@@ -5,11 +5,9 @@
 -->
 
 ## Description
-<!-- Please include SEO-friendly description -->
+In this repository you find a collection of different use cases for building 
 
-## Requirements
-
-## Download and Installation
+* [Topic 1: Extending the Goods Receipt Process ](./topic1/README.md)
 
 ## Known Issues
 <!-- You may simply state "No known issues. -->
