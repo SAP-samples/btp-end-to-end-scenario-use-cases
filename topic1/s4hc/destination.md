@@ -44,7 +44,7 @@ In this exercise, you will perform the following tasks:
         Properties| Value | 
         -------- | -------- | 
         HTML5.DynamicDestination   | true | 
-        HTML5.Timeout | true |
+        HTML5.Timeout | 60000 |
         WebIDEEnabled   | true | 
         WebIDEUsage   | odata_gen  | 
         Use default JDK truststore  | Check Checkmark| 
@@ -72,7 +72,7 @@ In this exercise, you will perform the following tasks:
         Properties| Value | 
         -------- | -------- | 
         HTML5.DynamicDestination   | true | 
-        HTML5.Timeout | true |
+        HTML5.Timeout | 60000 |
         WebIDEEnabled   | true | 
         WebIDEUsage   | odata_gen  | 
         Use default JDK truststore  | Check Checkmark| 
