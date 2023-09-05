@@ -34,7 +34,7 @@ In this exercise, you will perform the following tasks:
    
    c) Select **Go to Application** icon next to the **SAP Build Apps** application to open the SAP Build Apps lobby.
 
-   ![Build Apps Subscription](img/be-buildapp-subscription.png)
+   ![Build Apps Subscription](img_draft/be-buildapp-subscription.png)
 
    d) Login with your user and password if prompted.
 
