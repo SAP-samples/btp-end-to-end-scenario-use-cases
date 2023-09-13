@@ -34,7 +34,8 @@
    ![Create po item](./img/create_item.png)
 
 4. The **Purchase Order Item** application opens. In the 
-   a) Select the **Material** which you have classified in task 2.
+   
+   a) Select the **Material** *WORKSHOP*
    
    b) Select a **Plant**
    

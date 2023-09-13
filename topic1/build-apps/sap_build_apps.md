@@ -95,9 +95,9 @@ In this exercise, you will perform the following tasks:
 
       - Destination **S4HC_BASIC_DEFECT** (or **MOCK_DEFECT** in case of mock server usage), entity **Defect**
 
-      - Destination **S4HC_BASIC_GRCHECK_YOUR_ID** (or **MOCK_CUSTOM_OBJECT** in case of mock server usage), entity **YY1_GRCHECK**
+      - Destination **S4HC_BASIC_GRCHECK_\<YOUR_ID\>** (or **MOCK_CUSTOM_OBJECT** in case of mock server usage), entity **YY1_GRCHECK**
 
-      - Destination **S4HC_BASIC_CHECKLIST_YOUR_ID** (or **MOCK_CHECKLIST** in case of mock server usage), entity **YY1_CHECKLIST**
+      - Destination **S4HC_BASIC_CHECKLIST_\<YOUR_ID\>** (or **MOCK_CHECKLIST** in case of mock server usage), entity **YY1_CHECKLIST**
 
         In case of **YY1_CHECKLIST** entity make sure that you have marked the checkbox **to_CHECKLIST_ITEM**:
 
