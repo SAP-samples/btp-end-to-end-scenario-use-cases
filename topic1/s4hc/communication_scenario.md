@@ -52,9 +52,9 @@ In this exercise, you will perform the following tasks:
 
          ![save and publish cs](./img/cs_save.png)
 
-> **Note**
-> 
-> blablabla
+      > **Note**
+      > 
+      > It can be that the publishing process fails because of several simultaneous publishing actions from different users. Just repeat the publishing again afterwards in this case.
       
       b) After a while the status of the communication scenario switch to **Published**
 
