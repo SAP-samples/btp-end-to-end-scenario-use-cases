@@ -51,6 +51,10 @@ In this exercise, you will perform the following tasks:
       a) **Save** your changes and then press **Publish**
 
          ![save and publish cs](./img/cs_save.png)
+
+> **Note**
+> 
+> blablabla
       
       b) After a while the status of the communication scenario switch to **Published**
 
