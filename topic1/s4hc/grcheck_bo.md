@@ -11,8 +11,7 @@ For further validation and to historicise the results of the goods receipt check
 In this exercise, you will perform the following tasks:
 
 1. Create a custom business object using the **Custom Business Object** application.
-2. Create a custom communication system for this business object.
-3. Assign a business catalog to the custom business object.
+2. Assign a business catalog to the custom business object.
 
 ## Prerequisites
 
@@ -97,43 +96,7 @@ these as a template to create your own role.
    b) When the publishing was successful you will see the green **Published** tag at the business object.
 
 
-
-### Task 2: Create a Custom Communication Scenario
-   1. To expose the Custom Business object we have to create a custom communication scenario.
-      
-      a) Open the Custom Communication Scenario application
-
-         ![custom cs](./img/cs_app.png)
-
-      b) Select **New**
-
-         ![add cs](./img/cs_new.png)
-
-      c) Add the scenarion name GRCHECK_YOUR_ID and a description e.g. GR Checklist API. Select **New**
-
-         ![add cs](./img/cs_new2.png)
-
-   2. Select the custom business object
-     
-      a) Select the Inbound Services tabulator and press **Add**
-       
-         ![add inbound service](./img/cs_add_inbound_service.png)
-     
-      b) Choose the **YY1_GRCHECK_YOUR_ID_CDS** and press **Select**
-
-         ![select bo](./img/cs_select_service.png)
-
-   3. Publish the communication scenario
-      
-      a) **Save** your changes and then press **Publish**
-
-         ![save and publish cs](./img/cs_save.png)
-      
-      b) After a while the status of the communication scenario switch to **Published**
-
-         ![save and publish cs](./img/cs_published.png)
-
-### Task 3: Assign a Business Catalog to the Business Object
+### Task 2: Assign a Business Catalog to the Business Object
 
 To access the GRCHECK API in a secure manner with user propagation we need to assign a business catalog to it.
 For our scenario we use the **Material Management - Purchase Order** catalog, as this is also required to access the Purchase Order API we use in a later exercise.

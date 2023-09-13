@@ -10,8 +10,8 @@ To store the data of checklists used in material classification we can create an
 In this exercise, you will perform the following tasks:
 
 1. Create a custom business object using the **Custom Business Object** application.
-2. Create a custom communication system for this business object.
-3. Assign a business catalog to the custom business object.
+2. Assign a business catalog to the custom business object.
+3. Fill in the test data
 
 ## Prerequisites
 
@@ -85,43 +85,7 @@ The prerequisites are the same as in the previous exercise.
    b) When the publishing was successful you will see the green **Published** tag at the business object.
 
 
-### Task 2: Create a Custom Communication Scenario
-
-   1. To expose the Custom Business object we have to create a custom communication scenario.
-      
-      a) Open the Custom Communication Scenario application
-
-         ![custom cs](./img/cs_app.png)
-
-      b) Select **New**
-
-         ![add cs](./img/cs_new.png)
-
-      c) Add the scenarion name CHECKLIST_\<YOUR_ID\> and a description e.g. "Checklist API". Select **New**
-
-         ![add cs](./img/cs_checklist_new.png)
-
-   2. Select the custom business object
-     
-      a) Select the Inbound Services tabulator and press **Add**
-       
-         ![add inbound service](./img/cs_add_inbound_service.png)
-     
-      b) Choose the **YY1_CHECKLIST_\<YOUR_ID\>_CDS** and press **Select**
-
-         ![select bo](./img/cs_checklist_select_service.png)
-
-   3. Publish the communication scenario
-      
-      a) **Save** your changes and then press **Publish**
-
-         ![save and publish cs](./img/cs_checklist_save.png)
-      
-      b) After a while the status of the communication scenario switch to **Published**
-
-         ![save and publish cs](./img/cs_checklist_published.png)
-
-### Task 3: Assign a Business Catalog to the Business Object
+### Task 2: Assign a Business Catalog to the Business Object
 
 To access the Checklist API in a secure manner with user propagation we need to assign a business catalog to it.
 For our scenario we use the **Material Management - Purchase Order** catalog, as this is also required to access the Purchase Order API we use in a later exercise.
@@ -167,7 +131,7 @@ For our scenario we use the **Material Management - Purchase Order** catalog, as
       
       b) Repeat step b) to d) from section 2.
 
-### Task 4: Fill in the initial data
+### Task 3: Fill in the initial data
 
    1. Open generated UI
 
