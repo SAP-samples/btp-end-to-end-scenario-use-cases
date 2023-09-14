@@ -26,7 +26,7 @@ In this exercise, you will perform the following tasks:
 
          ![add cs](./img/cs_new.png)
 
-      c) Add the scenarion name **GRCHECK_\<YOUR_ID\>** and a description e.g. GR Checklist API. Select **New**
+      c) Add the scenarion name **GRCHECK_\<YOUR_ID\>** and a description e.g. **GR Checklist APIs**. Select **New**
 
          ![add cs](./img/cs_new2.png)
 
@@ -36,7 +36,7 @@ In this exercise, you will perform the following tasks:
        
          ![add inbound service](./img/cs_add_inbound_service.png)
      
-      b) Choose the **YY1_GRCHECK_\<YOUR_ID\>_CDS** and press **Select**
+      b) Choose the **YY1_GRCHECK_\<YOUR_ID\>_CDS** (you can use filter field for that) and press **Select** 
 
          ![select bo](./img/cs_select_service.png)
 

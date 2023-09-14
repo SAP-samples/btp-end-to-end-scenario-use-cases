@@ -10,7 +10,7 @@ In this section, you wil configure the end-to-end communication between the SAP 
 In this exercise, you will perform the following tasks:
 
 1. Define a destination for API **GRCHECK_\<YOUR_ID\>**
-2. Define a destination for API **GRCHECKLIST_\<YOUR_ID\>**
+2. Define a destination for API **CHECKLIST_\<YOUR_ID\>**
 
 
 
