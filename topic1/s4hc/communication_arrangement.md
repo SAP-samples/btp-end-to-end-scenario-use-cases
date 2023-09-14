@@ -27,16 +27,17 @@ In this exercise, you will perform the following tasks:
 
      ![Communication System](./img/s4c_communication_system.png)
 
-    d) Set a unique **System ID** and **System Name** using your ID from the previous exercise e.g. AB123
+    d) Set *GRCHECK_BASIC_\<YOUR_ID\>* as **System ID** using your ID from the previous exercise e.g. AB123
 
     e) Choose **Create**
     
       ![Communication System](./img/s4c_communication_system5.png)
 
 2. Define the Communication System and create a Communication User
-    a) In the Technical Data part set a Logical System and a Business System ID. (3 digit ID e.g S4H)
+    
+    a) In the Technical Data part check the **Inbound Only** box.
 
-    b) Check the **Inbound Only** box.
+    a) Set a Logical System and a Business System ID. (3 digit ID e.g S4H)
 
       ![Communication System](./img/s4c_communication_system_basic.png)
  
@@ -48,7 +49,7 @@ In this exercise, you will perform the following tasks:
 
      ![Communication System](./img/s4c_communication_user.png)
    
-    e) At the **Create Communication User** pane set the **User Name** again use your ID (e.g. USER_AB123) and **Description**
+    e) At the **Create Communication User** pane set *GRCHECK_\<YOUR_ID\>* as the **User Name** and *User for API communication* as **Description**
 
     f) Propose a Password - and copy it to a secrete store. You will need it in the next exercise.
 
@@ -64,23 +65,20 @@ In this exercise, you will perform the following tasks:
       
    a) Open the **Communication Arrangements** application and select **New**
 
-      ![Communication Arrangement](./img/s4c_comm_arrangement_grcheck.png)
-   
    b) Select the **YY1_GRCHECK_\<YOUR_ID\>** scenario and add an **Arrangement Name**. Press **Create**
    
-     
+      ![Communication Arrangement](./img/s4c_comm_arrangement_grcheck.png)     
    
    c) In the Communication Arrangement panel select the **Communication System** that you have created in the last section. The **Communication User** is added automatically
 
-   d) Copy the **Service URL**. You will need it in the next exercise. Select **Save**.
+   d) Copy both **Service URL**. You will need it in the next exercise. Select **Save**.
 
       ![Communication Arrangement](./img/s4c_comm_arrangement_setup.png)
 
-4. Repeat step 3. for **YY1_CHECKLIST_\<YOUR_ID\>**
  
 ## Result
 
-You have created the communication systems to expose the relevant data for our scenario. In the next exercise we setup the communication part on the SAP BTP side. 
+You have created a communication system and an arrangement to expose the relevant data for our scenario. In the next exercise we setup the communication part on the SAP BTP side. 
 
 ## Further reading / Reference Links
 
