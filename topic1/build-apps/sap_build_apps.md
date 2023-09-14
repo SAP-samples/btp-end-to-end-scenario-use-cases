@@ -95,11 +95,11 @@ In this exercise, you will perform the following tasks:
 
       - Destination **S4HC_BASIC_DEFECT** (or **MOCK_DEFECT** in case of mock server usage), entity **Defect**
 
-      - Destination **S4HC_BASIC_GRCHECK_\<YOUR_ID\>** (or **MOCK_CUSTOM_OBJECT** in case of mock server usage), entity **YY1_GRCHECK**
+      - Destination **S4HC_BASIC_GRCHECK_\<YOUR_ID\>** (or **MOCK_CUSTOM_OBJECT** in case of mock server usage), entity **YY1_GRCHECK_\<YOUR_ID\>**
 
-      - Destination **S4HC_BASIC_CHECKLIST_\<YOUR_ID\>** (or **MOCK_CHECKLIST** in case of mock server usage), entity **YY1_CHECKLIST**
+      - Destination **S4HC_BASIC_CHECKLIST_\<YOUR_ID\>** (or **MOCK_CHECKLIST** in case of mock server usage), entity **YY1_CHECKLIST_\<YOUR_ID\>**
 
-        In case of **YY1_CHECKLIST** entity make sure that you have marked the checkbox **to_CHECKLIST_ITEM**:
+        In case of **YY1_CHECKLIST_\<YOUR_ID\>** entity make sure that you have marked the checkbox **to_CHECKLIST_ITEM**:
 
         ![Enable data entity for PO](img_draft/fe1-expand-for-checklist.png)
 
@@ -290,7 +290,7 @@ In this exercise, you will perform the following tasks:
     
     ![Custom BO block adding](img_draft/fe-page1-on-item-click-adding-custom-bo-block.png)
     
-    c) On the *Properties* panel set the resource name to **YY1_GRCHECK**. Choose **Filter collection** button and select **Object with properties** binding option.
+    c) On the *Properties* panel set the resource name to **YY1_GRCHECK_\<YOUR_ID\>**. Choose **Filter collection** button and select **Object with properties** binding option.
     
     ![Custom BO block details](img_draft/fe-page1-on-item-click-custom-bo-block-details.png)
     
@@ -371,7 +371,7 @@ Now the navigation can be tested. If you click at any result list item you shoul
 
     ![Adding read lists block](img_draft/fe-page2-on-mount-adding-read-lists-block.png)
     
-    e) On the *Properties* panel set the resource name to **YY1_CHECKLIST**. Set the block name to **Get all checklists** in the *Advanced* section of the *Properties* tab.
+    e) On the *Properties* panel set the resource name to **YY1_CHECKLIST_\<YOUR_ID\>**. Set the block name to **Get all checklists** in the *Advanced* section of the *Properties* tab.
 
     ![Read lists block details](img_draft/fe-page2-on-mount-read-lists-block-details.png)
     
@@ -470,7 +470,7 @@ Now the navigation can be tested. If you click at any result list item you shoul
 
     ![Adding custom object block](img_draft/fe-page2-on-save-adding-custom-object-block.png)
     
-    b) On the *Properties* panel set the resource name to **YY1_GRCHECK**. Assign **Formula** binding option to the **Record** field.
+    b) On the *Properties* panel set the resource name to **YY1_GRCHECK_\<YOUR_ID\>**. Assign **Formula** binding option to the **Record** field.
     
     ![Custom object block details](img_draft/fe-page2-on-save-custom-object-block-details.png)
     
@@ -525,7 +525,7 @@ Now the navigation can be tested. If you click at any result list item you shoul
 
     ![Custom business objects app](img_draft/s4hc-custom-bo-app.png)
 
-    b) Select **YY1_GRCHECK** object.
+    b) Select **YY1_GRCHECK_\<YOUR_ID\>** object.
 
     ![Custom business objects list](img_draft/s4hc-custom-bo-list.png)
 
