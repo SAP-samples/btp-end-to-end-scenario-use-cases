@@ -33,7 +33,7 @@ In this exercise, you will perform the following tasks:
         -------- | -------- | 
         Name  | S4HC_GRCHECK_\<YOUR_ID\>  |
         Type   | HTTP  | 
-        URL for SAP S/4HANA  | https://myXXXXX-api.s4hana.ondemand.com/sap/opu/odata/sap/YY1_GRCHECK_\<YOUR_ID\>_CDS `<change to your URL>`| 
+        URL for SAP S/4HANA  | https://myXXXXX-api.s4hana.ondemand.com/sap/opu/odata/sap/YY1_GRCHECK_<YOUR_ID\>_CDS `<change to your URL>`| 
         Proxy Type   | Internet  | 
         Authentication  (only needed for SAP S/4HANA)   | BasicAuthentication  | 
         User   | your communication user name  | 
