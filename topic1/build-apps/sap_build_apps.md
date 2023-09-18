@@ -1,6 +1,6 @@
 # Creating a Frontend Application with SAP Build Apps
 
-## Usage scenario / Introduction (recommended)
+## Introduction
 The frontend application should access all the data prepared before. The warehouse user should be able to search for the specific purchase order item and see all the checks which are relevant for the product. The user can decide whether additional checks are necessary to be done and store all the information found after inspection. In case of any check fails the corresponding defect should be created in the SAP System to be managed by the back office later.
 
 
