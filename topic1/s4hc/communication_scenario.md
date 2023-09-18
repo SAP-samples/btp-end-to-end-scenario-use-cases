@@ -32,7 +32,7 @@ In this exercise, you will perform the following tasks:
 
    2. Select the custom business object
      
-      a) Select the Inbound Services tabulator and press **Add**
+      a) Select the Inbound Services tab and press **Add**
        
          ![add inbound service](./img/cs_add_inbound_service.png)
      
