@@ -1,4 +1,4 @@
- You can also evaluate other products in the same way and use them later in purchase orders.
+
 
 ## Create a purchase order
 
