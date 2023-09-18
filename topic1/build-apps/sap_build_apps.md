@@ -8,7 +8,7 @@ The frontend application should access all the data prepared before. The warehou
 In this exercise, you will perform the following tasks:
 
 1. Create a new application from a template
-2. Install integration with the data from the SAP System and from Visual Cloud Functions
+2. Install integration with the data from the SAP System
 3. Create a data variable used for search
 4. Add search button logic
 5. Add search results list
