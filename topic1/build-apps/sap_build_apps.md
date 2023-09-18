@@ -38,22 +38,19 @@ In this exercise, you will perform the following tasks:
 
    d) Login with your user and password if prompted.
 
-2. Import a template application - TODO - copy from template
+2. Copy a template application
 
-    a) Download the template from [here](https://github.com/SAP-samples/s4hana-extensions-with-sap-build-apps-learning-journey/raw/main/delivery-check-app.mtar)
-    
-    b) Select **Import** button.
-    
-    ![Import button](img_draft/fe-app-import-button.png)
+    a) Find the **DeliveryCheck** application in the list and select **More Options** button.
 
-    c) Select **Browse** button and then pick the file in the popup.
+    b) Select **Save as New Project**  in the popup menu.
 
-    ![Select file with the app](img_draft/fe-app-select-file.png)
+    ![Save as a new project](img_draft/fe-save-as-new-project.png)
 
-3. Go to the application by selecting its name
-  
-![Go to edit app](img_draft/fe-app-go-to-edit.png)
+    c) Enter **DeliveryCheck_\<YOUR_ID\>** as a project name and proceed with the **Save as new** button.
 
+    ![New project name](img_draft/fe-new-project-name.png)
+
+    d) A copied application will be opened in the design mode.
 
 ### Task 2: Install data integration
 
