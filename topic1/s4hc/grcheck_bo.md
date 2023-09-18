@@ -13,21 +13,6 @@ In this exercise, you will perform the following tasks:
 1. Create a custom business object using the **Custom Business Object** application.
 2. Assign a business catalog to the custom business object.
 
-## Prerequisites
-
-* You have an SAP S/4HANA Cloud system.
-* The Key User Extensibility (1N9) scope item must be active. You can check this in the Manage Your Solution app
-under View Solution Scope. If the scope item is not active, please request the activation through BCP – Ticket Component: XX-S4C-OPRSRV.
-* You must be assigned to one of the following roles. They are provided as example roles from SAP. You can use
-these as a template to create your own role.
-
-   Business Role | Business Role ID as Delivered by SAP
-   ------------- | ------------------------------------- 
-   Administrator | SAP_BR_ADMINISTRATOR
-   Configuration Expert | SAP_BR_BPC_EXPERT
-   Analytics Specialist | SAP_BR_ANALYTICS_SPECIALIST 
-   
-
 
 ## Content
 
