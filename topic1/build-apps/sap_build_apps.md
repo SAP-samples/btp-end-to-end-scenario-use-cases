@@ -419,7 +419,7 @@ Now the navigation can be tested. If you click at any result list item you shoul
     d) Use the following formula and then exit by choosing **Save** button.
     
     ```js
-    MAP(outputs["Get all checklists"].records, { name: item.Name, default: item.IsDefault, description: item.Description, instructions: item.Instructions, checks: MAP(item.to_CHECKLIST_ITEM, item.CheckText), checked: item.IsDefault || IS_IN_ARRAY_BY_KEY(outputs["Get product classification"].records, "CharcValue", item.Name) })
+    MAP(outputs["Get all checklists"].records, { name: item.Name, default: item.IsDefault, description: item.Description, instructions: item.Instructions, checks: MAP(item.to_CHECKLIST_ITEM.results, item.CheckText), checked: item.IsDefault || IS_IN_ARRAY_BY_KEY(outputs["Get product classification"].records, "CharcValue", item.Name) })
     ```
 
     ![Checklists block formula](img_draft/fe-page2-on-mount-checklists-block-formula.png)
@@ -430,7 +430,7 @@ Now the navigation can be tested. If you click at any result list item you shoul
     
     ![Page 2 demo](img_draft/fe-demo-page2.png)
 
-    b) If you select **Save checks** button - nothing will happen. This logic will be added in the next step. 
+    b) Do not click **Save checks** button - the logic is not complete there. It will be added in the next step. 
 
 
 ### Task 8: Add save button logic 
