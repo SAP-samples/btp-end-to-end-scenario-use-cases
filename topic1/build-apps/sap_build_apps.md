@@ -70,7 +70,7 @@ In this exercise, you will perform the following tasks:
 
 2. Add SAP Systems integration
 
-    a) Choose **Add integration** button and then select **BTP Destinations** button.
+    a) Choose **Add integration** button at the **Data** tab and then select **BTP Destinations** button.
 
     ![Add SAP systems integration](img_draft/fe-data-add-sap-systems-integration.png)
     
