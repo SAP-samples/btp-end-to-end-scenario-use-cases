@@ -364,7 +364,7 @@ Now the navigation can be tested. If you click at any result list item you shoul
 
     ![Show logic](img_draft/fe-page2-on-mount-show-logic.png)
 
-    d) Drag **Get records collection** logic block to the marked place in the logic builder.
+    d) Drag **Get record collection** logic block to the marked place in the logic builder.
 
     ![Adding read lists block](img_draft/fe-page2-on-mount-adding-read-lists-block.png)
     
@@ -378,7 +378,7 @@ Now the navigation can be tested. If you click at any result list item you shoul
 
 2. Get product classification data
     
-    a) Drag **Get records collection** logic block to the marked place in the logic builder.
+    a) Drag **Get record collection** logic block to the marked place in the logic builder.
     
     ![Adding classification block](img_draft/fe-page2-on-mount-adding-classification-block.png)
     
