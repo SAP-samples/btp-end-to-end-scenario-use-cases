@@ -13,10 +13,6 @@ In this exercise, you will perform the following tasks:
 2. Assign a business catalog to the custom business object.
 3. Fill in the test data
 
-## Prerequisites
-
-The prerequisites are the same as in the [previous exercise](./grcheck_bo.md).
-
 ## Content
 
 ### Task 1: Create the Custom Business Object 
