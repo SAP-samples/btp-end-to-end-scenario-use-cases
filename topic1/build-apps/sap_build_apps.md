@@ -92,7 +92,7 @@ In this exercise, you will perform the following tasks:
 
       - Destination **S4HC_BASIC_DEFECT** (or **MOCK_DEFECT** in case of mock server usage), entity **Defect**
 
-      - Destination **S4HC_BASIC_GRCHECK_\<YOUR_ID\>** (or **MOCK_CUSTOM_OBJECT** in case of mock server usage), entity **YY1_GRCHECK_\<YOUR_ID\>**
+      - Destination **S4HC_BASIC_GRCHECK_\<YOUR_ID\>** (or **MOCK_GRCHECK** in case of mock server usage), entity **YY1_GRCHECK_\<YOUR_ID\>**
 
       - Destination **S4HC_BASIC_CHECKLIST_\<YOUR_ID\>** (or **MOCK_CHECKLIST** in case of mock server usage), entity **YY1_CHECKLIST_\<YOUR_ID\>**
 
@@ -174,7 +174,7 @@ In this exercise, you will perform the following tasks:
     
     ![Search - get block details](img_draft/fe-page1-search-get-block-details.png)
     
-    d) Select **PurchaseOrder** in the **Property** list. Then choose **Compared value** field and navigate to **Data and Variables** &rarr; **Page Variables**. Then select **PurchaseOrder** page variable. Choose **Add condition** button and add another condition for **Material** property and **Material** page variable.
+    d) Choose **Add condition** button and select **PurchaseOrder** in the **Property** list. Then choose **Compared value** field and navigate to **Data and Variables** &rarr; **Page Variables**. Then select **PurchaseOrder** page variable. Choose **Add condition** button and add another condition for **Material** property and **Material** page variable.
 
     ![Search - get block filter](img_draft/fe-page1-search-get-block-filter.png)
     
@@ -291,7 +291,7 @@ In this exercise, you will perform the following tasks:
     
     ![Custom BO block details](img_draft/fe-page1-on-item-click-custom-bo-block-details.png)
     
-    d) Select **PurchaseOrder** in the **Property** field. Assign **Data item in repeat** binding option to the field **Compared value** and select **PurchaseOrder** field. Add another filter item with the **Add condition** button and select **PurchaseOrderItem** as the **Property** and **PurchaseOrderItem** repeated field as the **Compared value**. Exit with **Save** button.
+    d) Choose **Add condition** button and select **PurchaseOrder** in the **Property** field. Assign **Data item in repeat** binding option to the field **Compared value** and select **PurchaseOrder** field. Add another filter item with the **Add condition** button and select **PurchaseOrderItem** as the **Property** and **PurchaseOrderItem** repeated field as the **Compared value**. Exit with **Save** button.
 
     ![Custom BO block filter](img_draft/fe-page1-on-item-click-custom-bo-block-filter.png)
     
