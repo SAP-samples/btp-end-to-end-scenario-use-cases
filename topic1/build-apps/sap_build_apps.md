@@ -260,7 +260,7 @@ In this exercise, you will perform the following tasks:
 
     ![Preview or build](img_draft/fe-preview-or-build.png)
     
-    c) Select **Open Web Preview** button.
+    c) Select **Open Web Preview** button and choose your application (**DeliveryCheck_\<YOUR_ID\>**)on the next screen.
     
     ![Web preview](img_draft/fe-web-preview.png)
     
@@ -418,11 +418,19 @@ Now the navigation can be tested. If you click at any result list item you shoul
     
     d) Use the following formula and then exit by choosing **Save** button.
     
-    ```js
-    MAP(outputs["Get all checklists"].records, { name: item.Name, default: item.IsDefault, description: item.Description, instructions: item.Instructions, checks: MAP(item.to_CHECKLIST_ITEM.results, item.CheckText), checked: item.IsDefault || IS_IN_ARRAY_BY_KEY(outputs["Get product classification"].records, "CharcValue", item.Name) })
-    ```
+- For S4HANA Cloud backend:
+    
+```js
+MAP(outputs["Get all checklists"].records, { name: item.Name, default: item.IsDefault, description: item.Description, instructions: item.Instructions, checks: MAP(item.to_CHECKLIST_ITEM.results, item.CheckText), checked: item.IsDefault || IS_IN_ARRAY_BY_KEY(outputs["Get product classification"].records, "CharcValue", item.Name) })
+```
 
-    ![Checklists block formula](img_draft/fe-page2-on-mount-checklists-block-formula.png)
+- For Mockserver backend:
+
+```js
+MAP(outputs["Get all checklists"].records, { name: item.Name, default: item.IsDefault, description: item.Description, instructions: item.Instructions, checks: MAP(item.to_CHECKLIST_ITEM, item.CheckText), checked: item.IsDefault || IS_IN_ARRAY_BY_KEY(outputs["Get product classification"].records, "CharcValue", item.Name) })
+```
+
+![Checklists block formula](img_draft/fe-page2-on-mount-checklists-block-formula.png)
 
 4. Test the checklist page layout
 
