@@ -135,6 +135,11 @@ For our scenario we use the **Material Management - Purchase Order** catalog, as
          
          ![Entities button](img/bo_checklist_go_to_ui.png)
 
+> **Note**
+> 
+> If the button **Go To Generated UI** is not available - try to log out and log in again.
+
+
    2. Create header data
 
       a) At the new screen select **Create** button.
