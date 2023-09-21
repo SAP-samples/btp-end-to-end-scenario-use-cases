@@ -37,7 +37,7 @@ In this exercise, you will perform the following tasks:
     
     a) In the Technical Data part check the **Inbound Only** box.
 
-    a) Set a Logical System and a Business System ID. (3 digit ID e.g S4H)
+    a) Set a Logical System and a Business System ID. (3 character ID e.g S4H)
 
       ![Communication System](./img/s4c_communication_system_basic.png)
  
@@ -51,7 +51,7 @@ In this exercise, you will perform the following tasks:
    
     e) At the **Create Communication User** pane set *GRCHECK_\<YOUR_ID\>* as the **User Name** and *User for API communication* as **Description**
 
-    f) Propose a Password - and copy it to a secrete store. You will need it in the next exercise.
+    f) Propose a Password - and copy it to a secret store. You will need it in the next exercise.
 
       ![Communication System](./img/s4c_communication_system_basic2.png)
    
@@ -71,7 +71,7 @@ In this exercise, you will perform the following tasks:
    
    c) In the Communication Arrangement panel select the **Communication System** that you have created in the last section. The **Communication User** is added automatically
 
-   d) Copy both **Service URL**. You will need it in the next exercise. Select **Save**.
+   d) Copy both **Service URL**s. You will need them in the next exercise. Select **Save**.
 
       ![Communication Arrangement](./img/s4c_comm_arrangement_setup.png)
 
