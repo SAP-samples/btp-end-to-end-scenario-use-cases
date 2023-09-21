@@ -18,7 +18,7 @@ In this exercise, you will perform the following tasks:
 
    1. To expose the Custom Business object we have to create a custom communication scenario.
       
-      a) Open the Custom Communication Scenario application
+      a) Open the Custom Communication Scenarios application
 
          ![custom cs](./img/cs_app.png)
 
