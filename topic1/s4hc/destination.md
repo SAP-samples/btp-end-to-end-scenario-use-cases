@@ -16,7 +16,7 @@ In this exercise, you will perform the following tasks:
 
 ## Content
 
-### Option 1: Create destinations for SAP S/4HANA Cloud
+### Create destinations for SAP S/4HANA Cloud
 
 1. In **SAP BTP Cockpit**, navigate to your subaccount.
 
