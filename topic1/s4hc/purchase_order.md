@@ -2,7 +2,7 @@
 
 ## Create a purchase order
 
-1. Open the **Manage Purchase Order** application and choose **Create**.
+1. Open the **Manage Purchase Orders** application and choose **Create**.
   
   ![Create purchase order](./img/create_purchase_order.png)
 
@@ -38,7 +38,7 @@
    
    c) **Order Quantity**: *1 PC*
    
-   d) **Net Order Price**: *0.5*
+   d) **Net Order Price**: *0.50*
    
    e) **Price Unit**: *1 PC*
    
