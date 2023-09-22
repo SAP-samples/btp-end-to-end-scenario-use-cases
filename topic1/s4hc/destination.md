@@ -31,7 +31,7 @@ In this exercise, you will perform the following tasks:
 
         Name| Value | 
         -------- | -------- | 
-        Name  | S4HC_GRCHECK_\<YOUR_ID\>  |
+        Name  | S4HC_BASIC_GRCHECK_\<YOUR_ID\>  |
         Type   | HTTP  | 
         URL for SAP S/4HANA  | https://myXXXXX-api.s4hana.ondemand.com/sap/opu/odata/sap/YY1_GRCHECK_<YOUR_ID\>_CDS `<change to your URL>`| 
         Proxy Type   | Internet  | 
@@ -59,7 +59,7 @@ In this exercise, you will perform the following tasks:
 
         Name| Value | 
         -------- | -------- | 
-        Name  | S4HC_CHECKLIST_\<YOUR_ID\>  |
+        Name  | S4HC_BASIC_CHECKLIST_\<YOUR_ID\>  |
         Type   | HTTP  | 
         URL for SAP S/4HANA  | https://myXXXXX-api.s4hana.ondemand.com/sap/opu/odata/sap/YY1_CHECKLIST_<YOUR_ID\>_CDS `<change to your URL>`| 
         Proxy Type   | Internet  | 
