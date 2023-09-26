@@ -58,7 +58,7 @@
 
 ## Result
 
-You have created a new purchase order with the material which has checklist classification. With the creation of the purchase order you are now ready to create the **Goods Delivery Check** application.
+You have created a new purchase order with the material WORKSHOP. With the creation of the purchase order you are now ready to create the **Goods Delivery Check** application.
 
 ## Further reading / Reference Links
 - [Classification Reuse UI Component ](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/f48e215134d542109811123fe95a66af/c52fb722478b4d888f0e36c11a9ad1a7.html)
