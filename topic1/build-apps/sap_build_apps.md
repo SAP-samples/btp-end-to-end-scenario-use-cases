@@ -496,7 +496,7 @@ MAP(outputs["Get all checklists"].records, { name: item.Name, default: item.IsDe
 
 1. Test the application
 
-    a) Now the application is ready. You can search using your own criteria. Afterwards you can select the result item and do the checks based on the checklist data. You can even assign other checklists in the app. Try to play with different components of the second screen to understand how it works. After you select **Save checks** button the corresponding data will be saved to the backend (in case of the mock server scenario there will be only a save simulation).
+    a) Now the application is ready. You can search using your own criteria. Afterwards you can select the result item and do the checks based on the checklist data. You can even assign other checklists in the app. Try to play with different components of the second screen to understand how it works. For the further proper tests mark at least one check as failed as shown at the screenshot below. After you select **Save checks** button the corresponding data will be saved to the backend (in case of the mock server scenario there will be only a save simulation).
 
     ![Page 2 - checks demo](img_draft/fe-demo-page2-doing-checks.png)
 
@@ -512,7 +512,7 @@ MAP(outputs["Get all checklists"].records, { name: item.Name, default: item.IsDe
 
     ![Process defect app](img_draft/s4hc-process-defect-app.png)
 
-    c) Set **Today** in the **Created on** filter field. Choose **Go** button to search.
+    c) Set the time range corresponding to the creation time in the **Created on** filter field. Choose **Go** button to search.
 
     ![Process defect filter](img_draft/s4hc-process-defect-filter.png)
 

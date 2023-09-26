@@ -132,7 +132,7 @@ For our scenario we use the **Material Management - Purchase Order** catalog, as
 
 ## Result
 
-You have created a custom business object to store the results of a goods receipt check, defined a communication system so the data could be exposed and added a business catalog for secure access.
+You have created a custom business object to store the results of a goods receipt check and added a business catalog for secure access.
 
 In the [next exercise](./checklist_bo.md) you will create another custom business object to store the data of checklists.
 

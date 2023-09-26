@@ -189,7 +189,7 @@ For our scenario we use the **Material Management - Purchase Order** catalog, as
 
 ## Result
 
-You have created a custom business object to store the checklists data, defined a communication system so the data could be exposed and added a business catalog for secure access.
+You have created a custom business object to store the checklists data, added a business catalog for secure access and pre-filled the object with the data.
 
 In the next exercise you will define the communication systems and communication arrangements for external access to the necessary APIs.
 
