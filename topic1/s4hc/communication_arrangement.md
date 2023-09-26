@@ -37,7 +37,7 @@ In this exercise, you will perform the following tasks:
     
     a) In the Technical Data part check the **Inbound Only** box.
 
-    a) Set a Logical System and a Business System ID. (3 character ID e.g S4H)
+    a) Set a Logical System (e.g S4H) and a unique Business System ID (use your ID e.g AB123).
 
       ![Communication System](./img/s4c_communication_system_basic.png)
  
