@@ -2,7 +2,7 @@
 
 ## Logon problems
 
-If you are stuck with logon even though you are sure that the credentials are correct (for example, getting the "" message) then your probably doesn't allow third-party cookies during the SAML process triggered on logon. Try to enable the cookies. This is an example for Chrome:
+If you are stuck with logon even though you are sure that the credentials are correct (for example, getting the "Your Domain is not trusted" message) then your probably doesn't allow third-party cookies during the SAML process triggered on logon. Try to enable the cookies. This is an example for Chrome:
 
   1. Go to the browser settings and select **Privacy and security** section. Select **Cookies and other site data** afterwards.
 
