@@ -26,3 +26,7 @@ Part 2:
 5. [Set up Destinations](./s4hc/destination.md)
 6. [Create Purchase Order with sample Product](./s4hc/purchase_order.md)
 7. [Create a Frontend Application with SAP Build Apps](./build-apps/sap_build_apps.md)
+
+## Troubleshooting
+
+Please check [known issues](troubleshooting.md) if you stuck with some exercises.
