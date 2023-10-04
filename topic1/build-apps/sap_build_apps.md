@@ -19,7 +19,7 @@ In this exercise, you will perform the following tasks:
 
 ## Prerequisites
 * You have successfully created the all the previous exercised
-* Nice to have the initial SAP Build Apps skills. You can check this [learning journey](link-to-app400) before.
+* Nice to have the initial SAP Build Apps skills. You can check this [learning journey](https://learning.sap.com/learning-journey/develop-apps-with-sap-build-apps-using-drag-and-drop-simplicity) before.
 
 
 ## Content
