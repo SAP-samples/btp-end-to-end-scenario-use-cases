@@ -1,6 +1,20 @@
+# Create a purchase order
 
 
-## Create a purchase order
+## Usage scenario / Introduction 
+
+A purchaser creates a purchase order. Later the ordered goods will arrive to the warehouse and the warehouse worker can scan them and find the purchase order in the system. Please note that we use WORKSHOP material in this exercise. This material was classified with the custom material class. You can check it in the application **Manage Product Master Data** on the tab **Classification**.
+
+## Task Flow 
+
+In this exercise, you will perform the following tasks:
+
+1. Create a purchase order
+
+
+## Content
+
+### Task 1: Create a purchase order
 
 1. Open the **Manage Purchase Orders** application and choose **Create**.
   
