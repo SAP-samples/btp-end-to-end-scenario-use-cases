@@ -11,7 +11,7 @@ In this exercise, you will perform the following tasks:
 
 1. Create a custom business object using the **Custom Business Object** application.
 2. Assign a business catalog to the custom business object.
-3. Fill in the test data
+3. Fill in the test data.
 
 ## Content
 
@@ -80,7 +80,7 @@ In this exercise, you will perform the following tasks:
 ### Task 2: Assign a Business Catalog to the Business Object
 
 To access the Checklist API in a secure manner with user propagation we need to assign a business catalog to it.
-For our scenario we use the **Material Management - Purchase Order** catalog, as this is also required to access the Purchase Order API we use in a later exercise.
+For our scenario we use the **Materials Management - Purchase Orders** catalog, as this is also required to access the Purchase Order API we use in a later exercise.
 
    
    1. Maintain catalogs
@@ -105,11 +105,11 @@ For our scenario we use the **Material Management - Purchase Order** catalog, as
 
          ![add catalog](./img/cce_checklist_add_catalog.png)
 
-      c) In the **Add Business Catalog** popup search for **Material Management - Purchase Orders** catalog and select it. Press **OK**.
+      c) In the **Add Business Catalog** popup search for **Materials Management - Purchase Orders** catalog and select it. Press **OK**.
 
          ![select catalog](./img/cce_select.png)
       
-      d) In the **Used in Business Catalog** window select the **Material Management - Purchase Orders** catalog and press **Publish**.
+      d) In the **Used in Business Catalog** window select the **Materials Management - Purchase Orders** catalog and press **Publish**.
 
          ![publish](./img/cce_publish.png)
 
