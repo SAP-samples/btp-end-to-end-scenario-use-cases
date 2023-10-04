@@ -59,3 +59,7 @@ In this exercise, you will perform the following tasks:
 > **Note**
 > 
 > It can be that the publishing process fails because of several simultaneous publishing actions from different users. Just repeat the publishing again afterwards in this case.
+
+## Further reading / Reference Links
+
+- [Communication Management in SAP S/4HANA Cloud ](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/2e84a10c430645a88bdbfaaa23ac9ff7.html?locale=en-US&q=communication%20system)
