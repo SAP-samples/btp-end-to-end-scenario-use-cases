@@ -12,7 +12,7 @@ Therefore, the warehouse management wants to build a custom UI for this use case
 
 You have got the activation email from our SAP Cloud Identity Services and activated your profile with the provided link.
 
-Only then you can access the provided [SAP S/4HANA Cloud](https://my401610.lab.s4hana.cloud.sap/ui) system.
+Only then you can access the provided [SAP S/4HANA Cloud]() system.
 
 ## Exercises
 
