@@ -2,7 +2,7 @@
 
 ## Introduction 
 
-In this exercise, you will create a CDS view entity which will represent the data model of your service.
+In this exercise, you will create a CDS view entity which will represent the data model of your service. This consumption CDS view will be based on the standard interface view I_ENTERPRISEPROJECT which is released by SAP for Cloud development.
 
 ## Content
 
@@ -83,3 +83,4 @@ You have created a data entity. This entity is now ready to be exposed as a serv
 
 - [Naming convention](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/8b8f9d8f3cb948b2841d6045a255e503.html)
 - [Developing Managed Transactional Apps](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/b5bba99612cf4637a8b72a3fc82c22d9.html)
+- [Virtual Data Model and CDS Views](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/0a875bc7a005465aad92c08becc11776.html)
