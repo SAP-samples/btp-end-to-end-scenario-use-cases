@@ -40,19 +40,25 @@ In this exercise, you will perform the following tasks:
 
 ### Task 2: Clone repository
 
-1. At the welcome screen select **Clone from Git**.
+1. On the initial screen choose the "burger" button and then select *View* &rarr; *Terminal* option in the popup menu.
 
-  ![Alt text](img/0050-clone-from-git.png) 
+  ![Alt text](img/0050-open-terminal.png) 
 
-2. Paste the following url when prompted and press **Enter**:
+2. Switch to the projects folder with the following command:
+
+~~~cli
+cd projects
+~~~
+
+3. Clone the repository with the following command:
 
   ```url
-  https://github.com/SAP-samples/btp-end-to-end-scenario-use-cases
+  git clone https://github.com/SAP-samples/btp-end-to-end-scenario-use-cases.git -b topic2app
   ```
 
   ![Alt text](img/0060-git-clone-url.png) 
 
-3. After the cloning has been finished you will get a popup. Select **Open** button to open the cloned project.
+1. After the cloning has been finished you will see a new project **author-readings** in the **Get Started** window. Just select it to open.
 
   ![Alt text](img/0070-open-project.png) 
 
