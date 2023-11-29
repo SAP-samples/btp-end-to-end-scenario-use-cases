@@ -1,6 +1,12 @@
 # Motivation
 
-The deployed application works fine now. But there are still some issues like access with basic authentication, not optimal data reading (getting status for every project in a separate request), lack of OData V4 features for the Project API and so on. This can be fixed by creating an own service via SAP S/4HANA Cloud Developer Extensibility.
+The deployed application works fine now. But there are still some issues like access with basic authentication, not optimal data reading (getting status for every project in a separate request), lack of OData V4 features for the Project API and so on. 
+
+  ![before](img/0005-diagram-before.png)
+
+This can be fixed by creating an own service via SAP S/4HANA Cloud Developer Extensibility.
+
+  ![after](img/0006-diagram-after.png)
 
 As always the creating of the own service has its pros and cons:
 
