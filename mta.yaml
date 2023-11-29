@@ -22,6 +22,8 @@ modules:
       srv-url: ${default-url}
   parameters:
     buildpack: nodejs_buildpack
+    memory: 256MB
+    disk-quota: 512MB
 
 # DB deployer module
 - name: author-readings-db-deployer-{YOUR_ID}
@@ -32,6 +34,8 @@ modules:
   - name: author-readings-uaa-{YOUR_ID}
   parameters:
     buildpack: nodejs_buildpack
+    memory: 256MB
+    disk-quota: 512MB    
 
 # App UI content deployer module (upload web app content into the HTML5 application repository)
 - name: author-readings-app-content-{YOUR_ID}
