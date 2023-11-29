@@ -1,0 +1,7 @@
+code;locale;name;descr
+1;en;InProcess;In Process
+2;en;Confirmed;Confirmed
+3;en;Cancelled;Cancelled
+1;de;InProcess;In Bearbeitung
+2;de;Confirmed;Bestätigt
+3;de;Cancelled;Storniert

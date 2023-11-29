@@ -1,0 +1,36 @@
+# CAP author-readings
+_out
+*.db
+connection.properties
+default-*.json
+.cdsrc-private.json
+gen/
+node_modules/
+target/
+dist/
+resources/
+*.*-mt_mta_build_tmp
+
+# Web IDE, App Studio
+.che/
+.gen/
+.vscode
+.idea
+
+# MTA
+*_mta_build_tmp
+*.mtar
+mtad.yaml
+mta_archives/
+Makefile*.mta
+
+# Other
+.DS_Store
+*.orig
+*.log
+
+*.iml
+*.flattened-pom.xml
+
+default-*.json
+package-lock.json

@@ -1,0 +1,35 @@
+{
+    "requires": {
+        "[development]": {
+            "auth": {
+                "kind": "mocked",
+                "users": {
+                    "Kate Jacob": {
+                        "password": "welcome",
+                        "ID": "kjacob",
+                        "roles": [
+                            "AuthorReadingManagerRole",
+                            "authenticated-user"
+                        ]
+                    },
+                    "Peter Sellers": {
+                        "password": "welcome",
+                        "ID": "pseller",
+                        "roles": [
+                            "AuthorReadingAdminRole",
+                            "authenticated-user"
+                        ]
+                    },
+                    "Julia Brunner": {
+                        "password": "welcome",
+                        "ID": "jbrunner",
+                        "roles": [
+                            "authenticated-user"
+                        ]
+                    },
+                    "*": true
+                }
+            }
+        }
+    }    
+}

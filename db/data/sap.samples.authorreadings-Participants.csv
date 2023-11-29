@@ -1,0 +1,13 @@
+ID;parent_ID;identifier;name;email;mobileNumber;statusCode_code
+79ceab87-300d-4b66-8cc3-182c679b7c01;79ceab87-300d-4b66-8cc3-f82c679b77a1;1;Carlos Garcia;carlos.garcia@sapbydesign.com;+34 789654123;2
+79ceab87-300d-4b66-8cc3-282c679b7c02;79ceab87-300d-4b66-8cc3-f82c679b77a1;2;Lucas Van Brekelenkam;Lucas.VanBrekelenkam@sapbydesign.com;+31 4399357102;2
+79ceab87-300d-4b66-8cc3-382c679b7c03;79ceab87-300d-4b66-8cc3-f82c679b77a5;1;Susan Winters;Susan.Winters@sapbydesign.com;;2
+79ceab87-300d-4b66-8cc3-482c679b7c04;79ceab87-300d-4b66-8cc3-f82c679b77a5;2;Julia Brunner;Julia.Brunner@sapbydesign.com;+43 519369020;2
+79ceab87-300d-4b66-8cc3-582c679b7c05;79ceab87-300d-4b66-8cc3-f82c679b77a5;3;Eddie Smoke;eddie.smoke@sapbydesign.com;+49 15116810562;2
+79ceab87-300d-4b66-8cc3-682c679b7c06;79ceab87-300d-4b66-8cc3-f82c679b77a3;1;Bram De Jong;Bram.DeJong@sapbydesign.com;+31 40399357104;2
+79ceab87-300d-4b66-8cc3-782c679b7c07;79ceab87-300d-4b66-8cc3-f82c679b77a3;2;Giuseppe Rosso;giuseppe.rossi@sapbydesign.com;+39 68747524;2
+79ceab87-300d-4b66-8cc3-882c679b7c08;79ceab87-300d-4b66-8cc3-f82c679b77a4;1;Jessica Orwell;jessica.orwell@sapbydesign.com;;2
+79ceab87-300d-4b66-8cc3-982c679b7c09;79ceab87-300d-4b66-8cc3-f82c679b77a4;2;Catherine Kennedy-Woods;Catherine.Kennedy-Woods@sapbydesign.com;;2
+79ceab87-300d-4b66-8cc3-a82c679b7c10;79ceab87-300d-4b66-8cc3-f82c679b77a2;1;Jie Wenjie;Jie.Wenjie@sapbydesign.com;;2
+79ceab87-300d-4b66-8cc3-b82c679b7c11;79ceab87-300d-4b66-8cc3-f82c679b77a2;2;Knut Evans;Knut.Evans@sapbydesign.com;;2
+79ceab87-300d-4b66-8cc3-c82c679b7c12;79ceab87-300d-4b66-8cc3-f82c679b77a2;3;Richard Miao;Richard.Miao@sapbydesign.com;;2

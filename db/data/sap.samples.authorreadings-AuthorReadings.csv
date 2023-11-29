@@ -1,0 +1,9 @@
+ID;identifier;date;maxParticipantsNumber;availableFreeSlots;participantsFeeAmount;currency_code;statusCode_code;createdBy;title;description
+79ceab87-300d-4b66-8cc3-f82c679b77a1;1;2023-03-03;50;48;100.00;EUR;1;anonymous;The one plus one;Author reading: Jojo Moyes reading in her novel "The one plus one"
+79ceab87-300d-4b66-8cc3-f82c679b77a2;2;2023-04-07;50;47;105.00;CNY;1;anonymous;三体;Liu Cixin talks about the philosophy in his science fiction trilogy "The Three-Body Problem", "The Dark Forest" and "Death's End"
+79ceab87-300d-4b66-8cc3-f82c679b77a3;3;2023-04-14;75;73;95.00;USD;1;anonymous;The Hobbit;Thorin Oakenshield reads J. R. Tolkiens "The Hobbit" supported by the Rivendell Orchestra
+79ceab87-300d-4b66-8cc3-f82c679b77a4;4;2023-07-07;75;73;1000;INR;1;anonymous;A Midsommer Night's Dream;Hermia Lysander reading William Shakespeare's comedy "A Midsommer Night's Dream"
+79ceab87-300d-4b66-8cc3-f82c679b77a5;5;2023-07-27;50;47;100;EUR;1;anonymous;By the Sea;Author reading: Abdulrazak Gurnah reads "By the Sea"
+79ceab87-300d-4b66-8cc3-f82c679b77a6;6;2023-09-23;50;50;79;EUR;0;anonymous;Catweazle;Stuffy Gladstone reading Catweazle live
+79ceab87-300d-4b66-8cc3-f82c679b77a7;7;2023-12-16;50;50;25;EUR;0;anonymous;Poetry Slam Berlin;Live! Poetry slam 2022 in Berlin
+79ceab87-300d-4b66-8cc3-f82c679b77a8;8;2023-12-23;50;50;25;EUR;0;anonymous;Wacken Poetry Open Air;Open air poetry festival in Wacken

@@ -1,0 +1,9 @@
+code;locale;name;descr
+0;en;NotReleased;Not Released
+1;en;Published;Published
+2;en;Booked;Booked
+4;en;Blocked;Blocked
+0;de;NotReleased;Nicht freigegeben
+1;de;Published;Veröffentlicht
+2;de;Booked;Gebucht
+4;de;Blocked;Blockiert

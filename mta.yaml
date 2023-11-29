@@ -1,0 +1,172 @@
+_schema-version: "3.1"
+ID: author-readings-{YOUR_ID}
+description: SAP Demo Application
+version: 1.0.0
+
+# -------------------------------------------------------------------------
+# Modules
+
+modules:
+
+# Service module
+- name: author-readings-srv-{YOUR_ID}
+  type: nodejs
+  path: gen/srv
+  requires:
+  - name: author-readings-db-{YOUR_ID}
+  - name: author-readings-uaa-{YOUR_ID}
+  - name: author-readings-destination-service-{YOUR_ID}
+  provides:
+  - name: srv-api
+    properties:
+      srv-url: ${default-url}
+  parameters:
+    buildpack: nodejs_buildpack
+
+# DB deployer module
+- name: author-readings-db-deployer-{YOUR_ID}
+  type: hdb
+  path: gen/db
+  requires:
+  - name: author-readings-db-{YOUR_ID}
+  - name: author-readings-uaa-{YOUR_ID}
+  parameters:
+    buildpack: nodejs_buildpack
+
+# App UI content deployer module (upload web app content into the HTML5 application repository)
+- name: author-readings-app-content-{YOUR_ID}
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: author-readings-repo-host-{YOUR_ID}
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - authorreadingmanager.zip
+      name: authorreadingmanager-{YOUR_ID}
+      target-path: resources/
+
+# App UI resources module
+- name: authorreadingmanager-{YOUR_ID}
+  type: html5
+  path: app/authorreadingmanager
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+
+# Destination content module (define destinations with service keys)
+- name: author-readings-destination-content-{YOUR_ID}
+  type: com.sap.application.content
+  requires:
+  - name: author-readings-destination-service-{YOUR_ID}
+    parameters:
+      content-target: true
+  - name: author-readings-repo-host-{YOUR_ID}
+    parameters:
+      service-key:
+        name: author-readings-repo-host-key-{YOUR_ID}
+  - name: author-readings-uaa-{YOUR_ID}
+    parameters:
+      service-key:
+        name: author-readings-uaa-key-{YOUR_ID}
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: authorreadingmanager-repo-host-dest-{YOUR_ID}
+          ServiceInstanceName: author-readings-html5-srv-{YOUR_ID}
+          ServiceKeyName: author-readings-repo-host-key-{YOUR_ID}
+          sap.cloud.service: authorreadingmanager-{YOUR_ID}
+        - Authentication: OAuth2UserTokenExchange
+          Name: authorreadingmanager-uaa-fiori-dest-{YOUR_ID}
+          ServiceInstanceName: author-readings-uaa-{YOUR_ID}
+          ServiceKeyName: author-readings-uaa-key-{YOUR_ID}
+          sap.cloud.service: authorreadingmanager-{YOUR_ID}
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+
+# -------------------------------------------------------------------------
+# Resources
+
+resources:
+
+# Database
+- name: author-readings-db-{YOUR_ID}
+  type: com.sap.xs.hdi-container
+  parameters:
+    service: hana
+    service-plan: hdi-shared
+  properties:
+    hdi-service-name: ${service-name}
+
+# HTML5 app repository
+- name: author-readings-repo-host-{YOUR_ID}
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: author-readings-html5-srv-{YOUR_ID}
+    service-plan: app-host
+
+# Destination service
+- name: author-readings-destination-service-{YOUR_ID}
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        instance:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          - Authentication: NoAuthentication
+            Name: launchpad
+            ProxyType: Internet
+            Type: HTTP
+            URL: ~{srv-api/srv-url}
+            HTML5.DynamicDestination: true
+            HTML5.ForwardAuthToken: true
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: author-readings-destination-service-{YOUR_ID}
+    service-plan: lite
+  requires:
+  - name: srv-api
+
+# UAA service
+- name: author-readings-uaa-{YOUR_ID}
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      tenant-mode: dedicated
+      xsappname: author-readings-{YOUR_ID}-${space}
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: author-readings-uaa-{YOUR_ID}
+    service-plan: application
+
+# -------------------------------------------------------------------------
+# Parameters
+
+parameters:
+  deploy_mode: html5-repo
+  enable-parallel-deployments: true
+  
+
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    - npm ci --production
+    - npx -p @sap/cds-dk cds build --production

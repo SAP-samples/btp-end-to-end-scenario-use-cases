@@ -1,0 +1,23 @@
+code;locale;name;descr
+EUR;en;Euro;European Euro
+USD;en;US Dollar;United States Dollar
+CAD;en;Canadian Dollar;Canadian Dollar
+AUD;en;Australian Dollar;Australian Dollar
+GBP;en;British Pound;Great Britain Pound
+ILS;en;Shekel;Israeli New Shekel
+INR;en;Rupee;Indian Rupee
+QAR;en;Riyal;Katar Riyal
+SAR;en;Riyal;Saudi Riyal
+JPY;en;Yen;Japanese Yen
+CNY;en;Yuan;Chinese Yuan Renminbi
+EUR;de;Euro;Europäischer Euro
+USD;de;US-Dollar;US-Dollar
+CAD;de;Kanadischer Dollar;Kanadischer Dollar
+AUD;de;Australischer Dollar;Australischer Dollar
+GBP;de;Britisches Pfund;Großbritannien Pfund
+ILS;de;Schekel;Israelischer Neuer Schekel
+INR;de;Rupie;Indische Rupie
+QAR;de;Riyal;Katar Riyal
+SAR;de;Riyal;Saudi-Riyal
+JPY;de;Yen;Japanischer Yen
+CNY;de;Yuan;Chinesischer Yuan Renminbi

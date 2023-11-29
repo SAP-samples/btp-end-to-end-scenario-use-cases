@@ -1,0 +1,108 @@
+{
+  "name": "author-readings",
+  "version": "1.1.0",
+  "description": "SAP-SME Partner Reference Application",
+  "repository": "https://github.com/SAP-samples/sme-partner-reference-application",
+  "author": "SAP",
+  "license": "SAP SAMPLE CODE LICENSE",
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^3.2.0",
+    "@sap/cds": "^7.0.2",
+    "@sap/cds-dk": "^7.0.2",
+    "express": "^4.17.1",
+    "hdb": "^0.19.1",
+    "passport": "^0.6.0",
+    "cors": "^2.8.5",
+    "moment": "^2.29.4",
+    "@sap-cloud-sdk/http-client": "^3.3.0"
+  },
+  "devDependencies": {
+    "@sap/ux-specification": "^1.108.9",
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0",
+    "sqlite3": "^5.1.6"
+  },
+  "engines": {
+    "node": ">=16.17.1 <19.0.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "test": "mocha 'test/*.test.js' --recursive --timeout 10000 --exit",
+    "undeploy": "cf undeploy author-readings --delete-services --delete-service-keys"
+  },
+  "cds": {
+    "features": {
+      "fetch_csrf": true,
+      "audit_personal_data": true
+    },
+    "requires": {
+      "db": {
+        "kind": "sql"
+      },
+      "uaa": {
+        "kind": "xsuaa"
+      },
+      "S4HC_API_ENTERPRISE_PROJECT_SRV_0002": {
+        "kind": "odata-v2",
+        "model": "srv/external/S4HC_API_ENTERPRISE_PROJECT_SRV_0002",
+        "[sandbox]": {
+          "credentials": {
+              "url": "https://{{S4HC-hostname}}/sap/opu/odata/sap/API_ENTERPRISE_PROJECT_SRV;v=0002",
+              "authentication": "BasicAuthentication",
+              "username": "{{test-user}}",
+              "password": "{{test-password}}"
+          }
+          },
+          "[production]": {
+          "credentials": {
+              "destination": "s4hc",
+              "path": "/sap/opu/odata/sap/API_ENTERPRISE_PROJECT_SRV;v=0002"
+          }
+        }        
+      },
+      "S4HC_ENTPROJECTPROCESSINGSTATUS_0001": {
+        "kind": "odata",
+        "model": "srv/external/S4HC_ENTPROJECTPROCESSINGSTATUS_0001",
+        "[sandbox]": {
+          "credentials": {
+              "url": "https://{{S4HC-hostname}}/sap/opu/odata4/sap/api_entprojprocessingstat/srvd_a2x/sap/entprojectprocessingstatus/0001",
+              "authentication": "BasicAuthentication",
+              "username": "{{test-user}}",
+              "password": "{{test-password}}"
+          }
+        },
+        "[production]": {
+          "credentials": {
+              "destination": "s4hc-tech-user",
+              "path": "/sap/opu/odata4/sap/api_entprojprocessingstat/srvd_a2x/sap/entprojectprocessingstatus/0001"
+          }
+        }
+      },
+      "S4HC_ENTPROJECTPROFILECODE_0001": {
+        "kind": "odata",
+        "model": "srv/external/S4HC_ENTPROJECTPROFILECODE_0001",
+        "[sandbox]": {
+          "credentials": {
+              "url": "https://{{S4HC-hostname}}/sap/opu/odata4/sap/api_entprojectprofilecode/srvd_a2x/sap/entprojectprofilecode/0001",
+              "authentication": "BasicAuthentication",
+              "username": "{{test-user}}",
+              "password": "{{test-password}}"
+          }
+        },
+        "[production]": {
+          "credentials": {
+              "destination": "s4hc-tech-user",
+              "path": "/sap/opu/odata4/sap/api_entprojectprofilecode/srvd_a2x/sap/entprojectprofilecode/0001"
+          }
+        }
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  },
+  "sapux": [
+    "app/authorreadingmanager"
+  ]
+}
