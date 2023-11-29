@@ -25,9 +25,11 @@ You should have [ABAP Development Tools](https://tools.eu1.hana.ondemand.com/#ab
 
 1. On the next screen choose **Open Logon Page in Browser** and enter your credentials in the new browser tab when prompted.
 
+  > For users with several user accounts: If you already are logged on in the default browser with a user account which you do not want to use (for example with your corporate one), then use the "Copy Logon URL to Clipboard" option.
+
   ![Alt text](img/0040-logon-in-browser.png) 
 
-5. After log on is successful go back to Eclipse and choose **Next** to proceed.
+1. After log on is successful go back to Eclipse and choose **Next** to proceed.
 
   ![Alt text](img/0050-logon-successful.png) 
 
