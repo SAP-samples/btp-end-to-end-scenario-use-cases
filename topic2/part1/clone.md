@@ -66,7 +66,7 @@ cd projects
 
 > As all the workshop participants work in one subaccount and one SAP S/4 HANA Cloud system the name of the created artifacts must be unique. To distinguish the objects for all participants in the workshop use the following naming convention: Replace **{YOUR_ID}** in every exercise with your initials plus a 3 digit number. For example instead of **MY_OBJECT_{YOUR_ID}**, use **MY_OBJECT_AB123**. 
 
-1. On the left side in the file explorer select *topic2* &rarr; *Applications* &rarr; *author-readings* folder and call the popup menu. Select **Find in Folder...** option.
+1. On the left side in the file explorer select **btp-end-to-end-scenario-use-cases** folder and call the popup menu. Select **Find in Folder...** option.
 
   ![Alt text](img/0080-find-in-folder.png) 
 
@@ -78,13 +78,7 @@ cd projects
 
   ![Alt text](img/0100-view-terminal.png) 
 
-4. In the terminal switch to the app folder with the command:
-
-  ```cli
-  cd topic2/Applications/author-readings/
-  ```
-
-5. Install the packages with the command:
+4. In the terminal install the packages with the command:
 
   ```cli
   npm i
