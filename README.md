@@ -8,6 +8,7 @@
 In this repository you find a collection of different use cases for building 
 
 * [Topic 1: Extending the Goods Receipt Process ](./topic1/README.md)
+* [Topic 2: Clean Core Development with SAP BTP and Developer Extensibility in SAP S/4HANA Cloud](./topic2/README.md)
 
 ## Known Issues
 <!-- You may simply state "No known issues. -->
