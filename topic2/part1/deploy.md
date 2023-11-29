@@ -8,7 +8,7 @@ In this exercise, you will deploy the application in Cloud Foundry space.
 
 ### Login to the SAP BTP Account
 
-1. Open a terminal. In the menue select **Terminal > New Terminal**
+1. Open a terminal. In the menu select *Terminal* &rarr; *New Terminal*.
 
   ![open terminal](./img/0125-open-terminal.png)
 
@@ -16,7 +16,6 @@ In this exercise, you will deploy the application in Cloud Foundry space.
  
   ```bash
      cf api https://api.cf.eu10-004.hana.ondemand.com    
-  
   ```
   Result:
   
