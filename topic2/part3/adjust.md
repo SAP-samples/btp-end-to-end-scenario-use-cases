@@ -226,8 +226,8 @@ srv.on(["READ","CREATE","UPDATE","DELETE"],
 
     with
     ~~~js
-    authorReading.processingStatusText = projectsMap[authorReading.projectID]._ProcessingStatus.ProcessingStatus_Text;
-    authorReading.projectProfileCodeText = projectsMap[authorReading.projectID]._ProfileCode.ProjectProfileCode_Text;
+    authorReading.processingStatusText = projectsMap[authorReading.projectID]?._ProcessingStatus?.ProcessingStatus_Text;
+    authorReading.projectProfileCodeText = projectsMap[authorReading.projectID]?._ProfileCode?.ProjectProfileCode_Text;
     ~~~
 
 ### Task 2: Deploy the application
