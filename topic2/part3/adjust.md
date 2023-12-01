@@ -21,9 +21,11 @@ In this exercise, you will perform the following tasks:
 
 2. Open **Communication Arrangements** application.
 
-  ![Alt text](../part2/img/0360-communication-arrangements-app.png) 
+    ![Alt text](../part2/img/0360-communication-arrangements-app.png) 
 
 3. Select your communication arrangement **Z_ENTERPRISEPROJECT_{YOUR_ID}** in the list.
+
+    ![Alt text](img/../../part2/img/0365-find-communication-arrangement.png)
 
 4. In the **Inbound Services** section choose **Download WSDL/Service Metadata** button and select your service from the popup window.
 
@@ -35,7 +37,7 @@ In this exercise, you will perform the following tasks:
 
 1. Open your project in SAP Business Application Studio.
 
-2. Right click on *topic2* &rarr; *Applications* &rarr; *author-readings* &rarr; *external_resources* folder.
+2. Right click on *btp-end-to-end-scenario-use-cases* &rarr; *external_resources* folder.
 
 3. Choose **Upload** option from the context menu.
 
@@ -43,7 +45,7 @@ In this exercise, you will perform the following tasks:
 
 4. Select your file saved in the previous task.
 
-5. Right click on *topic2* &rarr; *Applications* &rarr; *author-readings* folder.
+5. Right click on *btp-end-to-end-scenario-use-cases* folder.
 
 6. Choose **Open in Integrated Terminal** option from the context menu.
 
@@ -52,36 +54,75 @@ In this exercise, you will perform the following tasks:
 7. Enter the following command to convert the file to CDL.
 
 ~~~cli
-cds import ./external_resources/Z_ENTERPRISEPROJECT_{YOUR_ID}_0001.xml --as cds
+cds import ./external_resources/Z_PROJECT_{YOUR_ID}_0001.xml --as cds
 ~~~
 
+8. Make sure that you received the similar command response:
+
+~~~cli
+[cds] - imported API to srv/external/Z_PROJECT_AB123_0001
+~~~
 
 ### Task 3: Adjust the code
 
 Do the following changes in files (do not forget to replace **{YOUR_ID}** accordingly):
 
+> **Hint**: If you don't want to change **{YOUR_ID}** for every piece of code, just copy it as it is and then do mass replacement as it was done in the [Clone](../part1/clone.md) exercise, Task 3.
+
 #### package.json
 
-Add new API:
-~~~json
-      "MYAPI": {
+1. Remove unnecessary APIs:
+
+    ~~~json
+        "S4HC_API_ENTERPRISE_PROJECT_SRV_0002": {
+            "kind": "odata-v2",
+            "model": "srv/external/S4HC_API_ENTERPRISE_PROJECT_SRV_0002",
+            ...
+        },
+        "S4HC_ENTPROJECTPROCESSINGSTATUS_0001": {
+            "kind": "odata",
+            "model": "srv/external/S4HC_ENTPROJECTPROCESSINGSTATUS_0001",
+            ...
+        },
+        "S4HC_ENTPROJECTPROFILECODE_0001": {
+            "kind": "odata",
+            "model": "srv/external/S4HC_ENTPROJECTPROFILECODE_0001",
+            ...
+        },
+    ~~~
+
+2. Add the destinations for your API by replacing:
+
+    ~~~json
+    "Z_PROJECT_{YOUR_ID}_0001": {
         "kind": "odata",
-        "model": "srv/external/MYAPI",
+        "model": "srv/external/Z_PROJECT_{YOUR_ID}_0001"
+    }
+    ~~~
+
+    with
+
+    ~~~json
+    "Z_PROJECT_{YOUR_ID}_0001": {
+        "kind": "odata",
+        "model": "srv/external/Z_PROJECT_{YOUR_ID}_0001",
         "[sandbox]": {
-          "credentials": {
-            "url": "https://{{S4HC-hostname}}/sap/opu/odata4/sap/zc_{YOUR_ID}/srvd_a2x/sap/zc_{YOUR_ID}/0001/",
+            "credentials": {
+            "url": "https://{{S4HC-hostname}}/sap/opu/odata4/sap/zapi_project_{YOUR_ID}/srvd_a2x/sap/z_project_{YOUR_ID}/0001/",
             "authentication": "BasicAuthentication",
             "username": "{{test-user}}",
             "password": "{{test-password}}"
-          }
+            }
         },
         "[production]": {
-          "credentials": {
+            "credentials": {
             "destination": "s4hc",
-            "path": "/sap/opu/odata4/sap/zc_{YOUR_ID}/srvd_a2x/sap/zc_{YOUR_ID}/0001"
-          }
+            "path": "/sap/opu/odata4/sap/zapi_project_{YOUR_ID}/srvd_a2x/sap/z_project_{YOUR_ID}/0001/"
+            }
         }
-~~~
+    }
+    ~~~
+
 
 #### srv/service-models.cds
 
