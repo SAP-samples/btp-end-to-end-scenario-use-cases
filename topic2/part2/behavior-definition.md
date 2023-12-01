@@ -6,19 +6,24 @@ In this exercise, you will create a behavior definition projection which will co
 
 ## Content
 
-1. Right click on your package name created in the previous exercise.
+1. Right click on the root projection view **ZC_PROJECT_{YOUR_ID}**.
+
+2. Select **New Behavior Definition** option in the popup menu.
   
   ![Alt text](img/0160-new-behavior-definition.png) 
 
-2. 
+3. Enter the following details and then choose **Next**:
+   
+   - **Behavior Definition for Project** in the **Description** field.
+   - **Projection** in the **Implementation Type**
 
   ![Alt text](img/0163-behavior-definition-details.png) 
 
-3. 
+4. On the next screen select your transport and then choose **Finish** button.
 
   ![Alt text](img/0166-behavior-definition-transport.png) 
 
-4. Replace the proposed code with the one below (considering **{YOUR_ID}** replacement) to restrict all operations except of *create*:
+4. Replace the proposed code with the one below (considering **{YOUR_ID}** replacement) to restrict all the operations except of *create*:
 
   ~~~abap
   projection;
