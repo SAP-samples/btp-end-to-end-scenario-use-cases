@@ -36,5 +36,6 @@ You have got basic knowledge about business object projections and found the bas
 [Next Tutorial: Connect to the system](./adt.md)
 
 ## Further reading / Reference Links
+
 - [Business Object Interface](https://help.sap.com/docs/abap-cloud/abap-rap/business-object-interface)
 - [Business Object Projection](https://help.sap.com/docs/abap-cloud/abap-rap/business-object-projection)
