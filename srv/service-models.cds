@@ -104,69 +104,28 @@ service AuthorReadingManager @(
 
 
 // -------------------------------------------------------------------------------
-// Extend service AuthorReadingManager by S/4 projects (principal propagation)
+// Extend service AuthorReadingManager by S/4HANA Projects
 
 using { S4HC_API_ENTERPRISE_PROJECT_SRV_0002 as RemoteS4HCProject } from './external/S4HC_API_ENTERPRISE_PROJECT_SRV_0002';
-
 extend service AuthorReadingManager with {
-    entity S4HCProjects as projection on RemoteS4HCProject.A_EnterpriseProject {
-        key ProjectUUID as ProjectUUID,
-        ProjectInternalID as ProjectInternalID,
-        Project as Project,
-        ProjectDescription as ProjectDescription,
-        EnterpriseProjectType as EnterpriseProjectType,
-        ProjectStartDate as ProjectStartDate,
-        ProjectEndDate  as ProjectEndDate,
-        ProcessingStatus as ProcessingStatus,
-        ResponsibleCostCenter as ResponsibleCostCenter,
-        ProfitCenter as ProfitCenter,
-        ProjectProfileCode as ProjectProfileCode,
-        CompanyCode as CompanyCode,
-        ProjectCurrency as ProjectCurrency,
-        EntProjectIsConfidential as EntProjectIsConfidential,
-        to_EnterpriseProjectElement as to_EnterpriseProjectElement : redirected to S4HCEnterpriseProjectElement ,                
-        to_EntProjTeamMember as to_EntProjTeamMember : redirected to S4HCEntProjTeamMember    
-    }
-    entity S4HCEnterpriseProjectElement as projection on RemoteS4HCProject.A_EnterpriseProjectElement {
-        key ProjectElementUUID as ProjectElementUUID,
-        ProjectUUID as ProjectUUID,
-        ProjectElement as ProjectElement,
-        ProjectElementDescription as ProjectElementDescription,
-        PlannedStartDate as PlannedStartDate,
-        PlannedEndDate as PlannedEndDate
-    }
-
-    entity S4HCEntProjTeamMember as projection on RemoteS4HCProject.A_EnterpriseProjectTeamMember {
-        key TeamMemberUUID as TeamMemberUUID,        
-        ProjectUUID as ProjectUUID,
-        BusinessPartnerUUID as BusinessPartnerUUID,
-        to_EntProjEntitlement as to_EntProjEntitlement : redirected to S4HCEntProjEntitlement     
-    }
-
-    entity S4HCEntProjEntitlement as projection on RemoteS4HCProject.A_EntTeamMemberEntitlement {
-        key ProjectEntitlementUUID as ProjectEntitlementUUID,
-        TeamMemberUUID as TeamMemberUUID,
-        ProjectRoleType as ProjectRoleType        
-    }
-
+    entity S4HCProjects as projection on RemoteS4HCProject.A_EnterpriseProject
+    entity S4HCEnterpriseProjectElement as projection on RemoteS4HCProject.A_EnterpriseProjectElement
 };
 
 // Extend service AuthorReadingManager by S4HC Projects ProjectProfileCode
 using { S4HC_ENTPROJECTPROCESSINGSTATUS_0001 as RemoteS4HCProjectProcessingStatus } from './external/S4HC_ENTPROJECTPROCESSINGSTATUS_0001';
-
 extend service AuthorReadingManager with {
     entity S4HCProjectsProcessingStatus as projection on RemoteS4HCProjectProcessingStatus.ProcessingStatus {
-        key ProcessingStatus as ProcessingStatus,
-        ProcessingStatusText as ProcessingStatusText    
-    }    
+        key ProcessingStatus,
+        ProcessingStatusText
+    }
 };
 
 // Extend service AuthorReadingManager by S4HC Projects ProcessingStatus
 using { S4HC_ENTPROJECTPROFILECODE_0001 as RemoteS4HCProjectProjectProfileCode } from './external/S4HC_ENTPROJECTPROFILECODE_0001';
-
 extend service AuthorReadingManager with {
     entity S4HCProjectsProjectProfileCode as projection on RemoteS4HCProjectProjectProfileCode.ProjectProfileCode {
-        key ProjectProfileCode as ProjectProfileCode,
-        ProjectProfileCodeText as ProjectProfileCodeText    
-    }    
+        key ProjectProfileCode,
+        ProjectProfileCodeText
+    }
 };

@@ -73,26 +73,6 @@ annotate AuthorReadingManager.S4HCEnterpriseProjectElement with @(restrict : [
         to    : 'AuthorReadingAdminRole'
     }
 ]);
-annotate AuthorReadingManager.S4HCEntProjTeamMember with @(restrict : [
-    {
-        grant : ['*'],
-        to    : 'AuthorReadingManagerRole',
-    },
-    {
-        grant : ['*'],
-        to    : 'AuthorReadingAdminRole'
-    }
-]);
-annotate AuthorReadingManager.S4HCEntProjEntitlement with @(restrict : [
-    {
-        grant : ['*'],
-        to    : 'AuthorReadingManagerRole',
-    },
-    {
-        grant : ['*'],
-        to    : 'AuthorReadingAdminRole'
-    }
-]);
 annotate AuthorReadingManager.S4HCProjectsProjectProfileCode with @(restrict : [
 {
     grant : ['*'],

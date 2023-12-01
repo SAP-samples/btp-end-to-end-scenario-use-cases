@@ -527,7 +527,7 @@ srv.on("userInfo", async (req) => {
 // Implementation of remote OData services (back-channel integration with S4HC)
 // Delegate OData requests to S4HC remote project entities
 srv.on(["READ","CREATE","UPDATE","DELETE"], 
-       ["S4HCProjects","S4HCEnterpriseProjectElement","S4HCEntProjEntitlement","S4HCEntProjTeamMember"], 
+       ["S4HCProjects","S4HCEnterpriseProjectElement"], 
        async (req) => {
     return await connectorS4HC.delegateODataRequests(req,"S4HC_API_ENTERPRISE_PROJECT_SRV_0002");
     });
