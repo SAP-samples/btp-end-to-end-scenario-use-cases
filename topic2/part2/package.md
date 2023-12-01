@@ -6,7 +6,7 @@ In this exercise, you will create a package for all your development artifacts i
 
 ## Content
 
-1. Right click on the **ZLOCAL** package under the **Favorite Packages** in your **DEVEXT_WORKSHOP**.
+1. Right click on the **ZLOCAL** package under the **Favorite Packages** in your **DEVEXT_WORKSHOP** project.
 
 2. Choose **New** &rarr; **ABAP Package** option.
 
@@ -34,4 +34,4 @@ You have created the package where all your further objects will be stored.
 
 ## Further reading / Reference Links
 
-???
+- [ABAP Packages](https://help.sap.com/docs/ABAP_PLATFORM/c238d694b825421f940829321ffa326a/4ec14bab6e391014adc9fffe4e204223.html)

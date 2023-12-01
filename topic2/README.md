@@ -64,8 +64,6 @@ Later you will create a tailored API using SAP Developer Extensibility. To do th
 1. [Adjust code of the CAP application](./part3/adjust.md)
 2. [Test the new app](./part3/test.md)
 
-Mock server???
-
 ## Troubleshooting
 
 Please check [known issues](./troubleshooting.md) if you stuck with some exercises.
