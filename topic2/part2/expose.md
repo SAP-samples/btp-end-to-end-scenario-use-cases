@@ -40,7 +40,7 @@ In this exercise, you will perform the following tasks:
     expose ZC_PROJECT_{YOUR_ID}          as A_EnterpriseProject;
     expose ZC_PROJECT_EL_{YOUR_ID}       as A_EnterpriseProjectElement;
     expose I_EntProjProcessingStatus as A_EntProjProcessingStatus;
-    expose I_ProjectProfileCode      as A_PorjectProfileCode;
+    expose I_ProjectProfileCode      as A_ProjectProfileCode;
   }
   ~~~
 
