@@ -48,6 +48,8 @@ In this exercise, you will create a communication arrangement which will expose 
 
 You have created the communication arrangement. Now your new service is fully accessible.
 
+[Next tutorial: Test the API](./test.md)
+
 ## Further reading / Reference Links
 
 - [Communication Management](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/2e84a10c430645a88bdbfaaa23ac9ff7.html)

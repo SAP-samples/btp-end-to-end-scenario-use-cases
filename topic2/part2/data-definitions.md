@@ -137,7 +137,7 @@ define root view entity ZC_PROJECT_{YOUR_ID}
 
 You have created CDS view projections. These projections can be used now as a base to create behavior definition projection.
 
-[Next Tutorial: Create behavior definition](./part2/behavior-definition.md)
+[Next Tutorial: Create behavior definition](./behavior-definition.md)
 
 ## Further reading / Reference Links
 
