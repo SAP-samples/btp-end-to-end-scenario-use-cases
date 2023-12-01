@@ -11,7 +11,7 @@ In this exercise, you will test the service created in the Part 2.
 1. In the new browser tab paste the URL copied in the [previous exercise](./arrangement.md).
 
 2. When credentials will be requested enter the following data:
-  - **DEVEXT_WORKSHOPER** in the field **Username**
+  - **DEVEXT_WORKSHOPPER** in the field **Username**
   - Password provided by the workshop host in the field **Password**
 
   ![Alt text](img/0430-credentials-request-on-test.png) 

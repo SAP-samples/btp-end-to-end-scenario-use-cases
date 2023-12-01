@@ -34,7 +34,7 @@ In this exercise, you will create a communication arrangement which will expose 
 
   ![Alt text](img/0400-select-communication-system.png) 
 
-9. Select **DEVEXT_WORKSHOPER** user.
+9. Select **DEVEXT_WORKSHOPPER** user.
 
   ![Alt text](img/0410-select-communication-user.png) 
 

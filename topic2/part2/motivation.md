@@ -22,9 +22,6 @@ As always the creating of the own service has its pros and cons:
 ### Cons:
 - ABAP Developer skills are needed
 - Lifecycle responsibility
-- Standard business logic is not available
-
-> The last 2 points could be eliminated by [extending the API](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/492d88ed89f640e5b18dd1c57f6817b1.html) without creating a new service instead. But this is not the focus of this workshop.
 
 [Next tutorial: Connect to the System](./adt.md)
 
