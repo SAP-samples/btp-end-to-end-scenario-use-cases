@@ -36,9 +36,11 @@ In this exercise, you will create a communication arrangement which will expose 
 
 9. Select **DEVEXT_WORKSHOPPER** user.
 
+> We use basic authentication here to simplify the API test in browser. For the access from CAP application we will still use user propagation approach with SAML Assertion.
+
   ![Alt text](img/0410-select-communication-user.png) 
 
-10. Copy the URL for the service and choose **Save** button.
+10.  Copy the URL for the service and choose **Save** button.
 
   ![Alt text](img/0420-save-communication-arrangement.png)
 
@@ -48,4 +50,4 @@ You have created the communication arrangement. Now your new service is fully ac
 
 ## Further reading / Reference Links
 
-???
+- [Communication Management](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/2e84a10c430645a88bdbfaaa23ac9ff7.html)
