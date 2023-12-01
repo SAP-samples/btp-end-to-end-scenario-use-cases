@@ -23,7 +23,7 @@ As always the creating of the own service has its pros and cons:
 - ABAP Developer skills are needed
 - Lifecycle responsibility
 
-[Next tutorial: Connect to the System](./adt.md)
+[Next tutorial: Explore Business Object Projection](./bo-projection.md)
 
 ## Further reading / Reference Links
 

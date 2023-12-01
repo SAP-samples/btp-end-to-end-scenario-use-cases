@@ -49,13 +49,15 @@ Later you will create a tailored API using SAP Developer Extensibility. To do th
 ### SAP Developer Extensibility
 
 1. [Motivation](./part2/motivation.md)
-2. [Connect to the system](./part2/adt.md)
-3. [Create package](./part2/package.md)
-4. [Create data definitions](./part2/data-definitions.md)
-5. [Expose an OData service](./part2/expose.md)
-6. [Create communication scenario](./part2/scenario.md)
-7. [Create communication arrangement](./part2/arrangement.md)
-8. [OPTIONAL: Test the API](./part2/test.md)
+2. [Explore Business Object Projection](./part2/bo-projection.md)
+3. [Connect to the system](./part2/adt.md)
+4. [Create package](./part2/package.md)
+5. [Create data definitions](./part2/data-definitions.md)
+6. [Create behavior definition](./part2/behavior-definition.md)
+7. [Expose an OData service](./part2/expose.md)
+8. [Create communication scenario](./part2/scenario.md)
+9. [Create communication arrangement](./part2/arrangement.md)
+10. [OPTIONAL: Test the API](./part2/test.md)
 
 ### Adjusting CAP Application for own API Integration
 

@@ -77,10 +77,13 @@ association [0..1] to I_ProjectProfileCode as _ProfileCode on  $projection.Proje
 
 You have created a data entity. This entity is now ready to be exposed as a service.
 
-[Next Tutorial: Expose an OData Service](./expose.md)
+[Next Tutorial: Create behavior definition](./part2/behavior-definition.md)
 
 ## Further reading / Reference Links
 
 - [Naming convention](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/8b8f9d8f3cb948b2841d6045a255e503.html)
 - [Developing Managed Transactional Apps](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/b5bba99612cf4637a8b72a3fc82c22d9.html)
 - [Virtual Data Model and CDS Views](https://help.sap.com/docs/SAP_S4HANA_ON-PREMISE/ee6ff9b281d8448f96b4fe6c89f2bdc8/0a875bc7a005465aad92c08becc11776.html)
+- [SAP Help: CDS Projection](https://help.sap.com/docs/abap-cloud/abap-rap/cds-projection-view)
+- [CDS Projection Views in ABAP CDS: What’s Your Flavor](https://blogs.sap.com/2022/07/04/cds-projection-views-in-abap-cds-whats-your-flavor/)
+- [ABAP Documentation: CDS Projection Views - Transactional Queries](https://help.sap.com/doc/abapdocu_latest_index_htm/latest/en-US/index.htm?file=abencds_proj_view_element_list.htm)
