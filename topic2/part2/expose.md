@@ -10,6 +10,7 @@ In this exercise, you will perform the following tasks:
 
 1. Create service definition
 2. Create service binding
+3. Clean up authorization details
 
 ## Content
 
@@ -74,6 +75,23 @@ In this exercise, you will perform the following tasks:
 
   ![Alt text](img/0260-publish-service-binding.png)
 
+### Task 3. Clean up authorization details
+
+> Every SAP Business Object contains its own authorization concept which is at the end defined by the list of authorization objects. After the service binding is created it generates the default values for these authorization objects. In this workshop we do not touch the authorization aspects at all. But for the further exercises these default values should be edited as they contain the objects which are not yet released for cloud development.
+
+1. Open the generated Authorization Default Values in your package.
+
+  ![Alt text](img/0262-edit-authorization-default-values.png) 
+
+2. Select object **C_PROJ_PRC** and choose **Delete selected item** button.
+
+  ![Alt text](img/0264-delete-prc-object.png) 
+
+3. Repeat the previous step with the objects **C_PRPS_KOK** and **C_PRPS_PRC**.
+
+4. Choose **Save** button. Make sure that the list doesn't contain the objects mentioned above after save.
+
+  ![Alt text](img/0266-save-default-values.png)
 
 ## Result
 
@@ -85,3 +103,4 @@ You have created a service definition and a service binding. Now your service is
 
 - [Service Definition](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/b09e4d53bfca4544a9f8910bcc2cd9d6.html)
 - [Service Binding](https://help.sap.com/docs/ABAP_PLATFORM_NEW/fc4c71aa50014fd1b43721701471913d/b58a3c27df4e406f9335d4b346f6be04.html)
+- [Editing Authorization Default Values](https://help.sap.com/docs/SAP_S4HANA_CLOUD/6aa39f1ac05441e5a23f484f31e477e7/266999e6b9244e728583e10dbbffc8bd.html)
