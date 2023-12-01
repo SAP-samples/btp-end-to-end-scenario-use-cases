@@ -8,66 +8,14 @@ In this exercise, you will adjust your CAP application to be able to consume you
 
 In this exercise, you will perform the following tasks:
 
-1. Download API metadata
-2. Import the metadata
-3. Adjust the code
-4. Deploy the application
+1. Adjust the code
+2. Deploy the application
 
 ## Content
 
-### Task 1: Download API metadata
-
-1. In your browser open *S/4HC Customizing Tenant*.
-
-2. Open **Communication Arrangements** application.
-
-    ![Alt text](../part2/img/0360-communication-arrangements-app.png) 
-
-3. Select your communication arrangement **Z_ENTERPRISEPROJECT_{YOUR_ID}** in the list.
-
-    ![Alt text](img/../../part2/img/0365-find-communication-arrangement.png)
-
-4. In the **Inbound Services** section choose **Download WSDL/Service Metadata** button and select your service from the popup window.
-
-    ![Download Metadata](img/0020-download-metadata.png)
-
-5. Save the file somewhere on your laptop.
-
-### Task 2: Import the metadata
-
-1. Open your project in SAP Business Application Studio.
-
-2. Right click on *btp-end-to-end-scenario-use-cases* &rarr; *external_resources* folder.
-
-3. Choose **Upload** option from the context menu.
-
-    ![upload](img/0025-upload.png)
-
-4. Select your file saved in the previous task.
-
-5. Right click on *btp-end-to-end-scenario-use-cases* folder.
-
-6. Choose **Open in Integrated Terminal** option from the context menu.
-
-    ![open terminal](img/0030-open-terminal.png)
-
-7. Enter the following command to convert the file to CDL.
-
-~~~cli
-cds import ./external_resources/Z_PROJECT_{YOUR_ID}_0001.xml --as cds
-~~~
-
-8. Make sure that you received the similar command response:
-
-~~~cli
-[cds] - imported API to srv/external/Z_PROJECT_AB123_0001
-~~~
-
-### Task 3: Adjust the code
+### Task 1: Adjust the code
 
 Do the following changes in files (do not forget to replace **{YOUR_ID}** accordingly):
-
-> **Hint**: If you don't want to change **{YOUR_ID}** for every piece of code, just copy it as it is and then do mass replacement as it was done in the [Clone](../part1/clone.md) exercise, Task 3.
 
 #### package.json
 
@@ -126,92 +74,76 @@ Do the following changes in files (do not forget to replace **{YOUR_ID}** accord
 
 #### srv/service-models.cds
 
-1. Replace
+1. Change the old external model to the new API by replacing:
     ~~~js
-    toS4HCProject: Association to RemoteS4HCProject.A_EnterpriseProject on toS4HCProject.Project = $projection.projectID
-    ~~~
+    // -------------------------------------------------------------------------------
+    // Extend service AuthorReadingManager by S/4HANA Projects
 
-    with
-    ~~~js
-    toS4HCProject: Association to MyAPI.A_EnterpriseProject on toS4HCProject.Project = $projection.projectID;
-    ~~~
+    using { S4HC_API_ENTERPRISE_PROJECT_SRV_0002 as RemoteS4HCProject } from './external/S4HC_API_ENTERPRISE_PROJECT_SRV_0002';
+    extend service AuthorReadingManager with {
+        entity S4HCProjects as projection on RemoteS4HCProject.A_EnterpriseProject
+        entity S4HCEnterpriseProjectElement as projection on RemoteS4HCProject.A_EnterpriseProjectElement
+    };
 
-2. Replace
-    ~~~js
     // Extend service AuthorReadingManager by S4HC Projects ProjectProfileCode
     using { S4HC_ENTPROJECTPROCESSINGSTATUS_0001 as RemoteS4HCProjectProcessingStatus } from './external/S4HC_ENTPROJECTPROCESSINGSTATUS_0001';
-
     extend service AuthorReadingManager with {
         entity S4HCProjectsProcessingStatus as projection on RemoteS4HCProjectProcessingStatus.ProcessingStatus {
-            key ProcessingStatus as ProcessingStatus,
-            ProcessingStatusText as ProcessingStatusText    
-        }    
+            key ProcessingStatus,
+            ProcessingStatusText
+        }
     };
 
     // Extend service AuthorReadingManager by S4HC Projects ProcessingStatus
     using { S4HC_ENTPROJECTPROFILECODE_0001 as RemoteS4HCProjectProjectProfileCode } from './external/S4HC_ENTPROJECTPROFILECODE_0001';
-
     extend service AuthorReadingManager with {
         entity S4HCProjectsProjectProfileCode as projection on RemoteS4HCProjectProjectProfileCode.ProjectProfileCode {
-            key ProjectProfileCode as ProjectProfileCode,
-            ProjectProfileCodeText as ProjectProfileCodeText    
-        }    
+            key ProjectProfileCode,
+            ProjectProfileCodeText
+        }
     };
     ~~~
 
     with
     ~~~js
-    using { MYAPI as MyAPI } from './external/MYAPI';
-
+    using { Z_PROJECT_{YOUR_ID}_0001 as RemoteS4HCProject } from './external/Z_PROJECT_{YOUR_ID}_0001';
     extend service AuthorReadingManager with {
-        entity S4HCProjectsExt as projection on MyAPI.A_EnterpriseProject
+        entity S4HCProjects as projection on RemoteS4HCProject.A_EnterpriseProject {
+            key ProjectUUID,
+                ProjectInternalID,
+                Project,
+                ProjectDescription,
+                EnterpriseProjectType,
+                ProjectStartDate,
+                ProjectEndDate,
+                ProcessingStatus,
+                ResponsibleCostCenter,
+                ProfitCenter,
+                ProjectProfileCode,
+                CompanyCode,
+                ProjectCurrency,
+                EntProjectIsConfidential,
+                to_EnterpriseProjectElement : redirected to S4HCEnterpriseProjectElement,                
+                _ProcessingStatus,
+                _ProfileCode            
+        }
+        entity S4HCEnterpriseProjectElement as projection on RemoteS4HCProject.A_EnterpriseProjectElement
+        entity S4HCProjectsProcessingStatus as projection on RemoteS4HCProject.A_EntProjProcessingStatus
+        entity S4HCProjectsProjectProfileCode as projection on RemoteS4HCProject.A_ProjectProfileCode
     };
     ~~~
-
-#### srv/service-auth.cds
-
-Replace
-~~~js
-annotate AuthorReadingManager.S4HCProjectsProjectProfileCode with @(restrict : [
-{
-    grant : ['*'],
-    to    : 'AuthorReadingManagerRole',
-},
-{
-    grant : ['*'],
-    to    : 'AuthorReadingAdminRole'
-}
-]);
-annotate AuthorReadingManager.S4HCProjectsProcessingStatus with @(restrict : [
-    {
-        grant : ['*'],
-        to    : 'AuthorReadingManagerRole',
-    },
-    {
-        grant : ['*'],
-        to    : 'AuthorReadingAdminRole'
-    }
-]);
-~~~
-
-with
-~~~js
-annotate AuthorReadingManager.S4HCProjectsExt with @(restrict : [
-    {
-        grant : ['*'],
-        to    : 'AuthorReadingManagerRole',
-    },
-    {
-        grant : ['*'],
-        to    : 'AuthorReadingAdminRole'
-    }
-]);
-~~~
 
 #### srv/service-implementation.js
 
 Replace
 ~~~js
+// Implementation of remote OData services (back-channel integration with S4HC)
+// Delegate OData requests to S4HC remote project entities
+srv.on(["READ","CREATE","UPDATE","DELETE"], 
+       ["S4HCProjects","S4HCEnterpriseProjectElement"], 
+       async (req) => {
+    return await connectorS4HC.delegateODataRequests(req,"S4HC_API_ENTERPRISE_PROJECT_SRV_0002");
+    });
 srv.on(["READ","CREATE","UPDATE","DELETE"], "S4HCProjectsProcessingStatus", async (req) => {
     return await connectorS4HC.delegateODataRequests(req,"S4HC_ENTPROJECTPROCESSINGSTATUS_0001");
 });
@@ -223,17 +155,34 @@ srv.on(["READ","CREATE","UPDATE","DELETE"], "S4HCProjectsProjectProfileCode", as
 with
 ~~~js
 // Implementation of remote OData services (back-channel integration with S4HC)
-// Delegate OData requests to S4HC remote project entities for new APIs
+// Delegate OData requests to S4HC remote project entities
 srv.on(["READ","CREATE","UPDATE","DELETE"], 
-       ["S4HCProjectsExt","S4HCProjectsProcessingStatus","S4HCProjectsProjectProfileCode"], 
+       ["S4HCProjects","S4HCEnterpriseProjectElement","S4HCProjectsProcessingStatus","S4HCProjectsProjectProfileCode"], 
        async (req) => {
-    return await connectorS4HC.delegateODataRequests(req,"MYAPI");
+    return await connectorS4HC.delegateODataRequests(req,"Z_PROJECT_{YOUR_ID}_0001");
     });
 ~~~
 
 #### srv/connector-s4hc.js
 
-1. Replace 
+1. Replace
+    ~~~js
+    var generatedStartDate      = moment(authorReadingDate).subtract(30, "days").toISOString().substring(0, 10) + "T00:00:00.0000000Z";
+    var generatedEndDate        = moment(authorReadingDate).toISOString().substring(0, 10) + "T00:00:00.0000000Z";
+    var generatedTask1EndDate   = moment(authorReadingDate).subtract(4, "days").toISOString().substring(0, 10) + "T00:00:00.0000000Z";
+    var generatedTask2StartDate = moment(authorReadingDate).subtract(1, "days").toISOString().substring(0, 10) + "T00:00:00.0000000Z";
+    ~~~
+
+    with
+
+    ~~~js
+    var generatedStartDate      = moment(authorReadingDate).subtract(30, "days").toISOString().substring(0, 10);
+    var generatedEndDate        = moment(authorReadingDate).toISOString().substring(0, 10);
+    var generatedTask1EndDate   = moment(authorReadingDate).subtract(4, "days").toISOString().substring(0, 10);
+    var generatedTask2StartDate = moment(authorReadingDate).subtract(1, "days").toISOString().substring(0, 10);
+    ~~~
+
+2. Replace 
     ~~~js
     const s4hcProject = await cds.connect.to('S4HC_API_ENTERPRISE_PROJECT_SRV_0002');
     const s4hcProjectsProjectProfileCode = await cds.connect.to('S4HC_ENTPROJECTPROFILECODE_0001');
@@ -242,24 +191,24 @@ srv.on(["READ","CREATE","UPDATE","DELETE"],
 
     with
     ~~~js
-    const s4hcProject = await cds.connect.to('MYAPI');
+    const s4hcProject = await cds.connect.to('Z_PROJECT_{YOUR_ID}_0001');
     ~~~
 
-2. Replace
+3. Replace
     ~~~js
     const projects = await s4hcProject.run( SELECT.from('AuthorReadingManager.S4HCProjects').where({ Project: projectIDs }) );
     ~~~
 
     with
     ~~~js
-    const projects = await s4hcProject.run( SELECT.from('AuthorReadingManager.S4HCProjectsExt', a => { 
+    const projects = await s4hcProject.run( SELECT.from('AuthorReadingManager.S4HCProjects', a => { 
             a`.*`, 
             a._ProcessingStatus (b => { }),
             a._ProfileCode (c => { })
         }).where({ Project: projectIDs }) );
     ~~~
 
-3. Replace
+4. Replace
     ~~~js
     // Get Project Profile Code Text from S4HC 
     var projectProfileCode = authorReading.toS4HCProject.ProjectProfileCode;
@@ -281,7 +230,7 @@ srv.on(["READ","CREATE","UPDATE","DELETE"],
     authorReading.projectProfileCodeText = projectsMap[authorReading.projectID]._ProfileCode.ProjectProfileCode_Text;
     ~~~
 
-### Task 4: Deploy the application
+### Task 2: Deploy the application
 
 1. Repeat the steps described in the [Deploy](../part1/deploy.md) exercise.
 
@@ -290,6 +239,4 @@ srv.on(["READ","CREATE","UPDATE","DELETE"],
 
 The application has been deployed. You can now check the applications and services created for the app in the Cloud Foundry space.
 
-## Further reading / Reference Links
-
-???
+[Next tutorial: Test the new app](./test.md)
