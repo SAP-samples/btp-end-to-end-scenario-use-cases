@@ -31,7 +31,7 @@ In this exercise, you will deploy the application in Cloud Foundry space.
   
   
 
-3. Log in with your email user with the origin to the workshop IAS and enter your password:
+3. Log in with your email user and origin of the workshop IAS. Then enter your password.
 
   ```
     cf login -u <your user> --origin pesworkshops-platform
@@ -53,7 +53,7 @@ In this exercise, you will deploy the application in Cloud Foundry space.
 
 > It may take several minutes. But you shouldn't wait until it's done and proceed to the following exercise.
 
-5. The deployment is finished when you get a similar message:
+3. The deployment is finished when you get a similar message:
 
 ~~~log
 Application "author-readings-srv-{your id}" started and available at "{subaccount}-dev-author-readings-srv-ab123.cfapps.eu10-004.hana.ondemand.com"

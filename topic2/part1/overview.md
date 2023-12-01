@@ -58,6 +58,4 @@ You can explore all the details of the destinations in your SAP BTP subaccount:
 
 You have explored the structure of the CAP application and have a basic understanding of how the S/4HANA Cloud integration works.
 
-## Further reading / Reference Links
-
-???
+[Next Tutorial: Manage Authorization](./authorization.md)
