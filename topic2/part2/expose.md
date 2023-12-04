@@ -73,6 +73,8 @@ In this exercise, you will perform the following tasks:
 
 6. After the service binding was activated, choose **Publish** button.  
 
+> It may take several minutes. Please be patient.
+
   ![Alt text](img/0260-publish-service-binding.png)
 
 ### Task 3. Clean up authorization details
