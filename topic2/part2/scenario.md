@@ -54,6 +54,8 @@ In this exercise, you will create a communication scenario to define the service
 
 12. Choose **Publish locally** button.  
 
+> It may take several minutes. Please be patient.
+
   ![Alt text](img/0340-publish-scenario.png)
 
 13. In the coming popup confirm the scenario saving with the **OK** button. 
