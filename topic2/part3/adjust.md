@@ -125,7 +125,6 @@ Do the following changes in files (do not forget to replace **{YOUR_ID}** accord
                 CompanyCode,
                 ProjectCurrency,
                 EntProjectIsConfidential,
-                to_EnterpriseProjectElement : redirected to S4HCEnterpriseProjectElement,                
                 _ProcessingStatus,
                 _ProfileCode            
         }
