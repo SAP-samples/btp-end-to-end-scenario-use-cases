@@ -79,7 +79,7 @@ In this exercise, you will perform the following tasks:
 
 > Every SAP Business Object contains its own authorization concept which is at the end defined by the list of authorization objects. After the service binding is created it generates the default values for these authorization objects. In this workshop we do not touch the authorization aspects at all. But for the further exercises these default values should be edited as they contain the objects which are not yet released for cloud development.
 
-1. Open the generated Authorization Default Values in your package.
+1. Open the generated Authorization Default Values from your new service binding.
 
   ![Alt text](img/0262-edit-authorization-default-values.png) 
 
