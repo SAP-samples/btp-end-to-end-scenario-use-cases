@@ -93,7 +93,7 @@ In this exercise, you will perform the following tasks:
 
   ![Alt text](img/0264-delete-prc-object.png) 
 
-3. Repeat the previous step with the objects **C_PRPS_KOK** and **C_PRPS_PRC**.
+3. Repeat the previous step with the objects **C_PROJ_KOK**, **C_PRPS_KOK** and **C_PRPS_PRC**.
 
 4. Choose **Save** button. Make sure that the list doesn't contain the objects mentioned above after save.
 

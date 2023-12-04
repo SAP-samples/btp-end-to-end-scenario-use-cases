@@ -43,6 +43,8 @@ In this exercise, you will perform the following tasks:
 
 7. Replace the code of the view with the one below (considering **{YOUR_ID}** replacement) and then choose **Save** button.
 
+> NOTE: You will probably notice that there's an error in the code below. That happens because we have cross-links between both objects (from parent to child and vice versa). These objects cannot be activated one by one. So we will save them both and then activate at once. So no worries about any error message in this step.
+
 ~~~abap
 @EndUserText.label: 'Projection view for Project Element'
 @AccessControl.authorizationCheck: #NOT_REQUIRED

@@ -32,7 +32,7 @@ The role collections defined in *xs-security.json* file are available in SAP BTP
 
 You have all the necessary roles assigned to your user. Your application is fully accessible now.
 
-[Next Tutorial: Explore the features of the application](./part1/explore.md)
+[Next Tutorial: Explore the features of the application](./explore.md)
 
 ## Further reading / Reference Links
 ???
