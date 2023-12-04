@@ -97,18 +97,20 @@ async function readProject(authorReadings) {
             for (const authorReading of asArray(authorReadings)) {
                 authorReading.toS4HCProject = projectsMap[authorReading.projectID];
 
-                // Get Project Profile Code Text from S4HC 
-                var projectProfileCode = authorReading.toS4HCProject.ProjectProfileCode;
-                const S4HCProjectsProjectProfileCodeRecords = await s4hcProjectsProjectProfileCode.run( SELECT.from('AuthorReadingManager.S4HCProjectsProjectProfileCode').where({ ProjectProfileCode: projectProfileCode }) );
-                for (const S4HCProjectsProjectProfileCodeRecord of S4HCProjectsProjectProfileCodeRecords) {
-                    authorReading.projectProfileCodeText = S4HCProjectsProjectProfileCodeRecord.ProjectProfileCodeText;
-                }
-
-                // Get Project Processing Status Text from S4HC 
-                var processingStatus = authorReading.toS4HCProject.ProcessingStatus;;
-                const S4HCProjectsProcessingStatusRecords = await s4hcProjectsProcessingStatus.run( SELECT.from('AuthorReadingManager.S4HCProjectsProcessingStatus').where({ ProcessingStatus: processingStatus }) );
-                for (const S4HCProjectsProcessingStatusRecord of S4HCProjectsProcessingStatusRecords) {
-                    authorReading.processingStatusText = S4HCProjectsProcessingStatusRecord.ProcessingStatusText;
+                IF (authorReading.toS4HCProject) {
+                    // Get Project Profile Code Text from S4HC 
+                    var projectProfileCode = authorReading.toS4HCProject.ProjectProfileCode;
+                    const S4HCProjectsProjectProfileCodeRecords = await s4hcProjectsProjectProfileCode.run( SELECT.from('AuthorReadingManager.S4HCProjectsProjectProfileCode').where({ ProjectProfileCode: projectProfileCode }) );
+                    for (const S4HCProjectsProjectProfileCodeRecord of S4HCProjectsProjectProfileCodeRecords) {
+                        authorReading.projectProfileCodeText = S4HCProjectsProjectProfileCodeRecord.ProjectProfileCodeText;
+                    }
+    
+                    // Get Project Processing Status Text from S4HC 
+                    var processingStatus = authorReading.toS4HCProject.ProcessingStatus;;
+                    const S4HCProjectsProcessingStatusRecords = await s4hcProjectsProcessingStatus.run( SELECT.from('AuthorReadingManager.S4HCProjectsProcessingStatus').where({ ProcessingStatus: processingStatus }) );
+                    for (const S4HCProjectsProcessingStatusRecord of S4HCProjectsProcessingStatusRecords) {
+                        authorReading.processingStatusText = S4HCProjectsProcessingStatusRecord.ProcessingStatusText;
+                    }
                 }
             };
         }
