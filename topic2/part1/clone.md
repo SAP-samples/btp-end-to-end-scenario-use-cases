@@ -81,7 +81,7 @@ cd projects
 4. In the terminal install the packages with the command:
 
   ```cli
-  npm i
+  npm i --save-dev
   ```
 
   ![Alt text](img/0110-npm-install.png)
