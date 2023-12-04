@@ -106,6 +106,8 @@ Do the following changes in files (do not forget to replace **{YOUR_ID}** accord
 
     with
     ~~~js
+    // -------------------------------------------------------------------------------
+    // Extend service AuthorReadingManager by S/4HANA Projects    
     using { Z_PROJECT_{YOUR_ID}_0001 as RemoteS4HCProject } from './external/Z_PROJECT_{YOUR_ID}_0001';
     extend service AuthorReadingManager with {
         entity S4HCProjects as projection on RemoteS4HCProject.A_EnterpriseProject {
