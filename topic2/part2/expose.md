@@ -77,6 +77,10 @@ In this exercise, you will perform the following tasks:
 
   ![Alt text](img/0260-publish-service-binding.png)
 
+> Do not press the button twice as the publishing is in progress! Note the message in the header:
+
+  ![Alt text](img/0261-publishing-in-progress.png)
+
 ### Task 3. Clean up authorization details
 
 > Every SAP Business Object contains its own authorization concept which is at the end defined by the list of authorization objects. After the service binding is created it generates the default values for these authorization objects. In this workshop we do not touch the authorization aspects at all. But for the further exercises these default values should be edited as they contain the objects which are not yet released for cloud development.
