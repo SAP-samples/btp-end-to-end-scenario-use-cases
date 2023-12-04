@@ -97,7 +97,7 @@ async function readProject(authorReadings) {
             for (const authorReading of asArray(authorReadings)) {
                 authorReading.toS4HCProject = projectsMap[authorReading.projectID];
 
-                IF (authorReading.toS4HCProject) {
+                if (authorReading.toS4HCProject) {
                     // Get Project Profile Code Text from S4HC 
                     var projectProfileCode = authorReading.toS4HCProject.ProjectProfileCode;
                     const S4HCProjectsProjectProfileCodeRecords = await s4hcProjectsProjectProfileCode.run( SELECT.from('AuthorReadingManager.S4HCProjectsProjectProfileCode').where({ ProjectProfileCode: projectProfileCode }) );
