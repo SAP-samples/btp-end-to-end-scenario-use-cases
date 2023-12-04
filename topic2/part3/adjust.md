@@ -223,6 +223,7 @@ srv.on(["READ","CREATE","UPDATE","DELETE"],
         const S4HCProjectsProcessingStatusRecords = await s4hcProjectsProcessingStatus.run( SELECT.from('AuthorReadingManager.S4HCProjectsProcessingStatus').where({ ProcessingStatus: processingStatus }) );
         for (const S4HCProjectsProcessingStatusRecord of S4HCProjectsProcessingStatusRecords) {
             authorReading.processingStatusText = S4HCProjectsProcessingStatusRecord.ProcessingStatusText;
+        }
     }
     ~~~
 
