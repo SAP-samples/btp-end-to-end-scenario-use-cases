@@ -236,7 +236,7 @@ srv.on(["READ","CREATE","UPDATE","DELETE"],
 
 #### Check yourself
 
-> It can happen that you still have some **{YOUR_ID}** text in the code. Try to find them by searching the corresponding text in your project:
+> It can happen that you still have some **{YOUR_ID}** text in the code. Try to find them by searching the corresponding text in your project (don't forget to replace any finding):
 
 ![Alt text](./img/0035-check-your-id-in-code.png)
 
