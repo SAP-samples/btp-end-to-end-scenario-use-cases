@@ -234,6 +234,12 @@ srv.on(["READ","CREATE","UPDATE","DELETE"],
     authorReading.projectProfileCodeText = projectsMap[authorReading.projectID]?._ProfileCode?.ProjectProfileCode_Text;
     ~~~
 
+#### Check yourself
+
+> It can happen that you still have some **{YOUR_ID}** text in the code. Try to find them by searching the corresponding text in your project:
+
+![Alt text](0035-check-your-id)
+
 ### Task 2: Deploy the application
 
 1. Repeat the steps described in the [Deploy](../part1/deploy.md) exercise.
