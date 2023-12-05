@@ -40,7 +40,7 @@ In this exercise you will explorer the features of the deployed application and 
 
   ![Alt text](img/0230-navigate-to-project.png) 
 
-10. The interface of the application **Project Planning** will be opened with the newly created project.
+10. It will open **Project Planning** section of the **Monitor Projects** application for your newly created project.
 
   ![Alt text](img/0240-project-in-s4hc.png)
 
