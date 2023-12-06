@@ -16,7 +16,9 @@ The role collections defined in *xs-security.json* file are available in SAP BTP
 
 2. From your left-side subaccount menu, navigate to **Security** &rarr; **Users**.
 
-3. Find your user in the list and select it.
+3. Find your user in the list and select it
+
+> Always select the user with the **Custom IAS Tenant** in the **Identity Provider** field!
 
 4. Select **Assign Role Collection** button in the right part of the screen.
 
