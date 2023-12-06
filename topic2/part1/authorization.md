@@ -35,4 +35,5 @@ You have all the necessary roles assigned to your user. Your application is full
 [Next Tutorial: Explore the features of the application](./explore.md)
 
 ## Further reading / Reference Links
-???
+
+- [Roles and Role Collections](https://help.sap.com/docs/btp/sap-business-technology-platform/roles-and-role-collections?version=Cloud)
