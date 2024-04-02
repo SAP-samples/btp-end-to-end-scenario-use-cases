@@ -64,6 +64,7 @@ Later you will create a tailored API using SAP Developer Extensibility. To do th
 1. [Import metadata](./part3/metadata.md)
 2. [Adjust code of the CAP application](./part3/adjust.md)
 3. [Test the new app](./part3/test.md)
+4. [Integrate the application in SAP Build Workzone and SAP Mobile Start](./part3/workzone.md)
 
 ## Troubleshooting
 
