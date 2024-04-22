@@ -37,7 +37,8 @@ In this section you will create a SAP Build Work Zone site and call it on your m
 
       ![](./img/0231-create-role.png)
 
-5. Map your user to the new Role Collection. Go to the SAP BTP Cockpit. Select Security - Role Collection and select the Launchpad_\<yourid\> role collection
+5. Map your user to the new Role Collection. 
+    * Go to the SAP BTP Cockpit. Select Security - Role Collection and select the Launchpad_\<yourid\> role collection
    
       ![](./img/0240-map-role-to-user.png)
 
@@ -45,13 +46,14 @@ In this section you will create a SAP Build Work Zone site and call it on your m
    
       ![](./img/0245-map-role-to-user.png)
 
-6. Go back to SAP Build Work Zone. In the Content Manager create a new Group. Call it group_\<yourid> and assign your application to it. 
+6. Create a new Group 
+     * Go back to SAP Build Work Zone. In the Content Manager create a new Group. Call it group_\<yourid> and assign your application to it. 
   
       ![](./img/0250-create-group.png)
 
-7. Create a new site. Call it Launchpad_\<your_id>. 
+7. Create a new site. 
    
-   *  Open the **Site Directory** and choose **Create Site**
+   *  Open the **Site Directory** and choose **Create Site**. Call it Launchpad_\<your_id>. 
    
       ![](./img/0260-create-site.png)
 
@@ -59,11 +61,11 @@ In this section you will create a SAP Build Work Zone site and call it on your m
 
       ![](./img/0262-create-site.png)
 
-8. Select **Edit** and assign your role to the site. Press **Save**
+   * Select **Edit** and assign your role to the site. Press **Save**
    
    ![](./img/0265-create-site.png)
 
-9.  Call the site URL to open the launchpad.
+8.  Call the site URL to open the launchpad.
 
 
 ## Call your app with SAP Mobile Start
