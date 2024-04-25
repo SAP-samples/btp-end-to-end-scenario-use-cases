@@ -46,6 +46,8 @@
       "S4HC_API_ENTERPRISE_PROJECT_SRV_0002": {
         "kind": "odata-v2",
         "model": "srv/external/S4HC_API_ENTERPRISE_PROJECT_SRV_0002",
+        "csrf": true,
+        "csrfInBatch": true,        
         "[sandbox]": {
           "credentials": {
               "url": "https://{{S4HC-hostname}}/sap/opu/odata/sap/API_ENTERPRISE_PROJECT_SRV;v=0002",
