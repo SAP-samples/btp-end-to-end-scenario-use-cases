@@ -56,7 +56,7 @@ In this exercise, you will deploy the application in Cloud Foundry space.
 3. The deployment is finished when you get a similar message:
 
 ~~~log
-Application "author-readings-srv-{your id}" started and available at "{subaccount}-dev-author-readings-srv-ab123.cfapps.eu10-004.hana.ondemand.com"
+Application "author-readings-srv-{your id}" started and available at "{subaccount}-dev-author-readings-srv-ab123.cfapps.us10.hana.ondemand.com"
 ~~~
 
 ## Result
