@@ -28,7 +28,7 @@ In this exercise, you will do the final test of your application and make sure t
 
 8. Scroll through the logs and make sure that there's no any error. You can also check that the external request goes to the **Z_PROJECT_{YOUR_ID}_0001** API via **s4hc** destination (the one with user propagation).
 
-  ![Alt text](img/0100-log-result.png)
+  ![Alt text](img/0101-log-result.png)
 
 ## Result
 
