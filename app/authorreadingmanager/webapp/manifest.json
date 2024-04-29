@@ -62,9 +62,11 @@
             "css": []
         },
         "dependencies": {
-            "minUI5Version": "1.120.1",
+            "minUI5Version": "1.123.1",
             "libs": {
+                "sap.m": {},                
                 "sap.ui.core": {},
+                "sap.ushell": {},                
                 "sap.fe.templates": {}
             }
         },
@@ -75,7 +77,10 @@
             },
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/i18n.properties"
+                "uri": "i18n/i18n.properties",
+                "settings": {
+                    "bundleName": "authorreadingmanager-IB369.i18n.i18n"
+                }
             },
             "": {
                 "dataSource": "mainService",
@@ -113,13 +118,20 @@
                     "name": "sap.fe.templates.ListReport",
                     "options": {
                         "settings": {
-                            "entitySet": "AuthorReadings",
+                            "contextPath": "/AuthorReadings",
                             "initialLoad": true,
                             "variantManagement": "Page",
                             "navigation": {
                                 "AuthorReadings": {
                                     "detail": {
                                         "route": "AuthorReadingsObjectPage"
+                                    }
+                                }
+                            },
+                            "controlConfiguration": {
+                                "@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "tableSettings": {
+                                        "type": "ResponsiveTable"
                                     }
                                 }
                             }
@@ -133,7 +145,7 @@
                     "options": {
                         "settings": {
                             "editableHeaderContent": false,
-                            "entitySet": "AuthorReadings",
+                            "contextPath": "/AuthorReadings",
                             "navigation": {
                                 "participants": {
                                     "detail": {
@@ -151,7 +163,7 @@
                     "options": {
                         "settings": {
                             "editableHeaderContent": false,
-                            "entitySet": "Participants"
+                            "contextPath": "/AuthorReadings/participants"
                         }
                     }
                 }
@@ -162,21 +174,12 @@
             "cozy": true
         }
     },
-    "sap.platform.abap": {
-        "_version": "1.1.0",
-        "uri": ""
-    },
-    "sap.platform.hcp": {
-        "_version": "1.1.0",
-        "uri": ""
-    },
     "sap.fiori": {
-        "_version": "1.1.0",
         "registrationIds": [],
         "archeType": "transactional"
     },
     "sap.cloud": {
         "public": true,
-        "service": "authorreadingmanager"
+        "service": "authorreadingmanager-{YOUR_ID}"
     }
 }
