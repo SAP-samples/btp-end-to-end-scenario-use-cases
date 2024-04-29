@@ -83,6 +83,8 @@ In this exercise, you will perform the following tasks:
 
 ### Task 3. Clean up authorization details
 
+> IMPORTANT! You can skip this task if your SAP S/4HANA Cloud runs on version 2402 and higher.
+
 > Every SAP Business Object contains its own authorization concept which is at the end defined by the list of authorization objects. After the service binding is created it generates the default values for these authorization objects. In this workshop we do not touch the authorization aspects at all. But for the further exercises these default values should be edited as they contain the objects which are not yet released for cloud development.
 
 1. Open the generated Authorization Default Values from your new service binding.
