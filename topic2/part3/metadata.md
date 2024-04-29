@@ -52,7 +52,7 @@ In this exercise, you will perform the following tasks:
 7. Enter the following command to convert the file to CDL.
 
 ~~~cli
-cds import ./external_resources/Z_PROJECT_{YOUR_ID}_0001.xml --as cds
+cds import ./external_resources/Z_PROJECT_{YOUR_ID}_0001.edmx --as cds
 ~~~
 
 8. Make sure that you received the similar command response:
