@@ -54,6 +54,8 @@ Do the following changes in files (do not forget to replace **{YOUR_ID}** accord
     "Z_PROJECT_{YOUR_ID}_0001": {
         "kind": "odata",
         "model": "srv/external/Z_PROJECT_{YOUR_ID}_0001",
+        "csrf": true,
+        "csrfInBatch": true,     
         "[sandbox]": {
             "credentials": {
             "url": "https://{{S4HC-hostname}}/sap/opu/odata4/sap/zapi_project_{YOUR_ID}/srvd_a2x/sap/z_project_{YOUR_ID}/0001/",
