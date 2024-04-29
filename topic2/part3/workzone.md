@@ -33,7 +33,7 @@ In this section you will create a SAP Build Work Zone site and call it on your m
    
       ![](./img/0230-create-role.png)
 
-   * Choose Launchpad_\<yourid> as Title and ID. Assign your application to the role and press **Save**
+   * Choose **Launchpad_\<YOUR_ID\>** as Title and ID. Assign your application to the role and press **Save**
 
       ![](./img/0231-create-role.png)
 
