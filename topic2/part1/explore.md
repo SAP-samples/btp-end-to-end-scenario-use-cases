@@ -50,5 +50,4 @@ In this exercise you will explorer the features of the deployed application and 
 
 You have created your first project in S/4HANA Cloud from the deployed application.
 
-## Further reading / Reference Links
-???
+
