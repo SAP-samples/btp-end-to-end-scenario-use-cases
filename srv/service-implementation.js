@@ -472,7 +472,7 @@ srv.on("createS4HCProject", async (req) => {
                     var s4hcRemoteSystem = await reuse.getDestinationURL(req , 's4hc-url'); 
                     
                     // Set the URL of S4HC project overview screen for UI navigation
-                    var s4hcRemoteProjectExternalURL = "/ui#EnterpriseProject-planProject?EnterpriseProject=" +projectRecord.Project ;
+                    var s4hcRemoteProjectExternalURL = "/ui#EnterpriseProject-maintain?EnterpriseProject=" +projectRecord.Project ;
                     var s4hcRemoteProjectExternalCompleteURL = s4hcRemoteSystem.concat( s4hcRemoteProjectExternalURL );
                     
                     // Update project elements in entity AuthorReadings
