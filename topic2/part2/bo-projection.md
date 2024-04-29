@@ -20,7 +20,7 @@ You have decided to create a new API. But it makes sense to reuse as much as pos
   
   ![Alt text](img/0009-api-sap-com-choose-product.png) 
 
-6. Choose **Develope Extensibility** option in the top menu. The choose **Business Object Interface** option in the sub menu. Afterwards search for **Enterprise Project** and select **Enterprise Project** tile.
+6. Choose **Developer Extensibility** option in the top menu. The choose **Business Object Interface** option in the sub menu. Afterwards search for **Enterprise Project** and select **Enterprise Project** tile.
 
   ![Alt text](img/0009a-api-sap-com-find-interface.png) 
   
