@@ -79,7 +79,7 @@
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/i18n.properties",
                 "settings": {
-                    "bundleName": "authorreadingmanager-IB369.i18n.i18n"
+                    "bundleName": "authorreadingmanager-{YOUR_ID}.i18n.i18n"
                 }
             },
             "": {
