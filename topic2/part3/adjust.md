@@ -244,7 +244,11 @@ srv.on(["READ","CREATE","UPDATE","DELETE"],
 
 ### Task 2: Deploy the application
 
-1. Repeat the steps described in the [Deploy](../part1/deploy.md) exercise.
+1. Normally if you redeploy the application all the services will be updated correspondingly. But sometimes it can happen that some update is failed. To avoid it delete your **Destination Service** and **HTML5 Application Repository Service** before the next step as shown on the picture below:
+
+    ![Delete services](./img/0037-delete-services-before-redeploy.png)
+
+3. Repeat the steps described in the [Deploy](../part1/deploy.md) exercise.
 
 
 ## Result
