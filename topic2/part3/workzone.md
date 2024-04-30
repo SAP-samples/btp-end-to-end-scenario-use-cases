@@ -42,7 +42,7 @@ In this section you will create a SAP Build Work Zone site and call it on your m
    
       ![](./img/0240-map-role-to-user.png)
 
-    * Select **Edit**. And add a new user with you email address as ID and E-mail. Select as Identity Provider  **pesworkshops.accounts.ondemand.com (application user)**. Press **Save**
+    * Select **Edit**. And add a new user with you email address as ID and E-mail. Select as Identity Provider  **Custom IAS tenant**. Press **Save**
    
       ![](./img/0245-map-role-to-user.png)
 
