@@ -40,9 +40,9 @@ In this exercise you will explorer the features of the deployed application and 
 
   ![Alt text](img/0230-navigate-to-project.png) 
 
-10. It will open **Project Planning** section of the **Monitor Projects** application for your newly created project.
+10. It will open a maintenace screen of **Enterprise Projects** for your newly created project.
 
-  ![Alt text](img/0240-project-in-s4hc.png)
+  ![Alt text](img/0241-enterprise-project-in-s4hc.png)
 
 > The deployed application offers other options to handle your projects, like changing the status, adding participants and so on. You can find more details in the original [repository](https://github.com/SAP-samples/sme-partner-reference-application/blob/main/Tutorials/30-Guided-Tour.md).
 
