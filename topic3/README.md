@@ -133,7 +133,7 @@ Find further SAP internal information on Observability basics, best practices an
 
 BTP Observability Go-To-Services are reusable & cross-consumable across multiple BTP runtimes and are recommended to be included in the CAP specific and service specific Operational procedures.
 
-![](./Images/observability.png | width=100)
+![](./Images/observability.png | width=50)
 
 ```mermaid
 journey
