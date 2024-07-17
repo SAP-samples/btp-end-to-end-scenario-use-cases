@@ -54,7 +54,7 @@ journey
       Access Logs,Metrics and Traces: 5: Me,Champion
 ```
 
-## Develop and Deploy Full-Stack CAP Application
+## 1. Develop and Deploy Full-Stack CAP Application
 
 The Incident Management application uses the following sample business scenario:
 
@@ -96,7 +96,7 @@ journey
 11. [Assign the User Roles](https://developers.sap.com/tutorials/user-role-assignment.html)
 12. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
 
-## Implement Remote Connectivity with SAP S/4HANA
+## 2. Implement Remote Connectivity with SAP S/4HANA
 
 In this tutorial, we will integrate SAP S/4HANA Cloud Business Partner API to the Incident Management application.
 
@@ -125,7 +125,7 @@ journey
 4. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/deploy/cf/deploy-to-cf.md)
 5. [Run application with SAP S/4HANA Backend](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/test-the-application/test-the-app.md)
 
-## Day2 Operation: Implement Observability 
+## 3. Day2 Operation: Implement Observability 
 
 **Observability** helps to take data-driven informed decisions based on runtime Observability telemetry data (logs, metrics, traces, events, ...) and provides insights into SAP & customer services and systems to understand and improve efficiency, scalability, resilience, and availability.
 
