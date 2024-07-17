@@ -1,5 +1,9 @@
 # Clean Core Full Stack Application Development with SAP BTP
 
+## Overview
+
+Welcome to this guidance for application development on **SAP Business Technology Platform (SAP BTP)** following the Golden Path. In the following documentation and tutorials, we provide information and examples on how to develop and deploy a full stack application based on **SAP Cloud Application Programming Model (CAP)** and **SAP Fiori elements** on SAP BTP using different tools and services step by step.
+
 ## MindMap
 
 ```mermaid
@@ -30,8 +34,6 @@
           Access Logs
           Metrics
           Traces
-
-
 ```
 ## Understand Your Journey
 
@@ -53,6 +55,12 @@ journey
 ```
 
 ## Develop and Deploy Full-Stack CAP Application
+
+The Incident Management application uses the following sample business scenario:
+
+ACME is a popular Electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. The newly created incident is based on a customer complaint received during the phone call so the call center support representative also adds the conversation with the customer to the incident
+
+![](./Images/basic.png)
 
 ```mermaid
 journey
@@ -90,6 +98,14 @@ journey
 
 ## Implement Remote Connectivity with SAP S/4HANA
 
+In this tutorial, we will integrate SAP S/4HANA Cloud Business Partner API to the Incident Management application.
+
+The Incident Management application helps call center support representatives process and manage customer incidents. A support representative (processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer.
+
+When a new incident is created by the processor, they have to assign the incident to the respective customer. The option to choose a customer will be given as a value help and the list of customers in the value help will be fetched from the **SAP S/4HANA Cloud system**. For this purpose, we will be using the **SAP S/4HANA Business Partner API**.
+
+![](./Images/remote.png)
+
 ```mermaid
 journey
     title Your Journey to Extend Incident Management with SAP S/4HANA Cloud
@@ -110,6 +126,14 @@ journey
 5. [Run application with SAP S/4HANA Backend](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/test-the-application/test-the-app.md)
 
 ## Day2 Operation: Implement Observability 
+
+**Observability** helps to take data-driven informed decisions based on runtime Observability telemetry data (logs, metrics, traces, events, ...) and provides insights into SAP & customer services and systems to understand and improve efficiency, scalability, resilience, and availability.
+
+Find further SAP internal information on Observability basics, best practices and more on Stack@SAP and on the SAP BTP Observability Website.
+
+BTP Observability Go-To-Services are reusable & cross-consumable across multiple BTP runtimes and are recommended to be included in the CAP specific and service specific Operational procedures.
+
+![](./Images/observability.png)
 
 ```mermaid
 journey
