@@ -85,7 +85,7 @@ journey
 
 1. [Set Up SAP Business Application Studio](https://developers.sap.com/tutorials/set-up-bas.html)
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
-3. [Add SAP Fiori Elements UIs](https://developers.sap.com/tutorials/add-fiori-elements-uis.html)
+3. [Add SAP Fiori Elements UIs](./docs/generate-fiori-ui.md)
 4. [Add Custom Logic](https://developers.sap.com/tutorials/add-custom-logic.html)
 5. [Use a Local Launch Page](https://developers.sap.com/tutorials/use-local-launch-page.html)
 6. [Add Authorization](https://developers.sap.com/tutorials/add-authorization.html)
