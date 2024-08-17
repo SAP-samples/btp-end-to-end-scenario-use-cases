@@ -148,5 +148,4 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 
 12.  In the **Creation Mode: Name** dropdown menu, select **Inline**. With it, the create action adds a new row at the table instead of navigating to a new object entry page.
 
-    <!-- border; size:540px --> 
-    ![Table creation mode](./images/obj95.png)
+ ![Table creation mode](./images/obj95.png)
