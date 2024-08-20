@@ -53,7 +53,7 @@ journey
       Assign the User Roles: 5: Me
     section Integration to Workzone
       Integrate Your Application with SAP Build Work Zone, Standard Edition: 5: Me, CAP Champion
-      Integration to SAP Mobile Start(Optional) 5: Me, CAP Champion
+      Integration to SAP Mobile Start(Optional): 5: Me, CAP Champion
 ```
 
 ![](./Images/basic.png)
