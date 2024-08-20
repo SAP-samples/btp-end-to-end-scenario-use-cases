@@ -24,7 +24,7 @@ Welcome to this guidance for application development on **SAP Business Technolog
           Integrate SAP Mobile Start
     Connect to SAP S/4HANA Cloud API
       Extend Incident Management
-      Deploy to SAP BTP, CF
+        Deploy to SAP BTP, CF
     Observability
       SAP Cloud Logging Service
         Access Logs
