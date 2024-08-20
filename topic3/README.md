@@ -15,22 +15,21 @@ Welcome to this guidance for application development on **SAP Business Technolog
         SAP Business Application Studio
       Setup System   
         SAP S/4HANA Cloud
-    Develop Full Stack CAP Application 
+    1. Develop Full Stack CAP Application 
       Add Custom Logic
       Add Fiori Elements
       Add Authorization
       Deploy to SAP BTP,CF
         Integrate to SAP Build Workzone
           Integrate SAP Mobile Start
-    Connect to SAP S/4HANA Cloud API
+    2. Connect to SAP S/4HANA Cloud API
       Extend Incident Management
       Deploy to SAP BTP, CF
-    Day 2 Operation
-      Observability
-        SAP Cloud Logging Service
-          Access Logs
-          Metrics
-          Traces
+    3. Observability
+      SAP Cloud Logging Service
+        Access Logs
+        Metrics
+        Traces
 ```
 ## 1. Develop and Deploy Full-Stack CAP Application
 
