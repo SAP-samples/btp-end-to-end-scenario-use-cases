@@ -33,7 +33,9 @@ Welcome to this guidance for application development on **SAP Business Technolog
 ```
 ## 1. Develop and Deploy Full-Stack CAP Application
 
-<img src="./images/Data-Subjects.drawio.svg" alt="Shows with which solutions CAP annotations can be used out of the box, as described in the following table." style="zoom:111%;" />
+<div align="center">
+	<img src="Images/Data-Subjects.drawio.svg" width="800" />
+</div>
 
 The Incident Management application uses the following sample business scenario:
 
