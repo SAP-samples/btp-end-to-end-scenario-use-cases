@@ -59,11 +59,7 @@ journey
 ![](./Images/basic.png)
 
 
-Live Demo: [demo](https://example.com){:target="_blank"} 
-
-Live Demo: [demo](https://example.com){target="_blank"} 
-
-Live Demo: <a href="https://example.com" target="_blank">demo</a> 
+<a href="placeholder.com" target="_blank">Opens in new tab</a>
 
 
 
