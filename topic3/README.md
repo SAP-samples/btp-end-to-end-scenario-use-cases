@@ -69,12 +69,9 @@ journey
       Add SAP Fiori Elements UIs: 5: Me 
     section Custom Logic
       Add Custom Logic: 5: Me 
-    section Launchpage & Security
-      Use a Local Launch Page: 5: Me
+    section Security
       Add Authorization: 5: Me
-      Add Test Cases: 5: Me
     section Ready for Production
-      Prepare for Production: 5: Me
       Deploy in SAP BTP, Cloud Foundry Runtime: 5: Me
       Assign the User Roles: 5: Me
     section Integration to Workzone
@@ -87,14 +84,10 @@ journey
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
 3. [Add SAP Fiori Elements UIs](./docs/generate-fiori-ui.md)
 4. [Add Custom Logic](https://developers.sap.com/tutorials/add-custom-logic.html)
-5. [Use a Local Launch Page](https://developers.sap.com/tutorials/use-local-launch-page.html)
 6. [Add Authorization](https://developers.sap.com/tutorials/add-authorization.html)
-7. [Add Test Cases](https://developers.sap.com/tutorials/add-test-cases.html)
-8. [Prepare for Production](https://developers.sap.com/tutorials/prep-for-prod.html)
-9. [Prepare for Deployment in the SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/prepare-btp-cf.html)
-10. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
-11. [Assign the User Roles](https://developers.sap.com/tutorials/user-role-assignment.html)
-12. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
+7. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
+8. [Assign the User Roles](https://developers.sap.com/tutorials/user-role-assignment.html)
+9. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
 
 ## 2. Implement Remote Connectivity with SAP S/4HANA
 
