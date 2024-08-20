@@ -33,9 +33,13 @@ Welcome to this guidance for application development on **SAP Business Technolog
 ```
 ## 1. Develop and Deploy Full-Stack CAP Application
 
+<img src="./images/Data-Subjects.drawio.svg" alt="Shows with which solutions CAP annotations can be used out of the box, as described in the following table." style="zoom:111%;" />
+
 The Incident Management application uses the following sample business scenario:
 
-ACME is a popular Electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. The newly created incident is based on a customer complaint received during the phone call so the call center support representative also adds the conversation with the customer to the incident
+ACME is a popular Electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. The newly created incident is based on a customer complaint received during the phone call so the call center support representative also adds the conversation with the customer to the incident.
+
+
 
 ```mermaid
 journey
