@@ -34,7 +34,7 @@ Welcome to this guidance for application development on **SAP Business Technolog
 ## 1. Develop and Deploy Full-Stack CAP Application
 
 <div align="center">
-	<img src="Images/Data-Subjects.drawio.svg" width="800" />
+	<img src="Images/Data-Subjects.drawio.svg" width="100" />
 </div>
 
 The Incident Management application uses the following sample business scenario:
