@@ -119,7 +119,7 @@ journey
       Acesss Metrics: 5: Me
       Access Traces: 5: Me, Day2 Expert
 ```
-<img src="Images/observability.png" width="800" />
+<img src="Images/observability.png" width="700" />
 
 1. [Setup Custom Log Collection](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/observability/2-implement.md)
 2. [Set Up Trace Collection](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/observability/3-implement-traces.md)
