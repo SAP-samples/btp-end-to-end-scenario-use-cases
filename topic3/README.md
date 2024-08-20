@@ -56,7 +56,10 @@ journey
       Integration to SAP Mobile Start(Optional): 5: Me, CAP Champion
 ```
 
-<img src="Images/basic.png" width="800" />
+<div align="center">
+	<img src="Images/basic.png" width="800" />
+</div>
+
 
 1. [Set Up SAP Business Application Studio](https://developers.sap.com/tutorials/set-up-bas.html)
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
@@ -89,7 +92,9 @@ journey
       Run application with SAP S/4HANA Backend: 5: Me, Extension Developer
 ```
 
-<img src="Images/remote.png" width="800" />
+<div align="center">
+	<img src="Images/remote.png" width="800" />
+</div>
 
 1. [Extend the Incident Management аpplication](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/develop/extend-app-cf.md)
 2. [Run a developer test with mock data](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/develop/test-with-mock.md)
@@ -123,7 +128,6 @@ journey
 <div align="center">
 	<img src="Images/observability.png" width="700" />
 </div>
-
 
 1. [Setup Custom Log Collection](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/observability/2-implement.md)
 2. [Set Up Trace Collection](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/observability/3-implement-traces.md)
