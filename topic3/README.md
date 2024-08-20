@@ -58,7 +58,14 @@ journey
 
 ![](./Images/basic.png)
 
-12. [Set Up SAP Business Application Studio](<a href="./docs/mobilestart.md" target="_blank"></a>)
+
+Live Demo: [demo](https://example.com){:target="_blank"} //kramdown
+
+Live Demo: [demo](https://example.com){target="_blank"} //markdown
+
+Live Demo: <a href="https://example.com" target="_blank">demo</a> //html
+
+
 
 1. [Set Up SAP Business Application Studio](https://developers.sap.com/tutorials/set-up-bas.html)
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
