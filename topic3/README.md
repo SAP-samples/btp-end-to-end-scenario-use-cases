@@ -128,6 +128,11 @@ journey
 4. [Deploy Application in the SAP BTP, Cloud Foundry Runtime](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/observability/4-deploy-to-cf.md)
 5. [Access Logs, Metrics and Traces Using SAP Cloud Logging Service](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/observability/6-test-the-flow.md)
 
+## Additonal Reference:
+
+ - [Internal Golden Path](https://pages.github.tools.sap/cap/golden-path/)
+ - [External Golden Path  a.k.a BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/what-is-btp-developers-guide)
+ - [SAP Discovery Center Mission](https://discovery-center.cloud.sap/missiondetail/4327/4608/)
 
 
 
