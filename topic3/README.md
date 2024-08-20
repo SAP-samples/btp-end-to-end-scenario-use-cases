@@ -16,15 +16,12 @@ Welcome to this guidance for application development on **SAP Business Technolog
     Develop Full Stack CAP Application 
       Add Custom Logic
       Add Fiori Elements
-      Use a Local Launch Page
       Add Authorization
-      Prepare for Production
-        Deploy to SAP BTP,CF
-          Integrate to SAP Build Workzone
-            Integrate SAP Mobile Start
+      Deploy to SAP BTP,CF
+        Integrate to SAP Build Workzone
+          Integrate SAP Mobile Start
     Inplement Remote Connectivity
       Extend Incident Management
-        Test with Mock Data locally
         Prepare for Production
           Deploy to SAP BTP, CF
             Run with S/4HANA Backend 
