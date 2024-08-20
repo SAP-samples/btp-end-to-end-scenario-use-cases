@@ -58,7 +58,7 @@ journey
 
 ![](./Images/basic.png)
 
-<a href="./docs/mobilestart.md" target="_blank"></a>
+12. <a href="./docs/mobilestart.md" target="_blank"></a>
 
 1. [Set Up SAP Business Application Studio](https://developers.sap.com/tutorials/set-up-bas.html)
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
