@@ -56,7 +56,7 @@ journey
       Integration to SAP Mobile Start(Optional): 5: Me, CAP Champion
 ```
 
-![](./Images/basic.png)
+<img src="Images/basic.png" width="800" />
 
 1. [Set Up SAP Business Application Studio](https://developers.sap.com/tutorials/set-up-bas.html)
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
@@ -89,7 +89,7 @@ journey
       Run application with SAP S/4HANA Backend: 5: Me, Extension Developer
 ```
 
-![](./Images/remote.png)
+<img src="Images/remote.png" width="800" />
 
 1. [Extend the Incident Management аpplication](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/develop/extend-app-cf.md)
 2. [Run a developer test with mock data](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/develop/test-with-mock.md)
