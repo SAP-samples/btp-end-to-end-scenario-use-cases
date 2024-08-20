@@ -53,6 +53,7 @@ journey
       Assign the User Roles: 5: Me
     section Integration to Workzone
       Integrate Your Application with SAP Build Work Zone, Standard Edition: 5: Me, CAP Champion
+      Integration to SAP Mobile Start(Optional) 5: Me, CAP Champion
 ```
 
 ![](./Images/basic.png)
@@ -65,6 +66,7 @@ journey
 7. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
 8. [Assign the User Roles](https://developers.sap.com/tutorials/user-role-assignment.html)
 9. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
+10. [OPTIONAL: Access Your Launchpad Site with SAP Mobile Start](./docs/mobilestart.md)
 
 ## 2. Implement Remote Connectivity with SAP S/4HANA
 
