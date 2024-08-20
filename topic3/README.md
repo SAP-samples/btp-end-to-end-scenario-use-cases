@@ -32,25 +32,6 @@ Welcome to this guidance for application development on **SAP Business Technolog
           Metrics
           Traces
 ```
-## Understand Your Journey
-
-```mermaid
-journey
-    title Your Journey for SAP BTP Developer Guide
-    section Develop Full Stack CAP Application
-      Develop CAP+Fiori: 5: Me
-      Prepare for Production: 5: Me
-      Deploy to SAP BTP,CF: 5: Me
-    section Implement Remote Connectivity
-      Extend Application: 5: Me
-      Test Locally: 5: Me
-      Prepare and Deploy: 5: Me
-      Run with S/4HANA Backend: 5: Me 
-    section Day 2 Operation
-      SAP Cloud Logging Service: 5: Me
-      Access Logs,Metrics and Traces: 5: Me,Champion
-```
-
 ## 1. Develop and Deploy Full-Stack CAP Application
 
 The Incident Management application uses the following sample business scenario:
