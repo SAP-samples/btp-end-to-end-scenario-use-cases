@@ -22,11 +22,9 @@ Welcome to this guidance for application development on **SAP Business Technolog
       Deploy to SAP BTP,CF
         Integrate to SAP Build Workzone
           Integrate SAP Mobile Start
-    Inplement Remote Connectivity
+    Connect to SAP S/4HANA Cloud API
       Extend Incident Management
-        Prepare for Production
-          Deploy to SAP BTP, CF
-            Run with S/4HANA Backend 
+      Deploy to SAP BTP, CF
     Day 2 Operation
       Observability
         SAP Cloud Logging Service
