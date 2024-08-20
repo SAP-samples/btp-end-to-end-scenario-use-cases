@@ -40,7 +40,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 ```mermaid
 journey
     title Your Journey to Develop and Deploy Full-Stack CAP Application
-    section Build Basic Application
+    section Base Application
       Create Dev Space in SAP Business Application Studio: 5: Me
       Build a CAP Application: 5: Me
       Add SAP Fiori Elements UIs: 5: Me 
