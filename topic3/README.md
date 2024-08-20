@@ -58,11 +58,6 @@ journey
 
 ![](./Images/basic.png)
 
-
-[Opens in new tab](https://external.ink?to=/placeholder.com)
-
-
-
 1. [Set Up SAP Business Application Studio](https://developers.sap.com/tutorials/set-up-bas.html)
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
 3. [Add SAP Fiori Elements UIs](./docs/generate-fiori-ui.md)
