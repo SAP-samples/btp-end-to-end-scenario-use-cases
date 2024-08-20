@@ -9,11 +9,12 @@ Welcome to this guidance for application development on **SAP Business Technolog
 ```mermaid
    mindmap
   root((SAP BTP Guide))
-    Setup Dev Environment
-      SAP BTP Accoun
+    Tools and Systems
+      Setup Dev Environment
+        SAP BTP Account
         SAP Business Application Studio
-    Setup System   
-      SAP S/4HANA Cloud
+      Setup System   
+        SAP S/4HANA Cloud
     Develop Full Stack CAP Application 
       Add Custom Logic
       Add Fiori Elements
