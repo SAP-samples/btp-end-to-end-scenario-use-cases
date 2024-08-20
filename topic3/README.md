@@ -64,7 +64,7 @@ journey
       Set Up SAP Business Application Studio: 5: Me
       Build a CAP Application: 5: Me
       Add SAP Fiori Elements UIs: 5: Me 
-    section Custom Logic
+    section Business Logic
       Add Custom Logic: 5: Me 
     section Security
       Add Authorization: 5: Me
