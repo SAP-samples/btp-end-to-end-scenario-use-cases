@@ -26,15 +26,15 @@
 
   <!-- Arrows -->
   <!-- Incident to Conversation (Red Arrow) -->
-  <line x1="120" y1="45" x2="160" y2="45" stroke="#FF4500" stroke-width="2"/>
-  <polygon points="160,40 170,45 160,50" fill="#FF4500"/>
+  <line x1="120" y1="45" x2="160" y2="45" stroke="red" stroke-width="2"/>
+  <polygon points="160,40 170,45 160,50" fill="red"/>
 
-  <!-- Incident to Customer (Blue Arrow) -->
-  <line x1="70" y1="50" x2="70" y2="100" stroke="#1E90FF" stroke-width="2"/>
-  <polygon points="65,100 70,110 75,100" fill="#1E90FF"/>
+  <!-- Incident to Customer (Red Arrow) -->
+  <line x1="70" y1="50" x2="70" y2="100" stroke="red" stroke-width="2"/>
+  <polygon points="65,100 70,110 75,100" fill="red"/>
 
-  <!-- Customer to Address (Green Arrow) -->
-  <line x1="120" y1="125" x2="160" y2="125" stroke="#32CD32" stroke-width="2"/>
-  <polygon points="160,120 170,125 160,130" fill="#32CD32"/>
+  <!-- Customer to Address (Red Arrow) -->
+  <line x1="120" y1="125" x2="160" y2="125" stroke="red" stroke-width="2"/>
+  <polygon points="160,120 170,125 160,130" fill="red"/>
 
 </svg>
