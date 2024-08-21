@@ -1,7 +1,7 @@
 <svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
   <!-- Box: Four Golden Signals -->
   <rect x="50" y="150" width="150" height="50" fill="#FFD700" stroke="#000000" stroke-width="2"/>
-  <text x="125" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">Four Golden Signals</text>
+  <text x="125" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#FFD700">Four Golden Signals</text>
   
   <!-- Box: Latency -->
   <rect x="250" y="50" width="150" height="50" fill="#FF6347" stroke="#000000" stroke-width="2"/>
