@@ -79,6 +79,10 @@ journey
 
 ## 2. Implement Remote Connectivity with SAP S/4HANA
 
+<div align="center">
+	<img src="Images/s4hana.drawio.svg" width="400" />
+</div>
+
 In this tutorial, we will integrate SAP S/4HANA Cloud Business Partner API to the Incident Management application.
 
 The Incident Management application helps call center support representatives process and manage customer incidents. A support representative (processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer.
