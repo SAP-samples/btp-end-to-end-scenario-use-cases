@@ -15,7 +15,7 @@
   <!-- SAP S/4HANA Artifact -->
   <g id="sap" transform="translate(20, 100)">
     <rect x="0" y="0" width="120" height="50" fill="#8A2BE2" rx="10" ry="10"/>
-    <text x="10" y="30" font-family="Arial" font-size="15" fill="white">SAP S/4HANA</text>
+    <text x="35" y="30" font-family="Arial" font-size="15" fill="white">SAP S/4HANA</text>
   </g>
 
   <!-- Customer Artifact -->
