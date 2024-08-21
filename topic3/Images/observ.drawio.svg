@@ -4,19 +4,19 @@
   <text x="125" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">Four Golden Signals</text>
   
   <!-- Box: Latency -->
-  <rect x="250" y="50" width="150" height="50" fill="#FF4500" stroke="#000000" stroke-width="2"/>
+  <rect x="250" y="50" width="150" height="50" fill="#FF6347" stroke="#000000" stroke-width="2"/>
   <text x="325" y="80" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">Latency</text>
 
   <!-- Box: Traffic -->
-  <rect x="250" y="150" width="150" height="50" fill="#1E90FF" stroke="#000000" stroke-width="2"/>
+  <rect x="250" y="150" width="150" height="50" fill="#00CED1" stroke="#000000" stroke-width="2"/>
   <text x="325" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">Traffic</text>
 
   <!-- Box: Errors -->
-  <rect x="250" y="250" width="150" height="50" fill="#32CD32" stroke="#000000" stroke-width="2"/>
+  <rect x="250" y="250" width="150" height="50" fill="#98FB98" stroke="#000000" stroke-width="2"/>
   <text x="325" y="280" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">Errors</text>
 
   <!-- Box: Saturation -->
-  <rect x="250" y="350" width="150" height="50" fill="#9400D3" stroke="#000000" stroke-width="2"/>
+  <rect x="250" y="350" width="150" height="50" fill="#BA55D3" stroke="#000000" stroke-width="2"/>
   <text x="325" y="380" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">Saturation</text>
   
   <!-- Arrows -->
