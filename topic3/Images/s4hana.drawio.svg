@@ -1,0 +1,46 @@
+<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Incident Artifact -->
+  <g id="incident" transform="translate(20, 20)">
+    <rect x="0" y="0" width="100" height="50" fill="#FF6347" rx="10" ry="10"/>
+    <text x="25" y="30" font-family="Arial" font-size="15" fill="white">Incident</text>
+  </g>
+
+  <!-- Conversation Artifact -->
+  <g id="conversation" transform="translate(160, 20)">
+    <rect x="0" y="0" width="100" height="50" fill="#4682B4" rx="10" ry="10"/>
+    <text x="15" y="30" font-family="Arial" font-size="15" fill="white">Conversation</text>
+  </g>
+
+  <!-- SAP S/4HANA Container -->
+  <g id="sap-container" transform="translate(140, 80)">
+    <rect x="0" y="0" width="260" height="100" fill="none" stroke="#8A2BE2" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="85" y="20" font-family="Arial" font-size="15" fill="#8A2BE2">SAP S/4HANA</text>
+
+    <!-- Customer Artifact -->
+    <g id="customer" transform="translate(20, 30)">
+      <rect x="0" y="0" width="100" height="50" fill="#32CD32" rx="10" ry="10"/>
+      <text x="25" y="30" font-family="Arial" font-size="15" fill="white">Customer</text>
+    </g>
+
+    <!-- Address Artifact -->
+    <g id="address" transform="translate(140, 30)">
+      <rect x="0" y="0" width="100" height="50" fill="#FFA500" rx="10" ry="10"/>
+      <text x="25" y="30" font-family="Arial" font-size="15" fill="white">Address</text>
+    </g>
+
+    <!-- Arrow from Customer to Address -->
+    <line x1="120" y1="55" x2="140" y2="55" stroke="red" stroke-width="2"/>
+    <polygon points="140,50 150,55 140,60" fill="red"/>
+  </g>
+
+  <!-- Arrows -->
+  <!-- Incident to Conversation (Red Arrow) -->
+  <line x1="120" y1="45" x2="160" y2="45" stroke="red" stroke-width="2"/>
+  <polygon points="160,40 170,45 160,50" fill="red"/>
+
+  <!-- Incident to SAP S/4HANA Container (Red Arrow) -->
+  <line x1="70" y1="50" x2="140" y2="130" stroke="red" stroke-width="2"/>
+  <polygon points="135,125 145,130 135,135" fill="red"/>
+
+</svg>
