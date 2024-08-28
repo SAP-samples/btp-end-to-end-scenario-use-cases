@@ -31,6 +31,9 @@ Welcome to this guidance for application development on **SAP Business Technolog
         Metrics
         Traces
 ```
+## Prerequisites
+
+1. [Set Up SAP Business Application Studio](./bas.md)
 
 ## Exercises
 
