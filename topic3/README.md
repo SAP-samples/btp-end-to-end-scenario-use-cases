@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to this guidance for application development on **SAP Business Technology Platform (SAP BTP)** following the Golden Path. In the following documentation and tutorials, we provide information and examples on how to develop and deploy a full stack application based on **SAP Cloud Application Programming Model (CAP)** and **SAP Fiori elements** on SAP BTP using different tools and services step by step.
+Welcome to this guidance for application development on **SAP Business Technology Platform (SAP BTP)** following the **SAP BTP Developer Guide**. In the following documentation and tutorials, we provide information and examples on how to develop and deploy a full stack application based on **SAP Cloud Application Programming Model (CAP)** and **SAP Fiori elements** on SAP BTP using different tools and services.
 
 ## MindMap
 
@@ -33,6 +33,7 @@ Welcome to this guidance for application development on **SAP Business Technolog
 ```
 ## Prerequisites
 
+2. [Create Cloud Foundry Space]()
 1. [Set Up SAP Business Application Studio](./bas.md)
 
 ## Exercises
