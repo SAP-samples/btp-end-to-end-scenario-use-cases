@@ -33,7 +33,7 @@ Welcome to this guidance for application development on **SAP Business Technolog
 ```
 ## Prerequisites
 
-2. [Create Cloud Foundry Space]()
+2. [Create Cloud Foundry Space](./space.md)
 1. [Set Up SAP Business Application Studio](./bas.md)
 
 ## Exercises
