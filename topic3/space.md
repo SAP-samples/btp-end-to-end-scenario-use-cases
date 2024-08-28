@@ -9,5 +9,5 @@
 </div>
 
 > [!IMPORTANT]  
-> You space name should be unique. You can have your first name followed by 3-digit number. example John123
+> You space name should be unique. You can have your first name followed by random 3-digit number. example John132
 
