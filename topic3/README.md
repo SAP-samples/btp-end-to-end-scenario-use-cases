@@ -45,7 +45,7 @@ Welcome to this guidance for application development on **SAP Business Technolog
 7. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
 8. [Assign the User Roles](https://developers.sap.com/tutorials/user-role-assignment.html)
 9. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
-10. [OPTIONAL: Access Your Launchpad Site with SAP Mobile Start](./docs/mobilestart.md)
+10. [Access Your Launchpad Site with SAP Mobile Start](./docs/mobilestart.md)
 
 ## 2. Implement Remote Connectivity with SAP S/4HANA
 
