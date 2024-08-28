@@ -8,7 +8,7 @@ Welcome to this guidance for application development on **SAP Business Technolog
 
 ```mermaid
    mindmap
-  root((Clean Core))
+  root((Clean Core Development))
     Tools and Systems
       Setup Dev Environment
         SAP BTP Account
