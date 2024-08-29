@@ -26,8 +26,6 @@ journey
       Add SAP Fiori Elements UIs: 5: Me 
     section Custom Logic
       Add Custom Logic: 5: Me 
-    section Security
-      Add Authorization: 5: Me
     section Ready for Production
       Deploy in SAP BTP, Cloud Foundry Runtime: 5: Me
       Assign the User Roles: 5: Me
