@@ -68,7 +68,9 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 
     - In the **Application title** field, enter **Incident-Management**.
 
-    - In the **Application namespace** field, enter a unique value eg.,**ns01**.
+    - In the **Application namespace** field, enter a unique value.
+       > [!NOTE]
+       > Namespace value should be unique, it's suggested to use your user ID followed by numeric value eg., **UserID-01**.
 
     - Leave the default values for all the other settings and choose **Finish**.
 
@@ -85,7 +87,7 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 2. Create a folder `_i18n` into root of your project, Create a file `i18n.properties` inside folder `_i18n` and paste the content of [i18n.properties](./files/_i18n/i18n.properties) into `i18n.properties`. 
 
 3. Navigate to `app/incidents` folder from the projects root directory.
-    Copy the contents of the file `./docs/files/annotations.cds` to `annotations.cds` in the working directory
+    Copy the contents of the file [annotations.cds](./files/annotations.cds) to `annotations.cds` in the working directory
 
 4. Lets do the below to get a flavor of how the generation of annotations looks like with Fiori Elements
 
@@ -112,22 +114,6 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 
     <!-- border; size:540px --> 
     ![Enable Data Auto Load](./images/ls8.png)
-
-10. Lets also edit the object page. Make sure the SAP Fiori page editor is open. If you closed it, choose the **Open Page Map** option in the **Application Info - incidents** tab.
-
-    > To open the **Application Info - incidents** tab: 
-    >
-    >1. Invoke the Command Palette - **View** &rarr; **Command Palette** or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> for macOS / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> for Windows. 
-    >2. Choose **Fiori: Open Application Info**.
-
-11. In the **Incident Object Page** tile, click the **Pencil** icon next to the title.
-
-    <!-- border; size:540px --> 
-    ![Edit object page](./images/obj0.png)
-
-12.  In the **Creation Mode: Name** dropdown menu, select **Inline**. With it, the create action adds a new row at the table instead of navigating to a new object entry page.
-
- ![Table creation mode](./images/obj95.png)
 
 
 # Enable draft with `@odata.draft.enabled`
