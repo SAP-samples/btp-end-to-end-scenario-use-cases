@@ -1,7 +1,3 @@
----
-outline: [2,2]
-impl-variants: true
----
 
 # Overview
 
@@ -44,23 +40,6 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 
 </div>
 
-<div class="impl java">
-
-6. In the **Data Source and Service Selection** step:
-
-    - In the **Data source** dropdown menu, select **Use a Local CAP Project**.
-
-    - In the **Choose your CAP project** dropdown menu, select the **incident-management** project.
-
-    - In the **OData service** dropdown menu, select the **ProcessorService (Java)**.
-    
-    - Choose **Next**.
-
-        <!-- border; size:540px --> 
-        ![CAPpro](./images/datasourceselectionjava.png)
-
-</div>
-
    > tip
    >In case you get the error: `Node module @sap/cds isn't found. Please install it and try again`, you have to install the corresponding CAP module which is >also required   by the app generator as described in [Add CAP Tooling](https://cap.cloud.sap/docs/tools/#command-line-interface-cli)
    > If not already done, please open a command line and run the following command:
@@ -72,7 +51,7 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
    >See the [CAP Troubleshooting guide](https://cap.cloud.sap/docs/advanced/troubleshooting#npm-installation) for more details.
 
 
-7. In the **Entity Selection** step:
+6. In the **Entity Selection** step:
 
     - In the **Main entity** dropdown menu, select **Incidents**.
     - Leave the **Navigation entity** value as **none**.
@@ -83,9 +62,9 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
         <!-- border; size:540px --> 
         ![Entity selection](./images/entityselection.png)
 
-8. In the **Project Attributes** step:
+7. In the **Project Attributes** step:
 
-    - In the **Module name** field, enter **incidents**.
+   - In the **Module name** field, enter **incidents**.
 
     - In the **Application title** field, enter **Incident-Management**.
 
@@ -103,7 +82,7 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 
 1. The tutorials to generate [List and Object page](https://developers.sap.com/tutorials/add-fiori-elements-uis.html#f9446c7a-810d-4c8f-a00b-b146386dd8bd) to be followed to generate list and report pages. Inorder to save time we will be now copying the annotations and pasting it into the project's folder.
 
-2. Cpoy the folder `_i18n` from `./docs/files` and paste it into the root folder of your project
+2. Create a folder `_i18n` into root of your project, Create a file `i18n.properties` inside folder `_i18n` and paste the content of [i18n.properties](./files/_i18n/i18n.properties) into `i18n.properties`. 
 
 3. Navigate to `app/incidents` folder from the projects root directory.
     Copy the contents of the file `./docs/files/annotations.cds` to `annotations.cds` in the working directory
@@ -149,3 +128,28 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 12.  In the **Creation Mode: Name** dropdown menu, select **Inline**. With it, the create action adds a new row at the table instead of navigating to a new object entry page.
 
  ![Table creation mode](./images/obj95.png)
+
+
+# Enable draft with `@odata.draft.enabled`
+
+SAP Fiori supports editing business entities with draft states stored on the server, so users can interrupt editing and continue later on, possibly from different places and devices. CAP, as well as SAP Fiori elements, provide out-of-the-box support for drafts. We recommend that you always use draft when your SAP Fiori application needs data input by end users.
+
+   >For more details, see the SAP Fiori Design Guidelines for [Draft Handling](https://experience.sap.com/fiori-design-web/draft-handling/).
+
+   >Read more about [Draft Support](https://cap.cloud.sap/docs/advanced/fiori#draft-support) in the CAP documentation.
+
+Enabling a draft for an entity allows the users to edit the entities. To enable a draft for an entity exposed by a service, follow these steps:
+
+1. Open the **srv/services.cds** file.
+
+2. Annotate the file with @odata.draft.enabled like this:
+
+    > ```bash
+    > service ProcessorService { 
+    >...
+    >}
+    >...
+    >annotate ProcessorService.Incidents with @odata.draft.enabled;
+    > ```
+    
+

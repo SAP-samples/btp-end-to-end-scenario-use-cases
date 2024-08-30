@@ -18,7 +18,6 @@ Welcome to this guidance for application development on **SAP Business Technolog
     Develop Full Stack CAP Application 
       Add Custom Logic
       Add Fiori Elements
-      Add Authorization
       Deploy to SAP BTP,CF
         Integrate to SAP Build Workzone
           Integrate SAP Mobile Start
