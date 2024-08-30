@@ -2,7 +2,7 @@
 
 ## 1. Add SAP HANA Cloud
 
-1. From the root of the **INCIDENT-MANAGEMENT** project, choose the burger menu, and then choose **Terminal → New Terminal**.
+1. From the root of the **INCIDENT-MANAGEMENT** project, choose the burger menu <img src="Images/hor.png" width="20" />, and then choose **Terminal → New Terminal**.
 2. To add an SAP HANA Cloud client to your application, run the following command:
 
 ```
