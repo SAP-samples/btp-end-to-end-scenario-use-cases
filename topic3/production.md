@@ -44,7 +44,7 @@ cds add xsuaa --for production
 Adds the SAP Authorization and Trust Management service service to the package.json file of the INCIDENT-MANAGEMENT project.
 Creates the SAP Authorization and Trust Management service security configuration (that is, the xs-security.json file) for the INCIDENT-MANAGEMENT project.
 
-2. Make sure that the following lines have been added to the ***package.json** file:
+2. Make sure that the following lines have been added to the **package.json** file:
 
 ```json
 {
