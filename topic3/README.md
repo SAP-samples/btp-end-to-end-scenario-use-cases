@@ -45,9 +45,10 @@ Welcome to this guidance for application development on **SAP Business Technolog
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
 3. [Add SAP Fiori Elements UIs](./docs/generate-fiori-ui.md)
 4. [Add Custom Logic](https://developers.sap.com/tutorials/add-custom-logic.html)
-5. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
-6. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
-7. [Access Your Launchpad Site with SAP Mobile Start](./docs/mobilestart.md)
+5. [Prepare for Production](./production.md)
+6. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
+7. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
+8. [Access Your Launchpad Site with SAP Mobile Start](./docs/mobilestart.md)
 
 ## 2. Implement Remote Connectivity with SAP S/4HANA
 
