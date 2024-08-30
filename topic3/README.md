@@ -52,10 +52,10 @@ Welcome to this guidance for application development on **SAP Business Technolog
 ## 2. Implement Remote Connectivity with SAP S/4HANA
 
 1. [Overview](./overview2.md)
-2. [Extend the Incident Management аpplication](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/develop/extend-app-cf.md)
-3. [Run a developer test with mock data](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/develop/test-with-mock.md)
-4. [Prepare the app for production](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/deploy/prep-for-prod/prep-for-prod.md)
-5. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/deploy/cf/deploy-to-cf.md)
+2. [Extend the Incident Management аpplication](./docs/extend-app.md)
+3. [Run a developer test with mock data](./docs/test-with-mock.md)
+4. [Prepare the app for production](./docs/prep-for-prod.md)
+5. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./docs/deploy-to-cf.md)
 6. [Run application with SAP S/4HANA Backend](https://github.com/SAP-samples/btp-developer-guide-cap/blob/main/documentation/remote-service/test-the-application/test-the-app.md)
 
 ## 3. Add Observability to CAP Application
