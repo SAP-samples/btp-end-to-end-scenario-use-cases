@@ -69,13 +69,13 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
     - In the **Application title** field, enter **Incident-Management**.
 
     - In the **Application namespace** field, enter a unique value.
-       > [!NOTE]
-       > Namespace value should be unique, it's suggested to use your user ID followed by numeric value eg., **UserID-01**.
+> [!IMPORTANT]
+> Namespace value should be unique, it's suggested to use your user ID followed by numeric value eg., **UserID-01**. You may also use it same as the unique [Cloud Foundry Space name](https://github.com/SAP-samples/btp-end-to-end-scenario-use-cases/blob/main/topic3/space.md#create-cloud-foundry-space). 
 
-    - Leave the default values for all the other settings and choose **Finish**.
+- Leave the default values for all the other settings and choose **Finish**.
 
-        <!-- border; size:540px --> 
-        ![Project names](./images/vscrfeapp.png)
+  <!-- border; size:540px --> 
+  ![Project names](./images/vscrfeapp.png)
 
     The application is now generated and in a few seconds you can see the application's **incidents** folder in the **app** folder of your **incident-management** project. It contains a **webapp** folder with a **Component.js** file that is typical for an SAPUI5 application. However, the source code of this application is minimal. It inherits its logic from the **sap/fe/core/AppComponent** class. This class is managed centrally by SAP Fiori elements and provides all the services that are required (routing, edit flow) so that the building blocks and the templates work properly.
 
