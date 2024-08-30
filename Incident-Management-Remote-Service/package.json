@@ -36,7 +36,8 @@
   "cds": {
     "requires": {
       "[production]": {
-        "db": "hana"
+        "db": "hana",
+        "auth": "xsuaa"
       },
       "API_BUSINESS_PARTNER": {
         "kind": "odata-v2",
