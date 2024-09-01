@@ -10,7 +10,7 @@ cds add hana --for production
 ```
 
 > [!NOTE] 
-> The cds add hana command adds the @sap/cds-hana module that allows SAP HANA Cloud to access the package.json file and the database configuration “db”: “hana” > 
+> The cds add hana command adds the @cap-js/hana module that allows SAP HANA Cloud to access the package.json file and the database configuration “db”: “hana” > 
 that uses SAP HANA Cloud when the application is started on production. The cds add hana command adds to the package.json file the highlighted lines.
 
 ```json
@@ -18,7 +18,7 @@ that uses SAP HANA Cloud when the application is started on production. The cds 
     "name": "incident-management",
     "dependencies": {
         ...
-        "@sap/cds-hana": "^x"
+        "@cap-js/hana": "^x"
     },
     ...
     "cds": {
