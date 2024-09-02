@@ -44,7 +44,7 @@ Welcome to this guidance for application development on **SAP Business Technolog
 1. [Overview](./overview1.md)
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
 3. [Add SAP Fiori Elements UIs](./docs/generate-fiori-ui.md)
-4. [Add Custom Logic](https://developers.sap.com/tutorials/add-custom-logic.html)
+4. [Add Custom Logic](./docs/custom.md)
 > [!CAUTION]
 > Please don't tryout the next steps **Use a Local Launch Page** which you may find inside **Add Custom Logic** as Next Steps . Directly jump to **Prepare for Production**.
 5. [Prepare for Production](./production.md)
