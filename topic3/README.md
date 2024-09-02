@@ -46,9 +46,7 @@ Welcome to this guidance for application development on **SAP Business Technolog
 3. [Add SAP Fiori Elements UIs](./docs/generate-fiori-ui.md)
 4. [Add Custom Logic](./docs/custom.md)
 5. [Prepare for Production](./production.md)
-6. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
-> [!CAUTION]
-> Please don't tryout the next steps **Assign the User Roles** which you may find inside **Deploy in SAP BTP, Cloud Foundry Runtime** as Next Steps. Directly jump to **Integrate Your Application with SAP Build Work Zone, Standard Edition**.
+6. [Deploy in SAP BTP, Cloud Foundry Runtime](./docs/deploy-basic.md)
 7. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
 > [!WARNING]
 > Use **SAP BTP Cockpit** option for SAP Build Work Zone integration
