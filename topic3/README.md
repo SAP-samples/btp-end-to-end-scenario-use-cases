@@ -45,6 +45,8 @@ Welcome to this guidance for application development on **SAP Business Technolog
 2. [Build a CAP Application](https://developers.sap.com/tutorials/build-cap-app.html)
 3. [Add SAP Fiori Elements UIs](./docs/generate-fiori-ui.md)
 4. [Add Custom Logic](https://developers.sap.com/tutorials/add-custom-logic.html)
+> [!CAUTION]
+> Please don't tryout the next steps **Use a Local Launch Page**
 5. [Prepare for Production](./production.md)
 6. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
 7. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
