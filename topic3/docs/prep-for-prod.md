@@ -8,7 +8,7 @@ To use the SAP S/4HANA Cloud Extensibility service to access the Business Partne
 
 Navigate to the *package.json* file in the root folder of the application. Replace the settings for **API_BUSINESS_PARTNER** with the following code snippet:
 
-    ```json
+```json
     "API_BUSINESS_PARTNER": {
         "kind": "odata-v2",
         "model": "srv/external/API_BUSINESS_PARTNER",
@@ -19,4 +19,4 @@ Navigate to the *package.json* file in the root folder of the application. Repla
             }
         }
     }
-    ```
+```
