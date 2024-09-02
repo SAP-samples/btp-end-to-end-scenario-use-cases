@@ -51,6 +51,9 @@ Welcome to this guidance for application development on **SAP Business Technolog
 6. [Deploy in SAP BTP, Cloud Foundry Runtime](https://developers.sap.com/tutorials/deploy-to-cf.html)
 > [!CAUTION]
 > Please don't tryout the next steps **Assign the User Roles** which you may find inside **Deploy in SAP BTP, Cloud Foundry Runtime** as Next Steps. Directly jump to **Integrate Your Application with SAP Build Work Zone, Standard Edition**.
+> [!WARNING]
+> Use **SAP BTP Cockpit** option for SAP Build Work Zone integration
+
 7. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
 8. [Access Your Launchpad Site with SAP Mobile Start](./docs/mobilestart.md)
 
