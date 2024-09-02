@@ -48,8 +48,6 @@ Welcome to this guidance for application development on **SAP Business Technolog
 5. [Prepare for Production](./production.md)
 6. [Deploy in SAP BTP, Cloud Foundry Runtime](./docs/deploy-basic.md)
 7. [Integrate Your Application with SAP Build Work Zone, Standard Edition](https://developers.sap.com/tutorials/integrate-with-work-zone.html)
-> [!WARNING]
-> Use **SAP BTP Cockpit** option for SAP Build Work Zone integration
 8. [Access Your Launchpad Site with SAP Mobile Start](./docs/mobilestart.md)
 
 ## 2. Implement Remote Connectivity with SAP S/4HANA
