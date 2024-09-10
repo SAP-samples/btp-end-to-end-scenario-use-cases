@@ -70,7 +70,7 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
 
     - In the **Application namespace** field, enter a unique value.
 > [!CAUTION]
-> Application Namespace value should be unique and it's suggested to use **ns_** followed by your **Cloud Foundry Space name** without any space. For example if your cf space name is **CC104**, then your application namespace shall be **ns_cc104**. 
+> Application Namespace value should be unique and it's suggested to use **Cloud Foundry Space name** without any space. For example if your cf space name is **CC104**, then your application namespace shall be **cc104**. 
 
 - Leave the default values for all the other settings and choose **Finish**.
 
