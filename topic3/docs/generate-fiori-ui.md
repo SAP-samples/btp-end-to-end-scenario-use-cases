@@ -69,8 +69,8 @@ SAP Fiori elements provides designs for UI patterns and predefined floorplans fo
     - In the **Application title** field, enter **Incident-Management**.
 
     - In the **Application namespace** field, enter a unique value.
-> [!IMPORTANT]
-> Namespace value should be unique, it's suggested to use your user ID followed by numeric value eg., **UserID-01**. You may also use it same as the unique [Cloud Foundry Space name](https://github.com/SAP-samples/btp-end-to-end-scenario-use-cases/blob/main/topic3/space.md#create-cloud-foundry-space). 
+> [!WARNING]
+> Application Namespace value should be unique, it's suggested to use **ns_** followed by your **Cloud Foundry Space name** without any space.  For example if your cf space name is **CC104**, then your application namespace shall be **ns_cc104**. 
 
 - Leave the default values for all the other settings and choose **Finish**.
 
