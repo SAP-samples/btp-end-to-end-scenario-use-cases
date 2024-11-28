@@ -1,1 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="200">
+  <!-- Big box -->
+  <rect x="10" y="10" width="480" height="180" fill="#f0f8ff" stroke="#000" stroke-width="2"/>
+  
+  <!-- Title -->
+  <text x="250" y="50" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#000">
+    Landscape
+  </text>
+  
+  <!-- URL Text -->
+  <text x="250" y="100" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#333">
+    cf-eu10-004.hana.ondemand.com
+  </text>
+</svg>
 
