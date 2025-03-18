@@ -66,6 +66,15 @@ Later you will create a tailored API using SAP Developer Extensibility. To do th
 3. [Test the new app](./part3/test.md)
 4. [Integrate the application in SAP Build Workzone and SAP Mobile Start](./part3/workzone.md)
 
+## System Preparation
+
+This section is not a part of the workshop exercises. Here you will learn how to prepare your systems for this workshop.
+
+1. [Bill of Materials](./system-preparation/bom.md)
+2. [Prepare SAP BTP Subaccount](./system-preparation/btp.md)
+3. [Prepare S/4HANA Cloud system Public Edition](./system-preparation/s4hana.md)
+4. [Integrate S/4HANA Cloud system with SAP BTP](./system-preparation/integration.md)
+
 ## Troubleshooting
 
 Please check [known issues](./troubleshooting.md) if you stuck with some exercises.
