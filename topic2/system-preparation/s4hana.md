@@ -38,6 +38,10 @@ As Poetry Slam Manager will use OData services of SAP S/4HANA Cloud to create an
 3. [Enterprise Project - Read Project Processing Status OData v4](https://api.sap.com/api/ENTPROJECTPROCESSINGSTATUS_0001/overview) 
 4. [Enterprise Project - Read Project Profile OData v4](https://api.sap.com/api/ENTPROJECTPROFILECODE_0001/overview) 
 
+## Communication Management
+
+You will create 3 communication arrangements for the APIs mentioned below.
+
 ## Links to SAP S/4HANA Cloud Help
 
 As the integration of Poetry Slam Manager and SAP S/4HANA Cloud is supposed to work without any further authentification steps, you configure single sign-on in the tutorial. Besides this, URL mashups are created. User maintenance and authorizations are, of course, important, too. 

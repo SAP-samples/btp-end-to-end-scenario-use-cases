@@ -8,6 +8,7 @@ The list shows the entitlements that are required in the different subaccounts t
 | -----------   |  -------------------                                 | ---------                 | ---------     | ---------                         |
 | Development   |                                                      |                           |               |                                   |
 |               | SAP Business Application Studio                      | standard-edition          | Application   | 1 (per developer)                 |
+|               | SAP Build Work Zone, standard edition                | standard                  | Application   | 1                                 | 
 |               |                                                      |                           |               |                                   |
 |               | SAP BTP Cloud Foundry runtime                        | standard                  | Environment   | 4 units                           |
 |               | SAP Authorization and Trust Management service       | broker                    | Service       | 1                                 | 

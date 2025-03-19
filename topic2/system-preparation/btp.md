@@ -64,3 +64,26 @@ After you've created a new SAP BTP subaccount, only the standard services appear
 
     <img src="./images/11_startBAS.png" width="50%">
 
+### Enabling Cloud Foundry Environment
+
+Choose *Enable Cloud Foundry* to create a Cloud Foundry Organization from the subaccount *Overview* menu.
+
+### Enabling HANA Cloud
+
+You should have an SAP HANA Cloud instance in your subaccount. See the [Provision an Instance of SAP HANA Cloud, SAP HANA Database tutorial](https://developers.sap.com/tutorials/hana-cloud-mission-trial-3.html).
+
+Remember that your [database instance should be available](https://help.sap.com/docs/hana-cloud/sap-hana-cloud-administration-guide/sap-hana-instance-mapping) from your Cloud Foundry space. You can do it during DB instance creation like shown here:
+
+  ![](./images/cf-map-during-creation.png)
+
+Or later in configuration:
+
+  ![](./images/cf-map-in-configuration.png)
+
+The Cloud Foundry Org Id can be found in the subaccount overview:
+
+  ![](./images/cf-org-id.png)
+
+### Enabling SAP Build Workzone, Standard Edition
+
+Follow the tutorial [Getting Started with SAP Build Work Zone, standard edition](https://help.sap.com/docs/build-work-zone-standard-edition/rise-grow-standard-edition-enablement/getting-started-with-sap-build-work-zone-standard-edition).
