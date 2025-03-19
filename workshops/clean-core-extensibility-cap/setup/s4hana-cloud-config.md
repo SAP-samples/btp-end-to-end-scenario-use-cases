@@ -32,7 +32,7 @@ Follow the steps 1-3 in the tutorial [Integrate SAP BTP, ABAP environment and SA
 
 ## Links to SAP S/4HANA Cloud Help
 
-For the simplicity reasons we propose to use Basic Authentication in this tutorial. You can also use single sign-on methods to access the API for the full autherization control. If you need more information about the topics, you can have a look at the following links as a reference: 
+For the simplicity reasons we propose to use Basic Authentication in this tutorial. You can also use single sign-on methods to access the API for better authorization control. If you need more information about the topics, you can have a look at the following links as a reference: 
 
 1. [Identity Authentication Configuration for SAP S/4HANA](https://help.sap.com/docs/cloud-identity/system-integration-guide/identity-authentication-configuration-for-sap-s-4hana)
 2. [Business Partner Model in SAP S/4HANA Cloud Public Edition](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0bebd08dffca45afa67b1f751199afd0/0b8351762c0b4b2aa7844905d9a3a441.html)
