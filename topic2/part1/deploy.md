@@ -12,19 +12,19 @@ In this exercise, you will deploy the application in Cloud Foundry space.
 
   ![open terminal](./img/0125-open-terminal.png)
 
-2. Set the the link to the Cloud Foundry environment
+2. Set the the link to the Cloud Foundry environment (use your CF API URL which you can find in the **Overview** section of your subbaccount):
  
   ```bash
-     cf api https://api.cf.us10.hana.ondemand.com
+     cf api https://api.cf.eu10-005.hana.ondemand.com
   ```
   Result:
   
   ```
-    Setting API endpoint to https://api.cf.us10.hana.ondemand.com...
+    Setting API endpoint to https://api.cf.eu10-005.hana.ondemand.com...
     OK
 
-    API endpoint:   https://api.cf.us10.hana.ondemand.com
-    API version:    3.149.0
+    API endpoint:   https://api.cf.eu10-005.hana.ondemand.com
+    API version:    3.186.0
 
     Not logged in. Use 'cf login' or 'cf login --sso' to log in.
   ```

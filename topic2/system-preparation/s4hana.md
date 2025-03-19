@@ -25,6 +25,10 @@ Make sure that you fulfill the following prerequisites to implement this section
 
 Ideally you should have administrator role in S/4HANA (*SAP_BR_ADMINISTRATOR*).
 
+For the users who participate in the workshop you will need the following authorizations:
+- Developer (SAP_BR_DEVELOPER) and Development Extensibility Specialist (SAP_BR_EXTENSIBILITY_SPEC) in the development tenant
+- Project Manager (SAP_BR_PROJECTMANAGER) in the tenants with the business data (e.g. customizing/test tenant)
+
 ## API Overview
 
 As Poetry Slam Manager will use OData services of SAP S/4HANA Cloud to create and read project data, make yourself familiar with the interfaces:

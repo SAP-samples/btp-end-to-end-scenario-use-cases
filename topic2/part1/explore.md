@@ -25,7 +25,7 @@ In this exercise you will explorer the features of the deployed application and 
 6. Enter the following data and then choose **Create** button:
    - **{YOUR_ID}** in the **ID** field
    - **My new event** in the **Title** field
-   - Any date e.g. **April 1, 2024** in the **Date** field
+   - Any date e.g. **April 1, 2025** in the **Date** field
    - **10** in the **Max Number of Participants** field
 
   ![Alt text](img/0210-new-event-data.png) 
