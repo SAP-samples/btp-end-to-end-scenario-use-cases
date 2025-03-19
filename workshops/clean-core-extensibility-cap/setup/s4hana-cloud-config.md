@@ -1,0 +1,1 @@
+# Configure S/4 HANA Public Cloud for connectivity from SAP BTP
