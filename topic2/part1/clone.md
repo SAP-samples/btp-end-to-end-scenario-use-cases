@@ -78,6 +78,13 @@ cd projects
 
   ![Alt text](img/0100-view-terminal.png) 
 
+
+3. Install UI5 CLI with the following command:
+
+  ```cli
+  npm install --save-dev @ui5/cli
+  ```
+
 4. In the terminal install the packages with the command:
 
   ```cli

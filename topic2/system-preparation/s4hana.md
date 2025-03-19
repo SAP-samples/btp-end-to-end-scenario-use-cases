@@ -49,7 +49,3 @@ If you need more information about the topics, you can have a look at the follow
 3. [Identity and Access Management](https://help.sap.com/docs/SAP_S4HANA_CLOUD/a630d57fc5004c6383e7a81efee7a8bb/f25f9108740442c3804370f2d88a9bdd.html?q=Maintain%20Business%20Users)
 4. [Configuration of Integrated SAP BTP Apps](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/1a2f16c997f741278347545969947d76.html?q=SAP%20S%2F4HANA%20Cloud%20Launchpad)
 5. [Communication Management](https://help.sap.com/docs/SAP_S4HANA_CLOUD/0f69f8fb28ac4bf48d2b57b9637e81fa/2e84a10c430645a88bdbfaaa23ac9ff7.html?q=SAP%20S%2F4HANA%20Cloud%20Launchpad)
-
-## Next Steps
-
-Now that you have an overview of the aim and the prerequisites of the SAP S/4HANA Cloud integration, the next step is to [integrate the SAP BTP application with SAP S/4HANA Cloud](./34a-S4HC-Integration.md).
