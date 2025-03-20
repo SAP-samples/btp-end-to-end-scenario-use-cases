@@ -9,7 +9,7 @@
    
    - For SAP BTP, Cloud Foundry runtime: `cf undeploy <YOUR_MTA_ID> --delete-services`
 
-4. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./add-remote-service/s4hana-cloud-to-btp-connectivity.md). 
+4. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./s4hana-cloud-to-btp-connectivity.md). 
 
 # Systems and Accounts
 

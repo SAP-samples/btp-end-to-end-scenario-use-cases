@@ -27,16 +27,20 @@ Extend the existing MTA build file with the settings for SAP S/4HANA Cloud exten
           system-name: <system-name>
     ```
 
-> [!Note] - For **system-name**, enter the name of your registered SAP S/4HANA Cloud system.
+> [!Note] - 
+> For **system-name**, enter the name of your registered SAP S/4HANA Cloud system.
 `
 
 3. Navigate to **Task Explorer** and run **Enable Discovery and Deploy**.
 
     ![deploy-cf](../../images/deploy-cf/deploy_cf_enable.png)
 
+> [!Note]
+> Make sure you have already logged in into Cloud Foundary in [previous exercise](../deploy-cf.md#deploy-the-application-to-sap-btp-cloud-foundry-runtime)  
+
 4. Once deployment is successful you will get confirmation message in terminal
 
-   [deploy-mtar-success](../../images/add-remote-service/deploy-to-cf/deploy_mtar_success.png)
+   ![deploy-mtar-success](../../images/add-remote-service/deploy-to-cf/deploy_mtar_success.png)
 
 Before you can access the application, you need to [Assign Application Roles](../deploy-cf.md#assign-the-user-roles).
 
