@@ -4,7 +4,9 @@ Mastering Clean Core Extensibility Workshop will focus on developing Side by Sid
 ## Prerequsite
 1. SAP BTP Sub Accounts with necessary Entitlement 
 2. [Setup SAP S/4HANA Cloud Public Edition](./setup/s4hana-cloud-config.md)
+3. [Setup SAP Build Code](./setup/setup-build-code.md)
 
 ## Hands-on Session
 - Use SAP Build Apps to Build Side-by-Side UI Extensions for SAP S/4HANA Public Cloud
 - Build a Business Process Extension for SAP S/4 HANA  Public Cloud with SAP Build Process Automation
+- [Build full stack cloud application with SAP Build Code powered by Joule](../../build-code/README.md)

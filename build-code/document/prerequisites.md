@@ -1,6 +1,6 @@
 ## Prerequisites
 
-1. [Setup SAP Build Code in SAP BTP](./setup-build-code.md)
+1. [Setup SAP Build Code in SAP BTP](../../workshops/clean-core-extensibility-cap/setup/setup-build-code.md)
 
 > [!Note]
 > For this handson we have already set up SAP Build Code.
