@@ -25,7 +25,6 @@ You need a user with administrator access for the SAP BTP global account and the
 
 2. In the **System Landscape** screen, choose **Systems** and then **Add System**.
 
-
    ![Register System](../../images/add-remote-service/s4hana-cloud-to-btp-connectivity/setup1.png)
 
 
@@ -86,7 +85,3 @@ You need a user with administrator access for the SAP BTP global account and the
 
 
 See also: [Register an SAP S/4HANA Cloud System in a Global Account in SAP BTP](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/28171b629f3549af8c1d66d7c8de5e18.html).
-
-# Next
-
-[Get the Business Partner API](./explore-apis-and-events.md)
