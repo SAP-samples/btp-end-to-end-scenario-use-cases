@@ -4,7 +4,6 @@ The main focus of this mission is to develop a custom UI application, which cons
 
 We will create a simple custom UI application using no-code tool **SAP Build Apps**, push the code to the HTML5 repository and show different options on how to expose this application - as a stand-alone or with the different SAP Build Work Zone environments.
 
-You can find this scenario as a mission in [SAP Discovery Center](https://discovery-center.cloud.sap/missiondetail/4024/4228/).
 
 ## Business Scenario
 
@@ -24,12 +23,11 @@ This scenario covers:
 
  ![Solution Architecture](./discover/images/Keep_the_Core_clean_SD.drawio.png)
 
-**SAP S/4HANA on-premise**
-
- ![Solution Architecture](./discover/images/Keep_the_Core_clean_OnPremise.drawio.png)
-
-
-### Develop a simple UI application:
+## Pre requisite
+  * BTP Account with entitlement for SAP Build Apps
+  * [SAP S/4 HANA Cloud system with communication user](../workshops/clean-core-extensibility-cap/setup/s4hana-cloud-config.md)
+    
+## Hands-on: Develop a simple UI application:
   * [Create a No-Code Application with SAP Build Apps](./create-application/develop/README.md)
   * [Create a Business Partner List Page](./create-application/develop/ListPage/README.md)
   * [Create a Business Partner Details Page](./create-application/develop/DetailsPage/README.md)
