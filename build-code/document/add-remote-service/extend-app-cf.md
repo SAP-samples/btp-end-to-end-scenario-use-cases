@@ -11,22 +11,13 @@
 
 2. Navigate to the project's root folder of the Incident Management application. 
    
-3.  In the *package.json*, change the name to `incident-management`.
-    
-    ```js
-    {
-      "name": "incident-management",
-      "version": "1.0.0",
-      "dependencies": {
-        ....
-    ```
-4. Add some additional libraries to the *package.json* for the communication with external systems. In the terminal, go to the project's root folder of the Incident Management application and run the following command:  
+3. Add some additional libraries to the *package.json* for the communication with external systems. In the terminal, go to the project's root folder of the Incident Management application and run the following command:  
    
    ```bash
    npm add @sap-cloud-sdk/http-client@3.x @sap-cloud-sdk/util@3.x @sap-cloud-sdk/connectivity@3.x @sap-cloud-sdk/resilience@3.x
    ```
 
-5. Import the Business Partner API to your project by following the below steps
+4. Import the Business Partner API to your project by following the below steps
 
    * In the project explorer, right-click on the project's root folder and select **Upload...**
 
@@ -40,13 +31,13 @@
       ```
    * You can find the generated files in the **srv/external** folder.
 
-6. Change the conditions for the relationships between some of the entities. Open **srv/external/API_BUSINESS_PARTNER.cds**. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
+5. Change the conditions for the relationships between some of the entities. Open **srv/external/API_BUSINESS_PARTNER.cds**. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
     ```js
     to_BusinessPartnerAddress : Composition of many API_BUSINESS_PARTNER.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
     ```
 
-7. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartnerAddress**. Replace the associations for email address and phone number.
+6. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartnerAddress**. Replace the associations for email address and phone number.
 
     ```js
     to_EmailAddress : Composition of many API_BUSINESS_PARTNER.A_AddressEmailAddress on to_EmailAddress.AddressID = AddressID;
@@ -54,9 +45,9 @@
     to_PhoneNumber : Composition of many API_BUSINESS_PARTNER.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
     ```
 
-8. Create a new file *remote.cds* in the *srv* folder.
+7. Create a new file *remote.cds* in the *srv* folder.
 
-9. Copy the snippet to the newly created *remote.cds* file:
+8. Copy the snippet to the newly created *remote.cds* file:
 
     ```js
     using { API_BUSINESS_PARTNER as S4 } from './external/API_BUSINESS_PARTNER';
@@ -87,7 +78,7 @@
     }
     ```
 
-10. Add some buisness logic for reading and saving a business partner. 
+9. Add some buisness logic for reading and saving a business partner. 
    * Open the **srv/services.js** file. 
    * Set the `init` method to `async`:
   
@@ -187,7 +178,7 @@
 
     
 
-11. To execute the tests, created in [add testcase exercise](../testcase.md) run following command: 
+10. To execute the tests, created in [add testcase exercise](../testcase.md) run following command: 
 
     ```sh
     npm run test

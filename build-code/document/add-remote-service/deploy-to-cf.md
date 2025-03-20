@@ -18,7 +18,7 @@ Extend the existing MTA build file with the settings for SAP S/4HANA Cloud exten
 2. Add the following code snippet to the *resource* section
 
     ```yaml
-    - name: incidents-api-access
+      - name: incidents-api-access
         type: org.cloudfoundry.managed-service  
         parameters:
           path: ./bupa.json
@@ -27,39 +27,20 @@ Extend the existing MTA build file with the settings for SAP S/4HANA Cloud exten
           system-name: <system-name>
     ```
 
-**Note** - For **system-name**, enter the name of your registered SAP S/4HANA Cloud system.
+> [!Note] - For **system-name**, enter the name of your registered SAP S/4HANA Cloud system.
+`
 
-4. In the *incident-management-srv* module, in the *requires* section, add **- name: incident-management-destination-service**
-   
-    ```yaml
-    - name: incident-management-srv
-      type: nodejs
-      path: gen/srv
-      requires:
-      - name: incident-management-auth
-      - name: incident-management-db
-      - name: incident-management-destination-service
-    ....
-    ```
+3. Navigate to **Task Explorer** and run **Enable Discovery and Deploy**.
 
-5. Right-click on the *mta.yaml* file and choose **Build MTA Project**
-   
-   ![build mtar](../../images/add-remote-service/deploy-to-cf/build_mtar.png)
+    ![deploy-cf](../../images/deploy-cf/deploy_cf_enable.png)
 
-5. If the build was successful, you find the generated file in the *mta_archives* folder. Right-click on *incident-management_1.0.0.mtar* and choose **Deploy MTA Archive**.
-   
-   ![deploy mtar](../../images/add-remote-service/deploy-to-cf/deploy_mtar.png)
+4. Once deployment is successful you will get confirmation message in terminal
 
-6. Login to your SAP BTP subaccount and space to start the deployment.
-   
-   ![login](../../images/add-remote-service/deploy-to-cf/login.png)
+   [deploy-mtar-success](../../images/add-remote-service/deploy-to-cf/deploy_mtar_success.png)
 
-   ![login](../../images/add-remote-service/deploy-to-cf/select_account.png)
+Before you can access the application, you need to [Assign Application Roles](../deploy-cf.md#assign-the-user-roles).
 
-
-Before you can access the application, you need to [Assign Application Roles](https://developers.sap.com/tutorials/user-role-assignment.html).
-
-As a next step, proceed to [Integrate with SAP Build Workzone](https://developers.sap.com/tutorials/integrate-with-work-zone.html) to access the application in launchpad.
+Make sure in previous exercise you have [Integrate with SAP Build Workzone](https://developers.sap.com/tutorials/integrate-with-work-zone.html) to access the application in launchpad.
 
 # Next
 

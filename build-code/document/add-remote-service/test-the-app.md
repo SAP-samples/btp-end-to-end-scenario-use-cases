@@ -3,8 +3,8 @@
 ## Prerequisites
 
 - You have sucessfully deployed the application to your SAP BTP Runtime.
-- You have assigned application roles before accessing the application. See [User Role Assignment](https://developers.sap.com/tutorials/user-role-assignment.html).
-- You have integrated your application with SAP Build Work Zone and accessed it via launchpad. See [Integrate Your Application with SAP Build Workzone](https://developers.sap.com/tutorials/integrate-with-work-zone.html).
+- You have assigned application roles before accessing the application. See [User Role Assignment](../deploy-cf.md#assign-the-user-roles).
+- You have integrated your application with SAP Build Work Zone and accessed it via launchpad. See [Integrate Your Application with SAP Build Workzone](../integrate-workzone.md).
 
 ## Run and Test the Applicaion
 
