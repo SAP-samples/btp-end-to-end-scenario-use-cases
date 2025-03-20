@@ -1,4 +1,7 @@
-## Create Destination for CAP Application
+## Create Destination for S/4 HANA Public Cloud
+
+> [!Note]
+> To Configure S/4 HANA Public Cloud, and to establish connectivity from SAP BTP, check [Configure S/4 HANA Public Cloud for connectivity from SAP BTP](../../workshops/clean-core-extensibility-cap/setup/s4hana-cloud-config.md).
 
 1. Go to the [SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/643ae448-ea81-4fea-8d95-fb010e4d9f50/subaccountoverview).
 
@@ -16,13 +19,15 @@
 
     3. URL becomes **s4hana-system-url/sap/opu/odata/sap/API_BUSINESS_PARTNER**
 
-        > Note: *s4hana-system-url* is the S/4HANA Cloud System.
+    > Note: *s4hana-system-url* is the S/4HANA Cloud System. Check the prerequisite section to retrieve the information.
 
     4. Leave the **Proxy Type** as **Internet** by default.
 
     5. Change the Authentication to **Basic Authentication** from the dropdown.
 
-    6. Retrieve the User and Password from [here](./s4hanasystem.md) 
+    6. Enter the User and Password details.
+    
+    > Note: User and password details can be retrieved from S/4 HANA system. Check the prerequisite section.
 
     7. Under Additional Properties, click on **New Property**.
 

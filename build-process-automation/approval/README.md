@@ -31,22 +31,25 @@
 
     ![approval](./images/text.png) 
 
-
 9. Go back to the **startprocess** tab, click on ApprovePurchase, which opens General tab.
     
     ![approval](./images/sp_2.png) 
 
-10. Under general tab, do the following:
-    1. In the **Subject**, enter 'Approve Purchase Order', and choose the purchase order from purchaseform.
+10. Under **General** tab, do the following:
+
+    1. In the **Subject**, type **Approve Purchase Order**, after that click on the **Purchase Order** from *purchaseform(Trigger)*.
+
     2. Under the **Recipients** -> **Users**, choose **Process Started By** from Process Metadata.
 
         ![approval](./images/general.png) 
 
-11. In Approval, choose **Inputs** tab.
-    1. In **Purchase Order**, choose **purchase order** from the form .
-    2. Choose **Save**
+11. Choose **Inputs** tab.
 
-        ![approval](./images/input.png) 
+12. In **Purchase Order**, click on the **Purchase Order** from *purchaseform(Trigger)*.
+
+13. Choose **Save**.
+
+    ![approval](./images/input.png) 
 
 **You have now completed the development of Approvals.**
 

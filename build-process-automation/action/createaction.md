@@ -70,4 +70,4 @@ Your Action Project will contain the actions for the CAP service.
 
     ![action](./images/createaction/publish.png)
 
-You have successfully created action project.
+**You have successfully created action project.**

@@ -17,7 +17,7 @@ Integrate CAP NodejS Application in SAP Build Process Automation, for creating d
 
 Integrate SAP S/4HANA in SAP Build Process Automation, for creating destination, follow [Create Destination for S/4HANA](./s4hana-destination.md)
 
-## Create destinations in SAP Build
+## Create Destinations in SAP Build
 
 1. Go to the [SAP Build Lobby](https://pw-build-hands-on.eu10.build.cloud.sap/lobby)
 
