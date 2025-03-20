@@ -44,7 +44,7 @@ Extend the existing MTA build file with the settings for SAP S/4HANA Cloud exten
 
 Before you can access the application, you need to [Assign Application Roles](../deploy-cf.md#assign-the-user-roles).
 
-Make sure in previous exercise you have [Integrate with SAP Build Workzone](https://developers.sap.com/tutorials/integrate-with-work-zone.html) to access the application in launchpad.
+Make sure in previous exercise you have [Integrate with SAP Build Workzone](../integrate-workzone.md) to access the application in launchpad.
 
 # Next
 
