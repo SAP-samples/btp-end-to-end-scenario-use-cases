@@ -26,7 +26,7 @@ Create a UI application using a Joule prompt following the steps at [Create SAP 
 
     ![Testcase](../images/testcases/selectphase.png)
 
-6. Choose **Open Code Editor -> Application Logic**.
+6. Choose **Open Code Editor -> Unit Test**.
 
     ![Testcase](../images/testcases/unittest.png)
 

@@ -74,13 +74,12 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
     3. Choose **Open a new browser page to generate your SSO passcode** to sign in to your subaccount in SAP BTP, which opens in a new browser.
 
-    4. Click on **Sign in with default identity provider** .
-    
-        > If you want to log in with an alternative identity provider, find the text box with **Enter the origin key**, and enter **pesworkshops-platform**. Then, choose **Sign in with alternative identity provider**.
+    4. Find the text box for **Enter the origin key** and enter **pesworkshops-platform** and click on **Sign in with alternative identity provider**.
 
         ![deploy-cf](../images/deploy-cf/tenant_login.png)
 
         > Note: When choosing **Sign in with alternative identity provider**, if your are prompted to sign in, enter your username and password.
+        > If you are signed in with Default Identity, you can choose to sign in with default identity provider.
 
     5. Choose the **Copy** icon to get a temporary authentication code.
 
