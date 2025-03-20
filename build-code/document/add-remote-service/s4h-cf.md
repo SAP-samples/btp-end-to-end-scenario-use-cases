@@ -9,6 +9,8 @@
    
    - For SAP BTP, Cloud Foundry runtime: `cf undeploy <YOUR_MTA_ID> --delete-services`
 
+4. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./add-remote-service/s4hana-cloud-to-btp-connectivity.md). 
+
 # Systems and Accounts
 
 * SAP S/4HANA Cloud system 
@@ -28,5 +30,5 @@ See [Entitlements and Quotas](https://help.sap.com/products/BTP/65de2977205c403b
 
 # Next
 
-[Configure the connectivity between SAP S/4HANA Cloud and SAP BTP](./s4hana-cloud-to-btp-connectivity.md)
+[Get the Business Partner API](./explore-apis-and-events.md)
 
