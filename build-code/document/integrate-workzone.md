@@ -17,13 +17,13 @@ Deploy your application in SAP BTP, Cloud Foundry and test using [Deploy in SAP 
 
     ![Create SAP Build Work Zone, standard edition](../images/integrate-workzone/create_workzone_instance.png)
 
-3. Keep the default setting for **Service** and choose **foundation** for **Plan**.
+3. Keep the default setting for **Service** and choose **Standard** for **Plan**.
 
 4. Choose **Create**.
 
-    ![New Instance or Subscription](../images/integrate-workzone/new_instance_dialog.png)
+    ![New Instance or Subscription](../images/integrate-workzone/workzoneSub.png)
 
-You have now subscribed to the SAP Build Work Zone, foundation plan.
+You have now subscribed to the SAP Build Work Zone, Standard plan.
 
 ## Assign SAP Build Work Zone, standard edition role collection
 

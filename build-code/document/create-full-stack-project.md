@@ -5,7 +5,7 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 > [!Note]
 > The Joule prompts are given in such a way to get the expected code. --> to be updated
 
-1. Open the [SAP Build Lobby](https://pes-handson.eu10.build.cloud.sap/lobby).
+1. Open the SAP Build Lobby.
 
 2. To create a new project, choose **Create**.
 

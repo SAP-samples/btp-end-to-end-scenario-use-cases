@@ -48,7 +48,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ## Consume External Service
 
-> **[!Note]**
+> [!Note]
 > To proceed with consuming external service, development and deployment of the CAP application needs to be completed as a prerequisite.
 
 [Consume External Service from SAP S/4HANA Public Cloud](./document/add-remote-service/README.md)
