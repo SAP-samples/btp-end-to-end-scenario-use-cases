@@ -9,8 +9,13 @@ Mastering Clean Core Extensibility Workshop will focus on developing Side by Sid
 ## Hands-on Exercises
 
 ### SAP Build Apps and SAP Build Process Automation
-- [Use SAP Build Apps to Build Side-by-Side UI Extensions for SAP S/4HANA Public Cloud](../../build-apps/README.md)
-- [Build a Business Process Extension for SAP S/4 HANA  Public Cloud with SAP Build Process Automation](../../build-process-automation/README.md)
+|  | | | 
+| ----------- | ----------- | ----------- |
+|[Use SAP Build Apps to Build Side-by-Side UI Extensions for SAP S/4HANA Public Cloud](../../build-apps/README.md) | SAP BTP Cockpit | SAP Build Lobby|
+|[Build a Business Process Extension for SAP S/4 HANA  Public Cloud with SAP Build Process Automation](../../build-process-automation/README.md)|SAP BTP Cockpit | SAP Build Lobby|
+
 
 ### SAP Build Code CAP
-- [Side by Side Extension Application Development with SAP Build Code CAP](../../build-code/README.md)
+|  | | | 
+| ----------- | ----------- | ----------- |
+| [Side by Side Extension Application Development with SAP Build Code CAP](../../build-code/README.md) | SAP BTP Cockpit | SAP Build Lobby|

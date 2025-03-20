@@ -6,7 +6,7 @@ The goal is to cover all the necessary steps to consume the CAP Service API func
 
 ![](./images/arch.png)
 
-## Section 1 : Build Purchase Order Approval Business Process and Integrate with CAP.
+## Exercise 1 : Build Purchase Order Approval Business Process and Integrate with CAP.
 
 * Follow the below steps for quick start.
 
@@ -20,10 +20,10 @@ The goal is to cover all the necessary steps to consume the CAP Service API func
     | **Step 6**: [Release and Deploy the Project](./deploy/README.md) |
     | **Step 7**: [Run End to End Scenario](./e2e/README.md) |
 
-##  Section 2: Learn how to integrate SAP S/4HANA inside SAP Build Process Automation.
+##  Exercise 2: Learn how to integrate SAP S/4HANA inside SAP Build Process Automation.
 
 > [!IMPORTANT]  
-> **Section 1** has to be completed before moving to Section 2.
+> **Exercise 1** has to be completed before moving to Section 2.
 
 * Follow the below steps for quick start.
 
@@ -36,3 +36,4 @@ The goal is to cover all the necessary steps to consume the CAP Service API func
 ## Start the Discovery Center Mission.
 
 Start the [SAP Discovery Center Mission](https://discovery-center.cloud.sap/missiondetail/4163/4406).
+[](../workshops/clean-core-extensibility-cap/setup/s4hana-cloud-config.md)
