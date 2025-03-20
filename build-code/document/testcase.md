@@ -56,8 +56,10 @@ Create a UI application using a Joule prompt following the steps at [Create SAP 
 > /cap-unit-test prompt for adding test cases still under development. If the generated code has some errors, replace with below code snippet to test a READ call for Incidents entity
 
 ```js
-    const response = await GET('/odata/v4/processor/Incidents');
-    expect(response.status).to.equal(200);
+    module.exports = async function(GET, POST, PATCH, DELETE, expect) {
+        const response = await GET('/odata/v4/processor/Incidents');
+        expect(response.status).to.equal(200);
+    };
 ```
 
 ## Test the application

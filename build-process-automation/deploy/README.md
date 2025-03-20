@@ -1,8 +1,12 @@
 # Release and Deploy the Projects.
 
-1. From the process editor, choose **Release**. In the **Release Project** popup, choose **Release** again.
+1. From the process editor, choose **Release**.
     
     ![release](./images/chooserelease.png)
+
+2. In the **Release Project** popup, choose **Release** again.
+
+    ![release](./images/chooserelease1.png)
 
 2. After release, Click on **Show project version** for deploy.
     
@@ -16,13 +20,13 @@
   
     ![release](./images/deploy1.png)
 
-5. From the destination, choose **cap-app-section1** from the dropdown and then choose **Deploy**
+5. From the destination, choose **cap-app** from the dropdown and then choose **Deploy**
     
-    ![release](./images/deployment.png)
+    ![release](./images/choosedest.png)
 
 6. You will see the project in **Deployed** status.
     
-    ![release](./images/status.png)
+    ![release](./images/final.png)
 
 **You have Deployed the Project Successfully**
 

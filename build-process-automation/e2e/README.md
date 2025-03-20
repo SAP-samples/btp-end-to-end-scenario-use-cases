@@ -41,4 +41,4 @@
 
     ![teste2e](./images/output.png)
 
-**Congratulations! You have successfully completed the Section 1 of integrating CAP Application in SAP Build Process Automation**
+**Congratulations! You have successfully completed the Exercise 1 of integrating CAP Application in SAP Build Process Automation**

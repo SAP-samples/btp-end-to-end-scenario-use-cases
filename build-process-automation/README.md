@@ -36,4 +36,3 @@ The goal is to cover all the necessary steps to consume the CAP Service API func
 ## Start the Discovery Center Mission.
 
 Start the [SAP Discovery Center Mission](https://discovery-center.cloud.sap/missiondetail/4163/4406).
-[](../workshops/clean-core-extensibility-cap/setup/s4hana-cloud-config.md)
