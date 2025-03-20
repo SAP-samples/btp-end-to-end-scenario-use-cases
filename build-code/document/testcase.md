@@ -28,25 +28,29 @@ Create a UI application using a Joule prompt following the steps at [Create SAP 
 
 6. Choose **Open Code Editor -> Application Logic**.
 
-    ![Testcase](../images/testcases/opencode_editor.png)
+    ![Testcase](../images/testcases/opencode_editor.png)'
 
-7. This will open Joule to create testcases.
+7. By default test environment is not enabled in build clde. Click *yes* in the pop-up to enable. 
+
+    ![confirm-test-env](../images/testcases/confirm-test-env.png)
+
+8. This will open Joule to create testcases.
 
     ![Testcase](../images/testcases/joule_start.png)
 
     > In the Joule prompt, **/cap-unit-test** is used for writing testcases for the created services.
 
-8. The Joule prompt will be prefilled with `/cap-unit-test #tests/code/test-incidents-test.js`. After the prefilled command, use the following prompt to create the testcase.
+9. The Joule prompt will be prefilled with `/cap-unit-test #tests/code/test-incidents-test.js`. After the prefilled command, use the following prompt to create the testcase.
 
     ```console
     Test case to read all the incidents, check the status code is 200. Odata endpoint is /odata/v4/processor/Incidents
     ```
     
-9.  Choose the **Send** icon.
+10.  Choose the **Send** icon.
 
     ![Testcase](../images/testcases/joule_send.png)
 
-10. Once Joule responds with the code, check the implementation and accept it. 
+11. Once Joule responds with the code, check the implementation and accept it. 
 
 ## Test the application
 

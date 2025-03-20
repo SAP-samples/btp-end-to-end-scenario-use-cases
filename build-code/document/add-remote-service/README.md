@@ -20,4 +20,4 @@ For this purpose, we will be using the [SAP S/4HANA Business Partner API](https:
 
 # Next Step
 
-[Connect to a Remote Service Using the SAP Destination Service (SAP BTP, Cloud Foundry Runtime and SAP S/4HANA Cloud)](remote-service-s4h-cf.md)             | 
+[Connect to a Remote Service Using the SAP Destination Service (SAP BTP, Cloud Foundry Runtime and SAP S/4HANA Cloud)](remote-service-s4h-cf.md) 

@@ -187,13 +187,7 @@
 
     
 
-11. To run the tests, navigate to `tests/test.js` and replace line no.3 with the following code snippet:
-
-    ```
-    const { GET, POST, DELETE, PATCH, expect } = cds.test(__dirname + '../../', '--with-mocks');
-    ```
-
-    Now you can run tests by using the following command: 
+11. To execute the tests, created in [add testcase exercise](../testcase.md) run following command: 
 
     ```sh
     npm run test

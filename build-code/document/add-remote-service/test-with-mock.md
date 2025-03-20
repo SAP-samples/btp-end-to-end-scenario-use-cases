@@ -83,23 +83,16 @@ To increase your development speed, it is helpful to run and test your implement
 4.  Open a new terminal and run `cds watch`. This will start the application connected to the running mock service.
 
 5. In a browser, open the server URL: `http://localhost:4004`.
-6. There are two URLs under web applications:
+6. There is an URLs under web applications:
  
-    - */launchpage.html* uses a [local launchpage](!https://pages.github.tools.sap/cap/golden-path/develop/Launchpage/Launchpage)
-    - */incidents/webapp/index.html* uses the *index.html* from [ui5 app](!https://pages.github.tools.sap/cap/golden-path/develop/btp-app-create-ui-fiori-elements/btp-app-create-ui-fiori-elements)
-    - Choose the *launchpad.html*.
+    - */incident-management/webapp* uses the *index.html* from [ui5 app](!https://pages.github.tools.sap/cap/golden-path/develop/btp-app-create-ui-fiori-elements/btp-app-create-ui-fiori-elements)
+    
+    Choose the url */incident-management/webapp*.
     
    ![run test](../../images/add-remote-service/test-with-mock/test-app01.png)
 
 
-7.  When you are prompted to authenticate, use the following credentials:
- 
-    - Username: `alice`
-    - Password: Empty / No Password   
-    
-    > You find the user settings in the `.cdsrc.json file`.
-
-8. Testing the scenario - while creating a new incident, the value help for customers loads data from the mock service.
+7. Testing the scenario - while creating a new incident, the value help for customers loads data from the mock service.
    * Open the Incident Management application.
   
       ![run test](../../images/add-remote-service/test-with-mock/test-app02.png)
