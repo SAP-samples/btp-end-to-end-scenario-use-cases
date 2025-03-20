@@ -15,8 +15,8 @@
 
 2. Choose Action **Invokes action updatespo** and then choose **Add**.
 
-    > [!NOTE]
-    > If the action mentioned is not available, click on Browse All Actions.
+> [!NOTE]
+> If the action mentioned is not available, click on Browse All Actions.
 
     ![action](./images/invoke.png)
 

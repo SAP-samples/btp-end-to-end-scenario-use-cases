@@ -32,7 +32,7 @@ The Business Process will be in Deployed state. To edit the process and forms, c
 
     ![s4hana](../s4hana/images/chosesource.png)
 
-4. In the **Browse Library** pop-up, choose **GET** Retrieves customer general data.
+4. In the **Browse Library** pop-up, choose **GET Retrieves customer general data**.
 
 5. Select the **Add** option for the action project you created earlier.
 
