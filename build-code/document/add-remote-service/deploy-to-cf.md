@@ -27,7 +27,7 @@ Extend the existing MTA build file with the settings for SAP S/4HANA Cloud exten
           system-name: <system-name>
     ```
 
-> [!Note] - 
+> [!Note]
 > For **system-name**, enter the name of your registered SAP S/4HANA Cloud system.
 `
 
