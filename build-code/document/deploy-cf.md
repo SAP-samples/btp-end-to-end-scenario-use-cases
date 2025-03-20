@@ -4,7 +4,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
 
 ## Prerequisites
 
-1. [Create testcases using Joule](./testcase.md).
+1. [Add Test cases using Joule](./testcase.md).
  
 2. The sample data generated in the previous steps, creates the **data** folder in the **test** folder. When deploying the application, move the **data** folder to the **db** folder. Open the terminal, and run the following command to copy the csv files.
 
@@ -46,6 +46,8 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
         - index.html
         - manifest.json
 
+        > Note: Do Find all and replace *incidentmanagement* with *incidentmanagementjd12*. 
+
 
 ## Deploy the Application
 
@@ -61,20 +63,20 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
 3. During the deployment, a new page pops up asking you to sign in to Cloud Foundry. Follow these steps:
 
-    1. In the **Enter Cloud Foundry Endpoint** field, enter ***https://api.cf.ap10.hana.ondemand.com***.
+    1. In the **Enter Cloud Foundry Endpoint** field, enter the **API Endpoint** from SAP BTP Cockpit.
 
-        > Note: The Cloud Foundry Endpoint can be retrived from [SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/643ae448-ea81-4fea-8d95-fb010e4d9f50/subaccountoverview).
+        > Note: The Cloud Foundry Endpoint can be retrived from SAP BTP Cockpit.
         ![deploy-cf](../images/deploy-cf/retrieve_endpoint.png) 
 
     2. Select **SSO Passcode** as an authentication method.
 
-        ![deploy-cf](../images/deploy-cf/signin.png)
+        ![deploy-cf](../images/deploy-cf/ssopasscode.png)
 
     3. Choose **Open a new browser page to generate your SSO passcode** to sign in to your subaccount in SAP BTP, which opens in a new browser.
 
     4. Click on **Sign in with default identity provider** .
     
-        > If you want to log in with an alternative identity provider, find the text box with **Enter the origin key**, and enter **aviss4yru-platform**. Then, choose **Sign in with alternative identity provider**.
+        > If you want to log in with an alternative identity provider, find the text box with **Enter the origin key**, and enter **pesworkshops-platform**. Then, choose **Sign in with alternative identity provider**.
 
         ![deploy-cf](../images/deploy-cf/tenant_login.png)
 
@@ -128,9 +130,9 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
 5. In the **Users** tab:
 
-    1. Type the username in the **ID** field, for example, **sapeventuser**, and select your username from the suggestions.
+    1. Type your username in the **ID** field, and select your username from the suggestions.
 
-    2. Select **aviss4yru.accounts.ondemand.com (application users)** from the **Identity Provider** dropdown.
+    2. Select **...accounts.ondemand.com(application users)** from the **Identity Provider** dropdown.
 
     ![deploy-cf](../images/deploy-cf/add_user.png)
 

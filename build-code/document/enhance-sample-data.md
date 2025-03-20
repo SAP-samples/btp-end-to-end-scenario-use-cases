@@ -1,4 +1,4 @@
-# Enhance the Sample Data Using Joule
+# Add the Sample Data Using Joule
 
 ## Prerequisites
 
@@ -36,4 +36,4 @@ Customers - Contains customer details such as ID, firstName, lastName, email, an
 
 ## Next Step
 
-[Generate Services](generate-service.md)
+[Add Services](generate-service.md)

@@ -181,4 +181,4 @@ We will now add another section to the object page displaying a table with conve
 
 ## Next Steps
 
-Deploy your application in SAP BTP, Cloud Foundry and test using [Deploy in SAP BTP, Cloud Foundry Runtime](deploy-cf.md)
+[Add Testcases](./testcase.md)

@@ -90,4 +90,4 @@ type PhoneNumber : String;
 
 ## Next Step
 
-[Enhance Sample Data](enhance-sample-data.md)
+[Add Sample Data](enhance-sample-data.md)

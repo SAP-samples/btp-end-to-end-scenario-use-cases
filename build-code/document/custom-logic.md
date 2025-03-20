@@ -1,12 +1,12 @@
-# Create Backend Logic with Joule
+# Add Business Logic with Joule
 
-In this section, with the help of Joule, you will generate custom logic before creating and updating incidents in the ProcessorService service generated in the previous section.
+In this section, with the help of Joule, you will generate business logic before creating and updating incidents in the ProcessorService service generated in the previous section.
 
 ## Prerequisite
 
-You have created Services following the steps at [Create Services](generate-service.md).
+You have created Services following the steps at [Add Services](generate-service.md).
 
-## Custom Logic for the ProcessorService Service
+## Business Logic for the ProcessorService
 
 1. Navigate to **Storyboard**.
 
@@ -40,7 +40,7 @@ You have created Services following the steps at [Create Services](generate-serv
 
     > In the Joule prompt, **/cap-app-logic** is used for creating custom backend logic for the created services. Once Joule generates the code, **#srv/code/changeUrgencyDueToSubject.js** tells which file to fill the generated code.
 
-5. The Joule prompt will be prefilled with `/cap-app-logic #srv/code/changeUrgencyDueToSubject.js`. After the prefilled command, use the following prompt to create the custom logic.
+5. The Joule prompt will be prefilled with `/cap-app-logic #srv/code/changeUrgencyDueToSubject.js`. After the prefilled command, use the following prompt to create the business logic.
 
     ```console
     Create a helper function named 'changeUrgencyDueToSubject' which checks the title of the incident is having urgent keyword and update the urgency_code field to High. Ensure the data is array or wrap in an array.
@@ -82,7 +82,7 @@ You have created Services following the steps at [Create Services](generate-serv
 
     > In the Joule prompt, `/cap-app-logic` is used for creating custom backend logic for the created services. Once Joule generates the code, **#srv/code/onUpdate.js** tells which file to fill the generated code.
 
-6. The Joule prompt will be prefilled with `/cap-app-logic #srv/code/onUpdate.js`. After the prefilled command, use the following prompt to create the custom logic.
+6. The Joule prompt will be prefilled with `/cap-app-logic #srv/code/onUpdate.js`. After the prefilled command, use the following prompt to create the business logic.
 
     ```console
     Create a helper function named 'onUpdate' and check if the status_code is 'C' and reject the request with 'cannot modify the closed incident'

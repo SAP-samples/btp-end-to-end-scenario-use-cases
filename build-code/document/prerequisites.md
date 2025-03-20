@@ -36,4 +36,4 @@ To consume remote service, [register an SAP S/4HANA Cloud system in your SAP SAP
 
 ## Next Step
 
-[Create a Full Stack Application](./create-full-stack-project.md)
+[Create the Project](./create-full-stack-project.md)
