@@ -36,7 +36,7 @@ Extend the existing MTA build file with the settings for SAP S/4HANA Cloud exten
     ![deploy-cf](../../images/deploy-cf/deploy_cf_enable.png)
 
 > [!Note]
-> Make sure you have already logged in into Cloud Foundary in [previous exercise](../deploy-cf.md#deploy-the-application-to-sap-btp-cloud-foundry-runtime)  
+> Make sure you have already logged in into Cloud Foundary in [previous exercise](../deploy-cf.md#deploy-the-application)  
 
 4. Once deployment is successful you will get confirmation message in terminal
 
