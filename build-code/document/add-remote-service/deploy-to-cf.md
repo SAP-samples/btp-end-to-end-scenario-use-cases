@@ -28,10 +28,9 @@ In this section you will extend the existing MTA build file with the settings fo
           system-name: <SYSTEM-NAME>
     ```
 
-- > [!Note]
-  > Enter **pes-workshop-s4hana-cloud** as the *systemName* of your registered SAP S/4HANA Cloud system, we have already register the system in SAP SAP Business Technology Platform (BTP) account for this handson.
+- Enter **pes-workshop-s4hana-cloud** as the *systemName* of your registered SAP S/4HANA Cloud system, we have already register the system in SAP SAP Business Technology Platform (BTP) account for this handson.
 
-- Replaced *SERVICE-NAME* with `incidents<your-initials><unique-random-number>-api-access`. For example, if your name is `John Doe`, then the service-name would be **incidentsjd12-api-access**, (12 is unique random number)
+- Replace *SERVICE-NAME* with `incidents<your-initials><unique-random-number>-api-access`. For example, if your name is `John Doe`, then the service-name would be **incidentsjd12-api-access**, (12 is unique random number)
 `
 
 3. Navigate to **Task Explorer** and run **Enable Discovery and Deploy**.
