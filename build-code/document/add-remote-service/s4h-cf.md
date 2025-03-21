@@ -28,7 +28,5 @@ See [Entitlements and Quotas](https://help.sap.com/products/BTP/65de2977205c403b
 * While adding entitlement **SAP S/4HANA Cloud Extensibility**, please select the appropriate system under **Service Details: SAP S/4HANA Cloud Extensibility** dropdown.
 * In the checkbox, check the **api-access** under Available Plans and add the service plans.
 
-# Next
 
-[Get the Business Partner API](./explore-apis-and-events.md)
 

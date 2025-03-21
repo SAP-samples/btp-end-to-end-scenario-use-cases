@@ -2,7 +2,7 @@
 
 ##  Prerequisite 
 
-You should have a trial or an enterprise SAP BTP global account. If you don't have [Get an Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account..html)
+You should have  an enterprise SAP BTP global account. If you don't have [Get an Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account..html)
 
 ## Run the SAP Build Code Booster
 
@@ -19,6 +19,19 @@ You should have a trial or an enterprise SAP BTP global account. If you don't ha
 4. After running the booster, in the popup window, choose **Navigate to Subaccount**.
 
     ![successful booster](./images/setup-build-code/booster-confirm.png)
+
+## Additional Entitlements Required
+
+Remote service integration to the developed CAP application requires the following additional entitlements and quotas in the SAP BTP cockpit:
+
+| Service                           | Plan       | Number of Instances |
+|-----------------------------------|------------|:-------------------:|
+| SAP S/4HANA Cloud Extensibility | api-access | 1 |
+
+See [Entitlements and Quotas](https://help.sap.com/products/BTP/65de2977205c403bbc107264b8eccf4b/00aa2c23479d42568b18882b1ca90d79.html?locale=en-US).
+
+* While adding entitlement **SAP S/4HANA Cloud Extensibility**, please select the appropriate system under **Service Details: SAP S/4HANA Cloud Extensibility** dropdown.
+* In the checkbox, check the **api-access** under Available Plans and add the service plans.
 
 ## Access Build Code through Subaccount
 

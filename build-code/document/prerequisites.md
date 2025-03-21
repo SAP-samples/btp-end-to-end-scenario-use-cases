@@ -1,8 +1,10 @@
 # Prerequisites
 
- You should have an enterprise SAP BTP global account. 
+ You should have 
+ * SAP BTP global Account
+ * SAP S/4HANA Public Cloud system 
 
-# Entitlements required
+# Entitlements required on SAP BTP
 
 | Service / Subscription                          | Plan       | Number of Instances |
 |-----------------------------------|------------|:-------------------:|
@@ -18,7 +20,7 @@
 | Application Logging Service | lite | 1 |
 | Authorization and Trust Management Service | application | 1 |
 | Cloud Foundry Runtime | Runtime | 1 GB |
-
+| SAP S/4HANA Cloud Extensibility | api-access | 1 |
 
 # Setup SAP Build Code
 
