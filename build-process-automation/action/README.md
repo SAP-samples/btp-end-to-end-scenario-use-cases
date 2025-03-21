@@ -1,12 +1,5 @@
 ## Integrate CAP Application in SAP Build Process Automation
 
-## Prerequisite
-
-[Create Purchase Order Action Project in SAP Build Actions](./createaction.md)
-
-> [!NOTE]  
-> Actions has already been created for this session.
-
 ## Add Action to Integrate Cloud Application in SAP Build Process Automation.
 
 1. In the Approve section of approval, choose **+**, and then choose **Action**.
