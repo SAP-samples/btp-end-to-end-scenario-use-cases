@@ -29,7 +29,7 @@
       ```bash
       cds import API_BUSINESS_PARTNER.edmx --as cds
       ```
-   * You can find the generated files in the **srv/external** folder.
+   * You can find two new files `API_BUSINESS_PARTNER.cds` and `API_BUSINESS_PARTNER.edmx` will be generated under the **srv/external** folder.
 
 5. Change the conditions for the relationships between some of the entities. Open **srv/external/API_BUSINESS_PARTNER.cds**. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
@@ -37,17 +37,23 @@
     to_BusinessPartnerAddress : Composition of many API_BUSINESS_PARTNER.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
     ```
 
-6. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartnerAddress**. Replace the associations for email address and phone number.
+6. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
 
     ```js
     to_EmailAddress : Composition of many API_BUSINESS_PARTNER.A_AddressEmailAddress on to_EmailAddress.AddressID = AddressID;
+    ```
 
+7. Scroll down to the **to_PhoneNumber** section under **entity API_BUSINESS_PARTNER.A_BusinessPartnerAddress** and replace the associations for phone number with the following.
+
+    ```js
     to_PhoneNumber : Composition of many API_BUSINESS_PARTNER.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
     ```
 
-7. Create a new file *remote.cds* in the *srv* folder.
+8. Create a new file *remote.cds* in the *srv* folder.
 
-8. Copy the snippet to the newly created *remote.cds* file:
+    ![create-new-file](../../images/add-remote-service/extend-app-cf/create-new-file.png)
+
+9. Copy the snippet to the newly created *remote.cds* file:
 
     ```js
     using { API_BUSINESS_PARTNER as S4 } from './external/API_BUSINESS_PARTNER';
@@ -78,14 +84,14 @@
     }
     ```
 
-9. Add some buisness logic for reading and saving a business partner. 
-   * Open the **srv/services.js** file. 
-   * Set the `init` method to `async`:
+10. Add some buisness logic for reading and saving a business partner. 
+   * Open the **srv/service.js** file. 
+   * Make sure `init` method is set to `async`:
   
       ```js
       async init() {
         this.before("UPDATE", "Incidents", (req) => this.onUpdate(req));
-        this.before("CREATE", "Incidents", (req) => this.changeUrgencyDueToSubject(req.data));
+        this.before(["CREATE", "UPDATE"], "Incidents", (req) => this.changeUrgencyDueToSubject(req.data));
 
         return super.init();
       }
@@ -139,42 +145,42 @@
       this.remoteService = await cds.connect.to('RemoteService');
       ```
     
-   * Add the custom handler after the *init* method:  
+   * Add the custom handler after the *onCustomerRead* method created in above step:  
 
-    ```
-    async onCustomerCache(req, next) {
-      const { Customers } = this.entities;
-      const newCustomerId = req.data.customer_ID;
-      const result = await next();
-      const { BusinessPartner } = this.remoteService.entities;
-      if (newCustomerId && (newCustomerId !== "") && ((req.event == "CREATE") || (req.event == "UPDATE"))) {
-        console.log('>> CREATE or UPDATE customer!');
-
-        // Expands are required as the runtime does not support path expressions for remote services
-        const customer = await this.S4bupa.run(SELECT.one(BusinessPartner, bp => {
-          bp('*'),
-            bp.addresses(address => {
-              address('email', 'phoneNumber'),
-                address.email(emails => {
-                  emails('email')
-                }),
-                address.phoneNumber(phoneNumber => {
-                  phoneNumber('phone')
-                })
-            })
-        }).where({ ID: newCustomerId }));
-                                                                                      
-        if(customer) {
-          customer.email = customer.addresses[0]?.email[0]?.email;
-          customer.phone = customer.addresses[0]?.phoneNumber[0]?.phone;
-          delete customer.addresses;
-          delete customer.name;
-          await UPSERT.into(Customers).entries(customer);
-        }
-      }
-      return result;
-      }
       ```
+      async onCustomerCache(req, next) {
+        const { Customers } = this.entities;
+        const newCustomerId = req.data.customer_ID;
+        const result = await next();
+        const { BusinessPartner } = this.remoteService.entities;
+        if (newCustomerId && (newCustomerId !== "") && ((req.event == "CREATE") || (req.event == "UPDATE"))) {
+          console.log('>> CREATE or UPDATE customer!');
+
+          // Expands are required as the runtime does not support path expressions for remote services
+          const customer = await this.S4bupa.run(SELECT.one(BusinessPartner, bp => {
+            bp('*'),
+              bp.addresses(address => {
+                address('email', 'phoneNumber'),
+                  address.email(emails => {
+                    emails('email')
+                  }),
+                  address.phoneNumber(phoneNumber => {
+                    phoneNumber('phone')
+                  })
+              })
+          }).where({ ID: newCustomerId }));
+                                                                                        
+          if(customer) {
+            customer.email = customer.addresses[0]?.email[0]?.email;
+            customer.phone = customer.addresses[0]?.phoneNumber[0]?.phone;
+            delete customer.addresses;
+            delete customer.name;
+            await UPSERT.into(Customers).entries(customer);
+          }
+        }
+        return result;
+        }
+        ```
 
     
 

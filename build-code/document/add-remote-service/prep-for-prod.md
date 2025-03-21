@@ -11,11 +11,11 @@ You have set up the connection to an SAP S/4HANA Cloud system. See [Configure th
 
 ## Content
 
-1. Create a new file **bupa.json** in the root folder of the project and copy the content below
+1. Create a new file **bupa.json** in the root folder of the project. 
 
-- For **systemName**, enter the name of your registered SAP S/4HANA Cloud system. 
-- For **communicationArrangementName**, enter a speaking name for your communication arrangement (e.g. INCIDENT_MANAGEMENT_0008).
+    ![create-new-file](../../images/add-remote-service/prep-for-prod/create-file.png)
 
+2. Copy the below content in *bupa.json* file created in above step. 
 
     ```json
     {
@@ -74,24 +74,27 @@ You have set up the connection to an SAP S/4HANA Cloud system. See [Configure th
     }
     ```
 
+- Enter **pes-workshop-s4hana-cloud** as the *systemName* of your registered SAP S/4HANA Cloud system, we have already registered the system in SAP SAP Business Technology Platform (BTP) account for this handson.
+- For **communicationArrangementName**, enter a speaking name for your communication arrangement (e.g. INCIDENT_MANAGEMENT_0008).
+
 For more information, see [Communication Arrangement JSON/YAML File - Properties](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/553a4c6b98be4c1ba7d1dfa0e9df8669.html).
 
-2.  Navigate to the *package.json* file in the root folder of the application. Replace the settings for **API_BUSINESS_PARTNER** with the following code snippet:
+3.  Navigate to the *package.json* file in the root folder of the application. Replace the settings for **API_BUSINESS_PARTNER** with the following code snippet:
   
-  ```json
-  "API_BUSINESS_PARTNER": {
-      "kind": "odata-v2",
-      "model": "srv/external/API_BUSINESS_PARTNER",
-      "[production]": {
-          "credentials": {
-              "destination": "<DESTINATION_NAME>",
-              "path": "/sap/opu/odata/sap/API_BUSINESS_PARTNER"
-          }
-      }
-  }
-  ```
+    ```json
+    "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER",
+        "[production]": {
+            "credentials": {
+                "destination": "<DESTINATION_NAME>",
+                "path": "/sap/opu/odata/sap/API_BUSINESS_PARTNER"
+            }
+        }
+    }
+    ```
     
-> If you are deploying to Cloud Foundry, the **destination** is `incidents-api-access`.
+> If you are deploying to Cloud Foundry, the **DESTINATION_NAME** should be replaced with `incidents-api-access`.
 
 # Next
 

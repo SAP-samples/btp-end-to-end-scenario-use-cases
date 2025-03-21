@@ -2,8 +2,8 @@
 
 This section explains how to access the SAP Build lobby and create a full-stack application using SAP Build Code.
 
-> [!Note]
-> The Joule prompts are given in such a way to get the expected code. --> to be updated
+> [!Information]
+> The Joule prompt is designed to guide the generation of the complete code required to successfully develop a full-stack application in SAP Build Code powered by Joule. This prompt ensures that it aligns with the hands-on requirements.
 
 1. Open the SAP Build Lobby.
 
