@@ -6,15 +6,16 @@
     
     ![teste2e](./images/process.png)
 
-2. Copy Form link from right side, and open in browser.
+2. Click on **purchaseform**
+3. Copy Form link from right side, and open in browser.
     
     ![teste2e](./images/formlink.png)
 
-3. In the form, Choose **Purchase Order** then choose **Submit**.
+4. In the form, Choose **Purchase Order** then choose **Submit**.
     
     ![teste2e](./images/choosepo.png)
 
-4. You form is successfully submitted.
+5. You form is successfully submitted.
     
     ![teste2e](./images/submit.png)
 
