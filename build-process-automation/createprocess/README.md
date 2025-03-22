@@ -20,8 +20,8 @@
     ![project](./images/projectname.png)
 
 6. Please wait until the created project opens up in a new tab automatically.
-
-    > If the created project is not opening, click on the project name
+    > - If any popup comes. Click on Cancel Button
+    > - If the created project is not opening, click on the project name
     ![project](./images/projectclick.png)
     Click on Create and choose **process** from the dropdown.
     ![project](./images/createprocessmanual.png)
