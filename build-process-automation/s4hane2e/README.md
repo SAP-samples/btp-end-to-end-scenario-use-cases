@@ -1,6 +1,6 @@
 # Test the Dropdown Filtering in the Form
 
-1. Select the **purchaseform** artifact and copy the deployed form link.
+1. In the **startprocess** Select the **purchaseform** artifact and copy the deployed form link.
 
     ![s4hana](./images/formlink.png)
 
