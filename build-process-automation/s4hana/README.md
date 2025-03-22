@@ -61,8 +61,12 @@ The Business Process will be in Deployed state. To edit the process and forms, c
 9. **Save** the form.
 
 10. **Release** the project.
+11. In the Release Project popup for version select option **Contains minor changes**
 
-11. **Deploy** the project.
+12. **Deploy** the project. Select option **Upgrade**
+13. For destination variable **bupa** chooose destination **S4HANA**
+14. For destination variable **dest** leave destination as **cap-app**
+15. Click on Deploy
 
     ![s4hana](../s4hana/images/dest.png)
 
