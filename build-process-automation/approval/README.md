@@ -1,4 +1,5 @@
 # Create Purchase Order Approval Form.
+In this exercise you will create a form to Approve the Purchase and add a comment for approval
 
 1. Go back to startprocess tab, and choose **+** after the trigger. 
 
@@ -16,8 +17,10 @@
     1. Enter **Name** as **ApprovePurchase**.
     2. Choose **Based on a form**.
     3. Choose the created form name from dropdown
+    4. Click on **Create** Button
 
         ![approval](./images/approval_popup.png)
+    
 
 5. In **Approval**, choose **Open Editor**.
 
