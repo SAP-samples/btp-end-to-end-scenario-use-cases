@@ -8,8 +8,11 @@
 
 2. Click on **purchaseform**
 3. Copy Form link from right side, and open in browser.
-    
-    ![teste2e](./images/formlink.png)
+> [!Note]
+> If you face any authorization issue open the link in an incognito window
+
+
+![teste2e](./images/formlink.png)
 
 4. In the form, Choose **Purchase Order** then choose **Submit**.
     
