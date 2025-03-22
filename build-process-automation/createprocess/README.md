@@ -23,10 +23,11 @@
     > - If any popup comes. Click on Cancel Button
     > - If the created project is not opening, click on the project name
     ![project](./images/projectclick.png)
-    Click on Create and choose **process** from the dropdown.
+
+7.  Click on Create and choose **process** from the dropdown.
     ![project](./images/createprocessmanual.png)
 
-7. In the create process popup, enter **startprocess** in the Name field and choose **Create**.
+8. In the create process popup, enter **startprocess** in the Name field and choose **Create**.
 
     ![project](./images/createprocess.png)
 
