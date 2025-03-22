@@ -21,12 +21,12 @@ In this exercise you will create a UI Form to trigger the approval process
 
     ![form](./images/open_editor.png)
 
-#### Now you are inside Form Editor. Lets add the component by drag and drop.
+6. Now you are inside Form Editor. Lets add the component by drag and drop.
 
-6. Choose header **H1**, drag it to **purchaseform** and enter **Choose Purchase Order**
+7. Choose header **H1**, drag it to **purchaseform** and enter **Choose Purchase Order**
 
-7. Choose **Dropdown**, and drag it below **Choose Purchase Order** and enter name of the dropdown as **Purchase Order**.
-8. In the right side, under **Data to display**, choose **Manual**. Enter below values.
+8. Choose **Dropdown**, and drag it below **Choose Purchase Order** and enter name of the dropdown as **Purchase Order**.
+9. In the right side, under **Data to display**, choose **Manual**. Enter below values.
 
 * PO-001
 * PO-002
@@ -34,7 +34,7 @@ In this exercise you will create a UI Form to trigger the approval process
 * PO-004
 * PO-005
 
-9. In the **Configuration**, choose **Required** and choose **Save**
+10. In the **Configuration**, choose **Required** and choose **Save**
 
     ![](./images/fillform.png)
 
