@@ -1,4 +1,5 @@
 # Create Trigger Form for Purchase Order Approval
+In this exercise you will create a UI Form to trigger the approval process
 
 1. In the startprocess, click on **Add a Trigger**.
 
