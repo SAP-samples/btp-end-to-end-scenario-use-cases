@@ -14,8 +14,8 @@
 
     ![project](./images/bp.png)
 
-5. Enter Project Name **Purchase Managers** and choose **Create**.
-    > Please append a unique random number at the end of Project name to avoid duplication error.
+5. Enter Project Name **Purchase Managers-<UniqueID>** and choose **Create**.
+    > Please append a unique id which consists of your initials and random number at the end of Project name e.g if your name is John Doe name the Project Purchase Managers-JD06.
 
     ![project](./images/projectname.png)
 
