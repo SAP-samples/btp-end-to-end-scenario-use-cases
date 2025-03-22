@@ -1,19 +1,19 @@
 ## Integrate CAP Application in SAP Build Process Automation
 
 ## Add Action to Integrate Cloud Application in SAP Build Process Automation.
-
-1. In the Approve section of approval, choose **+**, and then choose **Action**.
+1. Navigate to **startprocess** tab
+2. In the Approve section of approval, choose **+**, and then choose **Action**.
 
     ![action](./images/add.png)
 
-2. Choose Action **Invokes action updatespo** and then choose **Add**.
+3. Choose Action **Invokes action updatespo** and then choose **Add**.
 
 > [!NOTE]
 > If the action mentioned is not available, click on Browse All Actions.
 
     ![action](./images/invoke.png)
 
-3. In the action, choose **General**.
+4. In the action, choose **General**.
 
     1. Choose **+ Create Destination Variable** 
         
@@ -23,7 +23,7 @@
         
         ![action](./images/iden.png)
 
-4. In the action, under **inputs** tab do the following:
+5. In the action, under **inputs** tab do the following:
 
     1. In the **po**, choose **Purchase Order** from *purchaseform(Trigger)*.
 
