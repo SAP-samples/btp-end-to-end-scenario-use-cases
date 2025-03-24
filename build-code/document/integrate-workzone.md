@@ -106,7 +106,7 @@ You need to assign your user to the **Launchpad_Admin** role collection, so you 
 
     ![WorkZone1](../images/integrate-workzone/create_site.png)
 
-2. Enter the site name as *Incident Management Site* and choose **Create**.
+2. Enter the site name as `Incident Management Site <your-initials><unique-random-number>` and choose **Create**.
 
     ![WorkZone1](../images/integrate-workzone/create_site1.png)
 
