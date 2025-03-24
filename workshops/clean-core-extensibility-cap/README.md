@@ -14,4 +14,4 @@ Mastering Clean Core Extensibility Workshop will focus on developing Side by Sid
 ### SAP Build Code CAP
 |  | | | 
 | ----------- | ----------- | ----------- |
-|3. [Side by Side Extension Application Development with SAP Build Code CAP](../../build-code/README.md) | [SAP BTP Cockpit](https://apac.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/4c1ebe70-43f2-4a82-83c1-c85da24c7fbaOld) | [SAP Build Lobby](https://pes-handson.eu10.build.cloud.sap/lobby)|
+|3. [Side by Side Extension Application Development with SAP Build Code CAP](../../build-code/README.md) | [SAP BTP Cockpit](https://apac.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/4c1ebe70-43f2-4a82-83c1-c85da24c7fba/subaccountoverview) | [SAP Build Lobby](https://pes-handson.eu10.build.cloud.sap/lobby)|
