@@ -70,4 +70,8 @@ Your Action Project will contain the actions for the CAP service.
 
     ![action](./images/createaction/publish.png)
 
+# Create Action for SAP S/4HANA Cloud system using SAP Build
+
+Follow the steps from [Create Business Partner Action Project in SAP Build Actions](https://developers.sap.com/tutorials/spa-business-partner-action-create.html)
+
 **You have successfully created action project.**

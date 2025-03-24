@@ -2,17 +2,18 @@
 
 ## 1. Submit a new PO Approval Form.
 
-1. From the project, choose **process**.
+1. From the project, click on the process named **startprocess**.
     
     ![teste2e](./images/process.png)
 
-2. Click on **purchaseform**
+2. Click on **purchaseform**.
+
 3. Copy Form link from right side, and open in browser.
-> [!Note]
-> If you face any authorization issue open the link in an incognito window
 
+    > [!Note]
+    > If you face any authorization issue open the link in an incognito window.
 
-![teste2e](./images/formlink.png)
+    ![teste2e](./images/formlink.png)
 
 4. In the form, Choose **Purchase Order** then choose **Submit**.
     
@@ -30,7 +31,11 @@
 
 2. You will see the task in inbox. In the Approval form, enter approval text in **Start with Comment** field (add some unique description after that).
 
+> [!Note]
+> After clicking on the task, please wait for sometime till it loads. As it might take few seconds to load.
+
 3. Choose **Approve**.
+
     ![teste2e](./images/approve.png)
 
 ## 3. Review PO Status in Purchase Order CAP Application.

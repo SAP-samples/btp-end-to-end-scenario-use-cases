@@ -1,12 +1,3 @@
-## Prerequisites
-
-> [!Note]
-> For this handson we have already set up the below steps. You can directly proceed with [Create Project in SAP Build](../createprocess/README.md)
-
-1. [Setup SAP Build Process Automation in SAP BTP](../../workshops/clean-core-extensibility-cap/setup/setup-build-apps-&-process-automation.md#setup-sap-build-process-automation-in-sap-btp-using-booster)
-
-2. [Deployment of CAP Application](./deployment.md)
-
 ## Create Destinations in SAP BTP Cockpit
 
 **Section 1:**
