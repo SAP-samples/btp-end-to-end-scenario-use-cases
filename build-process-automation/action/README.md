@@ -1,15 +1,17 @@
-## Integrate CAP Application in SAP Build Process Automation
+# Integrate CAP Application in SAP Build Process Automation
 
 ## Add Action to Integrate Cloud Application in SAP Build Process Automation.
-1. Navigate to **startprocess** tab
+
+1. Navigate to **startprocess** tab.
+
 2. In the Approve section of approval, choose **+**, and then choose **Action**.
 
     ![action](./images/add.png)
 
 3. Choose Action **Invokes action updatespo** and then choose **Add**.
 
-> [!NOTE]
-> If the action mentioned is not available, click on Browse All Actions.
+    > [!NOTE]
+    > If the action mentioned is not available, click on **Browse All Actions**.
 
     ![action](./images/invoke.png)
 

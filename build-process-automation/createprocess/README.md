@@ -14,18 +14,27 @@
 
     ![project](./images/bp.png)
 
-5. Enter Project Name **Purchase Managers-<UniqueID>** and choose **Create**.
-    > Please append a unique id which consists of your initials and random number at the end of Project name e.g if your name is John Doe name the Project Purchase Managers-JD06.
+5. Enter `Purchase Manager <your-initials><unique-random-number>` in the **Project Name** field. For example, if your name is `John Doe`, then the project name would be **Purchase Manager-jd12**, (12 is some random number).
 
-    ![project](./images/projectname.png)
+    > **Note:** The project name should be unique to identify your project during deployment and also to avoid a duplication error.
 
-6. Please wait until the created project opens up in a new tab automatically.
-    > - If any popup comes. Click on Cancel Button
-    > - If the created project is not opening, click on the project name
-    ![project](./images/projectclick.png)
+6. Click on **Create**.
 
-7.  Click on Create and choose **process** from the dropdown.
-    ![project](./images/createprocessmanual.png)
+    ![project](./images/project_name.png)
+
+7. Please wait until the created project opens up in a new tab automatically.
+
+    > If any popup comes. Click on Cancel Button
+
+8. If the created project is not opening, do the following:
+
+    1. Click on the project name.
+    
+        ![project](./images/projectclick.png)
+
+    2. Click on **Create** and choose **Process** from the dropdown.
+        
+        ![project](./images/createprocessmanual.png)
 
 8. In the create process popup, enter **startprocess** in the Name field and choose **Create**.
 

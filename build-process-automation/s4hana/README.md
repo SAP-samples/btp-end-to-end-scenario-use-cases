@@ -1,12 +1,5 @@
 # Consume SAP S/4HANA Business Partner API to the Drop-Down Fields in the Form.
 
-## Prerequisite
-
-[Create Business Partner Action Project in SAP Build Actions](https://developers.sap.com/tutorials/spa-business-partner-action-create.html)
-
-> [!NOTE]  
-> Actions has already been created for this session.
-
 ## Create a dropdown in order processing form
 
 The Business Process will be in Deployed state. To edit the process and forms, change the state from *Deployed* to *Editable*.
@@ -22,7 +15,7 @@ The Business Process will be in Deployed state. To edit the process and forms, c
     ![s4hana](../s4hana/images/form.png)
 
 
-## Add action project to dropdown.
+## Add S/4HANA action project to dropdown.
 
 1. Select the **Customer Name** dropdown.
 
@@ -60,13 +53,27 @@ The Business Process will be in Deployed state. To edit the process and forms, c
 
 9. **Save** the form.
 
-10. **Release** the project.
-11. In the Release Project popup for version select option **Contains minor changes**
+## Release and Deploy the project
 
-12. **Deploy** the project. Select option **Upgrade**
-13. For destination variable **bupa** chooose destination **S4HANA**
-14. For destination variable **dest** leave destination as **cap-app**
-15. Click on Deploy
+1. Click on **Release**.
+
+2. In the Release Project popup, select option **Contains minor changes** and click on **Release**.
+
+    ![s4hana](../s4hana/images/release1.png)
+
+3. Click on **Deploy**.
+
+4. Choose the environment as **Public**.
+
+5. Click on **Upgrade**.
+
+    ![s4hana](../s4hana/images/release2.png)
+
+6. For destination variable **bupa** chooose destination **S4HANA**.
+
+7. For destination variable **dest** leave destination as **cap-app**.
+
+8. Click on **Deploy**.
 
     ![s4hana](../s4hana/images/dest.png)
 
