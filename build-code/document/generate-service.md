@@ -29,18 +29,14 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 4. Choose **Accept**.
 
     ![cap-accept-service](../images/generate-service/accept-edit-model.png)
-
-- CDS service definition exposes entities from the database schema (schema.cds) as part of  service layers with role-based access to services.
-    
--  Modular Service Definitions - Services (ProcessorService and AdminService) allow controlled access to data.
-
-- Role-Based Access 
-
+   
+> [!Tip]
+> - CDS service definition exposes entities from the database schema (schema.cds) as part of  service layers with role-based access to services.
+> -  Modular Service Definitions - Services (ProcessorService and AdminService) allow controlled access to data.
+> - Role-Based Access 
     - ProcessorService → Support staff can manage incidents and customers.
-
     - AdminService → Admin users have full access.
-
-- Projections on Entities - The original database entities are not directly exposed, only projected versions are. This allows customization, filtering, or restricting access to certain fields (if needed in the future).
+> - Projections on Entities - The original database entities are not directly exposed, only projected versions are. This allows customization, filtering, or restricting access to certain fields (if needed in the future).
 
 
 5. For OData draft enabling, use the following prompt to make ProcessorService to draft enable. Start typing `/cap-edit`, and select **/cap-edit-model** from the suggestions.
@@ -48,7 +44,7 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
     ```
     Annotate Processor Service with odata draft enable for incidents entity.
     ```
-> [!Info]
+> [!Tip]
 >  OData draft enablement in CAP allows users to save work-in-progress data before final submission. This is especially useful in SAP Fiori applications, where users may enter data in multiple steps and want to avoid losing changes.
 
 
