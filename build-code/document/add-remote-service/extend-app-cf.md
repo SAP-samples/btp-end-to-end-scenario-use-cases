@@ -19,7 +19,7 @@
 
 4. Import the Business Partner API to your project by following the below steps
 
-   * In the project explorer, right-click on the project's root folder and select **Upload...**
+   * In the project explorer, right-click on the empty space under root folder and select **Upload...**
 
      ![upload API](../../images/add-remote-service/extend-app-cf/upload-api.png)
 

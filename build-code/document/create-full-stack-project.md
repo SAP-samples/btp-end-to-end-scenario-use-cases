@@ -1,3 +1,7 @@
+# Prerequisites
+
+1. You will need to create Cloud Foundry space in SAP BTP Cockpit, which is required for deploying the developed application to Cloud Foundry Runtime. Follow [Create Space in SAP BTP](./create-space.md).
+
 # Create a Full-Stack Application
 
 This section explains how to access the SAP Build lobby and create a full-stack application using SAP Build Code.

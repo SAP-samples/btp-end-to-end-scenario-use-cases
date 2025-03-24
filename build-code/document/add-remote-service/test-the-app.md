@@ -8,11 +8,19 @@
 
 ## Run and Test the Applicaion
 
-1. Access your application via launchpad.
+1. Open *SAP Build Work Zone, Standard edition*.
+
+   ![open-workzone](../../images/add-remote-service/test-the-app/open-work-zone.png)
+
+2. You should see the *launchpad* create in [integrate workzone](../integrate-workzone.md). 
+
+   ![launchpad](../../images/add-remote-service/test-the-app/launchpad.png)
+
+3. Access your application via launchpad.
    
    ![Test app](../../images/add-remote-service/test-the-app/run-app02.png)
 
-2. While creating a new incident, the value help for customers loads data from the integrated remote service.
+4. While creating a new incident, the value help for customers loads data from the integrated remote service.
   
    *  Choose **Create**
   
