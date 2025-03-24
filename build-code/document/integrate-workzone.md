@@ -82,7 +82,7 @@ You need to assign your user to the **Launchpad_Admin** role collection, so you 
 
     ![WorkZone1](../images/integrate-workzone/create_group.png)
 
-2. Add the title Incident Management Group.
+2. Add the title Incident Management Group <your-initials><unique-random-number> eg Incident Management Group JD12 .
 
 3. In the Assignment Status, choose the slider to assign the Incident-Management app to the group.
 
