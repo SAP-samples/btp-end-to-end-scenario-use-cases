@@ -1,7 +1,6 @@
 # Extend Fiori UI
 
-SAP Build Code with Joule is a development tool designed to facilitate the creation of basic applications, providing a streamlined approach to jump-start application development. It enables developers to quickly build foundational applications, which can be further extended and customized as per our requirements. 
-In this section let's explore how to extend Fiori UI of an application.
+In this chapter we will extend/customize the generated Fiori UI using SAP Fiori Tooling.
 
 ## Prerequisites
 

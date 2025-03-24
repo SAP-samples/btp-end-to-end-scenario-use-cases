@@ -46,7 +46,8 @@ ACME is a popular Electronics company. ACME hires call center support representa
 4. [Add Services](./document/generate-service.md)
 5. [Add Business Logic with Joule](./document/custom-logic.md)
 6. [Add Fiori UI Using Joule](./document/fiori-ui.md)
-7. [Add Test Cases](./document/testcase.md)
+7. [[Optional]Extend the Fiori UI](./document/extend-fiori-ui.md)
+8. [Add Test Cases](./document/testcase.md)
 
 ## Exercise 2: Deploy in SAP BTP, Cloud Foundry Runtime
 

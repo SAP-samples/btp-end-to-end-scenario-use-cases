@@ -18,8 +18,8 @@ You have created Services following the steps at [Add Services](generate-service
 
 3. The **Application Logic Editor** appears.
 
-### Logic 1: changeUrgencyDueToSubject
-
+### 1: Change Urgency Due To Subject
+Using Joule we will define an event handler that automatically sets the urgency level of an incident to High ('H') if the title contains the word 'urgent'.The function **changeUrgencyDueToSubject** is triggered before CREATE or UPDATE operations on the ProcessorService.Incidents entity. 
 1. In the **Application Logic Editor**, change the value of the **Name** field to **changeUrgencyDueToSubject** and choose **Add**.
 
     ![Custom Logic](../images/custom-logic/logic1_name.png)
@@ -56,7 +56,8 @@ You have created Services following the steps at [Add Services](generate-service
 
     > Joule may generate different codes for the same prompt. If the code for the backend logic differs but achieves the same result, you can ignore the variation.
 
-### Logic 2: onUpdate
+### 2: Prevent updates to closed incidents
+This event handler prevents updates to incidents that are already closed (status_code = 'C'). This function runs before an UPDATE operation on ProcessorService.Incidents and ensures that validation happens before the database update.
 
 1. Go back to the **Application Logic Editor**, and choose **+**.
 

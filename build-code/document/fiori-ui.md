@@ -24,27 +24,29 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
     ![ui-generated-msg](../images/fiori-ui/ui_generated.png)
 
-4. Go to **Explorer**. In the **app** folder, check that the following folder structure is generated.
+4. Joule creates a  SAP Fiori application using the List Report template in SAP Fiori Elements, with a local CAP  service as the data source
+
+5. Go to **Explorer**. In the **app** folder, check that the following folder structure is generated.
 
     ![fiori-ui](../images/fiori-ui/app_folder.png)
 
-5. Choose **Run and Debug** to start the application.
+6. Choose **Run and Debug** to start the application.
 
     ![run-app](../images/fiori-ui/run-app.png)
 
-6. The application is started and opens in a new tab. Choose the SAP Fiori application tile to view the user interface.
+7. The application is started and opens in a new tab. Choose the SAP Fiori application tile to view the user interface.
 
     ![open-app](../images/fiori-ui/webapp_ui.png)
 
-7. The list report page opens in new tab. Choose **Go** to view the list of incidents.
+8. The list report page opens in new tab. Choose **Go** to view the list of incidents.
 
     ![list-report-page](../images/fiori-ui/UI_listpage.png)
 
-8. Choose one of the incidents. The incident details are displayed.
+9. Choose one of the incidents. The incident details are displayed.
 
     ![object-page](../images/fiori-ui/Incident-object-page.png)
 
-9. To stop the running application, choose the **Disconnect** icon at top of the screen.
+10. To stop the running application, choose the **Disconnect** icon at top of the screen.
     
     ![stop-preview](../images/fiori-ui/stop_preview.png)
 
