@@ -6,7 +6,7 @@
 
 ## Content
 
-1. Open SAP Business Applicaiton Studio.
+1. Open SAP Business Application Studio.
 
 2. Navigate to the project's root folder of the Incident Management application. 
    

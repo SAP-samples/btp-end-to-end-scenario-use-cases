@@ -1,56 +1,81 @@
 # Extend the Incident Management Application
 
-1. Open SAP Build Code.
+## Clean Up the Cloud Foundry Space
 
-2. Navigate to the project's root folder of the Incident Management application. 
+1. Open your project space.
 
-3. Open the a new Terminal 
+2. Open the terminal and type the following command. Then, get the mta_id from the output of the command.
 
-4. Undeploy the old version of Application. 
-  - Run the command `cf mtas`. This will display all the MTA applications which are listed. Copy the name of your MTA Application which will be like `Incidents<Initial><unique number>` e.g IncidentsJD12
-  - Undeploy the application by running the command cf undeploy IncidentsJD12 --delete-services --delete-service-keys
+    ```sh
+      cf mtas
+    ```
 
-5. Wait a few minutes untill the application is fully undeployed and the successmessage is displayed
+    ![testing](../../images/e2e-testing/get_mtaid.png)
 
-6. In the SAP Build Code
+    > **Note:** You run `cf mtas` command to get the MTA ID.
+
+3. To undeploy the application, use the following command:
+
+    ```sh
+      cf undeploy <mta_id> --delete-service-keys --delete-services
+    ```
+
+    If its asks for confirmation, type **y**.
+
+    ![testing](../../images/e2e-testing/undeploy_confirm.png)
+
+    > **Note:** The mta_id is the same you got from Step 1.
+
+> [!Note]
+> Wait for a few minutes until the application is fully undeployed and you get the success message.
+
+## Extend the Incident Management Application
+
+1. To add the service, do the following:
    - Click on Service Center(on left navigation shown in screenshot below)
    - Set `Select a Provider` as **SAP SYSTEM**
-   - select `Service`  **incidents-api-access**.
-  ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
+   - Select `Service`  **incidents-api-access**.
+    
+      ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
 
-8. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
-  ![service-url](../../images/add-remote-service/extend-app-cf/service-url.png)
+2. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
 
-9. Choose the `Add to CAP Project`.  
-  ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
+    ![service-url](../../images/add-remote-service/extend-app-cf/service-url.png)
 
-9. Select the CAP Project `Incidents<Initial><Uniquid>` if prompted in the UI.
+3. Choose the `Add to CAP Project`.  
+    
+    ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
 
-10. Click on Explorer in the left navigation
+> [!Note]
+> If UI prompts to select the project, choose your project name created with `Incidents<Initial><Uniquid>` earlier. And click on **Add**.
+![add-cap](../../images/add-remote-service/extend-app-cf/addcap.png)
 
-8. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
+4. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
     ```js
     to_BusinessPartnerAddress : Composition of many incidents_api_access.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
     ```
 
-9. Search for **entity incidents_api_access.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
+    ![add-cap](../../images/add-remote-service/extend-app-cf/code1.png)
+
+5. Search for **entity incidents_api_access.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
 
     ```js
     to_EmailAddress : Composition of many incidents_api_access.A_AddressEmailAddress on to_EmailAddress.AddressID = AddressID;
     ```
 
-10. Scroll down to the **to_PhoneNumber** section under **entity incidents_api_access.A_BusinessPartnerAddress** and replace the associations for phone number with the following.
+6. Scroll down to the **to_PhoneNumber** section under **entity incidents_api_access.A_BusinessPartnerAddress** and replace the associations for phone number with the following.
 
     ```js
     to_PhoneNumber : Composition of many incidents_api_access.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
     ```
+    ![add-cap](../../images/add-remote-service/extend-app-cf/code0.png)
 
-11. Create a new file *remote.cds* in the *srv* folder.
+7. Create a new file *remote.cds* in the *srv* folder.
 
     ![create-new-file](../../images/add-remote-service/extend-app-cf/create-new-file.png)
 
-12. Copy the snippet to the newly created *remote.cds* file:
+8. Copy the snippet to the newly created *remote.cds* file:
 
     ```js
     using { incidents_api_access as S4 } from './external/incidents_api_access';
@@ -81,7 +106,7 @@
     }
     ```
 
-13. Add some buisness logic for reading and saving a business partner. 
+9. Add some buisness logic for reading and saving a business partner. 
    * Open the **srv/service.js** file. 
    * Make sure `init` method is set to `async`:
   
@@ -179,17 +204,9 @@
         }
         ```
 
-    
+## Result
+You have integrated the Business Partner API into your project and business logic to read the data from the backend system. New or changed customer data would be stored in your application database.
 
-14. To execute the tests, created in [add testcase exercise](../testcase.md) run following command: 
-
-    ```sh
-    npm run test
-    ```
-
- ## Result
- You have integrated the Business Partner API into your project and business logic to read the data from the backend system. New or changed customer data would be stored in your application database.
-
-# Next
+## Next Step
 
 [Run a developer test Locally](./test-with-mock.md)

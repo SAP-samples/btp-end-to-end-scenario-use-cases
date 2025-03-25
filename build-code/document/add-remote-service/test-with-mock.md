@@ -2,7 +2,7 @@
 
 ## Scenario
 
-To increase your development speed, it is helpful to run and test your implementation in a local environment. In this section you will learn how to test the incident management applicaiton locally.
+To increase your development speed, it is helpful to run and test your implementation in a local environment. In this section you will learn how to test the incident management application locally.
 
 ## Content
 
@@ -16,8 +16,7 @@ To increase your development speed, it is helpful to run and test your implement
 
    ![select-api](../../images/add-remote-service/test-with-mock/select-api.png)
 
-
-8. Testing the scenario - while creating a new incident, the value help for customers loads data from the SAP S/4HANA Cloud.
+3. Testing the scenario - while creating a new incident, the value help for customers loads data from the SAP S/4HANA Cloud.
    * Open the Incident Management application.
   
    *  Choose **Create**.
@@ -25,14 +24,21 @@ To increase your development speed, it is helpful to run and test your implement
       ![run test](../../images/add-remote-service/test-with-mock/test-app03.png)
    
    * Set **Title**, **Customer**, **Status** and **Urgency**. 
+
    * The value help for **Customer** fetches data from the SAP S/4HANA Cloud.
-   ![select-api](../../images/add-remote-service/test-with-mock/customer-list.png)
+
+      ![select-api](../../images/add-remote-service/test-with-mock/customer-list.png)
+
    * Create a conversation.
+
    * Choose **Create** to save the settings.
      
       ![run test](../../images/add-remote-service/test-with-mock/test-app04.png)
    
+> [!Note]
+> By using a mock server you can easily test your implementation in a local environment. You find more details in the documentation for [Local Mocking](https://cap.cloud.sap/docs/guides/using-services#local-mocking)
 
-# Next 
+## Next Step
 
-[Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./deploy-to-cf.md)
+[Prepare the app for Production](./prep-for-prod.md)
+
