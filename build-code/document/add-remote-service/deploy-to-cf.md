@@ -39,7 +39,7 @@ In this section you will extend the existing MTA build file with the settings fo
 > [!Note]
 > Make sure you have already logged in into Cloud Foundry in [previous exercise](../deploy-cf.md#deploy-the-application)  
 
-4. Once deployment is successful you will get confirmation message in terminal
+2. Once deployment is successful you will get confirmation message in terminal
 
    ![deploy-mtar-success](../../images/add-remote-service/deploy-to-cf/deploy_mtar_success.png)
 

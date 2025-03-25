@@ -47,6 +47,23 @@
 > If it asks for which project to select, choose your project name, which you have created earlier. And click on **Add**.
 ![add-cap](../../images/add-remote-service/extend-app-cf/addcap.png)
 
+6. In the SAP Build Code
+   - Click on Service Center(on left navigation shown in screenshot below)
+   - Set `Select a Provider` as **SAP SYSTEM**
+   - select `Service`  **incidents-api-access**.
+  ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
+
+8. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
+  ![service-url](../../images/add-remote-service/extend-app-cf/service-url.png)
+
+9. Choose the `Add to CAP Project`.  
+  ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
+
+9. Select the CAP Project `Incidents<Initial><Uniquid>` if prompted in the UI.
+
+10. Click on Explorer in the left navigation
+
+
 4. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
     ```js
