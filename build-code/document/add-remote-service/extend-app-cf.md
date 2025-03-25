@@ -31,9 +31,12 @@
 
 ## Extend the Incident Management Application
 
-1. Choose Service Center and select `incidents-api-access`.
+1. To add the service, do the following:
+   - Click on Service Center(on left navigation shown in screenshot below)
+   - Set `Select a Provider` as **SAP SYSTEM**
+   - Select `Service`  **incidents-api-access**.
     
-    ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
+      ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
 
 2. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
 
@@ -44,25 +47,8 @@
     ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
 
 > [!Note]
-> If it asks for which project to select, choose your project name, which you have created earlier. And click on **Add**.
+> If UI prompts to select the project, choose your project name created with `Incidents<Initial><Uniquid>` earlier. And click on **Add**.
 ![add-cap](../../images/add-remote-service/extend-app-cf/addcap.png)
-
-6. In the SAP Build Code
-   - Click on Service Center(on left navigation shown in screenshot below)
-   - Set `Select a Provider` as **SAP SYSTEM**
-   - select `Service`  **incidents-api-access**.
-  ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
-
-8. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
-  ![service-url](../../images/add-remote-service/extend-app-cf/service-url.png)
-
-9. Choose the `Add to CAP Project`.  
-  ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
-
-9. Select the CAP Project `Incidents<Initial><Uniquid>` if prompted in the UI.
-
-10. Click on Explorer in the left navigation
-
 
 4. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
@@ -70,7 +56,7 @@
     to_BusinessPartnerAddress : Composition of many incidents_api_access.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
     ```
 
-    ![add-cap](../../images/add-remote-service/extend-app-cf/code0.png)
+    ![add-cap](../../images/add-remote-service/extend-app-cf/code1.png)
 
 5. Search for **entity incidents_api_access.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
 
@@ -83,7 +69,7 @@
     ```js
     to_PhoneNumber : Composition of many incidents_api_access.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
     ```
-    ![add-cap](../../images/add-remote-service/extend-app-cf/code1.png)
+    ![add-cap](../../images/add-remote-service/extend-app-cf/code0.png)
 
 7. Create a new file *remote.cds* in the *srv* folder.
 

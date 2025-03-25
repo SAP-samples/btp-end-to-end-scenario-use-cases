@@ -28,9 +28,9 @@ In this section you will extend the existing MTA build file with the settings fo
           system-name: <SYSTEM-NAME>
     ```
 
-- Enter **pes-workshop-s4hana-cloud** as the *systemName* of your registered SAP S/4HANA Cloud system, we have already registered the system in SAP SAP Business Technology Platform (BTP) account for this handson.
-
 - Replace *SERVICE-NAME* with `incidents<your-initials><unique-random-number>-api-access`. For example, if your name is `John Doe`, then the service-name would be **incidentsjd12-api-access**, (12 is unique random number)
+
+- Enter **pes-workshop-s4hana-cloud** as the *systemName* of your registered SAP S/4HANA Cloud system, we have already registered the system in SAP SAP Business Technology Platform (BTP) account for this handson.
 
 3. Navigate to **Task Explorer** and run **Enable Discovery and Deploy**.
 
@@ -39,7 +39,7 @@ In this section you will extend the existing MTA build file with the settings fo
 > [!Note]
 > Make sure you have already logged in into Cloud Foundry in [previous exercise](../deploy-cf.md#deploy-the-application)  
 
-2. Once deployment is successful you will get confirmation message in terminal
+4. Once deployment is successful, you will get confirmation message in terminal
 
    ![deploy-mtar-success](../../images/add-remote-service/deploy-to-cf/deploy_mtar_success.png)
 
