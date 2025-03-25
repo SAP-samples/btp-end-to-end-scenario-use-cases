@@ -43,7 +43,7 @@ You should have  an enterprise SAP BTP global account. If you don't have [Get an
 
 4. Choose **Create**.
 
-    ![New Instance or Subscription](../images/integrate-workzone/workzoneSub.png)
+    ![New Instance or Subscription](../../../build-code/images/integrate-workzone/workzoneSub.png)
 
 You have now subscribed to the SAP Build Work Zone, Standard plan.
 
