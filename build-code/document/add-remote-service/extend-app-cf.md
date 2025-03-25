@@ -12,7 +12,7 @@
 
 5. Wait a few minutes untill the application is fully undeployed and the successmessage is displayed
 
-6. In the SAP Business Application Studio, choose Service Center and select `incidents-api-access`.
+6. In the SAP Build Code, choose Service Center(as shown in screenshot below) and select `incidents-api-access`.
   ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
 
 7. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
