@@ -40,5 +40,5 @@ To increase your development speed, it is helpful to run and test your implement
 
 ## Next Step
 
-[Prepare the app for Production](./prep-for-prod.md)
+[Deploy the application to Cloud Foundry Runtime](./deploy-to-cf.md)
 

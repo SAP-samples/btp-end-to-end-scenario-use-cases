@@ -1,18 +1,10 @@
 # Test the flow end-to-end
 
-## Prerequisites
-
-- You have sucessfully deployed the application to your SAP BTP Runtime.
-- You have assigned application roles before accessing the application. See [User Role Assignment](../deploy-cf.md#assign-the-user-roles).
-- You have integrated your application with SAP Build Work Zone and accessed it via launchpad. See [Integrate Your Application with SAP Build Workzone](../integrate-workzone.md).
-
 ## Run and Test the Applicaion
 
-1. Open *SAP Build Work Zone, Standard edition*.
+1. Open [SAP Build Work Zone](https://pes-handson.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory).
 
-   ![open-workzone](../../images/add-remote-service/test-the-app/open-work-zone.png)
-
-2. You should see the *launchpad* create in [integrate workzone](../integrate-workzone.md). 
+2. Under the Site Directory, find your site created earlier.
 
    ![launchpad](../../images/add-remote-service/test-the-app/launchpad.png)
 
@@ -33,6 +25,8 @@
      
       ![run test](../../images/add-remote-service/test-the-app/test-app04.png)
 
+> [!Note]
+> If you have not done the enhance Fiori UI chapter, creating conversations will not be visible in the UI.
 
 ## Congratulations! 
 

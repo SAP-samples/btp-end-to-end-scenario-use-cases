@@ -83,8 +83,6 @@
     service RemoteService {
       entity BusinessPartner as projection on S4.A_BusinessPartner {
         key BusinessPartner as ID,
-        FirstName as firstName,
-        LastName as lastName,
         BusinessPartnerName as name,
         to_BusinessPartnerAddress as addresses
       }
