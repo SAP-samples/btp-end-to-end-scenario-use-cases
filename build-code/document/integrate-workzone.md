@@ -28,9 +28,10 @@ Deploy your application in SAP BTP, Cloud Foundry and test using [Deploy in SAP 
 
 3. In the items table, set checkmark for the application Incidents and choose the button Add.
 
-    ![WorkZone1](../images/integrate-workzone/ce_checkbox.png)
+    >[!Note]
+    > While clicking on the checkmark, make sure you are selecting the application with the ID you have created
 
-    > Note: Check the application which you have created during the project creation.
+    ![WorkZone1](../images/integrate-workzone/ce_checkbox.png)
 
 #### Create a group
 
