@@ -38,4 +38,4 @@ By using a mock server you can easily test your implementation in a local enviro
 
 # Next 
 
-[Prepare the app for production](./prep-for-prod.md)
+[Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./deploy-to-cf.md)
