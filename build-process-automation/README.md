@@ -19,6 +19,11 @@ The goal is to cover all the necessary steps to consume the CAP Service API func
 4. [Create Action Project in SAP Build Actions](./action/createaction.md)
 5. [SAP S/4 HANA Cloud system with communication user](../workshops/clean-core-extensibility-cap/setup/s4hana-cloud-config.md)
 
+## Important Links
+| | | |
+| ----------- | ----------- | ----------- |
+|[SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/643ae448-ea81-4fea-8d95-fb010e4d9f50Old) | [SAP Build Lobby](https://pw-build-hands-on.eu10.build.cloud.sap/lobby)|
+
 ## Exercise 1 : Build Purchase Order Approval Business Process and Integrate with CAP.
 
 1. [Create Project](./createprocess/README.md)
@@ -30,9 +35,11 @@ The goal is to cover all the necessary steps to consume the CAP Service API func
 
 ##  Exercise 2: Learn how to integrate SAP S/4HANA inside SAP Build Process Automation.
 
-> [!IMPORTANT]  
+> [!Note]  
 > **Exercise 1** has to be completed before moving to Exercise 2.
 
 1. [Consume SAP S/4HANA Business Partner API to the Drop-Down Fields in the Form.](./s4hana/README.md)
 2. [Test the Dropdown Filtering in the Form](./s4hane2e/README.md)
 
+  ## Exercise Home Page
+   [Navigate to Home Page](../workshops/clean-core-extensibility-cap/README.md)

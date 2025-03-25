@@ -1,4 +1,4 @@
-# Mastering the Clean Core Extensibility
+# Home Page: Mastering the Clean Core Extensibility
 Mastering Clean Core Extensibility Workshop will focus on developing Side by Side Extensions for SAP S/4 HANA Public Cloud using SAP Build and SAP Cloud Application Programming Model (CAP)
 
 
