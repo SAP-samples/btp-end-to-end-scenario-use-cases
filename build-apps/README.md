@@ -25,10 +25,12 @@ This scenario covers:
 # Hands-on Exercises
 
 ## Pre-requisite
+## 
+
 > [!Note]
 > For this hands-on we have already set up the below pre-requsite steps. You can directly proceed with  the exercises
 
-  1.  [BTP Account with entitlement for SAP Build Apps](../workshops/clean-core-extensibility-cap/setup/setup-build-apps-&-process-automation.mdd#setup-sap-build-apps-in-sap-btp-using-booster)
+  1.  [BTP Account with entitlement for SAP Build Apps](../workshops/clean-core-extensibility-cap/setup/setup-build-apps-&-process-automation.md#setup-sap-build-apps-in-sap-btp-using-booster)
   2. [SAP S/4 HANA Cloud system with communication user](../workshops/clean-core-extensibility-cap/setup/s4hana-cloud-config.md)
     
 ##  Exercise 1: Develop a Simple UI application using SAP Build Apps

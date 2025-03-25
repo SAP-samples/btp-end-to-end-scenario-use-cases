@@ -6,6 +6,10 @@ In this section you will use a booster to setup the landscape for using **SAP Bu
 
 If you do not have an enterprise SAP BTP Global Account, you can set up trial account by following [Get an Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account..html)
 
+You have the required entitlements for it. 
+- [Entitlements for SAP Build Apps](../../../build-apps/setup/btp/pre-requisite.md)
+- [Entitlements for SAP Build Process Automation](../../../build-process-automation/prerequisites/pre-requisite.md)
+
 ## Setup SAP Build Apps in SAP BTP using Booster
 
 1. Logon to the **SAP BTP Cockpit** and select your global account.
