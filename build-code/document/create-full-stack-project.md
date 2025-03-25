@@ -29,11 +29,14 @@ This section explains how to access the SAP Build lobby and create a full-stack 
         > **Note:** The project name should be unique to identify your project during deployment and also to avoid a duplication error.
 
     2. Select **Node.js** from the **Development stack** dropdown.
-    3. You can use the existing Dev Space instead of creating a new one. Let **Full_Stack** be the default Dev Space.
+    3. Let **Full_Stack** be the default Dev Space.
     4. Choose **Create**.
 
-        ![project details](../images/create-full-stack-project/project_name.png)
+        ![project details](../images/create-full-stack-project/create.png)
 
+    > [!Note]
+    > If the UI shows Dev space with New option, you can choose the existing Dev Space instead of creating a new one. 
+    ![project details](../images/create-full-stack-project/project_name.png)
 
 7. Wait for the project to get created. Once it's created, click the project, which opens in a new tab.
 
