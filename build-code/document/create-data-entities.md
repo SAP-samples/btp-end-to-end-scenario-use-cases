@@ -84,10 +84,15 @@ type EMailAddress : String;
 type PhoneNumber : String;
 ```
 > [!Note]
-> This CDS file defines the data model of the Incident Management Application. The model includes:
+> This CDS file defines the data model of the Incident Management Application. 
+> The model includes:
+>
 > Incidents: Represents support tickets raised by customers.
+>
 > Customers: Stores customer details, linking them to their incidents and addresses.
+>
 > Addresses: Stores customer addresses.
+>
 > Status: Defines various states an incident can be in like New (N), In Process(I) etc.
 > Urgency: Defines different urgency levels for incidents High(H), Medium(M) and Low (L).
 > **Key CAP features covered in the model**
