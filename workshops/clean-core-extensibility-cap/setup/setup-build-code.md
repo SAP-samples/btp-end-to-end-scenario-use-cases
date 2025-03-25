@@ -1,6 +1,6 @@
 # Setup SAP Build Code in SAP BTP
 
-##  Prerequisite 
+## Prerequisite 
 
 You should have  an enterprise SAP BTP global account. If you don't have [Get an Account on SAP BTP Trial](https://developers.sap.com/tutorials/hcp-create-trial-account..html)
 

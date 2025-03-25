@@ -1,7 +1,7 @@
 # Prerequisites
 
  You should have 
- * SAP BTP global Account
+ * SAP BTP Global Account
  * SAP S/4HANA Public Cloud system 
 
 # Entitlements required on SAP BTP
@@ -25,6 +25,3 @@
 # Setup SAP Build Code
 
 1. Next step is to [Setup SAP Build Code in SAP BTP](../../workshops/clean-core-extensibility-cap/setup/setup-build-code.md)
-
-2. You will need to create Cloud Foundry space in SAP BTP Cockpit, which is required for deploying the developed application to Cloud Foundry Runtime. Follow [Create Space in SAP BTP](./create-space.md).
-

@@ -81,3 +81,34 @@ The subaccount has been configured with a custom IAS tenant and your user has be
 10. Once the booster is completed, click on **Navigate to Subaccount**, which will open the Subaccount on another tab.
 
     ![booster](../../../build-process-automation/prerequisites/images/navigate.png)
+
+## Assign roles to the user. 
+
+1. Open the SAP BTP cockpit and navigate to your subaccount.
+
+2. If yoChoose **Security → Users**.
+
+    ![role-collection-create](./images/setup-sbpa/users.png)
+
+3. Search for your user in the list, and click on your user.
+
+> [!Note]
+> If you want to onboard a new user, click on **Create**, and add your user ID.
+![role-collection-create](./images/setup-sbpa/create.png)
+
+4. Once you have opened the user, click on **Assign Role Collection**.
+
+    ![role-collection-create](./images/setup-sbpa/assign.png)
+
+5. In Assign Role Collection, Search for **Process** in the Search box.
+
+6. Click on check mark for the below mentioned roles, and click on **Assign Role Collection**.
+
+    - ProcessAutomationAdmin	
+    - ProcessAutomationDelegate
+    - ProcessAutomationDeveloper	
+    - ProcessAutomationParticipant
+
+    ![role-collection-create](./images/setup-sbpa/select.png)
+
+**You have successfully assgined roles to the user.**
