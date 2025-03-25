@@ -2,7 +2,7 @@
 
 ## Clean Up the Cloud Foundry Space
 
-1. Open SAP Build Code.
+1. Open your project space.
 
 2. Open the terminal and type the following command. Then, get the mta_id from the output of the command.
 
@@ -43,11 +43,17 @@
     
     ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
 
+> [!Note]
+> If it asks for which project to select, choose your project name, which you have created earlier. And click on **Add**.
+![add-cap](../../images/add-remote-service/extend-app-cf/addcap.png)
+
 4. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
     ```js
     to_BusinessPartnerAddress : Composition of many incidents_api_access.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
     ```
+
+    ![add-cap](../../images/add-remote-service/extend-app-cf/code0.png)
 
 5. Search for **entity incidents_api_access.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
 
@@ -60,6 +66,7 @@
     ```js
     to_PhoneNumber : Composition of many incidents_api_access.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
     ```
+    ![add-cap](../../images/add-remote-service/extend-app-cf/code1.png)
 
 7. Create a new file *remote.cds* in the *srv* folder.
 

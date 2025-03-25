@@ -12,7 +12,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
         mv test/data db/data
     ```
 
-3. Open app &rarr; incident-managmenent &rarr; webapp &rarr; manifest.json, and copy the below code snippet of **crossNavigation** object under "sap.app"
+3. Open app &rarr; incident-managmenent &rarr; webapp &rarr; manifest.json, and copy the below code snippet of **crossNavigation** object after **dataSources** object under "sap.app"
 
     ```sh
     "sap.app": {
@@ -28,7 +28,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
                 "action": "display"
                 }
             }
-        },
+        }
         ....
     ```
 
