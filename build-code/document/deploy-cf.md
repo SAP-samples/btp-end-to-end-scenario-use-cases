@@ -36,7 +36,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
 
 
 > [!Note]
-> **UI Application name will be common for all the users. To uniquely identify your application, make the following changes.**
+> **To uniquely identify your deployed application, make the following changes to UI module of your application .**
 
 4. UI Application name can be `incidentmanagement<your-initials><unique-random-number>`. For example, if your name is `John Doe`, then the project name would be **incidentmanagementjd12**, (12 is some random number). 
 
@@ -45,6 +45,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
         - Component.js
         - index.html
         - manifest.json
+        - UI5.yaml
 
         > Note: Do Find all and replace *incidentmanagement* with *incidentmanagementjd12*. 
 
