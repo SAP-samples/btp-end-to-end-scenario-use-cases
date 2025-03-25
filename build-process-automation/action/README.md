@@ -10,10 +10,11 @@
 
 3. Choose Action **Invokes action updatespo** and then choose **Add**.
 
-    > [!NOTE]
-    > If the action mentioned is not available, click on **Browse All Actions**.
+> [!NOTE]
+> If the action mentioned is not available, click on **Browse All Actions**.
+> ![action](./images/browse.png)
 
-    ![action](./images/invoke.png)
+![action](./images/invoke.png)
 
 4. In the action, choose **General**.
 
