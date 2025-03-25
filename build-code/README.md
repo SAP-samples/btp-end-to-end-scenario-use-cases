@@ -36,6 +36,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 1. [Setup SAP Build Code  in SAP BTP](./document/prerequisites.md)
 2. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./document/add-remote-service/s4hana-cloud-to-btp-connectivity.md)
+3. [Create a Service Instance for SAP S/4HANA Cloud Extensibility](./document/add-remote-service/create-service.md)
 
 ## Important Links 
 
