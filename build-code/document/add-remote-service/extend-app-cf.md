@@ -11,43 +11,33 @@
   - Undeploy the application by running the command cf undeploy IncidentsJD12 --delete-services --delete-service-keys
 
 5. Wait a few minutes untill the application is fully undeployed and the successmessage is displayed
-   
-6. Add some additional libraries to the *package.json* for the communication with external systems. In the terminal, go to the project's root folder of the Incident Management application and run the following command:  
-   
-   ```bash
-   npm add @sap-cloud-sdk/http-client@3.x @sap-cloud-sdk/util@3.x @sap-cloud-sdk/connectivity@3.x @sap-cloud-sdk/resilience@3.x
-   ```
 
-7. Import the Business Partner API to your project by following the below steps
+6. In the SAP Business Application Studio, choose Service Center and select `incidents-api-access`.
+  ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
 
-   * In the project explorer, right-click on the empty space under root folder and select **Upload...**
+7. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
+  ![service-url](../../images/add-remote-service/extend-app-cf/service-url.png)
 
-     ![upload API](../../images/add-remote-service/extend-app-cf/upload-api.png)
+8. Choose the `Add to CAP Project`.  
+  ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
 
-   * Select the *API_BUSINESS_PARTNER.edmx* file and upload it to your project folder.
-   * In the terminal, run the following command:
-  
-      ```bash
-      cds import API_BUSINESS_PARTNER.edmx --as cds
-      ```
-   * You can find two new files `API_BUSINESS_PARTNER.cds` and `API_BUSINESS_PARTNER.edmx` will be generated under the **srv/external** folder.
 
-8. Change the conditions for the relationships between some of the entities. Open **srv/external/API_BUSINESS_PARTNER.cds**. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
+8. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
     ```js
-    to_BusinessPartnerAddress : Composition of many API_BUSINESS_PARTNER.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
+    to_BusinessPartnerAddress : Composition of many incidents_api_access.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
     ```
 
-9. Search for **entity API_BUSINESS_PARTNER.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
+9. Search for **entity incidents_api_access.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
 
     ```js
-    to_EmailAddress : Composition of many API_BUSINESS_PARTNER.A_AddressEmailAddress on to_EmailAddress.AddressID = AddressID;
+    to_EmailAddress : Composition of many incidents_api_access.A_AddressEmailAddress on to_EmailAddress.AddressID = AddressID;
     ```
 
-10. Scroll down to the **to_PhoneNumber** section under **entity API_BUSINESS_PARTNER.A_BusinessPartnerAddress** and replace the associations for phone number with the following.
+10. Scroll down to the **to_PhoneNumber** section under **entity incidents_api_access.A_BusinessPartnerAddress** and replace the associations for phone number with the following.
 
     ```js
-    to_PhoneNumber : Composition of many API_BUSINESS_PARTNER.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
+    to_PhoneNumber : Composition of many incidents_api_access.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
     ```
 
 11. Create a new file *remote.cds* in the *srv* folder.
@@ -57,7 +47,7 @@
 12. Copy the snippet to the newly created *remote.cds* file:
 
     ```js
-    using { API_BUSINESS_PARTNER as S4 } from './external/API_BUSINESS_PARTNER';
+    using { incidents_api_access as S4 } from './external/incidents_api_access';
 
     service RemoteService {
       entity BusinessPartner as projection on S4.A_BusinessPartner {
@@ -105,7 +95,7 @@
 
    * Add the custom handler implementation after the *init* method:
   
-      ```
+      ```js
       async onCustomerRead(req) {
         console.log('>> delegating to S4 service...', req.query);
         const top = parseInt(req._queryOptions?.$top) || 100;
@@ -142,13 +132,13 @@
 
       ```js
       this.on(['CREATE','UPDATE'], 'Incidents', (req, next) => this.onCustomerCache(req, next));
-      this.S4bupa = await cds.connect.to('API_BUSINESS_PARTNER');
+      this.S4bupa = await cds.connect.to('incidents_api_access');
       this.remoteService = await cds.connect.to('RemoteService');
       ```
     
    * Add the custom handler after the *onCustomerRead* method created in above step:  
 
-      ```
+      ```js
       async onCustomerCache(req, next) {
         const { Customers } = this.entities;
         const newCustomerId = req.data.customer_ID;
@@ -196,4 +186,4 @@
 
 # Next
 
-[Run a developer test with mock data](./test-with-mock.md)
+[Run a developer test Locally](./test-with-mock.md)

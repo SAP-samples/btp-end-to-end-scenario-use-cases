@@ -79,23 +79,6 @@ You have set up the connection to an SAP S/4HANA Cloud system. See [Configure th
 
 For more information, see [Communication Arrangement JSON/YAML File - Properties](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/553a4c6b98be4c1ba7d1dfa0e9df8669.html).
 
-3.  Navigate to the *package.json* file in the root folder of the application. Replace the settings for **API_BUSINESS_PARTNER** with the following code snippet:
-  
-    ```json
-    "API_BUSINESS_PARTNER": {
-        "kind": "odata-v2",
-        "model": "srv/external/API_BUSINESS_PARTNER",
-        "[production]": {
-            "credentials": {
-                "destination": "<DESTINATION_NAME>",
-                "path": "/sap/opu/odata/sap/API_BUSINESS_PARTNER"
-            }
-        }
-    }
-    ```
-    
-> If you are deploying to Cloud Foundry, the **DESTINATION_NAME** should be replaced with `incidents-api-access`.
-
 # Next
 
 [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./deploy-to-cf.md)

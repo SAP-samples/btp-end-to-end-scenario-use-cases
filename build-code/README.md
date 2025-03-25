@@ -62,9 +62,8 @@ ACME is a popular Electronics company. ACME hires call center support representa
 > To proceed with consuming external service, development and deployment of the CAP application needs to be completed as a prerequisite.
 
 1. [Update the Business Scenario](./document/add-remote-service/README.md)
-2. [Get the Business Partner API](./document/add-remote-service/explore-apis-and-events.md)
 3. [Extend the Incident Management аpplication](./document/add-remote-service/extend-app-cf.md)
-4. [Run a developer test with mock data](./document/add-remote-service/test-with-mock.md)
+4. [Run a developer test Locally](./document/add-remote-service/test-with-mock.md)
 5. [Prepare the app for production](./document/add-remote-service/prep-for-prod.md)
 6. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./document/add-remote-service/deploy-to-cf.md)
 7. [Test the end to end flow](./document/add-remote-service/test-the-app.md)

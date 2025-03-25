@@ -20,4 +20,4 @@ When a new incident is created by the processor, they have to assign the inciden
 
 # Next Step
 
-[Get the Business Partner API](./explore-apis-and-events.md)
+[Extend the Incident Management аpplication](./extend-app-cf.md)
