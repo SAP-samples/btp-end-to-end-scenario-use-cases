@@ -12,13 +12,16 @@
 
 5. Wait a few minutes untill the application is fully undeployed and the successmessage is displayed
 
-6. In the SAP Build Code, choose Service Center(as shown in screenshot below) and select `incidents-api-access`.
+6. In the SAP Build Code
+   - Click on Service Center(on left navigation shown in screenshot below)
+   - Set `Select a Provider` as **SAP SYSTEM**
+   - select `Service`  **incidents-api-access**.
   ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
 
-7. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
+8. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
   ![service-url](../../images/add-remote-service/extend-app-cf/service-url.png)
 
-8. Choose the `Add to CAP Project`.  
+9. Choose the `Add to CAP Project`.  
   ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
 
 
