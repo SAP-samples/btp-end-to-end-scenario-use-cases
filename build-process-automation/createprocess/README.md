@@ -24,8 +24,6 @@
 
 7. Please wait until the created project opens up in a new tab automatically.
 
-    > If any popup comes. Click on Cancel Button
-
 8. If the created project is not opening, do the following:
 
     1. Click on the project name.

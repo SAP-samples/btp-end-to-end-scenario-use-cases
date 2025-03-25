@@ -32,7 +32,8 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
         ....
     ```
 
-> [!Note] 
+
+> [!Note]
 > This code snippet is required to access and make the application clickable, while accessing the application via Build Workzone.
 
 ![deploy-cf](../images/deploy-cf/crossnavigation.png)  

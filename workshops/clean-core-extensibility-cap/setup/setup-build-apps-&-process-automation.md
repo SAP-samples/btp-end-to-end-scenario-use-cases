@@ -53,19 +53,17 @@ The subaccount has been configured with a custom IAS tenant and your user has be
 ### Assigning  Additional Users with Roles for Build Apps
 1. Open the SAP BTP cockpit and navigate to your subaccount.
 
-2. If yoChoose **Security → Users**.
-
-    ![role-collection-create](./images/setup-sbpa/users.png)
+2. Choose **Security → Users**.
 
 3. Search for your user in the list, and click on your user.
+
+4. Once you have opened the user, click on **Assign Role Collection**.
+
+    ![role-collection-create](./images/setup-sbpa/user1.png)
 
 > [!Note]
 > If you want to onboard a new user, click on **Create**, and add your user ID.
 ![role-collection-create](./images/setup-sbpa/create.png)
-
-4. Once you have opened the user, click on **Assign Role Collection**.
-
-    ![role-collection-create](./images/setup-sbpa/assign.png)
 
 5. In Assign Role Collection, Search for **BuildApps** in the Search box.
 
@@ -114,23 +112,21 @@ The subaccount has been configured with a custom IAS tenant and your user has be
 
     ![booster](../../../build-process-automation/prerequisites/images/navigate.png)
 
-## Assign roles to the user. 
+### Assign roles to the user. 
 
 1. Open the SAP BTP cockpit and navigate to your subaccount.
 
-2. If yoChoose **Security → Users**.
-
-    ![role-collection-create](./images/setup-sbpa/users.png)
+2. Choose **Security → Users**.
 
 3. Search for your user in the list, and click on your user.
+
+4. Once you have opened the user, click on **Assign Role Collection**.
+
+    ![role-collection-create](./images/setup-sbpa/user1.png)
 
 > [!Note]
 > If you want to onboard a new user, click on **Create**, and add your user ID.
 ![role-collection-create](./images/setup-sbpa/create.png)
-
-4. Once you have opened the user, click on **Assign Role Collection**.
-
-    ![role-collection-create](./images/setup-sbpa/assign.png)
 
 5. In Assign Role Collection, Search for **Process** in the Search box.
 

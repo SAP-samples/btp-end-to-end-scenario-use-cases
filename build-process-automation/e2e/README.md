@@ -10,10 +10,10 @@
 
 3. Copy Form link from right side, and open in browser.
 
-    > [!Note]
-    > If you face any authorization issue open the link in an incognito window.
-
     ![teste2e](./images/formlink.png)
+
+> [!Note]
+> If you face any authorization issue open the link in an incognito window.
 
 4. In the form, Choose **Purchase Order** then choose **Submit**.
     
@@ -29,12 +29,14 @@
     
     ![teste2e](./images/chooseinbox.png)
 
-2. You will see the task in inbox. In the Approval form, enter approval text in **Start with Comment** field (add some unique description after that).
+2. You will see the task in inbox. Click on the task coming from your ID.
 
 > [!Note]
 > After clicking on the task, please wait for sometime till it loads. As it might take few seconds to load.
 
-3. Choose **Approve**.
+3. In the Approval form, enter approval text in **Start with Comment** field (add some unique description after that).
+
+4. Choose **Approve**.
 
     ![teste2e](./images/approve.png)
 

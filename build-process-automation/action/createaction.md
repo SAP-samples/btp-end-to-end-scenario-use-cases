@@ -1,5 +1,7 @@
 # Create Action for CAP Application using SAP Build
 
+Action is one of the feature in SAP Process Automation. Action is a mean to connect processes with external systems, be it SAP or non-SAP systems. This is an important piece of the puzzle especially if you want to automate or extend your business processes for any available line of business like SAP S/4HANA, SAP Ariba, SAP SuccessFactors and many more. These extensions can be easily build using SAP Process Automation, and using Actions you can connect to any SAP System and can do any kind of operation like GET, POST, PATCH and other calls.
+
 ## Prerequisite
 
 Deploy the Purchase Order CAP Application using [Deployment of CAP Application](../prerequisites/deployment.md)

@@ -34,9 +34,9 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 
         ![project details](../images/create-full-stack-project/create.png)
 
-    > [!Note]
-    > If the UI shows Dev space with New option, you can choose the existing Dev Space instead of creating a new one. 
-    ![project details](../images/create-full-stack-project/project_name.png)
+> [!Note]
+> If the UI shows Dev space with New option, you can choose the existing Dev Space instead of creating a new one. 
+![project details](../images/create-full-stack-project/create1.png)
 
 7. Wait for the project to get created. Once it's created, click the project, which opens in a new tab.
 
