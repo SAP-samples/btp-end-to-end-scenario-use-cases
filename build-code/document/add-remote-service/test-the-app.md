@@ -34,6 +34,14 @@
       ![run test](../../images/add-remote-service/test-the-app/test-app04.png)
 
 
-## Summary
+## Congratulations! 
 
-Congratulations! You have successfully developed, configured and deployed the Incidenent Management application using an external service.
+You have successfully completed the exercise!
+
+Learn more about SAP BTP Developer’s Guide in [GitHub](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide) or in [SAP Help Portal](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide?version=Cloud) or scan the QR code on the screen to bookmark it for future reference.
+
+The SAP BTP Developer’s Guide is the starting point for developing a business application on SAP BTP. It contains recommendations and best practices that give you an overview of what you should consider when working on development projects on SAP BTP. It also contains links to step-by-step instructions.
+
+<p align="center">
+ <img align="center" src="../images/e2e-testing/help_sap_com_qr.png" width="50%"/>
+</p>
