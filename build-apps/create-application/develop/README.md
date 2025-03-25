@@ -9,7 +9,7 @@ In this section, you will create an SAP Build Apps application.
 
 ## Open SAP Build Apps
 
- 1. Open the <a href="https://hands-on.eu10.build.cloud.sap/lobby" target="_blank" rel="noopener noreferrer">SAP Build Apps</a>.
+ 1. Open the <a href="https://pw-build-hands-on.eu10.build.cloud.sap/lobby" target="_blank" rel="noopener noreferrer">SAP Build Apps</a>.
 
  4. You might be prompted with a log in screen of either default Identity Provider or custom Identity Provider depending on what you have configured.
 
