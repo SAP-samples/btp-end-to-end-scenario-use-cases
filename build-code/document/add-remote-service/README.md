@@ -18,6 +18,6 @@ When a new incident is created by the processor, they have to assign the inciden
 
   ![Solution Diagram](../../images/add-remote-service/Solution-Diagram-RS.png)
 
-# Next Step
+## Next Step
 
 [Extend the Incident Management аpplication](./extend-app-cf.md)

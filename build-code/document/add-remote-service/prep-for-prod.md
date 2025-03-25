@@ -79,6 +79,6 @@ You have set up the connection to an SAP S/4HANA Cloud system. See [Configure th
 
 For more information, see [Communication Arrangement JSON/YAML File - Properties](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/553a4c6b98be4c1ba7d1dfa0e9df8669.html).
 
-# Next
+## Next Step
 
 [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./deploy-to-cf.md)

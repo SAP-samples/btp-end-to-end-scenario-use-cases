@@ -1,50 +1,71 @@
 # Extend the Incident Management Application
 
+## Clean Up the Cloud Foundry Space
+
 1. Open SAP Build Code.
 
-2. Navigate to the project's root folder of the Incident Management application. 
+2. Open the terminal and type the following command. Then, get the mta_id from the output of the command.
 
-3. Open the a new Terminal 
+    ```sh
+      cf mtas
+    ```
 
-4. Undeploy the old version of Application. 
-  - Run the command `cf mtas`. This will display all the MTA applications which are listed. Copy the name of your MTA Application which will be like `Incidents<Initial><unique number>` e.g IncidentsJD12
-  - Undeploy the application by running the command cf undeploy IncidentsJD12 --delete-services --delete-service-keys
+    ![testing](../../images/e2e-testing/get_mtaid.png)
 
-5. Wait a few minutes untill the application is fully undeployed and the successmessage is displayed
+    > **Note:** You run `cf mtas` command to get the MTA ID.
 
-6. In the SAP Business Application Studio, choose Service Center and select `incidents-api-access`.
-  ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
+3. To undeploy the application, use the following command:
 
-7. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
-  ![service-url](../../images/add-remote-service/extend-app-cf/service-url.png)
+    ```sh
+      cf undeploy <mta_id> --delete-service-keys --delete-services
+    ```
 
-8. Choose the `Add to CAP Project`.  
-  ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
+    If its asks for confirmation, type **y**.
 
+    ![testing](../../images/e2e-testing/undeploy_confirm.png)
 
-8. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
+    > **Note:** The mta_id is the same you got from Step 1.
+
+> [!Note]
+> Wait for a few minutes until the application is fully undeployed and you get the success message.
+
+## Extend the Incident Management Application
+
+1. Choose Service Center and select `incidents-api-access`.
+    
+    ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
+
+2. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
+
+    ![service-url](../../images/add-remote-service/extend-app-cf/service-url.png)
+
+3. Choose the `Add to CAP Project`.  
+    
+    ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
+
+4. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
     ```js
     to_BusinessPartnerAddress : Composition of many incidents_api_access.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
     ```
 
-9. Search for **entity incidents_api_access.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
+5. Search for **entity incidents_api_access.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
 
     ```js
     to_EmailAddress : Composition of many incidents_api_access.A_AddressEmailAddress on to_EmailAddress.AddressID = AddressID;
     ```
 
-10. Scroll down to the **to_PhoneNumber** section under **entity incidents_api_access.A_BusinessPartnerAddress** and replace the associations for phone number with the following.
+6. Scroll down to the **to_PhoneNumber** section under **entity incidents_api_access.A_BusinessPartnerAddress** and replace the associations for phone number with the following.
 
     ```js
     to_PhoneNumber : Composition of many incidents_api_access.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
     ```
 
-11. Create a new file *remote.cds* in the *srv* folder.
+7. Create a new file *remote.cds* in the *srv* folder.
 
     ![create-new-file](../../images/add-remote-service/extend-app-cf/create-new-file.png)
 
-12. Copy the snippet to the newly created *remote.cds* file:
+8. Copy the snippet to the newly created *remote.cds* file:
 
     ```js
     using { incidents_api_access as S4 } from './external/incidents_api_access';
@@ -75,7 +96,7 @@
     }
     ```
 
-13. Add some buisness logic for reading and saving a business partner. 
+9. Add some buisness logic for reading and saving a business partner. 
    * Open the **srv/service.js** file. 
    * Make sure `init` method is set to `async`:
   
@@ -173,17 +194,9 @@
         }
         ```
 
-    
+## Result
+You have integrated the Business Partner API into your project and business logic to read the data from the backend system. New or changed customer data would be stored in your application database.
 
-14. To execute the tests, created in [add testcase exercise](../testcase.md) run following command: 
-
-    ```sh
-    npm run test
-    ```
-
- ## Result
- You have integrated the Business Partner API into your project and business logic to read the data from the backend system. New or changed customer data would be stored in your application database.
-
-# Next
+## Next Step
 
 [Run a developer test Locally](./test-with-mock.md)
