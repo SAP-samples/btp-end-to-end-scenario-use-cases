@@ -24,6 +24,9 @@
 9. Choose the `Add to CAP Project`.  
   ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
 
+9. Select the CAP Project `Incidents<Initial><Uniquid>` if prompted in the UI.
+
+10. Click on Explorer in the left navigation
 
 8. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
