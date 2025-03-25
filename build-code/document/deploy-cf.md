@@ -36,7 +36,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
 
 
 > [!Note]
-> **To uniquely identify your deployed application, make the following changes to UI module of your application .**
+> **To uniquely identify your deployed application in SAP BTP Cockpit, make the following changes to UI module of your application .**
 
 4. UI Application name can be `incidentmanagement<your-initials><unique-random-number>`. For example, if your name is `John Doe`, then the project name would be **incidentmanagementjd12**, (12 is some random number). 
 
