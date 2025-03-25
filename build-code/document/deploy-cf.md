@@ -12,7 +12,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
         cp -r test/data db/data
     ```
 
-3. Open app &rarr; incidents &rarr; webapp &rarr; manifest.json, and copy the below code snippet under "sap.app"
+3. Open app &rarr; incidents &rarr; webapp &rarr; manifest.json, and copy the below code snippet of **crossNavigation** object under "sap.app"
 
     ```sh
     "sap.app": {
@@ -43,10 +43,14 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
     1. Under **app -> incident-management -> webapp**, replace incidentmanagement with new name in below files.
 
         - Component.js
-            
+        ![deploy-cf](../images/deploy-cf/componentjs.png)  
         - index.html
+        ![deploy-cf](../images/deploy-cf/index.png)
         - manifest.json
-        - ui5.yaml
+        ![deploy-cf](../images/deploy-cf/manifest.png)
+
+    2. Under **app -> incident-management -> ui5.yaml**, replace incidentmanagement with new name.
+        ![deploy-cf](../images/deploy-cf/ui5.png)
 
         > Note: Do Find all and replace *incidentmanagement* with *incidentmanagementjd12*. 
 
