@@ -54,6 +54,8 @@ Deploy your application in SAP BTP, Cloud Foundry and test using [Deploy in SAP 
 #### Add application to the Everyone role
 1. Back in the Content Manager, choose role Everyone and choose Edit.
 
+    ![WorkZone1](../images/integrate-workzone/everyone.png)
+
 2. In the Assignment Status, choose the slider to assign the Incident-Management app to the role.
 
 3. Choose Save.
