@@ -6,57 +6,13 @@ This tutorial shows you how to subscribe to the SAP Build Work Zone, standard ed
 
 Deploy your application in SAP BTP, Cloud Foundry and test using [Deploy in SAP BTP, Cloud Foundry Runtime](deploy-cf.md)
 
-## Subscribe to SAP Build Work Zone, standard edition
-
-> [!Note]
-> If you have already subscribed to SAP Build Work Zone, skip the below steps and proceed with **Assign SAP Build Work Zone, standard edition role collection**
-
-1. Navigate to your subaccount and choose **Services** &rarr; **Service Marketplace** on the left.
-
-2. Search for the **SAP Build Work Zone, standard edition** tile and choose **Create**.
-
-    ![Create SAP Build Work Zone, standard edition](../images/integrate-workzone/create_workzone_instance.png)
-
-3. Keep the default setting for **Service** and choose **Standard** for **Plan**.
-
-4. Choose **Create**.
-
-    ![New Instance or Subscription](../images/integrate-workzone/workzoneSub.png)
-
-You have now subscribed to the SAP Build Work Zone, Standard plan.
-
-## Assign SAP Build Work Zone, standard edition role collection
-
-You need to assign your user to the **Launchpad_Admin** role collection, so you don't get an error accessing the **SAP Build Work Zone, standard edition** site later on.
-
-1. Choose **Security** &rarr; **Users** on the left.
-
-2. Choose your user.
-
-3. Under **Role Collections** on the right, choose **Assign Role Collection** and assign the **Launchpad_Admin** role collection to your user.
-
-    ![Add role](../images/integrate-workzone/add_launchpad_admin_role.png)
-
-    You've assigned the **Launchpad_Admin** role collection to your user.
-
-> You might need to log out and log back in to make sure your new role collection is taken into account.
-
-> See section [Initial Setup](https://help.sap.com/viewer/8c8e1958338140699bd4811b37b82ece/Cloud/en-US/fd79b232967545569d1ae4d8f691016b.html) in the SAP Build Work Zone, standard edition's documentation for more details.
-
-
-##  Integrate your application with SAP Build Work Zone, standard edition
-
 #### Update content
 
-1. Open your subaccount and navigate to **Instances and Subscriptions**.
+1. Open [SAP Build Work Zone](https://pes-handson.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory).
 
-2. Choose the application **SAP Build Work Zone, standard edition**.
+2. Click on **Channel Manager** from the left navigation bar. 
 
-    ![WorkZone0](../images/integrate-workzone/integrate_launchpad_0.png)
-
-3. In the menu on the left side, choose the icon for **Channel Manager**.
-
-4. Choose the refresh icon to fetch the updated content.
+3. Choose the refresh icon to fetch the updated content.
 
     ![WorkZone1](../images/integrate-workzone/launchpad1.png)
 

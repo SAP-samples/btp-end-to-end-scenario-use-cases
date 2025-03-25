@@ -9,7 +9,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
 2. The sample data generated in the previous steps, creates the **data** folder in the **test** folder. When deploying the application, move the **data** folder to the **db** folder. Open the terminal, and run the following command to copy the csv files.
 
     ```sh
-    cp test/data db/data
+        cp -r test/data db/data
     ```
 
 3. Open app &rarr; incidents &rarr; webapp &rarr; manifest.json, and copy the below code snippet under "sap.app"
@@ -43,9 +43,10 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
     1. Under **app -> incident-management -> webapp**, replace incidentmanagement with new name in below files.
 
         - Component.js
+            
         - index.html
         - manifest.json
-        - UI5.yaml
+        - ui5.yaml
 
         > Note: Do Find all and replace *incidentmanagement* with *incidentmanagementjd12*. 
 
@@ -56,7 +57,7 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
 1. Navigate to **Task Explorer** and run **Enable Discovery and Deploy**.
 
-    ![deploy-cf](../images/deploy-cf/deploy_cf_enable.png)
+    ![deploy-cf](../images/deploy-cf/taskexplorer.png)
 
 2. Check if the task has been launched in the terminal.
 
@@ -133,6 +134,8 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
     1. Type your username in the **ID** field, and select your username from the suggestions.
 
     2. Select **...accounts.ondemand.com(application users)** from the **Identity Provider** dropdown.
+
+    > **Note:** Make sure you are selecting the Identity Provider with (application users).
 
     ![deploy-cf](../images/deploy-cf/add_user.png)
 

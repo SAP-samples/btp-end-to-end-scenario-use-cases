@@ -54,6 +54,6 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
 To enhance the user interface, follow the steps at [Extend SAP Fiori UI](./extend-fiori-ui.md). 
 
-Else, you can proceed with [Add Testcases](./testcase.md)
+Else, you can proceed with [Add Test Cases](./testcase.md)
 
 

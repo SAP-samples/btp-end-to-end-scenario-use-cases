@@ -43,5 +43,5 @@ Learn more about SAP BTP Developer’s Guide in [GitHub](https://help.sap.com/do
 The SAP BTP Developer’s Guide is the starting point for developing a business application on SAP BTP. It contains recommendations and best practices that give you an overview of what you should consider when working on development projects on SAP BTP. It also contains links to step-by-step instructions.
 
 <p align="center">
- <img align="center" src="../images/e2e-testing/help_sap_com_qr.png" width="50%"/>
+ <img align="center" src="../../images/e2e-testing/help_sap_com_qr.png" width="50%"/>
 </p>

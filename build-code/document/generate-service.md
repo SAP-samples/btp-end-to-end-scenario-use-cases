@@ -1,6 +1,6 @@
-# Add Services Using Joule
+# Add CDS Services Using Joule
 
-This section describes how to generate services using Joule.
+This section describes how to generate CDS services using Joule.
 
 ## Prerequisite
 
@@ -12,23 +12,21 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 
     ![edit-model](../images/generate-service/editmodel.png)
 
-    > **Note:** By default, **/cap-edit-model #db/schema.cds** should be displayed in a text box.
+    > **Note:** By default, **/cap-edit-model** should be displayed in a text box.
 
-    ![cap-edit-model](../images/generate-service/prompt_start.png)
+2. The Joule prompt will be prefilled with **/cap-edit-model**. Paste the following prompt to generate a service:
 
-2. The Joule prompt will be prefilled with **/cap-edit-model #db/schema.cds**. Paste the following prompt to generate a service:
-
-    ```html
-    Add 1 service named 'ProcessorService' as projection on the entity 'Incidents' and readonly for 'Customers' and Add 1 service named 'AdminService' on projection for Customers and Incidents entity and remove other services. Annotate ProcessorService with Support role and AdminService with admin role. Remove path properties.
+    ```
+    Add 1 service named 'ProcessorService' as projection on the entity 'Incidents' and 'Customers' and Add 1 service named 'AdminService' on projection for Customers and Incidents entity and remove other services. Annotate ProcessorService with Support role and AdminService with admin role. Remove path properties. Annotate only Incidents entity of ProcessorService odata draft enabled, make only Customers entity readonly of ProcessorService.
     ```
 
 3. Choose the **Send** icon.
 
-    ![cap-edit-model-prompt](../images/generate-service/prompt.png)
+    ![cap-edit-model-prompt](../images/generate-service/prompt3.png)
 
 4. Choose **Accept**.
 
-    ![cap-accept-service](../images/generate-service/accept-edit-model.png)
+    ![cap-accept-service](../images/generate-service/code.png)
    
 > [!Tip]
 > - CDS service definition exposes entities from the database schema (schema.cds) as part of  service layers with role-based access to services.
@@ -37,52 +35,35 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
     - ProcessorService → Support staff can manage incidents and customers.
     - AdminService → Admin users have full access.
 > - Projections on Entities - The original database entities are not directly exposed, only projected versions are. This allows customization, filtering, or restricting access to certain fields (if needed in the future).
-
-
-5. For OData draft enabling, use the following prompt to make ProcessorService to draft enable. Start typing `/cap-edit`, and select **/cap-edit-model** from the suggestions.
-
-    ```
-    Annotate Processor Service with odata draft enable for incidents entity.
-    ```
-> [!Tip]
 >  OData draft enablement in CAP allows users to save work-in-progress data before final submission. This is especially useful in SAP Fiori applications, where users may enter data in multiple steps and want to avoid losing changes.
 
-
-6. Choose the **Send** icon.
-
-    ![validate-edit-model](../images/generate-service/prompt2.png)
-
-7. Choose **Accept**.
-
-    ![accept-edit-service](../images/generate-service/accept-edit-service.png)
-
-8. Open **service.cds** in the project explorer and validate the generated service. 
+5. Open **service.cds** in the project explorer and validate the generated service. 
 
     ![validate-gen-service](../images/generate-service/code_struct.png)
 
-9. Go to **Storyboard**. In the **Services** section, make sure **ProcessorService** and **AdminService** have been created.
+6. Go to **Storyboard**. In the **Services** section, make sure **ProcessorService** and **AdminService** have been created.
 
     ![validate-edit-model](../images/generate-service/storyboardcheck.png)
 
-10. Check for the @readonly annotation, if its missing please add as per the below code.
+7. Please make sure the final `service.cds` file looks like this:
 
-```
-using { sap.capire.incidents as my } from '../db/schema.cds';
+    ```
+    using { sap.capire.incidents as my } from '../db/schema.cds';
 
-@requires: 'Support'
-service ProcessorService {
-    @odata.draft.enabled
-    entity Incidents as projection on my.Incidents;
-    @readonly // add
-    entity Customers as projection on my.Customers;
-}
+    @requires: 'Support'
+    service ProcessorService {
+        @odata.draft.enabled
+        entity Incidents as projection on my.Incidents;
+        @readonly
+        entity Customers as projection on my.Customers;
+    }
 
-@requires: 'admin'
-service AdminService {
-    entity Customers as projection on my.Customers;
-    entity Incidents as projection on my.Incidents;
-}
-```
+    @requires: 'admin'
+    service AdminService {
+        entity Customers as projection on my.Customers;
+        entity Incidents as projection on my.Incidents;
+    }
+    ```
 
 > [!Note]
 > If Joule has generated a different code for the service than the sample above, then provide this one instead of the one generated by Joule.
