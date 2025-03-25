@@ -33,9 +33,6 @@ To increase your development speed, it is helpful to run and test your implement
       ![run test](../../images/add-remote-service/test-with-mock/test-app04.png)
    
 
-## Summary
-By using a mock server you can easily test your implementation in a local environment. You find more details in the documentation for [Local Mocking](https://cap.cloud.sap/docs/guides/using-services#local-mocking)
-
 # Next 
 
 [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./deploy-to-cf.md)
