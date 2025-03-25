@@ -50,6 +50,33 @@ The subaccount has been configured with a custom IAS tenant and your user has be
 
 ![Booster](./images/newbooster12_boxes.png)
 
+### Assigning  Additional Users with Roles for Build Apps
+1. Open the SAP BTP cockpit and navigate to your subaccount.
+
+2. If yoChoose **Security → Users**.
+
+    ![role-collection-create](./images/setup-sbpa/users.png)
+
+3. Search for your user in the list, and click on your user.
+
+> [!Note]
+> If you want to onboard a new user, click on **Create**, and add your user ID.
+![role-collection-create](./images/setup-sbpa/create.png)
+
+4. Once you have opened the user, click on **Assign Role Collection**.
+
+    ![role-collection-create](./images/setup-sbpa/assign.png)
+
+5. In Assign Role Collection, Search for **BuildApps** in the Search box.
+
+6. Select check mark for the below mentioned roles, and click on **Assign Role Collection**.
+    - BuildApps_Administrator	
+    - BuildApps_Developer
+7. Choose on Save.
+
+**You have successfully assgined roles to the user.**
+
+
 ## Setup SAP Build Process Automation in SAP BTP using Booster
 
 1. Navigate to the Global Account.
