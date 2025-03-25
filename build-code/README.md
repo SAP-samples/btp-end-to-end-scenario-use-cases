@@ -37,6 +37,11 @@ ACME is a popular Electronics company. ACME hires call center support representa
 1. [Setup SAP Build Code  in SAP BTP](./document/prerequisites.md)
 2. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./document/add-remote-service/s4hana-cloud-to-btp-connectivity.md)
 
+## Important Links 
+
+| | | |
+| ----------- | ----------- | ----------- |
+| [SAP BTP Cockpit](https://apac.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/4c1ebe70-43f2-4a82-83c1-c85da24c7fba/subaccountoverview) | [SAP Build Lobby](https://pes-handson.eu10.build.cloud.sap/lobby)| [SAP Build Work Zone](https://pes-handson.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory) |
 
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
@@ -68,4 +73,4 @@ ACME is a popular Electronics company. ACME hires call center support representa
 5. [Test the end to end flow](./document/add-remote-service/test-the-app.md)
 
 ## Exercise Home Page
-   [Navigate to Home Page](https://github.com/SAP-samples/btp-end-to-end-scenario-use-cases/blob/main/workshops/clean-core-extensibility-cap/README.md)
+   [Navigate to Home Page](../workshops/clean-core-extensibility-cap/README.md)

@@ -25,14 +25,18 @@ This scenario covers:
 # Hands-on Exercises
 
 ## Pre-requisite
-## 
 
 > [!Note]
 > For this hands-on we have already set up the below pre-requsite steps. You can directly proceed with  the exercises
 
   1.  [BTP Account with entitlement for SAP Build Apps](../workshops/clean-core-extensibility-cap/setup/setup-build-apps-&-process-automation.md#setup-sap-build-apps-in-sap-btp-using-booster)
   2. [SAP S/4 HANA Cloud system with communication user](../workshops/clean-core-extensibility-cap/setup/s4hana-cloud-config.md)
-    
+
+## Important Links
+| | | 
+| ----------- | ----------- |
+| [SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/643ae448-ea81-4fea-8d95-fb010e4d9f50) | [SAP Build Lobby](https://pw-build-hands-on.eu10.build.cloud.sap/lobby)|
+
 ##  Exercise 1: Develop a Simple UI application using SAP Build Apps
   1. [Create a No-Code Application with SAP Build Apps](./create-application/develop/README.md)
   2. [Create a Business Partner List Page](./create-application/develop/ListPage/README.md)
@@ -41,3 +45,5 @@ This scenario covers:
 ##  [Optional] Exercise 2: Deploy Simple UI Application to SAP BTP.
   1. [Build and Deploy Your SAP Build Apps Application to SAP BTP](./create-application/deploy/README.md)
 
+  ## Exercise Home Page
+   [Navigate to Home Page](../workshops/clean-core-extensibility-cap/README.md)
