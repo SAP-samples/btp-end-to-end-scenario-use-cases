@@ -9,7 +9,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
 2. The sample data generated in the previous steps, creates the **data** folder in the **test** folder. When deploying the application, move the **data** folder to the **db** folder. Open the terminal, and run the following command to copy the csv files.
 
     ```sh
-        cp -r test/data db/data
+        mv test/data db/data
     ```
 
 3. Open app &rarr; incident-managmenent &rarr; webapp &rarr; manifest.json, and copy the below code snippet of **crossNavigation** object under "sap.app"
