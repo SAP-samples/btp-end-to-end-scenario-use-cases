@@ -12,37 +12,12 @@ You have created the project following the steps at [Create a Full-Stack Applica
 
     ![project-explorer](../images/create-data-entities/project_explorer.png)
 
-2. Expand the **db** folder. Choose the icon to create a new file, and provide the **schema.cds** file name.
+2. Expand the **db** folder. Choose the icon to create a new file, and provide **schema.cds** as file name.
 
     ![create-schema](../images/create-data-entities/schema_creation.png)
 
-3. Copy the following schema to the **schema.cds** file. This CDS file defines the data model of the Incident Management Application. The model includes:
+3. Copy the following schema to the **schema.cds** file. 
 
-- Incidents: Represents support tickets raised by customers.
-
-- Customers: Stores customer details, linking them to their incidents and addresses.
-
-- Addresses: Stores customer addresses.
-
-- Status: Defines various states an incident can be in like New (N), In Process(I) etc.
-
-- Urgency: Defines different urgency levels for incidents High(H), Medium(M) and Low (L).
-
-**Key CAP features covered in the model**
-- Uses managed & cuid: Ensures automatic timestamps and UUID-based primary keys.
-
-- Associations & Compositions:
-
-    - Customers ↔ Incidents (One-to-Many)
-    
-    - Customers ↔ Addresses (One-to-Many)
-    
-    - Incidents ↔ Status & Urgency (Default values provided)
-
-- Validations: Credit card number format enforced using regex.
-
-- Nested Composition: Each incident maintains a chat log with timestamps and authors.
-  
 ```
 using { cuid, managed, sap.common.CodeList } from '@sap/cds/common';
 namespace sap.capire.incidents; 
@@ -108,8 +83,35 @@ key code: String enum {
 type EMailAddress : String;
 type PhoneNumber : String;
 ```
+> [!Note]
+> This CDS file defines the data model of the Incident Management Application. The model includes:
 
-4. Navigate to **Storyboard** in the editor and make sure the **Data Models** section is updated following the entities created in the **schema.cds** file.
+> - Incidents: Represents support tickets raised by customers.
+
+> - Customers: Stores customer details, linking them to their incidents and addresses.
+
+> - Addresses: Stores customer addresses.
+
+> - Status: Defines various states an incident can be in like New (N), In Process(I) etc.
+
+> - Urgency: Defines different urgency levels for incidents High(H), Medium(M) and Low (L).
+
+**Key CAP features covered in the model**
+- Uses managed & cuid: Ensures automatic timestamps and UUID-based primary keys.
+
+- Associations & Compositions:
+
+    - Customers ↔ Incidents (One-to-Many)
+    
+    - Customers ↔ Addresses (One-to-Many)
+    
+    - Incidents ↔ Status & Urgency (Default values provided)
+
+- Validations: Credit card number format enforced using regex.
+
+- Nested Composition: Each incident maintains a chat log with timestamps and authors.
+
+4. Navigate to **Storyboard** in the editor and make sure the **Data Models** section is updated with the entities mentioned in **schema.cds** file.
 
     ![schema-storyboard](../images/create-data-entities/schema-storyboard.png)
 

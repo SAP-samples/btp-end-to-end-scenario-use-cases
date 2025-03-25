@@ -36,4 +36,4 @@ Customers - Contains customer details such as ID, firstName, lastName, email, an
 
 ## Next Step
 
-[Add Services](generate-service.md)
+[Add CDS Services](generate-service.md)

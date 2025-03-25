@@ -4,7 +4,7 @@ In this section, with the help of Joule, you will generate business logic before
 
 ## Prerequisite
 
-You have created Services following the steps at [Add Services](generate-service.md).
+You have created CDS Services following the steps at [Add CDS Services](generate-service.md).
 
 ## Business Logic for the ProcessorService
 
@@ -42,7 +42,7 @@ Using Joule we will define an event handler that automatically sets the urgency 
 
 5. The Joule prompt will be prefilled with `/cap-app-logic #srv/code/changeUrgencyDueToSubject.js`. After the prefilled command, use the following prompt to create the business logic.
 
-    ```console
+    ```
     Create a helper function named 'changeUrgencyDueToSubject' which checks the title of the incident is having urgent keyword and update the urgency_code field to High. Ensure the data is array or wrap in an array.
     ```
     

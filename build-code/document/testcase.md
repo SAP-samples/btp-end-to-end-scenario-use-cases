@@ -1,6 +1,6 @@
 ## Add Test Cases with Joule
 
-This section describes to create few testcases using a Joule prompt.
+This section describes to create few test cases using a Joule prompt.
 
 ## Prerequisite
 
@@ -64,7 +64,11 @@ Create a UI application using a Joule prompt following the steps at [Create SAP 
 
 ## Test the application
 
-1. To test the application, run the following command in the terminal:
+1. Open Terminal by clicking on the hamburger icon, click on **Terminal -> New Terminal**.
+
+    ![Testcase](../images/testcases/terminal.png)
+
+2. To test the application, run the following command in the terminal:
 
     ```sh
         npm run test

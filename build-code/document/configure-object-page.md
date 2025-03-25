@@ -181,4 +181,4 @@ We will now add another section to the object page displaying a table with conve
 
 ## Next Steps
 
-[Add Testcases](./testcase.md)
+[Add Test Cases](./testcase.md)

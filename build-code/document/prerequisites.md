@@ -22,6 +22,19 @@
 | Cloud Foundry Runtime | Runtime | 1 GB |
 | SAP S/4HANA Cloud Extensibility | api-access | 1 |
 
+## Additional Entitlements Required
+
+Remote service integration to the developed CAP application requires the following additional entitlements and quotas in the SAP BTP cockpit:
+
+| Service                           | Plan       | Number of Instances |
+|-----------------------------------|------------|:-------------------:|
+| SAP S/4HANA Cloud Extensibility | api-access | 1 |
+
+See [Entitlements and Quotas](https://help.sap.com/products/BTP/65de2977205c403bbc107264b8eccf4b/00aa2c23479d42568b18882b1ca90d79.html?locale=en-US).
+
+* While adding entitlement **SAP S/4HANA Cloud Extensibility**, please select the appropriate system under **Service Details: SAP S/4HANA Cloud Extensibility** dropdown.
+* In the checkbox, check the **api-access** under Available Plans and add the service plans.
+
 # Setup SAP Build Code
 
 1. Next step is to [Setup SAP Build Code in SAP BTP](../../workshops/clean-core-extensibility-cap/setup/setup-build-code.md)
