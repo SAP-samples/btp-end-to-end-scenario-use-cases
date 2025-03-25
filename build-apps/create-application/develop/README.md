@@ -35,7 +35,7 @@ In this section, you will create an SAP Build Apps application.
    
    ![image](https://github.com/user-attachments/assets/814d603f-c0d9-46d8-89cf-21892a7eb794)
 
-6. Enter a **Project Name**, for example **Business Partner**
+6. Enter a **Project Name**, as **Business Partner <your-initials><unique-random-number>** e.g Business Partner jd12
 
 7. Enter a **Short Description**.
 
