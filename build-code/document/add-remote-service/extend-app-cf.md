@@ -1,12 +1,5 @@
 # Extend the Incident Management Application
 
-## Prerequisites
-
-* You have ensured that the [prerequisites are fullfilled and all the required systems are in place](./s4h-cf.md)
-* You have downloaded the [Business Partner API](./explore-apis-and-events.md)
-
-## Content
-
 1. Open SAP Business Applicaiton Studio.
 
 2. Navigate to the project's root folder of the Incident Management application. 
