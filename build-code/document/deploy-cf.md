@@ -12,7 +12,7 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
         cp -r test/data db/data
     ```
 
-3. Open app &rarr; incidents &rarr; webapp &rarr; manifest.json, and copy the below code snippet of **crossNavigation** object under "sap.app"
+3. Open app &rarr; incident-managmenent &rarr; webapp &rarr; manifest.json, and copy the below code snippet of **crossNavigation** object under "sap.app"
 
     ```sh
     "sap.app": {
@@ -32,10 +32,10 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
         ....
     ```
 
-    > [!Note] 
-    > This code snippet is required to access and make the application clickable, while accessing the application via Build Workzone.
+> [!Note] 
+> This code snippet is required to access and make the application clickable, while accessing the application via Build Workzone.
 
-    ![deploy-cf](../images/deploy-cf/crossnavigation.png)  
+![deploy-cf](../images/deploy-cf/crossnavigation.png)  
 
 
 > [!Note]

@@ -28,10 +28,10 @@ Deploy your application in SAP BTP, Cloud Foundry and test using [Deploy in SAP 
 
 3. In the items table, set checkmark for the application Incidents and choose the button Add.
 
-    >[!Note]
-    > While clicking on the checkmark, make sure you are selecting the application with the ID you have created
+>[!Note]
+> While clicking on the checkmark, make sure you are selecting the application with the ID you have created
 
-    ![WorkZone1](../images/integrate-workzone/ce_checkbox.png)
+![WorkZone1](../images/integrate-workzone/ce_checkbox.png)
 
 #### Create a group
 
@@ -39,9 +39,12 @@ Deploy your application in SAP BTP, Cloud Foundry and test using [Deploy in SAP 
 
     ![WorkZone1](../images/integrate-workzone/create_group.png)
 
-2. Add the title Incident Management Group <your-initials><unique-random-number> eg Incident Management Group JD12 .
+2. Add the title `Incident Management Group <your-initials><unique-random-number>`. For example, title would be **Incident Management Group JD12**.
 
 3. In the Assignment Status, choose the slider to assign the Incident-Management app to the group.
+
+>[!Note]
+> While clicking on the slider, make sure you are selecting the application with the ID you have created
 
 4. Choose Save.
     
