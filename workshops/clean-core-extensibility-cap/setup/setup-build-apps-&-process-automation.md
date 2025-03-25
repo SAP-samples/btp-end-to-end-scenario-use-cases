@@ -72,6 +72,7 @@ The subaccount has been configured with a custom IAS tenant and your user has be
 6. Select check mark for the below mentioned roles, and click on **Assign Role Collection**.
     - BuildApps_Administrator	
     - BuildApps_Developer
+
 7. Choose on Save.
 
 **You have successfully assgined roles to the user.**
