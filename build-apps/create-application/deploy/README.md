@@ -61,15 +61,16 @@ In this section you will build the application that you created using SAP Build 
 
 11. In the pop-up, choose the API endpoint of your subaccount
 
-> Hint: You can find the API endpoint in the overview section of your subaccount
+> TIP: You can find the API endpoint in the overview section of your subaccount
 
 12. In case you are not logged in yet, choose **Login with BTP**
 
    ![API Endpoint](./images/deploy-9.png)
 
-13. In the pop-up choose **Sign in the the default identity provider**
+13. In the pop-up choose **Sign in with alternative identity provider**
+   ![Alternative IDP](./images/alternative-idp.png)
 
-   ![Identity Provider](./images/deploy-10.png)
+**Fill the value as origin Key: `pesworkshops-platform`**
 
 14. Back in the **Deploy to Work Zone** view choose your **Organization** and **Space**
 
