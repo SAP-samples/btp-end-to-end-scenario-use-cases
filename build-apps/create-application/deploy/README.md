@@ -74,13 +74,14 @@ In this section you will build the application that you created using SAP Build 
 
 14. Back in the **Deploy to Work Zone** view choose your **Organization** and **Space**
 
-> Hint: You can find the Organization and Space in the overview section of your  of your subaccount
+> [!TIP] You can find the Organization and Space in the overview section of your  of your subaccount
+> **Org: build-hands-on, Space: dev**
 
-15. Choose **Continue**
+1.  Choose **Continue**
 
    ![Org & Space](./images/deploy-11.png)
 
-16. Your application in now being deployed. This can take up to 5 minutes. As soon as the status is 'Your web build is now live at' you can click on the link to open your app.
+2.  Your application in now being deployed. This can take up to 5 minutes. As soon as the status is 'Your web build is now live at' you can click on the link to open your app.
 
    ![Org & Space](./images/deploy-12.png)
 
