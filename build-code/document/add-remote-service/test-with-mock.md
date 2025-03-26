@@ -34,7 +34,10 @@ To increase your development speed, it is helpful to run and test your implement
    * Choose **Create** to save the settings.
      
       ![run test](../../images/add-remote-service/test-with-mock/test-app04.png)
-   
+
+> [!Note]
+> If you have not done the enhance Fiori UI chapter, creating conversations will not be visible in the UI.
+
 > [!Note]
 > By using a mock server you can easily test your implementation in a local environment. You find more details in the documentation for [Local Mocking](https://cap.cloud.sap/docs/guides/using-services#local-mocking)
 
