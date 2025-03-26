@@ -105,6 +105,3 @@ In this section you will build the application that you created using SAP Build 
 ## Summary
 
 You have deployed the application that you developed in SAP Build Apps to SAP BTP that can be consumed using a URL.
-
-### Next Step
-[Integrate the Application with SAP Build Work Zone, standard edition](./../workzone/README.md)
