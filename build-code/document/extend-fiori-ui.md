@@ -42,11 +42,11 @@ You have created the basic UI application using [Create UI with Joule](fiori-ui.
 
 ### Edit filter fields
 
-5. Select filter field **urgency_code**. In the **Label** field, change the value to **Urgency**.
+1. Select filter field **urgency_code**. In the **Label** field, change the value to **Urgency**.
  
     ![Update filter label](../images/extend-fiori-ui/update-filter-label.png)
 
-6. Click the **Globe** icon to generate a translatable text key and click **Apply**.
+2. Click the **Globe** icon to generate a translatable text key and click **Apply**.
 
     ![Generate Translatable Text Key](../images/extend-fiori-ui/ls10.png)
 
@@ -54,18 +54,18 @@ You have created the basic UI application using [Create UI with Joule](fiori-ui.
 
     > Learn more about how internationalization works for the backend part in [Where to Place Text Bundles?](https://cap.cloud.sap/docs/guides/i18n#where-to-place-text-bundles) in the CAP documentation.
 
-7. Select the **status_code** filter. In the **Label** field, change the value to **Status**.
-8. Click the **Globe** icon to generate a translatable text key and click **Apply**.
+3. Select the **status_code** filter. In the **Label** field, change the value to **Status**.
+4. Click the **Globe** icon to generate a translatable text key and click **Apply**.
 
     Both filter value helps currently show the corresponding code values when opened. We want to display a descriptive text instead.
 
     ![Value help display type](../images/extend-fiori-ui/filter-code-values.png)
  
-9. For both the **Status** and **Urgency** filters, in the **Display Type** dropdown menu, select **Value Help**. A dialog shows up. 
+5. For both the **Status** and **Urgency** filters, in the **Display Type** dropdown menu, select **Value Help**. A dialog shows up. 
 
     ![Value help display type](../images/extend-fiori-ui/value-help-dipslay-type.png)
 
-10. In the **Define Value Help Properties for Urgency/Status** dialog:
+6. In the **Define Value Help Properties for Urgency/Status** dialog:
 
     - Open the dropdown menu in the **Value Description Property** field and select **descr**
     - Open the dropdown menu for **Text Arrangement** and select **Text Only**
@@ -73,7 +73,7 @@ You have created the basic UI application using [Create UI with Joule](fiori-ui.
 
     ![Value desc property](../images/extend-fiori-ui/value-desc-property.png)
 
-11. Switch back to the app preview browser tab and open the filter fields. They now show the descriptive text instead of the code value.
+7. Switch back to the app preview browser tab and open the filter fields. They now show the descriptive text instead of the code value.
 
 ### Edit columns
 
@@ -83,20 +83,20 @@ In the List Report, we can see the titles of the table columns shown as **custom
 
 Let's start by rearranging the column order.
 
-12. Select column **Title** and click **^** to move the column up to the top of the list.
-13. Select column **status_code** and click **^** to place it before column **urgency_code**.
+1. Select column **Title** and click **^** to move the column up to the top of the list.
+2. Select column **status_code** and click **^** to place it before column **urgency_code**.
 
     ![Reorder Columns](../images/extend-fiori-ui/reorder-columns.png)
 
-14.  Select the **Title** column. Field **Label** contains string **Title** which was automatically set during app generation. Click the **Globe** icon in the **Label** field to generate a translatable text key for it, and apply the changes.
+3.  Select the **Title** column. Field **Label** contains string **Title** which was automatically set during app generation. Click the **Globe** icon in the **Label** field to generate a translatable text key for it, and apply the changes.
 
-15. For each of the columns **customer_ID**, **status_code** and **urgency_code**:
+4. For each of the columns **customer_ID**, **status_code** and **urgency_code**:
     - In the **Label** field, change the value to **Customer**, **Status**, and **Urgency**, respectively.
     - Choose the **Globe** icon in the **Label** field to generate a translatable text key.
 
     ![Update Columns](../images/extend-fiori-ui/update-columns.png)
 
-16. We will now configure the **display text** and the **text arrangement** for columns **Customer**, **Status** and **Urgency** in order to show a descriptive text instead of the identifier/code.
+5. We will now configure the **display text** and the **text arrangement** for columns **Customer**, **Status** and **Urgency** in order to show a descriptive text instead of the identifier/code.
 
     - Select column **Customer**
     - Click the drop-down box of property **Text** and select entry **customer/name**
@@ -104,8 +104,8 @@ Let's start by rearranging the column order.
       
       ![Customer Column](../images/extend-fiori-ui/customer-column.png)
 
-17.  Select text property for columns **Status** (select **status/descr** ) and **Urgency** (select **urgency/descr**) and also set **Text Arrangement** to **Text Only**
-18.  Switch back to the app preview to see the effect.
+6.  Select text property for columns **Status** (select **status/descr** ) and **Urgency** (select **urgency/descr**) and also set **Text Arrangement** to **Text Only**
+7.  Switch back to the app preview to see the effect.
 
 ### Configure the Table
 
@@ -115,23 +115,23 @@ This allows defining filters before the query is executed.\
 The default behaviour can be changed in a way that selection is immediately
 triggered when the app is started.
 
-19. Select **Table** in the left pane of the page editor. In the **Initial Load** dropdown menu, select **Enabled** to load the data automatically.
+1. Select **Table** in the left pane of the page editor. In the **Initial Load** dropdown menu, select **Enabled** to load the data automatically.
 
     ![Enable Data Auto Load](../images/extend-fiori-ui/ls8.png)
 
 It is considered as best practice providing a **criticality color** for status information displayed on the UI.
 
-20. Select **Table** &rarr; **Columns** &rarr; **Status**. In the **Criticality** dropdown menu, select **status/criticality**.
+2. Select **Table** &rarr; **Columns** &rarr; **Status**. In the **Criticality** dropdown menu, select **status/criticality**.
 
     ![Add Status Criticality](../images/extend-fiori-ui/criticality.png)
 
 ### Check the result
 
-21. The list page of the Incident Management application should look like this:
+1. The list page of the Incident Management application should look like this:
 
     ![Incident Management App's List Page](../images/extend-fiori-ui/IncidentsUI.png)
 
-22. Navigate back to the page editor and choose **Page Map** in the top left. This takes you back to the overview of the **incidents** application.
+2. Navigate back to the page editor and choose **Page Map** in the top left. This takes you back to the overview of the **incidents** application.
 
     ![page-map-back](../images/extend-fiori-ui/page-map-back.png)
 
