@@ -10,7 +10,7 @@ You have created the basic UI application using [Create UI with Joule](fiori-ui.
 
 1. Navigate to **Storyboard**.
 
-2. In the **UI Applicaitons** section, click on your UI app **incidentmanagement<your-initials><unique-random-number>** and then choose **Open in Page Map**
+2. In the **UI Applications** section, click on your UI app **incidentmanagement<your-initials><unique-random-number>** and then choose **Open in Page Map**
 
     ![Custom Logic](../images/extend-fiori-ui/pagemap%202.png)
 
