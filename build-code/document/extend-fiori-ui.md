@@ -6,29 +6,15 @@ In this chapter we will extend/customize the generated Fiori UI using SAP Fiori 
 
 You have created the basic UI application using [Create UI with Joule](fiori-ui.md)
 
-## Configure the List Report
-
-In this section, you'll modify the List Report with the SAP Fiori Tools page editor.
-
-1. Choose the burger menu and then choose **View → Command Palette**.
-
-    ![open-command-palette](../images/extend-fiori-ui/open-command-palette.png)
-
-    > You can also invoke the Command Palette quickly using the following key combination:  
-    > <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> for macOS.        
-    >  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> for Windows. 
-
-2. Type **Fiori: Open Application Info** in the field and select this entry from the list.
-
-    ![open-app-info](../images/extend-fiori-ui/open-app-info.png)
-
-3. In the **Application Info - incidents** tab, click the **Open Page Map** tile. 
-
-    ![Page Map](../images/extend-fiori-ui/PageMap.png)
-
 ### Add filter fields
 
-1.  The page map of the **incidents** application opens in a new tab within SAP Build code. You will see the properties on the right side of the page map. You can edit these properties to update the UI of the application.
+1. Navigate to **Storyboard**.
+
+2. In the **UI Applicaitons** section, click on your UI app **incidentmanagement<your-initials><unique-random-number>** and then choose **Open in Page Map**
+
+    ![Custom Logic](../images/extend-fiori-ui/pagemap%202.png)
+
+3.  The page map of the **incidents** application opens in a new tab within SAP Build code. You will see the properties on the right side of the page map. You can edit these properties to update the UI of the application.
 
     ![Page Map properties](../images/extend-fiori-ui/PageMap-properties.png)
 
@@ -37,15 +23,15 @@ In this section, you'll modify the List Report with the SAP Fiori Tools page edi
     >1. Invoke the Command Palette - **View** &rarr; **Command Palette** or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> for macOS / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> for Windows. 
     >2. Select **Fiori: Open Application Info**.
 
-2. In the **List Report** tile, click the **Pencil** icon next to the title. The page editor is opened.
+4. In the **List Report** tile, click the **Pencil** icon next to the title. The page editor is opened.
 
     ![List Report Page Config](../images/extend-fiori-ui/ls3.png)
 
-3. In the **Filter Bar** section of the page editor, select **Filter Fields** and then click the **Plus** icon to add filter fields. Then, select **Add Filter Fields** in the dropdown menu.
+5. In the **Filter Bar** section of the page editor, select **Filter Fields** and then click the **Plus** icon to add filter fields. Then, select **Add Filter Fields** in the dropdown menu.
 
     ![Add Filter Fields](../images/extend-fiori-ui/ls4.png)
 
-4. In the **Add Filter Fields** dialog:
+6. In the **Add Filter Fields** dialog:
 
     - Select the **status_code** and **urgency_code** checkboxes in the **Filter Field** dropdown menu.
     - Click **Add**. Your application will be updated to show the new filters.
