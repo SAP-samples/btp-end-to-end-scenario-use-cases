@@ -2,7 +2,7 @@
 
 ## Run and Test the Applicaion
 
-1. Open [SAP Build Work Zone](https://pes-handson.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory).
+1. Open [SAP Build Work Zone](https://pw-build-hands-on.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory).
 
 2. Under the Site Directory, find your site created earlier.
 

@@ -8,7 +8,7 @@ Deploy your application in SAP BTP, Cloud Foundry and test using [Deploy in SAP 
 
 #### Update content
 
-1. Open [SAP Build Work Zone](https://pes-handson.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory).
+1. Open [SAP Build Work Zone](https://pw-build-hands-on.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory).
 
 2. Click on **Channel Manager** from the left navigation bar. 
 
