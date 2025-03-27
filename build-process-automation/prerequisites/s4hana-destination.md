@@ -3,7 +3,7 @@
 > [!Note]
 > To Configure S/4 HANA Public Cloud, and to establish connectivity from SAP BTP, check [Configure S/4 HANA Public Cloud for connectivity from SAP BTP](../../workshops/clean-core-extensibility-cap/setup/s4hana-cloud-config.md).
 
-1. Go to the [SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/643ae448-ea81-4fea-8d95-fb010e4d9f50/subaccountoverview).
+1. Go to the [SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/39f42fe8-e715-49e0-850a-316400cceb53/subaccountoverview).
 
 2. Click on **Destinations** under **Connectivity** from the left side menu.
 
