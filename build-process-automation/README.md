@@ -1,4 +1,4 @@
-# Integrate CAP NodejS Application in SAP Build Process Automation.
+# Build a Business Process Extension for SAP S/4 HANA Public Cloud with SAP Build Process Automation
 
 The goal is to cover all the necessary steps to consume the CAP Service API functions in a Process, not to provide a real use case. With Action concept, it simplifies the experience for Citizen Developers to consume APIs without coding (no-code). Here is an high level overview of the architecture.
 
