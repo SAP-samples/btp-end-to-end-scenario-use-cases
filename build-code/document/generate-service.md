@@ -17,7 +17,13 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 2. The Joule prompt will be prefilled with **/cap-edit-model**. Paste the following prompt to generate a service:
 
     ```
-    Add 1 service named 'ProcessorService' as projection on the entity 'Incidents' and 'Customers' and Add 1 service named 'AdminService' on projection for Customers and Incidents entity and remove other services. Annotate ProcessorService with Support role and AdminService with admin role. Remove path properties. Annotate only Incidents entity of ProcessorService odata draft enabled, make only Customers entity readonly of ProcessorService.
+    Add 1 service named 'ProcessorService' with projection on the entities 'Incidents' and 'Customers'.
+    Add additional service named 'AdminService' with projection on the entities 'Customers' and 'Incidents'.
+    Make ProcessorService only accessible by the user with 'Support' role.
+    Similarly, make AdminService to be only accessible by the user with 'Admin' role.
+    Remove others services and path parameters.
+    Enable draft editing for Incidents entity of ProcessorService using annotation.
+    Make Customers entity of ProcessorService as readonly.
     ```
 
 3. Choose the **Send** icon.
