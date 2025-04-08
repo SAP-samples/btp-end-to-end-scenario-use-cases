@@ -43,7 +43,9 @@ Using Joule we will define an event handler that automatically sets the urgency 
 5. The Joule prompt will be prefilled with `/cap-app-logic #srv/code/changeUrgencyDueToSubject.js`. After the prefilled command, use the following prompt to create the business logic.
 
     ```
-    Create a helper function named 'changeUrgencyDueToSubject' which checks the title of the incident is having urgent keyword and update the urgency_code field to High. Ensure the data is array or wrap in an array.
+    Check the title of the incident is having urgent keyword and update the urgency_code field to High.
+    Ensure the data is array or wrap in an array.
+    Do not generate unused variables.
     ```
     
 6. Choose the **Send** icon.
