@@ -88,7 +88,8 @@ This event handler prevents updates to incidents that are already closed (status
 6. The Joule prompt will be prefilled with `/cap-app-logic #srv/code/onUpdate.js`. After the prefilled command, use the following prompt to create the business logic.
 
     ```console
-    Create a helper function named 'onUpdate' and check if the status_code is 'C' and reject the request with 'cannot modify the closed incident'
+    Check if the status_code is 'C' and reject the request with 'cannot modify the closed incident'.
+    Do not generate unused variables.
     ```
     
 7. Choose the **Send** icon.
