@@ -15,7 +15,9 @@ You have created custom logic following the steps at [Create Backend Logic with 
 2. Use the following prompt to create a user interface.
 
     ```
-    Create an SAP Fiori application named Incident-management with List report page as the template. Data source is local CAP application and use ProcessorService as the odata Service, and incidents is the main entity. Table should be responsive. Application should be created from ProcessorService as the main OData service
+    Create an SAP Fiori application named incidents with List report page as the template.
+    Data source is local CAP application and use incidents entity of ProcessorService as the main odata Service.
+    Table should be responsive.
     ```
 
     > The prompt asks Joule to create an SAP Fiori application with List report as the SAP Fiori template. Because there might be many services, mention which service you want to be mapped with the UI application. In this case, ProcessorService is the OData service and incidents is the main entity in it. 
