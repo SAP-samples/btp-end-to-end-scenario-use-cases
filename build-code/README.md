@@ -38,12 +38,6 @@ ACME is a popular Electronics company. ACME hires call center support representa
 2. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./document/add-remote-service/s4hana-cloud-to-btp-connectivity.md)
 3. [Create a Service Instance for SAP S/4HANA Cloud Extensibility](./document/add-remote-service/create-service.md)
 
-## Important Links 
-
-| | | |
-| ----------- | ----------- | ----------- |
-| [SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/39f42fe8-e715-49e0-850a-316400cceb53/subaccountoverview) | [SAP Build Lobby](https://pw-build-hands-on.eu10.build.cloud.sap/lobby)| [SAP Build Work Zone](https://pw-build-hands-on.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory) |
-
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
 1. [Create Space in SAP BTP](./document/create-space.md)
@@ -72,7 +66,3 @@ ACME is a popular Electronics company. ACME hires call center support representa
 3. [Run a developer test Locally](./document/add-remote-service/test-with-mock.md)
 4. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./document/add-remote-service/deploy-to-cf.md)
 5. [Test the end to end flow](./document/add-remote-service/test-the-app.md)
-
-## Exercise Home Page
-
-[Navigate to Home Page](../workshops/clean-core-extensibility-cap/README.md)

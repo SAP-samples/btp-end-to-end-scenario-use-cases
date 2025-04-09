@@ -24,7 +24,7 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
 3. Joule responds with `files generated successfully`.
 
-    ![ui-generated-msg](../images/fiori-ui/ui_generated.png)
+    ![ui-generated-msg](../images/newprompts/fiori.png)
 
 4. Joule creates a  SAP Fiori application using the List Report template in SAP Fiori Elements, with a local CAP  service as the data source
 
