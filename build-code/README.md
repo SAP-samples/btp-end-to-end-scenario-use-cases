@@ -20,7 +20,7 @@ With the integration of Joule, the innovative AI copilot of SAP, SAP Build Code 
 
 # Business Scenario
 
-In this hands-on exercise, you will build an application called Incident Management using SAP Build Code. The business scenario of the Incident Management applciation is the following:
+In this hands-on exercise, you will build an application called Incident Management using SAP Build Code. The business scenario of the Incident Management application is the following:
 
 ACME is a popular Electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. The newly created incident is based on a customer complaint received during the phone call. The call center support representative also adds the conversation with the customer to the incident for future reference.
 
@@ -32,7 +32,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ## Pre-requisite
 > [!Note]
-> For this hands-on we have already set up the below pre-requsite steps. You can directly proceed with  the exercises
+> For this hands-on we have already set up the below pre-requisite steps. You can directly proceed with  the exercises
 
 1. [Setup SAP Build Code  in SAP BTP](./document/prerequisites.md)
 2. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./document/add-remote-service/s4hana-cloud-to-btp-connectivity.md)
