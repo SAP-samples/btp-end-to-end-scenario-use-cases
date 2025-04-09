@@ -88,8 +88,7 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
     4. Find the text box for **Enter the origin key** and click on **Sign in with alternative identity provider**.
 
-        > [!Note]
-        > Ask the instructor for the origin key
+        > Note: Ask the instructor for the origin key
 
         ![deploy-cf](../images/deploy-cf/tenant_login.png)
 
