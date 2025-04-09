@@ -1,6 +1,6 @@
 # Create Cloud Foundry Space
 
-1. Open the [SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/39f42fe8-e715-49e0-850a-316400cceb53/subaccountoverview).
+1. Open the SAP BTP Cockpit.
 
 2. In the Overview, you will find the Spaces table. Choose **Create Space** from the top right hand-side corner of that table.
 
