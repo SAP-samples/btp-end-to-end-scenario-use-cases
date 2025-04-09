@@ -28,7 +28,7 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 
 3. Choose the **Send** icon.
 
-    ![cap-edit-model-prompt](../images/generate-service/prompt3.png)
+    ![cap-edit-model-prompt](../images/newprompts/service.png)
 
 4. Choose **Accept**.
 
