@@ -18,7 +18,7 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 
     ```
     Add 1 service named 'ProcessorService' with projection on the entities 'Incidents' and 'Customers'.
-    Add additional service named 'AdminService' with projection on the entities 'Customers' and 'Incidents'.
+    Add additional service named 'AdminService' with projection on the entities 'Incidents' and 'Customers'.
     Make ProcessorService only accessible by the user with 'Support' role.
     Similarly, make AdminService to be only accessible by the user with 'Admin' role.
     Remove others services and path parameters.

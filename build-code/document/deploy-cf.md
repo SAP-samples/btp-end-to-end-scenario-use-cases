@@ -65,9 +65,9 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
 
 The final step in SAP Build Code is to deploy the application to the SAP BTP, Cloud Foundry runtime. This process also involves the automatic creation of destinations, enabling ODATA services to be utilized by other tools such as SAP Build Apps.
 
-1. Navigate to **Task Explorer** and run **Enable Discovery and Deploy**.
+1. Navigate to **Task Explorer** and run **Deploy** project name.
 
-    ![deploy-cf](../images/deploy-cf/taskexplorer.png)
+    ![deploy-cf](../images/newprompts/taskexplorer.png)
 
 2. Check if the task has been launched in the terminal.
 
@@ -86,7 +86,10 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
     3. Choose **Open a new browser page to generate your SSO passcode** to sign in to your subaccount in SAP BTP, which opens in a new browser.
 
-    4. Find the text box for **Enter the origin key** and enter **pesworkshops-platform** and click on **Sign in with alternative identity provider**.
+    4. Find the text box for **Enter the origin key** and click on **Sign in with alternative identity provider**.
+
+        > [!Note]
+        > Ask the instructor for the origin key
 
         ![deploy-cf](../images/deploy-cf/tenant_login.png)
 
