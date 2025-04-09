@@ -50,7 +50,7 @@ Using Joule we will define an event handler that automatically sets the urgency 
     
 6. Choose the **Send** icon.
 
-    ![Custom Logic](../images/custom-logic/logic1_prompt.png)
+    ![Custom Logic](../images/newprompts/logic1.png)
 
 7. Once Joule responds with the code, check the implementation and accept it. 
 
@@ -87,14 +87,14 @@ This event handler prevents updates to incidents that are already closed (status
 
 6. The Joule prompt will be prefilled with `/cap-app-logic #srv/code/onUpdate.js`. After the prefilled command, use the following prompt to create the business logic.
 
-    ```console
-    Check if the status_code is 'C' and reject the request with 'cannot modify the closed incident'.
+    ```
+    For already closed incident, check if the status_code is 'C' and reject the request with 'cannot modify the closed incident'. 
     Do not generate unused variables.
     ```
     
 7. Choose the **Send** icon.
 
-    ![Custom Logic](../images/custom-logic/logic2_prompt.png)
+    ![Custom Logic](../images/newprompts/logic2.png)
 
 8. Once Joule responds with the code, check the implementation and accept it. 
 

@@ -28,7 +28,7 @@ Do not generate name.The data should be structured in CSV format, maintaining co
 
 3. Choose the **Send** icon.
 
-    ![data-gen-prompt](../images/enhance-sample-data/data-gen-prompt.png)
+    ![data-gen-prompt](../images/newprompts/data.png)
 
 4. Joule will create list of .csv files that contain sample data as per the provided schema. Choose **Accept**.
 
