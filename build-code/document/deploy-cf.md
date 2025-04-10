@@ -67,7 +67,7 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
 1. Navigate to **Task Explorer** and run **Deploy** project name.
 
-    ![deploy-cf](../images/newprompts/taskexplorer.png)
+    ![deploy-cf](../images/deploy-cf/taskexplorer.png)
 
 2. Check if the task has been launched in the terminal.
 
