@@ -22,8 +22,8 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 
     ![full-stack-app](../images/create-full-stack-project/new-nodejs.png)
 
-6. Under Name tab, do the following:
-    1. Enter the Name as `Incidents<your-initials><unique-random-number>` in the **Project Name** field. For example, if your name is `John Doe`, then the project name would be **Incidentsjd12**, (12 is some random number).
+6. Under **Name** tab, do the following:
+    1. Enter the Name as `Incidents<your-initials><unique-random-number>`. For example, if your name is `John Doe`, then the project name would be **Incidentsjd12**, (12 is some random number).
 
         > **Note:** The project name should be unique to identify your project during deployment and also to avoid a duplication error.
     2. Let **Full_Stack** be the default Dev Space.
