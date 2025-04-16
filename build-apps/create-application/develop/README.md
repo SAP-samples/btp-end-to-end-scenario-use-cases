@@ -9,51 +9,53 @@ In this section, you will create an SAP Build Apps application.
 
 ## Open SAP Build Apps
 
- 1. Open the <a href="https://pw-build-hands-on.eu10.build.cloud.sap/lobby" target="_blank" rel="noopener noreferrer">SAP Build Apps</a>.
+1. Open the <a href="https://pw-build-hands-on.eu10.build.cloud.sap/lobby" target="_blank" rel="noopener noreferrer">SAP Build Apps</a>.
 
- 4. You might be prompted with a log in screen of either default Identity Provider or custom Identity Provider depending on what you have configured.
+2. You might be prompted with a log in screen of either default Identity Provider or custom Identity Provider depending on what you have configured.
 
- 5. Log in to the Application using your custom Identity Provider credentials.
+3. Log in to the Application using your custom Identity Provider credentials.
 
 ## Create an Application Using SAP Build Apps
 
 ### Create a Project
 
-1. On the SAP Build Lobby choose **Create** 
+1. Click on **Create** from the *Create* dropdown.
 
-   ![image](https://github.com/user-attachments/assets/e1531823-9d94-4ac0-9c6f-02aede19bfe7)
+   ![image](./images/new-create.png)
 
-2. Choose **Build an Application** to create a new business application.
+2. In Create Project dialog box, under **Objective**, click on **Application** tile and click on **Next**.
 
-   <img src="./images/ba_createapp.png" width="80%">
+   <img src="./images/new-application.png" width="80%">
 
-3. Select **SAP Build Apps**
+3. Under **Category**, choose the **Frontend** tile and click on **Next**.
 
-    ![image](https://github.com/user-attachments/assets/fab69bd4-2e99-4750-979d-bd306fb53763)
+    ![image](./images/frontend.png)
    
-5. Choose **Web & Mobile Application**.
+4. Under **Type**, select the development configuration as **Web Application** and click on **Next**.
    
-   ![image](https://github.com/user-attachments/assets/814d603f-c0d9-46d8-89cf-21892a7eb794)
+   ![image](./images/webapp.png)
 
-6. Enter a **Project Name**, as `Business Partner <your-initials><unique-random-number>` e.g Business Partner jd12
+5. Under **Name**, enter the project name, as `Business Partner <your-initials><unique-random-number>` e.g Business Partner jd12.
 
-7. Enter a **Short Description**.
+6. click on **Review**.
 
-8. Choose **Create**.
+   ![image](./images/name.png)
 
-   <img src="./images/ba_createApp_1.png" width="80%">
+7. In the **Summary** page, review the *Objective, Category, Type and name* given in the previous steps and click on **Create**.
 
-9. Your created project will be opened in **App Editor** which is the central place to build your application including a user interface, logic, as well as data integration.
+   ![image](./images/summary.png)
 
-10. Choose **Headline** and change the content from **Headline** to **Extend UI Application**.
+8. Your created project will be opened in **App Editor** which is the central place to build your application including a user interface, logic, as well as data integration.
+
+9. Choose **Headline** and change the content from **Headline** to **Extend UI Application**.
    ![image](https://github.com/user-attachments/assets/4461e6dd-75c2-4f9d-b8a3-7f23d1d13fd3)
 
-11. Find the text field in the UI canvas in the center of your screen and choose the trash can icon to remove this component.
+10. Find the text field in the UI canvas in the center of your screen and choose the trash can icon to remove this component.
    ![image](https://github.com/user-attachments/assets/749e834e-d442-42fc-83d1-4edec6d03f0e)
 
-12. Choose the blank page. On the right side under the **Properties**, choose **Page name**.
+11. Choose the blank page. On the right side under the **Properties**, choose **Page name**.
 
-13. Change the page name to **Home**.
+12. Change the page name to **Home**.
     ![image](https://github.com/user-attachments/assets/d31853b5-1a5f-4c88-86b0-88513a48e2ae)
 
 
