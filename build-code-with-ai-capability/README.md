@@ -50,14 +50,3 @@ ACME is a popular Electronics company. ACME hires call center support representa
 2. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
 3. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
 4. [Test the Scenario End to End](./document/e2e-testing.md)
-
-## Exercise 3: Consume External Service
-
-> [!Note]
-> To proceed with consuming external service, development and deployment of the CAP application needs to be completed as a prerequisite.
-
-1. [Update the Business Scenario](./document/add-remote-service/README.md)
-2. [Extend the Incident Management аpplication](./document/add-remote-service/extend-app-cf.md)
-3. [Run a developer test Locally](./document/add-remote-service/test-with-mock.md)
-4. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./document/add-remote-service/deploy-to-cf.md)
-5. [Test the end to end flow](./document/add-remote-service/test-the-app.md)
