@@ -26,7 +26,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 # Solution Diagram
 
-![Solution Diagram](images/Solution-Diagram.png)
+to be updated
 
 # Hands-on Exercise
 

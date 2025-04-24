@@ -10,7 +10,7 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 
 1. Choose the **Joule** icon. Start typing ```/cap-edit``` in the Joule prompt and select **/cap-edit-model** from the suggestions to create a service.
 
-    ![edit-model](../images/generate-service/editmodel.png)
+    ![edit-model](../../build-code/images/generate-service/editmodel.png)
 
     > **Note:** By default, **/cap-edit-model** should be displayed in a text box.
 
@@ -28,11 +28,11 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 
 3. Choose the **Send** icon.
 
-    ![cap-edit-model-prompt](../images/newprompts/service.png)
+    ![cap-edit-model-prompt](../../build-code/images/newprompts/service.png)
 
 4. Choose **Accept**.
 
-    ![cap-accept-service](../images/generate-service/code.png)
+    ![cap-accept-service](../../build-code/images/generate-service/code.png)
    
 > [!Tip]
 > - CDS service definition exposes entities from the database schema (schema.cds) as part of  service layers with role-based access to services.
@@ -45,11 +45,11 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 
 5. Open **service.cds** in the project explorer and validate the generated service. 
 
-    ![validate-gen-service](../images/generate-service/code_struct.png)
+    ![validate-gen-service](../../build-code/images/generate-service/code_struct.png)
 
 6. Go to **Storyboard**. In the **Services** section, make sure **ProcessorService** and **AdminService** have been created.
 
-    ![validate-edit-model](../images/generate-service/storyboardcheck.png)
+    ![validate-edit-model](../../build-code/images/generate-service/storyboardcheck.png)
 
 7. Please make sure the final `service.cds` file looks like this:
 

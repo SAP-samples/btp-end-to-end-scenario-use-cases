@@ -10,11 +10,11 @@ Data entities have been defined in the previous step. Using Joule, let's create 
 
 1. Choose the **Joule** icon. Start typing ```/cap``` in text box and then choose **/cap-gen-data**. 
 
-    ![gen-data](../images/enhance-sample-data/gen-data.png)
+    ![gen-data](../../build-code/images/enhance-sample-data/gen-data.png)
 
     > **Note:** By default, **/cap-gen-data #db/schema.cds** should be displayed in a text box.
 
-    ![cap-gen-data](../images/enhance-sample-data/cap-gen-data-prompt.png)
+    ![cap-gen-data](../../build-code/images/enhance-sample-data/cap-gen-data-prompt.png)
 
 2. The Joule prompt will be prefilled with **/cap-gen-data #db/schema.cds**. Paste the following prompt to generate the sample data. 
 
@@ -28,15 +28,15 @@ Do not generate name.The data should be structured in CSV format, maintaining co
 
 3. Choose the **Send** icon.
 
-    ![data-gen-prompt](../images/newprompts/data.png)
+    ![data-gen-prompt](../../build-code/images/newprompts/data.png)
 
 4. Joule will create list of .csv files that contain sample data as per the provided schema. Choose **Accept**.
 
-    ![accept-gen-data](../images/enhance-sample-data/generated_files.png)
+    ![accept-gen-data](../../build-code/images/enhance-sample-data/generated_files.png)
 
 5. All the generated .csv files will be saved in the **test/data** folder of your project.
 
-    ![validate-gen-data](../images/enhance-sample-data/validate-gen-data.png)
+    ![validate-gen-data](../../build-code/images/enhance-sample-data/validate-gen-data.png)
 
 ## Next Step
 

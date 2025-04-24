@@ -10,7 +10,7 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
 1. In Joule, start typing ```/fiori``` and select **/fiori-gen-cap-ui** from the suggestions.
 
-    ![fiori-ui](../images/fiori-ui/ui_suggestion.png)
+    ![fiori-ui](../../build-code/images/fiori-ui/ui_suggestion.png)
 
 2. Use the following prompt to create a user interface.
 
@@ -24,38 +24,36 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
 3. Joule responds with `files generated successfully`.
 
-    ![ui-generated-msg](../images/newprompts/fiori.png)
+    ![ui-generated-msg](../../build-code/images/newprompts/fiori.png)
 
 4. Joule creates a  SAP Fiori application using the List Report template in SAP Fiori Elements, with a local CAP  service as the data source
 
 5. Go to **Explorer**. In the **app** folder, check that the following folder structure is generated.
 
-    ![fiori-ui](../images/fiori-ui/app_folder.png)
+    ![fiori-ui](../../build-code/images/fiori-ui/app_folder.png)
 
 6. Choose **Run and Debug** to start the application.
 
-    ![run-app](../images/fiori-ui/run-app.png)
+    ![run-app](../../build-code/images/fiori-ui/run-app.png)
 
 7. The application is started and opens in a new tab. Choose the SAP Fiori application tile to view the user interface.
 
-    ![open-app](../images/fiori-ui/webapp_ui.png)
+    ![open-app](../../build-code/images/fiori-ui/webapp_ui.png)
 
 8. The list report page opens in new tab. Choose **Go** to view the list of incidents.
 
-    ![list-report-page](../images/fiori-ui/UI_listpage.png)
+    ![list-report-page](../../build-code/images/fiori-ui/UI_listpage.png)
 
 9. Choose one of the incidents. The incident details are displayed.
 
-    ![object-page](../images/fiori-ui/Incident-object-page.png)
+    ![object-page](../../build-code/images/fiori-ui/Incident-object-page.png)
 
 10. To stop the running application, choose the **Disconnect** icon at top of the screen.
     
-    ![stop-preview](../images/fiori-ui/stop_preview.png)
+    ![stop-preview](../../build-code/images/fiori-ui/stop_preview.png)
 
 ## Next Step
 
-To enhance the user interface, follow the steps at [Extend SAP Fiori UI](./extend-fiori-ui.md). 
 
-Else, you can proceed with [Add Test Cases](./testcase.md)
 
 

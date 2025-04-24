@@ -10,11 +10,11 @@ You have created the project following the steps at [Create a Full-Stack Applica
 
 1. In the SAP Business Application Studio, choose **Project Explorer**.
 
-    ![project-explorer](../images/create-data-entities/project_explorer.png)
+    ![project-explorer](../../build-code/images/create-data-entities/project_explorer.png)
 
 2. Expand the **db** folder. Choose the icon to create a new file, and provide **schema.cds** as file name.
 
-    ![create-schema](../images/create-data-entities/schema_creation.png)
+    ![create-schema](../../build-code/images/create-data-entities/schema_creation.png)
 
 3. Copy the following schema to the **schema.cds** file. 
 
@@ -111,6 +111,8 @@ type PhoneNumber : String;
 >
 > **Urgency**: Defines different urgency levels for incidents High(H), Medium(M) and Low (L).
 >
+> **vectorEmbeddings**: 
+>
 > **Key CAP features covered in the model**
 >
 > **Uses managed & cuid**: Ensures automatic timestamps and UUID-based primary keys.
@@ -126,7 +128,9 @@ type PhoneNumber : String;
 
 4. Navigate to **Storyboard** in the editor and make sure the **Data Models** section is updated with the entities mentioned in **schema.cds** file.
 
-    ![schema-storyboard](../images/create-data-entities/schema-storyboard.png) - to be updated
+screenshot to be updated
+    ![schema-storyboard](../images/create-data-entities/datamodels.png)
+
 
 ## Next Step
 
