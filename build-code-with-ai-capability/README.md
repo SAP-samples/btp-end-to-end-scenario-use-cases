@@ -26,7 +26,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 # Solution Diagram
 
-to be updated
+![Solution Diagram](./images/solution-diagram-ai.png)
 
 # Hands-on Exercise
 
@@ -50,4 +50,4 @@ to be updated
 
 1. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
 2. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
-3. [Test the Scenario End to End](./document/e2e-testing.md)
+3. [Test the Scenario End to End](./document/e2e-testing-cf.md)

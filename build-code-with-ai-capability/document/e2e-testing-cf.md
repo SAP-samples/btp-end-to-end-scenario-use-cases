@@ -2,36 +2,7 @@
 
 ## Prerequisite
 
-[Extend the Incident Management Application](./extend-service.md)
-
-## Feed the data 
-
-1. Open the terminal, and start the application by following the below command:
-
-```sh
-cds watch --profile hybrid
-```
-
-2. Open the `request.http` file and click on **Send Request**.
-
-    ![request](../images/extend-service/send-req.png)
-
-> In the terminal, you can see the data from Incidents.csv file is getting trained, please wait for sometime. you will see the Response as 200. 
-
-3. Once completed, you will see the Response as 200.
-
-    ![response](../images/extend-service/success-http.png)
-
-4. Go back to the terminal where the application is running, click on the url where the localhost is running
-
-    ![terminal](../images/extend-service/localhost.png)
-
-> [!Tip]
-> Open the URL in the browser, by following
->
-> For windows, Ctrl + click on the URL
->
-> For Mac, command + click on the URL
+[Intergrate with SAP Build Work Zone](./integrate-workzone.md)
 
 ## Testing end to end.
 
@@ -80,5 +51,3 @@ cds watch --profile hybrid
 8. You will get a notification as **Data added successfully!**
 
     ![testing](../images/teste2e/data-saved.png)
-
-## Go back to the [Home Page](../../build-code-with-ai-capability/README.md#optional-exercise-3-deploy-in-sap-btp-cloud-foundry-runtime) to deploy to the Cloud Foundry Runtime.
