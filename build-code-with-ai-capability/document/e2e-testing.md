@@ -41,19 +41,38 @@ cds watch --profile hybrid
 
 2. Click on **Go**, which loads all the incidents.
 
-    ![testing](../images/e2e-testing/incident_create.png)
+    ![testing](../images/teste2e/create.png)
 
 3. Fill in the incident details:
 
-    1. In the **Title** field, enter **Printer not working**.
+    1. In the **Title** field, enter **Printer is not working**.
     
-    2. In the **Customer ID** dropdown menu, select a customer of your choice.
+    2. In the **Customer** dropdown menu, select a customer of your choice.
 
-        image
+        ![testing](../images/teste2e/valuehelp.png)
 
-    3. Leave the **urgency_code** and **status_code** fields.
+    3. Leave the **Status** and **Urgency** fields with its default value.
 
-    4. Choose **Create**.
+    4. Under **Conversation**, click on **Create**.
 
-        ![testing](../images/e2e-testing/create_draft.png)
+    5. Enter the Message as **Paper is not printing**.
 
+    6. Click on **Create**.
+
+        ![testing](../images/teste2e/createinobject.png)
+
+4. Under **Recommended Solutions**, you will be able to see the solutions with the confidence score.
+
+    ![testing](../images/teste2e/recommend.png)
+
+5. Click on **Accept Solution**.
+
+    ![testing](../images/teste2e/accept1.png)
+
+6. In the dropdown, click on Yes, if the recommended solution worked. And click on **Accept Solution** again.
+
+    ![testing](../images/teste2e/accept2.png)
+
+7. You will get a notification as **Data added successfully!**
+
+    ![testing](../images/teste2e/data-saved.png)

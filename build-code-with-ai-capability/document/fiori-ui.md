@@ -52,8 +52,4 @@ You have created custom logic following the steps at [Create Backend Logic with 
     
     ![stop-preview](../../build-code/images/fiori-ui/stop_preview.png)
 
-## Next Step
-
-
-
-
+## Go to the [Home Page](../../build-code-with-ai-capability/README.md#exercise-2-add-ai-capabilities-using-sap-ai-sdk) to continue with Exercise 2 on adding AI capabilities using SAP AI SDK

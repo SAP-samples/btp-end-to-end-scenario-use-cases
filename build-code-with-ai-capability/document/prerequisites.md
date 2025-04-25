@@ -83,7 +83,7 @@ cds deploy --to hana
 ```
  
 > [!Note]
-> Please wait for sometime, until you get the successful deployment message.
+> It might take few seconds to finish the deployment to hana, once done, you get the successful deployment message.
 ![success](../images/extend-service/successful-deployment.png)
 
 ## Create service binding to SAP AI Core
