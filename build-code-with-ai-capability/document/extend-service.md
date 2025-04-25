@@ -2,13 +2,13 @@
 
 ## Prerequisites
 
-Added dependencies required for SAP AI SDK by following [Add Dependencies of SAP AI SDK](./package-dependency.md)
+Add dependencies required for SAP AI SDK, and setting up the data for productive usage by following [Pre-requiste](./prerequisites.md)
 
 ## Extend the Incident Management Application
 
-1. Under srv, create a new file called `incidents.csv`, copy the contents from [incidents.csv](../csv/incidents.csv)
+1. Under `srv`, create a new file called `incidents.csv`, copy the contents from [incidents.csv](../csv/incidents.csv)
 
-2. Create a new file called `feed-data.js` and paste the content from below.
+2. Under `srv`, create a new file called `feed-data.js` and paste the content from below.
 
 ```js
 const fs = require("fs");
@@ -69,7 +69,11 @@ module.exports = { trainModel };
 
 ```
 
-3. Open service.cds file and replace the service ProcessorService with below code snippet
+> [!Tip]
+> This file feeds data
+
+3. Open `srv/service.cds`file and replace the service ProcessorService with below code snippet.
+
 ```js
 service ProcessorService {
     @readonly
@@ -90,7 +94,10 @@ service ProcessorService {
 }
 ```
 
-4. Create a new file called `service.js` and add the following content.
+> [!Tip]
+> to be updated
+
+4. Under `srv`, create a new file called `service.js` and add the following content.
 
 ```js
 const cds = require('@sap/cds');
@@ -232,10 +239,13 @@ class ProcessorService extends cds.ApplicationService {
 }
  
 module.exports = { ProcessorService };
- 
 ```
 
+> [!Tip]
+> to be updated
+
 5. In the root project, create a new file called `request.http` and paste the content below.
+
 ```http
 ### Trigger the TrainModel action
 POST http://localhost:4004/odata/v4/processor/TrainModel
@@ -246,7 +256,7 @@ Content-Type: application/json
 
 ## Add Annotations to enhance the Fiori UI
 
-1. Open `app/incidents/annotation.cds` file and paste the below code
+1. Open `app/incident-management/annotation.cds` file and paste the below code
 
 ```js
 using ProcessorService as service from '../../srv/service';

@@ -42,7 +42,7 @@ to be updated
 
 ## Exercise 2: Add AI Capabilities using SAP AI SDK
 
-1. [Prerequisites](./document/package-dependency.md)
+1. [Prerequisites](./document/prerequisites.md)
 2. [Extend the Incident Management Application](./document/extend-service.md)
 2. [Test the Scenario End to End](./document/e2e-testing.md)
 

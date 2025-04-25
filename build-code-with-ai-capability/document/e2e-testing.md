@@ -14,23 +14,46 @@ cds watch --profile hybrid
 
 2. Open the `request.http` file and click on **Send Request**.
 
-image
+    ![request](../images/extend-service/send-req.png)
 
-> In the terminal, you can see the data from Incidents.csv file is getting trained.
-> Once done, you will see the Response as 200. 
+> In the terminal, you can see the data from Incidents.csv file is getting trained, please wait for sometime. you will see the Response as 200. 
 
-image
+3. Once completed, you will see the Response as 200.
 
-3. Go back to the terminal where the application is running, click on the url where the localhost is running
+    ![response](../images/extend-service/success-http.png)
 
-image
+4. Go back to the terminal where the application is running, click on the url where the localhost is running
 
-> Note: To open the URL in the browser
+    ![terminal](../images/extend-service/localhost.png)
+
+> [!Tip]
+> Open the URL in the browser, by following
+>
 > For windows, Ctrl + click on the URL
+>
 > For Mac, command + click on the URL
 
-1. Choose **Create**, to create a new incident.
+## Testing end to end.
+
+1. Once you open the application, click on the URL under **Web Applications**.
+
+    ![webapp](../images/teste2e/open-webapp.png)
+
+2. Click on **Go**, which loads all the incidents.
 
     ![testing](../images/e2e-testing/incident_create.png)
 
+3. Fill in the incident details:
+
+    1. In the **Title** field, enter **Printer not working**.
     
+    2. In the **Customer ID** dropdown menu, select a customer of your choice.
+
+        image
+
+    3. Leave the **urgency_code** and **status_code** fields.
+
+    4. Choose **Create**.
+
+        ![testing](../images/e2e-testing/create_draft.png)
+
