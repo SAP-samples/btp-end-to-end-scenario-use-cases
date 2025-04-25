@@ -32,7 +32,7 @@ to be updated
 
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
-1. [Create Space in SAP BTP](../build-code/document/create-space.md)
+1. [Create Space in SAP BTP](./document/create-space.md)
 2. [Create the Project](./document/create-full-stack-project.md)
 3. [Create Data Entities](./document/create-data-entities.md)
 4. [Add Sample Data](./document/enhance-sample-data.md)
