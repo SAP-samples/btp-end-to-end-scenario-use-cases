@@ -5,14 +5,14 @@
 1. Open Package.json and add the below dependencies
 
 ```json
-    "dependencies": {
-        ...
-        "@sap-ai-sdk/foundation-models": "^1.12.0",
-        "@sap-ai-sdk/langchain": "^1.12.0",
-        "csv-parser": "^3.2.0",
-        "fs": "^0.0.1-security",
-        "natural": "^8.0.1",
-    },
+"dependencies": {
+    ...
+    "@sap-ai-sdk/foundation-models": "^1.12.0",
+    "@sap-ai-sdk/langchain": "^1.12.0",
+    "csv-parser": "^3.2.0",
+    "fs": "^0.0.1-security",
+    "natural": "^8.0.1",
+},
 ```
 
 > [!Note]
