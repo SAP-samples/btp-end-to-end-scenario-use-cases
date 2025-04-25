@@ -32,24 +32,22 @@ to be updated
 
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
-1. [Create the Project](./document/create-full-stack-project.md)
-2. [Create Data Entities](./document/create-data-entities.md)
-3. [Add Sample Data](./document/enhance-sample-data.md)
-4. [Add CDS Services](./document/generate-service.md)
-5. [Add Business Logic with Joule](./document/custom-logic.md)
-6. [Add Fiori UI Using Joule](./document/fiori-ui.md)
+1. [Create Space in SAP BTP](../build-code/document/create-space.md)
+2. [Create the Project](./document/create-full-stack-project.md)
+3. [Create Data Entities](./document/create-data-entities.md)
+4. [Add Sample Data](./document/enhance-sample-data.md)
+5. [Add CDS Services](./document/generate-service.md)
+6. [Add Business Logic with Joule](./document/custom-logic.md)
+7. [Add Fiori UI Using Joule](./document/fiori-ui.md)
 
 ## Exercise 2: Add AI Capabilities using SAP AI SDK
 
-1. [Add dependencies for SAP AI SDK](./document/package-dependency.md)
-2. [Add Services for SAP AI SDK](./document/add-service-ai-core.md)
-3. [Enhance Fiori UI](./document/enhance-fiori-ui.md)
-4. [Add Default environment for local testing](./document/add-default-env.md)
-5. [Test the Scenario End to End](./document/e2e-testing.md)
+1. [Prerequisites](./document/package-dependency.md)
+2. [Extend the Incident Management Application](./document/extend-service.md)
+2. [Test the Scenario End to End](./document/e2e-testing.md)
 
 ## [Optional] Exercise 3: Deploy in SAP BTP, Cloud Foundry Runtime
 
-1. [Create Space in SAP BTP](../build-code/document/create-space.md)
-2. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
-3. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
-4. [Test the Scenario End to End](./document/e2e-testing.md)
+1. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
+2. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
+3. [Test the Scenario End to End](./document/e2e-testing.md)
