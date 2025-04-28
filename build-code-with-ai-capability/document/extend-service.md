@@ -247,8 +247,8 @@ module.exports = { ProcessorService };
 5. In the root project, create a new file called `request.http` and paste the content below.
 
 ```http
-### Trigger the Feed Data action
-POST http://localhost:4004/odata/v4/processor/FeedData
+### Trigger the Vector Embedding action
+POST http://localhost:4004/odata/v4/processor/VectorEmbedding
 Content-Type: application/json
  
 {}
