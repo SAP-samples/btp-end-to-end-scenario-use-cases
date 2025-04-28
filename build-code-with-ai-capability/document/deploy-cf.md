@@ -2,39 +2,10 @@
 
 This section describes how to deploy the application to the SAP BTP, Cloud Foundry runtime.
 
-## Prerequisites
-
-1. Open app &rarr; incident-managmenent &rarr; webapp &rarr; manifest.json, and copy the below code snippet of **crossNavigation** object after **dataSources** object under "sap.app"
-
-    ```sh
-    "sap.app": {
-        .....
-        "crossNavigation": {
-            "inbounds": {
-                "intent1": {
-                "signature": {
-                    "parameters": {},
-                    "additionalParameters": "allowed"
-                    },
-                "semanticObject": "Incidents",
-                "action": "display"
-                }
-            }
-        }
-        ....
-    ```
-
-
-> [!Note]
-> This code snippet is required to access and make the application clickable, while accessing the application via Build Workzone.
-
-![deploy-cf](../../build-code/images/deploy-cf/crossnavigation.png)  
-
-
 > [!Note]
 > **To uniquely identify your deployed application in SAP BTP Cockpit, make the following changes to UI module of your application .**
 
-2. UI Application name can be `incidentmanagement<your-initials><unique-random-number>`. For example, if your name is `John Doe`, then the project name would be **incidentmanagementjd12**, (12 is some random number). 
+1. UI Application name can be `incidentmanagement<your-initials><unique-random-number>`. For example, if your name is `John Doe`, then the project name would be **incidentmanagementjd12**, (12 is some random number). 
 
     1. Under **app -> incident-management -> webapp**, replace incidentmanagement with new name in below files.
 
@@ -65,7 +36,10 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
     ![deploy-cf](../../build-code/images/deploy-cf/deploy_cf_terminal.png)
 
-3. During the deployment, a new page pops up asking you to sign in to Cloud Foundry. Follow these steps:
+> [!Note]
+> During the deployment, if a new page pops up for sign in to Cloud Foundry Runtime, follow steps 3 - 6. Else, proceed with the **Assign the User Roles**.
+
+3. In the Cloud Foundry Sign in pop up, do the following: 
 
     1. In the **Enter Cloud Foundry Endpoint** field, enter the **API Endpoint** from SAP BTP Cockpit.
 
@@ -139,7 +113,7 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
     2. Select **...accounts.ondemand.com(business users)** from the **Identity Provider** dropdown.
 
-    > **Note:** Make sure you are selecting the Identity Provider with (application users).
+    > **Note:** Make sure you are selecting the Identity Provider with (business users).
 
     ![deploy-cf](../../build-code/images/deploy-cf/add_user.png)
 
@@ -147,4 +121,4 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
 ## Next Steps
 
-Integrate Your Application with SAP Build Work Zone by following the steps at [Integrate with SAP Build Work Zone](integrate-workzone.md)
+[Testing End to end](./e2e-testing-cf.md)

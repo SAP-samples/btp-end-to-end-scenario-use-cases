@@ -1,6 +1,11 @@
-# Side by Side Extension Application Development with SAP Build Code CAP
+# Develop Full Stack BTP Applications powered by AI
 
-In this hands-on exercise, you will learn how to jumpstart your application development of a full-stack SAP Cloud Application Programming Model (CAP)-based application using SAP Build Code powered by Joule, which is the AI copilot that understands your business and can interact with your SAP business systems.
+In this hands-on exercise, you will learn how to jumpstart your application development of a full-stack SAP Cloud Application Programming Model (CAP)-based application using SAP Build Code powered by Joule, which is the AI copilot that understands your business and can interact with your SAP business systems. You will also learn how to embed AI into this CAP based application. 
+Key take-aways in this handson would be:
+
+- Full Stack CAP Application development on SAP BTP using SAP Build Code powered by Joule
+- Embed AI using SAP AI Core
+- Deploy the application to SAP BTP Cloud Fouundry Runtime
 
 
 ## Key Capabilities of SAP Build Code
@@ -18,11 +23,13 @@ With the integration of Joule, the innovative AI copilot of SAP, SAP Build Code 
 
 ![build code with joule](images/build-code.png)
 
+## 
+
 # Business Scenario
 
 In this hands-on exercise, you will build an application called Incident Management using SAP Build Code. The business scenario of the Incident Management application is the following:
 
-ACME is a popular Electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. The newly created incident is based on a customer complaint received during the phone call. The call center support representative also adds the conversation with the customer to the incident for future reference.
+ACME is a popular Electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. The newly created incident is based on a customer complaint received during the phone call. A call center executive who processes the Incident will get recommended solutions which is proposed by AI.
 
 # Solution Diagram
 
