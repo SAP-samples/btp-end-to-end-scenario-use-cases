@@ -103,9 +103,9 @@ cf login --sso
     cds deploy --to hana
     ```
  
-    > [!Note]
-    > It might take few seconds to finish the deployment to hana, once done, you get the successful deployment message.
-    ![success](../images/extend-service/successful-deployment.png)
+> [!Note]
+> It might take few seconds to finish the deployment to hana, once done, you get the successful deployment message.
+![success](../images/extend-service/successful-deployment.png)
 
 ## Create service binding to SAP AI Core
 

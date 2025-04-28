@@ -112,7 +112,7 @@ type PhoneNumber : String;
 
 4. Navigate to **Storyboard** in the editor and make sure the **Data Models** section is updated with the entities mentioned in **schema.cds** file.
 
-    ![schema-storyboard](../images/create-data-entities/datamodels.png)
+    ![schema-storyboard](../../build-code/images/create-data-entities/schema-storyboard.png)
 
 
 ## Next Step
