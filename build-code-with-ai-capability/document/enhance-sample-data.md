@@ -32,7 +32,7 @@ Do not generate name.The data should be structured in CSV format, maintaining co
 
 4. Joule will create list of .csv files that contain sample data as per the provided schema. Choose **Accept**.
 
-    ![accept-gen-data](../images/extend-service/test-data.png)
+    ![accept-gen-data](../../build-code/images/create-data-entities/schema-storyboard.png)
 
 5. All the generated .csv files will be saved in the **test/data** folder of your project.
 
