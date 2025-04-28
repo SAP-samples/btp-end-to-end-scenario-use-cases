@@ -8,7 +8,7 @@ Add dependencies required for SAP Cloud SDK for AI, and setting up the data for 
 
 1. Under `srv`, create a new file called `incidents.csv`, copy the contents from [incidents.csv](https://raw.githubusercontent.com/SAP-samples/btp-end-to-end-scenario-use-cases/refs/heads/main/build-code-with-ai-capability/csv/incidents.csv)
 
-2. Under `srv`, create a new file called `feed-data.js` and paste the content from below.
+2. Under `srv`, create a new file called `vector-embedding.js` and paste the content from below.
 
 ```js
 const fs = require("fs");
@@ -29,7 +29,7 @@ async function loadCSV(filePath) {
   });
 }
  
-async function feedData() {
+async function vectorEmbedding() {
   try {
     const db = await cds.connect.to("db");
     const { vectorEmbeddings } = db.entities;
@@ -59,14 +59,15 @@ async function feedData() {
       console.log(`✅ Incident ${ID} stored.`);
     }
  
-    return "Feeding Data completed successfully.";
+    return "Vector Embedding completed successfully.";
   } catch (e) {
-    console.error("❌ Feeding error:", e);
+    console.error("❌ Vector Embedding error:", e);
     return `Error: ${e.message}`;
   }
 }
  
-module.exports = { feedData };
+module.exports = { vectorEmbedding };
+
 ```
 > [!Tip]
 > This file feeds data
@@ -88,7 +89,7 @@ service ProcessorService {
  
     @readonly
     entity Customers as projection on my.Customers;
-    action FeedData() returns String;
+    action VectorEmbedding() returns String;
 }
 ```
 
@@ -99,7 +100,7 @@ service ProcessorService {
 
 ```js
 const cds = require('@sap/cds');
-const { feedData } = require("./feed-data");
+const { vectorEmbedding } = require("./vectorEmbedding");
 const natural = require('natural');
 const tokenizer = new natural.WordTokenizer();
 const {Incidents, vectorEmbeddings} = cds.entities;
@@ -112,7 +113,7 @@ class ProcessorService extends cds.ApplicationService {
   /** Registering custom event handlers */
   async init() {
     this.after("CREATE", "Incidents", (req) => this.getRagResponse(req));
-    this.on("FeedData", feedData);
+    this.on("VectorEmbedding", vectorEmbedding);
  
     this.on('acceptsolution', async (req) => {
       if (!req.data.input1) return req.reject(400, "Solution acceptance is required.");
@@ -481,6 +482,9 @@ annotate service.Solutions with @(
 
 1. In the root project, create a new file called `.env` and add the below content
 
+```sh
+AICORE_SERVICE_KEY='{ "clientid": "sb-6b774987-cafe-486f-9be1-d15b70f04924!b554099|aicore!b540", "clientsecret": "b196aa17-c841-42cd-a92f-e8e3ba8d5747$NAbEw5BsvtexpN-41R87hu3HiVc7xqU4rOGyc03Zyek=", "url": "https://hands-on-build-code-2b7rbjie.authentication.eu10.hana.ondemand.com", "serviceurls": {"AI_API_URL": "https://api.ai.prod.eu-central-1.aws.ml.hana.ondemand.com" }}'
+```
 
 ## Next Step
 
