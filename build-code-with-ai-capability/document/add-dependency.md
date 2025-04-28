@@ -15,11 +15,15 @@
 },
 ```
 
-> [!Note]
+> [!Tip]
 > These packages are needed to enable AI integration, text processing, and file handling within the CAP application.
+> 
 > **@sap-ai-sdk/foundation-models** and **@sap-ai-sdk/langchain** are used to interact with SAP AI Core services and manage AI-related workflows.
+> 
 > **csv-parser** helps in reading and parsing CSV files, useful for importing or processing bulk data.
+> 
 > **fs (File System)** is required for handling file operations like reading or writing local files.
+> 
 > **natural** provides basic Natural Language Processing (NLP) capabilities such as tokenization, stemming, and text similarity calculations.
 
 2. From the root of the project, choose the burger menu, and then choose Terminal → New Terminal.
