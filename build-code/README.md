@@ -31,12 +31,8 @@ ACME is a popular Electronics company. ACME hires call center support representa
 # Hands-on Exercise
 
 ## Pre-requisite
-> [!Note]
-> For this hands-on we have already set up the below pre-requisite steps. You can directly proceed with  the exercises
 
-1. [Setup SAP Build Code  in SAP BTP](./document/prerequisites.md)
-2. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./document/add-remote-service/s4hana-cloud-to-btp-connectivity.md)
-3. [Create a Service Instance for SAP S/4HANA Cloud Extensibility](./document/add-remote-service/create-service.md)
+1. [Setup SAP Build Code in SAP BTP](https://developers.sap.com/tutorials/build-code-setup..html)
 
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
@@ -53,16 +49,5 @@ ACME is a popular Electronics company. ACME hires call center support representa
 ## Exercise 2: Deploy in SAP BTP, Cloud Foundry Runtime
 
 1. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
-2. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
+2. [Optional: Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
 3. [Test the Scenario End to End](./document/e2e-testing.md)
-
-## Exercise 3: Consume External Service
-
-> [!Note]
-> To proceed with consuming external service, development and deployment of the CAP application needs to be completed as a prerequisite.
-
-1. [Update the Business Scenario](./document/add-remote-service/README.md)
-2. [Extend the Incident Management аpplication](./document/add-remote-service/extend-app-cf.md)
-3. [Run a developer test Locally](./document/add-remote-service/test-with-mock.md)
-4. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./document/add-remote-service/deploy-to-cf.md)
-5. [Test the end to end flow](./document/add-remote-service/test-the-app.md)
