@@ -23,7 +23,7 @@ Ensure the generated sample data: Follows the given data format with appropriate
 Includes realistic values for fields such as email, phone numbers, and messages. 
 Uses meaningful incident titles and messages that reflect real-world support cases. Covers various urgency levels and statuses. 
 For codelists entities like Status and Urgency follow the example as: code - N, criticality - 1, descr - New.
-Do not generate name.The data should be structured in CSV format, maintaining consistency with SAP CAP standards.
+Do not generate name column.The data should be structured in CSV format, maintaining consistency with SAP CAP standards.
 ```
 
 3. Choose the **Send** icon.
