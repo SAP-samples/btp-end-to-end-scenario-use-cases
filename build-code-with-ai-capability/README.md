@@ -49,7 +49,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ## Exercise 2: Add AI Capabilities using SAP AI SDK
 
-1. [Add dependencies for SAP Cloud SDK for AI ](./document/prerequisites.md)
+1. [Add dependencies for SAP Cloud SDK for AI ](./document/add-dependency.md)
 2. [Extend the Incident Management Application](./document/extend-service.md)
 2. [Test the Scenario End to End](./document/e2e-testing.md)
 

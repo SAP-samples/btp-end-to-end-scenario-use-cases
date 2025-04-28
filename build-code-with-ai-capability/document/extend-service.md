@@ -17,7 +17,7 @@ const resourceGroup = 'default';
 const embeddingModelName = 'text-embedding-ada-002';
 const { AzureOpenAiEmbeddingClient } = require("@sap-ai-sdk/langchain");
  
-
+// Loads CSV file
 async function loadCSV(filePath) {
   return new Promise((resolve, reject) => {
     const results = [];
@@ -70,7 +70,7 @@ module.exports = { vectorEmbedding };
 
 ```
 > [!Tip]
-> This file feeds data
+> The **vectorEmbedding** function reads incident data from a CSV file, generates text embeddings for each incident using Azure OpenAI, and stores the results (including the embedding vectors) into a database table named *vectorEmbeddings*.
 
 3. Open `srv/service.cds`file and replace the service ProcessorService with below code snippet.
 
@@ -94,7 +94,7 @@ service ProcessorService {
 ```
 
 > [!Tip]
-> to be updated
+> The **ProcessorService** is being updated to incorporate entities for solutions and vector embeddings. An action called **VectorEmbedding** is been defined to retrieve solution details.
 
 4. Under `srv`, create a new file called `service.js` and add the following content.
 
@@ -127,25 +127,16 @@ class ProcessorService extends cds.ApplicationService {
     return super.init();
   }
  
+  // Cleans and stems the issue title into a normalized string.
   async preprocessInput(issueTitle) {
     if (!issueTitle) return "";
- 
-    // Convert to lowercase & trim spaces
     let processedTitle = issueTitle.toLowerCase().trim();
- 
-    // Remove special characters (keep only letters, numbers, and spaces)
     processedTitle = processedTitle.replace(/[^a-zA-Z0-9 ]/g, '');
- 
-    // Tokenize the sentence into words
+
     let words = tokenizer.tokenize(processedTitle);
- 
-    // Remove stop words
     words = words.filter(word => !stopWords.has(word));
- 
-    // Apply simple stemming (reduces words to base form)
+
     const stemmedWords = words.map(word => natural.PorterStemmer.stem(word));
- 
-    // Join words back into a processed string
     return stemmedWords.join(" ");
   }
 
@@ -242,7 +233,10 @@ module.exports = { ProcessorService };
 ```
 
 > [!Tip]
-> to be updated
+> The **preprocessInput** cleans, tokenizes, removes stop words, stems, and normalizes an issue title into a processed string.
+> The **generateAndStoreEmbeddings** function generates AI embeddings for incident data (title and conversation) and stores them in the vectorEmbeddings table along with the solution. 
+> The **getRagResponse** function fetches the most relevant solutions for an incident using RAG (Retrieval-Augmented Generation) based on similarity search with embeddings.
+
 
 5. In the root project, create a new file called `request.http` and paste the content below.
 
