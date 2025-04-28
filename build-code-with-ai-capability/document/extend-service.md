@@ -94,7 +94,9 @@ service ProcessorService {
 ```
 
 > [!Tip]
-> The **ProcessorService** is being updated to incorporate entities for solutions and vector embeddings. An action called **VectorEmbedding** is been defined to retrieve solution details.
+> The **ProcessorService** is being updated to incorporate entities for solutions and vector embeddings.
+> 
+> An action called **VectorEmbedding** is been defined to retrieve solution details.
 
 4. Under `srv`, create a new file called `service.js` and add the following content.
 
@@ -234,7 +236,9 @@ module.exports = { ProcessorService };
 
 > [!Tip]
 > The **preprocessInput** cleans, tokenizes, removes stop words, stems, and normalizes an issue title into a processed string.
-> The **generateAndStoreEmbeddings** function generates AI embeddings for incident data (title and conversation) and stores them in the vectorEmbeddings table along with the solution. 
+> 
+> The **generateAndStoreEmbeddings** function generates AI embeddings for incident data (title and conversation) and stores them in the vectorEmbeddings table along with the solution.
+> 
 > The **getRagResponse** function fetches the most relevant solutions for an incident using RAG (Retrieval-Augmented Generation) based on similarity search with embeddings.
 
 
