@@ -15,7 +15,7 @@ const fs = require("fs");
 const csv = require("csv-parser");
 const resourceGroup = 'default';
 const embeddingModelName = 'text-embedding-ada-002';
-const { AzureOpenAiEmbeddingClient } = require("@sap-ai-sdk/langchain");
+
  
 
 async function loadCSV(filePath) {
@@ -31,12 +31,15 @@ async function loadCSV(filePath) {
  
 async function feedData() {
   try {
+    const { AzureOpenAiEmbeddingClient } = await import('@sap-ai-sdk/langchain');
     const db = await cds.connect.to("db");
     const { vectorEmbeddings } = db.entities;
     const incidents = await loadCSV(__dirname + "/incidents.csv");
     const embeddingClient = new AzureOpenAiEmbeddingClient({
       modelName: embeddingModelName,
       resourceGroup: resourceGroup
+    },{
+      destinationName: 'generative_ai_hub'
     });
  
     for (const incident of incidents) {
@@ -56,12 +59,12 @@ async function feedData() {
         solution: Resolution
       });
       
-      console.log(`✅ Incident ${ID} stored.`);
+      console.log(`Incident ${ID} stored.`);
     }
  
     return "Feeding Data completed successfully.";
   } catch (e) {
-    console.error("❌ Feeding error:", e);
+    console.error("Feeding error:", e);
     return `Error: ${e.message}`;
   }
 }
@@ -76,11 +79,10 @@ module.exports = { feedData };
 ```js
 service ProcessorService {
     @odata.draft.enabled
-    entity Incidents as projection on my.Incidents actions {
-        action acceptsolution(input1: Boolean @title : 'Did the recommended solution worked for you ?') returns String;
-        }
+    entity Incidents as projection on my.Incidents;
         entity Solutions as projection on my.Incidents.solutions actions {
-        action details() returns String;
+            action details() returns String;
+            action acceptSolution(input1: Boolean @title : 'Did the recommended solution work for you? ?') returns String;
     };
     entity vectorEmbeddings as projection on my.vectorEmbeddings  excluding {
         embedding
@@ -102,10 +104,9 @@ const cds = require('@sap/cds');
 const { feedData } = require("./feed-data");
 const natural = require('natural');
 const tokenizer = new natural.WordTokenizer();
-const {Incidents, vectorEmbeddings} = cds.entities;
+const {vectorEmbeddings} = cds.entities;
 const resourceGroup = 'default';
 const embeddingModelName = 'text-embedding-ada-002';
-const { AzureOpenAiEmbeddingClient } = require('@sap-ai-sdk/langchain');
 const stopWords = new Set(["a", "an", "the", "is", "in", "on", "of", "and", "to", "with", "for", "this", "that", "it", "by", "at"]);
  
 class ProcessorService extends cds.ApplicationService {
@@ -114,13 +115,19 @@ class ProcessorService extends cds.ApplicationService {
     this.after("CREATE", "Incidents", (req) => this.getRagResponse(req));
     this.on("FeedData", feedData);
  
-    this.on('acceptsolution', async (req) => {
+    this.on('acceptSolution', async (req) => {
       if (!req.data.input1) return req.reject(400, "Solution acceptance is required.");
-      let result = await cds.run(SELECT.from("Incidents.solutions").where({ up__ID: req.params[0].ID }));
+      let result = await cds.run(SELECT.from("Incidents.solutions").where({ ID: req.params[1].ID }));
       if (!result.length) return req.reject(404, "No solutions found for the given incident.");
       await cds.run(UPDATE('Incidents').set({ status_code: 'R' }).where({ ID: req.params[0].ID }));
       await this.generateAndStoreEmbeddings(req.params[0].ID, result[0].solution);
       req.info("Data added successfully!");
+    });
+
+    this.on('details', async (req) => {
+      let result = await cds.run(SELECT.from("Incidents.solutions").where({ ID: req.params[1].ID }));
+      const aioutput = await this.getDetails(result[0].solution);
+      req.info(aioutput);
     });
 
     return super.init();
@@ -151,6 +158,7 @@ class ProcessorService extends cds.ApplicationService {
   /** Generate and store embeddings */
   async generateAndStoreEmbeddings(IncidentId, solution) {
     try {
+      const { AzureOpenAiEmbeddingClient } = await import('@sap-ai-sdk/langchain');
       const db = await cds.connect.to("db");
       const { Incidents } = db.entities;
       const [incident] = await db.read("Incidents").where({ ID: IncidentId }).columns("title");
@@ -164,8 +172,9 @@ class ProcessorService extends cds.ApplicationService {
       let textSplits = ["this is test data"];
       const embeddingClient = new AzureOpenAiEmbeddingClient({
         modelName: embeddingModelName,
-        maxRetries: 0,
         resourceGroup: resourceGroup
+      },{
+        destinationName: 'generative_ai_hub'
       });
   
       const embeddingResult = await embeddingClient.embedDocuments(textData);
@@ -188,6 +197,7 @@ class ProcessorService extends cds.ApplicationService {
   /** RAG-based Response Retrieval */
   async getRagResponse(req) {
     try {
+      const { AzureOpenAiEmbeddingClient } = await import('@sap-ai-sdk/langchain');
       const db = await cds.connect.to("db");
       const [incident] = await db.read("Incidents").where({ ID: req.ID }).columns("title");
       if (!incident) throw new Error("Incident not found");
@@ -201,6 +211,8 @@ class ProcessorService extends cds.ApplicationService {
         modelName: embeddingModelName,
         maxRetries: 0,
         resourceGroup: resourceGroup
+      },{
+        destinationName: 'generative_ai_hub'
       });
   
       let embedding = await embeddingClient.embedQuery(userQuery);
@@ -233,6 +245,32 @@ class ProcessorService extends cds.ApplicationService {
       throw error;
     }
   }
+    async getDetails(userQuery){
+    try{ 
+        const { OrchestrationClient } = await import ('@sap-ai-sdk/orchestration');
+        const orchestrationClient = new OrchestrationClient({
+        llm: {
+            model_name: 'gpt-4o'
+        },
+        templating: {
+            template: [
+            {
+                role: 'user',
+                content: `In about 100 words, describe the following recommended solution: '${userQuery}'. Start by briefly stating the problem this solution addresses. Then, present the solution in a step-by-step format using numbered bullet points (1., 2., 3., etc.). Each step should be clear and action-oriented. End with any important considerations the user should keep in mind. Keep the description professional, concise, and easy to follow.`
+            }
+            ]
+        }
+        }, resourceGroup,
+        {
+        destinationName: 'generative_ai_hub'
+        });
+        const response = await orchestrationClient.chatCompletion();
+        return response.getContent();
+    } catch (error) {
+      throw new Error("No response received from orchestration client.");
+    }
+  
+  }
  
 }
  
@@ -260,7 +298,7 @@ Content-Type: application/json
 ```js
 using ProcessorService as service from '../../srv/service';
 using from '../../db/schema';
- 
+
 annotate service.Incidents with @(
     UI.FieldGroup #GeneratedGroup : {
         $Type : 'UI.FieldGroupType',
@@ -334,7 +372,7 @@ annotate service.Incidents with @(
          
     ],
 );
- 
+
 annotate service.Incidents with {
     customer @Common.ValueList : {
         $Type : 'Common.ValueListType',
@@ -364,7 +402,7 @@ annotate service.Incidents with {
         ],
     }
 };
- 
+
 annotate service.Incidents with @(
     UI.SelectionFields : [
         status_code,
@@ -403,14 +441,6 @@ annotate service.Incidents with @(
         },
         TypeImageUrl : 'sap-icon://alert',
     },
-     UI.Identification: [
-        {
-            $Type: 'UI.DataFieldForAction',
-            Action: 'ProcessorService.acceptsolution',
-            Label: 'Accept Solution'
-        },
- 
-    ],
     
 );
 annotate service.Incidents with @(
@@ -435,8 +465,8 @@ annotate service.Incidents with {
 annotate service.Incidents with {
     customer @Common.ValueListWithFixedValues : false
 };
- 
- 
+
+
 annotate service.Incidents with {
     urgency @Common.Text : urgency.descr
 };
@@ -459,27 +489,35 @@ annotate service.Incidents.conversation with @(
 annotate service.Incidents with @Common.SemanticKey: [ID]{
     ID @Core.Computed
 };
- 
+
 annotate service.Solutions with @(
     UI.LineItem #i18nRecommendedSolutions : [
         {
             $Type : 'UI.DataField',
             Value : confidence,
-            Label : 'confidence',
+            Label : '{i18n>ConfidenceScore}',
         },
         {
             $Type : 'UI.DataField',
             Value : solution,
-            Label : 'solution',
+            Label : '{i18n>Solution}',
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'ProcessorService.details',
+            Label : 'Detailed Solution',
+            Inline : true,
+        },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'ProcessorService.acceptSolution',
+            Label : 'Accept Solution',
+            Inline : true,
         },
     ]
 );
  
 ```
-
-## Add Default environment for local testing
-
-1. In the root project, create a new file called `.env` and add the below content
 
 
 ## Next Step

@@ -107,7 +107,7 @@ cf login --sso
     > It might take few seconds to finish the deployment to hana, once done, you get the successful deployment message.
     ![success](../images/extend-service/successful-deployment.png)
 
-## Create service binding to SAP AI Core
+## Create service binding to SAP Destination Service
 
 1. Create the instance and binding by running the below commands in the terminal.
 
