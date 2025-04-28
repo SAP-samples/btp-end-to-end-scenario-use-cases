@@ -1,6 +1,6 @@
-# Prerequisites
+# Add dependencies for SAP Cloud SDK for AI 
 
-## Add Dependencies of SAP AI SDK
+## Add and Install required packages
 
 1. Open Package.json and add the below dependencies
 
@@ -62,25 +62,46 @@ cf login --sso
 
 ## Setup initial data for Incident Management Application
 
-1. Under `test/data` folder, delete the `sap.capire.incidents-vectorEmbeddings.csv` file, as we will be feeding the data in later stage.
+1. Open `schema.cds` and add the following code snippets:
+
+    1. Under `Incidents` entity, add the `solutions`.
+
+        ```sh
+        solutions    : Composition of many {
+            key ID    : UUID;
+            confidence : String;
+            solution   : String;
+        };
+        ```
+
+    2. Add a new entity called `vectorEmbeddings`.
+
+        ```sh
+        entity vectorEmbeddings : cuid, managed{
+            metadata   : LargeString;
+            text_chunk : LargeString;
+            embedding  : Vector(1536);
+            solution   : LargeString;
+        }
+        ```
 
 2. The sample data generated in the previous steps, creates the **data** folder in the **test** folder. To use the data for productive usgae, move the **data** folder to the **db** folder. Open the terminal, and run the following command to move the csv files.
 
-```sh
-mv test/data db/data
-```
+    ```sh
+    mv test/data db/data
+    ```
 
 3. Do the productive build for your application, by running the below command in the terminal.
 
-```sh
-cds build --production
-```
+    ```sh
+    cds build --production
+    ```
 
 4. Deploy the csv files to the hana database, by running the below command in the terminal.
 
-```sh
-cds deploy --to hana
-```
+    ```sh
+    cds deploy --to hana
+    ```
  
 > [!Note]
 > It might take few seconds to finish the deployment to hana, once done, you get the successful deployment message.

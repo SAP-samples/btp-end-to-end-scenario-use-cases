@@ -2,13 +2,13 @@
 
 ## Prerequisites
 
-Add dependencies required for SAP AI SDK, and setting up the data for productive usage by following [Pre-requiste](./prerequisites.md)
+Add dependencies required for SAP Cloud SDK for AI, and setting up the data for productive usage by following [Add dependencies for SAP Cloud SDK for AI](./prerequisites.md)
 
 ## Extend the Incident Management Application
 
-1. Under `srv`, create a new file called `incidents.csv`, copy the contents from [incidents.csv](../csv/incidents.csv)
+1. Under `srv`, create a new file called `incidents.csv`, copy the contents from [incidents.csv](https://raw.githubusercontent.com/SAP-samples/btp-end-to-end-scenario-use-cases/refs/heads/main/build-code-with-ai-capability/csv/incidents.csv)
 
-2. Under `srv`, create a new file called `feed-data.js` and paste the content from below.
+2. Under `srv`, create a new file called `vector-embedding.js` and paste the content from below.
 
 ```js
 const fs = require("fs");
@@ -17,6 +17,7 @@ const resourceGroup = 'default';
 const embeddingModelName = 'text-embedding-ada-002';
 const { AzureOpenAiEmbeddingClient } = require("@sap-ai-sdk/langchain");
  
+
 async function loadCSV(filePath) {
   return new Promise((resolve, reject) => {
     const results = [];
@@ -28,7 +29,7 @@ async function loadCSV(filePath) {
   });
 }
  
-async function trainModel() {
+async function vectorEmbedding() {
   try {
     const db = await cds.connect.to("db");
     const { vectorEmbeddings } = db.entities;
@@ -58,17 +59,16 @@ async function trainModel() {
       console.log(`✅ Incident ${ID} stored.`);
     }
  
-    return "Training completed successfully.";
+    return "Vector Embedding completed successfully.";
   } catch (e) {
-    console.error("❌ Training error:", e);
+    console.error("❌ Vector Embedding error:", e);
     return `Error: ${e.message}`;
   }
 }
  
-module.exports = { trainModel };
+module.exports = { vectorEmbedding };
 
 ```
-
 > [!Tip]
 > This file feeds data
 
@@ -76,9 +76,6 @@ module.exports = { trainModel };
 
 ```js
 service ProcessorService {
-    @readonly
-    entity Customers as projection on my.Customers;
-
     @odata.draft.enabled
     entity Incidents as projection on my.Incidents actions {
         action acceptsolution(input1: Boolean @title : 'Did the recommended solution worked for you ?') returns String;
@@ -89,8 +86,10 @@ service ProcessorService {
     entity vectorEmbeddings as projection on my.vectorEmbeddings  excluding {
         embedding
     };
-
-    action TrainModel() returns String;
+ 
+    @readonly
+    entity Customers as projection on my.Customers;
+    action VectorEmbedding() returns String;
 }
 ```
 
@@ -101,7 +100,7 @@ service ProcessorService {
 
 ```js
 const cds = require('@sap/cds');
-const { trainModel } = require("./feed-data");
+const { vectorEmbedding } = require("./vectorEmbedding");
 const natural = require('natural');
 const tokenizer = new natural.WordTokenizer();
 const {Incidents, vectorEmbeddings} = cds.entities;
@@ -114,7 +113,7 @@ class ProcessorService extends cds.ApplicationService {
   /** Registering custom event handlers */
   async init() {
     this.after("CREATE", "Incidents", (req) => this.getRagResponse(req));
-    this.on("TrainModel", trainModel);
+    this.on("VectorEmbedding", vectorEmbedding);
  
     this.on('acceptsolution', async (req) => {
       if (!req.data.input1) return req.reject(400, "Solution acceptance is required.");
@@ -239,6 +238,7 @@ class ProcessorService extends cds.ApplicationService {
 }
  
 module.exports = { ProcessorService };
+ 
 ```
 
 > [!Tip]
@@ -247,8 +247,8 @@ module.exports = { ProcessorService };
 5. In the root project, create a new file called `request.http` and paste the content below.
 
 ```http
-### Trigger the TrainModel action
-POST http://localhost:4004/odata/v4/processor/TrainModel
+### Trigger the Vector Embedding action
+POST http://localhost:4004/odata/v4/processor/VectorEmbedding
 Content-Type: application/json
  
 {}

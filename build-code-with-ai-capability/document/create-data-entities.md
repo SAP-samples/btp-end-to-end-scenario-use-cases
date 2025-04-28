@@ -30,11 +30,6 @@ customer     : Association to Customers;
 title        : String  @title : 'Title';
 urgency        : Association to Urgency default 'M';
 status         : Association to Status default 'N';
- solutions    : Composition of many {
-    key ID    : UUID;
-    confidence    : String;
-    solution   : String;
-};
 conversation  : Composition of many {
     key ID    : UUID;
     timestamp : type of managed:createdAt;
@@ -85,15 +80,6 @@ key code: String enum {
 };
 }
 
-entity vectorEmbeddings : cuid, managed{
-    metadata   : LargeString;
-    text_chunk : LargeString;
-    embedding  : Vector(1536);
-    solution   : LargeString;
-}
-
- 
-
 type EMailAddress : String;
 type PhoneNumber : String;
 ```
@@ -111,8 +97,6 @@ type PhoneNumber : String;
 >
 > **Urgency**: Defines different urgency levels for incidents High(H), Medium(M) and Low (L).
 >
-> **vectorEmbeddings**: 
->
 > **Key CAP features covered in the model**
 >
 > **Uses managed & cuid**: Ensures automatic timestamps and UUID-based primary keys.
@@ -128,7 +112,7 @@ type PhoneNumber : String;
 
 4. Navigate to **Storyboard** in the editor and make sure the **Data Models** section is updated with the entities mentioned in **schema.cds** file.
 
-    ![schema-storyboard](../images/create-data-entities/datamodels.png)
+    ![schema-storyboard](../../build-code/images/create-data-entities/schema-storyboard.png)
 
 
 ## Next Step
