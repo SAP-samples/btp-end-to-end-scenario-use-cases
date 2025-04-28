@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Add dependencies required for SAP Cloud SDK for AI, and setting up the data for productive usage by following [Add dependencies for SAP Cloud SDK for AI](./prerequisites.md)
+Add dependencies required for SAP Cloud SDK for AI, and setting up the data for productive usage by following [Add dependencies for SAP Cloud SDK for AI](./add-dependency.md)
 
 ## Extend the Incident Management Application
 
@@ -17,7 +17,7 @@ const resourceGroup = 'default';
 const embeddingModelName = 'text-embedding-ada-002';
 const { AzureOpenAiEmbeddingClient } = require("@sap-ai-sdk/langchain");
  
-
+// Loads CSV file
 async function loadCSV(filePath) {
   return new Promise((resolve, reject) => {
     const results = [];
@@ -70,7 +70,7 @@ module.exports = { vectorEmbedding };
 
 ```
 > [!Tip]
-> This file feeds data
+> The **vectorEmbedding** function reads incident data from a CSV file, generates text embeddings for each incident using Azure OpenAI, and stores the results (including the embedding vectors) into a database table named *vectorEmbeddings*.
 
 3. Open `srv/service.cds`file and replace the service ProcessorService with below code snippet.
 
@@ -94,7 +94,7 @@ service ProcessorService {
 ```
 
 > [!Tip]
-> to be updated
+> The **ProcessorService** is being updated to incorporate entities for solutions and vector embeddings. An action called **VectorEmbedding** is been defined to retrieve solution details.
 
 4. Under `srv`, create a new file called `service.js` and add the following content.
 
@@ -127,25 +127,16 @@ class ProcessorService extends cds.ApplicationService {
     return super.init();
   }
  
+  // Cleans and stems the issue title into a normalized string.
   async preprocessInput(issueTitle) {
     if (!issueTitle) return "";
- 
-    // Convert to lowercase & trim spaces
     let processedTitle = issueTitle.toLowerCase().trim();
- 
-    // Remove special characters (keep only letters, numbers, and spaces)
     processedTitle = processedTitle.replace(/[^a-zA-Z0-9 ]/g, '');
- 
-    // Tokenize the sentence into words
+
     let words = tokenizer.tokenize(processedTitle);
- 
-    // Remove stop words
     words = words.filter(word => !stopWords.has(word));
- 
-    // Apply simple stemming (reduces words to base form)
+
     const stemmedWords = words.map(word => natural.PorterStemmer.stem(word));
- 
-    // Join words back into a processed string
     return stemmedWords.join(" ");
   }
 
@@ -242,7 +233,10 @@ module.exports = { ProcessorService };
 ```
 
 > [!Tip]
-> to be updated
+> The **preprocessInput** cleans, tokenizes, removes stop words, stems, and normalizes an issue title into a processed string.
+> The **generateAndStoreEmbeddings** function generates AI embeddings for incident data (title and conversation) and stores them in the vectorEmbeddings table along with the solution. 
+> The **getRagResponse** function fetches the most relevant solutions for an incident using RAG (Retrieval-Augmented Generation) based on similarity search with embeddings.
+
 
 5. In the root project, create a new file called `request.http` and paste the content below.
 
@@ -480,15 +474,10 @@ annotate service.Solutions with @(
 
 ## Add Default environment for local testing
 
-In the root project, create a new file called `.env` and add the below content
+1. In the root project, create a new file called `.env` and add the below content
 
 ```sh
-AICORE_SERVICE_KEY='{ 
-    "clientid": "<your-client-id>", 
-    "clientsecret": "<your-client-secret>", 
-    "url": "<your-authentication-url>", 
-    "serviceurls": {"AI_API_URL": "<your-ai-api-url>" 
-}}'
+AICORE_SERVICE_KEY='{ "clientid": "sb-6b774987-cafe-486f-9be1-d15b70f04924!b554099|aicore!b540", "clientsecret": "b196aa17-c841-42cd-a92f-e8e3ba8d5747$NAbEw5BsvtexpN-41R87hu3HiVc7xqU4rOGyc03Zyek=", "url": "https://hands-on-build-code-2b7rbjie.authentication.eu10.hana.ondemand.com", "serviceurls": {"AI_API_URL": "https://api.ai.prod.eu-central-1.aws.ml.hana.ondemand.com" }}'
 ```
 
 ## Next Step
