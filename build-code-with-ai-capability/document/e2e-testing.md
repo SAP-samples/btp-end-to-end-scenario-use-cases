@@ -20,7 +20,7 @@ cds watch --profile hybrid
 
 3. Once completed, you will see the Response as 200.
 
-    ![response](../images/extend-service/success-http.png)
+    to be updated.
 
 4. Go back to the terminal where the application is running, click on the url where the localhost is running
 

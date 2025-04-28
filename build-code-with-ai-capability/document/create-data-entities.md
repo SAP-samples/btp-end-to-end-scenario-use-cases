@@ -30,11 +30,6 @@ customer     : Association to Customers;
 title        : String  @title : 'Title';
 urgency        : Association to Urgency default 'M';
 status         : Association to Status default 'N';
- solutions    : Composition of many {
-    key ID    : UUID;
-    confidence    : String;
-    solution   : String;
-};
 conversation  : Composition of many {
     key ID    : UUID;
     timestamp : type of managed:createdAt;
@@ -85,15 +80,6 @@ key code: String enum {
 };
 }
 
-entity vectorEmbeddings : cuid, managed{
-    metadata   : LargeString;
-    text_chunk : LargeString;
-    embedding  : Vector(1536);
-    solution   : LargeString;
-}
-
- 
-
 type EMailAddress : String;
 type PhoneNumber : String;
 ```
@@ -110,8 +96,6 @@ type PhoneNumber : String;
 > **Status**: Defines various states an incident can be in like New (N), In Process(I) etc.
 >
 > **Urgency**: Defines different urgency levels for incidents High(H), Medium(M) and Low (L).
->
-> **vectorEmbeddings**: 
 >
 > **Key CAP features covered in the model**
 >

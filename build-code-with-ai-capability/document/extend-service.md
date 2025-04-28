@@ -2,11 +2,11 @@
 
 ## Prerequisites
 
-Add dependencies required for SAP AI SDK, and setting up the data for productive usage by following [Pre-requiste](./prerequisites.md)
+Add dependencies required for SAP Cloud SDK for AI, and setting up the data for productive usage by following [Add dependencies for SAP Cloud SDK for AI](./prerequisites.md)
 
 ## Extend the Incident Management Application
 
-1. Under `srv`, create a new file called `incidents.csv`, copy the contents from [incidents.csv](../csv/incidents.csv)
+1. Under `srv`, create a new file called `incidents.csv`, copy the contents from [incidents.csv](https://raw.githubusercontent.com/SAP-samples/btp-end-to-end-scenario-use-cases/refs/heads/main/build-code-with-ai-capability/csv/incidents.csv)
 
 2. Under `srv`, create a new file called `feed-data.js` and paste the content from below.
 
@@ -17,6 +17,7 @@ const resourceGroup = 'default';
 const embeddingModelName = 'text-embedding-ada-002';
 const { AzureOpenAiEmbeddingClient } = require("@sap-ai-sdk/langchain");
  
+
 async function loadCSV(filePath) {
   return new Promise((resolve, reject) => {
     const results = [];
@@ -28,7 +29,7 @@ async function loadCSV(filePath) {
   });
 }
  
-async function trainModel() {
+async function feedData() {
   try {
     const db = await cds.connect.to("db");
     const { vectorEmbeddings } = db.entities;
@@ -58,17 +59,15 @@ async function trainModel() {
       console.log(`✅ Incident ${ID} stored.`);
     }
  
-    return "Training completed successfully.";
+    return "Feeding Data completed successfully.";
   } catch (e) {
-    console.error("❌ Training error:", e);
+    console.error("❌ Feeding error:", e);
     return `Error: ${e.message}`;
   }
 }
  
-module.exports = { trainModel };
-
+module.exports = { feedData };
 ```
-
 > [!Tip]
 > This file feeds data
 
@@ -76,9 +75,6 @@ module.exports = { trainModel };
 
 ```js
 service ProcessorService {
-    @readonly
-    entity Customers as projection on my.Customers;
-
     @odata.draft.enabled
     entity Incidents as projection on my.Incidents actions {
         action acceptsolution(input1: Boolean @title : 'Did the recommended solution worked for you ?') returns String;
@@ -89,8 +85,10 @@ service ProcessorService {
     entity vectorEmbeddings as projection on my.vectorEmbeddings  excluding {
         embedding
     };
-
-    action TrainModel() returns String;
+ 
+    @readonly
+    entity Customers as projection on my.Customers;
+    action FeedData() returns String;
 }
 ```
 
@@ -101,7 +99,7 @@ service ProcessorService {
 
 ```js
 const cds = require('@sap/cds');
-const { trainModel } = require("./feed-data");
+const { feedData } = require("./feed-data");
 const natural = require('natural');
 const tokenizer = new natural.WordTokenizer();
 const {Incidents, vectorEmbeddings} = cds.entities;
@@ -114,7 +112,7 @@ class ProcessorService extends cds.ApplicationService {
   /** Registering custom event handlers */
   async init() {
     this.after("CREATE", "Incidents", (req) => this.getRagResponse(req));
-    this.on("TrainModel", trainModel);
+    this.on("FeedData", feedData);
  
     this.on('acceptsolution', async (req) => {
       if (!req.data.input1) return req.reject(400, "Solution acceptance is required.");
@@ -239,6 +237,7 @@ class ProcessorService extends cds.ApplicationService {
 }
  
 module.exports = { ProcessorService };
+ 
 ```
 
 > [!Tip]
@@ -247,8 +246,8 @@ module.exports = { ProcessorService };
 5. In the root project, create a new file called `request.http` and paste the content below.
 
 ```http
-### Trigger the TrainModel action
-POST http://localhost:4004/odata/v4/processor/TrainModel
+### Trigger the Feed Data action
+POST http://localhost:4004/odata/v4/processor/FeedData
 Content-Type: application/json
  
 {}
@@ -482,9 +481,6 @@ annotate service.Solutions with @(
 
 1. In the root project, create a new file called `.env` and add the below content
 
-```sh
-AICORE_SERVICE_KEY='{ "clientid": "sb-6b774987-cafe-486f-9be1-d15b70f04924!b554099|aicore!b540", "clientsecret": "b196aa17-c841-42cd-a92f-e8e3ba8d5747$NAbEw5BsvtexpN-41R87hu3HiVc7xqU4rOGyc03Zyek=", "url": "https://hands-on-build-code-2b7rbjie.authentication.eu10.hana.ondemand.com", "serviceurls": {"AI_API_URL": "https://api.ai.prod.eu-central-1.aws.ml.hana.ondemand.com" }}'
-```
 
 ## Next Step
 
