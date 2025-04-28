@@ -109,7 +109,7 @@ cf login --sso
 
 ## Create service binding to SAP AI Core
 
-1. Create the instance and binding by running the below commands in the terminal.
+Create the instance and binding by running the below commands in the terminal.
 
 ```sh
 cf create-service destination lite <destination-name>
