@@ -73,9 +73,12 @@ module.exports = { vectorEmbedding };
 > [!Tip]
 > The **vectorEmbedding** function reads incident data from a CSV file, generates text embeddings for each incident using Azure OpenAI, and stores the results (including the embedding vectors) into a database table named *vectorEmbeddings*.
 
-3. Open `srv/service.cds`file and replace the service ProcessorService with below code snippet.
+3. Open the `srv/service.cds` file and replace the service ProcessorService with the code snippet below.
 
 ```js
+using { sap.capire.incidents as my } from '../db/schema.cds';
+
+@requires: 'Support'
 service ProcessorService {
     @odata.draft.enabled
     entity Incidents as projection on my.Incidents;
