@@ -60,9 +60,7 @@ cf login --sso
 
 5. Paste the copied code in the terminal and click the enter key.
 
-6. Select the relevant org and enter.
-
-7. Select the created space and enter.
+6. Select Cloud Foundry space created in [Exercise 1 Step 1: Create Cloud Foundry Space](./create-space.md).
 
 ## Setup initial data for Incident Management Application
 
