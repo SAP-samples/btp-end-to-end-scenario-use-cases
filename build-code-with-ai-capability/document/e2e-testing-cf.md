@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-[Intergrate with SAP Build Work Zone](./integrate-workzone.md)
+[Extend the Incident Management Application](./extend-service.md)
 
 ## Testing end to end.
 
