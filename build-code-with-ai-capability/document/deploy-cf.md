@@ -59,7 +59,6 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
         ![deploy-cf](../../build-code/images/deploy-cf/tenant_login.png)
 
         > Note: When choosing **Sign in with alternative identity provider**, if your are prompted to sign in, enter your username and password.
-        > If you are signed in with Default Identity, you can choose to sign in with default identity provider.
 
     5. Choose the **Copy** icon to get a temporary authentication code.
 
