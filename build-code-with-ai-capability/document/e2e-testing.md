@@ -12,6 +12,7 @@
 1. Open the terminal, and start the application by following the below command:
 
 ```sh
+npm install
 cds watch --profile hybrid
 ```
 
