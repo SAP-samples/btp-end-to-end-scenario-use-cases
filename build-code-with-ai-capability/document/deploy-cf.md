@@ -115,7 +115,7 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
 
     > **Note:** Make sure you are selecting the Identity Provider with (business users).
 
-    ![deploy-cf](../../build-code/images/deploy-cf/add_user.png)
+    ![deploy-cf](../images/others/businessuser.png)
 
 6. Choose **Save**.
 
