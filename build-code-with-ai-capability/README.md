@@ -23,8 +23,6 @@ With the integration of Joule, the innovative AI copilot of SAP, SAP Build Code 
 
 ![build code with joule](images/build-code.png)
 
-## 
-
 # Business Scenario
 
 In this hands-on exercise, you will build an application called Incident Management using SAP Build Code. The business scenario of the Incident Management application is the following:
