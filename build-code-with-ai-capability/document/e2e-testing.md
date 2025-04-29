@@ -4,6 +4,9 @@
 
 [Extend the Incident Management Application](./extend-service.md)
 
+> [!Note]
+> Delete the files app/index.html and app/launchpadPage.html files if exist.
+
 ## Feed the data 
 
 1. Open the terminal, and start the application by following the below command:

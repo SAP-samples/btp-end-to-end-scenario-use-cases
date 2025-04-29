@@ -4,6 +4,16 @@
 
 [Deploy to Cloud Foundry Runtime](./deploy-cf.md)
 
+## Access the application.
+
+1. Open SAP BTP Cockpit.
+
+2. Click on HTML5 Applications in the left navigation bar.
+
+    ![html5](../images/others/image.png)
+
+3. Click on the application which is having your Business Solution. 
+
 ## Testing end to end.
 
 1. Once you open the application, click on the URL under **Web Applications**.

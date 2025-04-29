@@ -35,24 +35,32 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
     ![fiori-ui](../../build-code/images/fiori-ui/app_folder.png)
 
-6. Choose **Run and Debug** to start the application.
+6. From the root of the project, choose the burger menu, and then choose Terminal → New Terminal.
 
-    ![run-app](../../build-code/images/fiori-ui/run-app.png)
+    ![prereq](../images/extend-service/open-terminal.png) 
 
-7. The application is started and opens in a new tab. Choose the SAP Fiori application tile to view the user interface.
+7. Run `cds watch` in the terminal.
 
-    ![open-app](../../build-code/images/fiori-ui/webapp_ui.png)
+8. Click on the url where the localhost is running to access the application.
 
-8. The list report page opens in new tab. Choose **Go** to view the list of incidents.
+    ![terminal](../images/extend-service/localhost.png)
 
-    ![list-report-page](../../build-code/images/fiori-ui/UI_listpage.png)
+> [!Tip]
+> Open the URL in the browser, by following
+>
+> For windows, Ctrl + click on the URL
+>
+> For Mac, command + click on the URL
 
-9. Choose one of the incidents. The incident details are displayed.
+9. Once you open the application, click on the URL under **Web Applications**.
 
-    ![object-page](../../build-code/images/fiori-ui/Incident-object-page.png)
+    ![webapp](../images/teste2e/open-webapp.png)
 
-10. To stop the running application, choose the **Disconnect** icon at top of the screen.
-    
-    ![stop-preview](../../build-code/images/fiori-ui/stop_preview.png)
+10. Click on **Go**, which loads all the incidents.
+
+    ![testing](../images/teste2e/go.png)
+
+> [!Note]
+> If you want to stop the application, click `Ctrl + C`.
 
 ## Go back to the [Home Page](../../build-code-with-ai-capability/README.md#exercise-2-add-ai-capabilities-using-sap-ai-sdk) to continue with Exercise 2 on adding AI capabilities using SAP AI SDK
