@@ -16,13 +16,14 @@ cds watch --profile hybrid
 
     ![request](../images/extend-service/send-req.png)
 
-> In the terminal, you can see the data from Incidents.csv file is getting trained, please wait for sometime. you will see the Response as 200. 
+> In the terminal, you can see the data from `Incidents.csv` file is getting stored. Please wait for sometime, until all the data gets stored.
+![request](../images/others/stored.png)
 
-3. Once completed, you will see the Response as 200.
+3. Once its completed, you will get the Response as **200**.
 
-    to be updated.
+    ![request](../images/extend-service/success.png)
 
-4. Go back to the terminal where the application is running, click on the url where the localhost is running
+4. In the terminal, scroll up to find the application running details. Click on the url where the localhost is running to access the application.
 
     ![terminal](../images/extend-service/localhost.png)
 
@@ -49,7 +50,7 @@ cds watch --profile hybrid
 
 4. Fill in the incident details:
 
-    1. In the **Title** field, enter **Printer is not working**.
+    1. In the **Title** field, enter **Laptop issue**.
     
     2. In the **Customer** dropdown menu, select a customer of your choice.
 
@@ -59,19 +60,21 @@ cds watch --profile hybrid
 
     4. Under **Conversation**, click on **Create**.
 
-    5. Enter the Message as **Paper is not printing**.
+        ![testing](../images/teste2e/convocreate.png)
+
+    5. Enter the Message as **Laptop is too slow**.
 
     6. Click on **Create**.
 
-        ![testing](../images/teste2e/createinobject.png)
+        ![testing](../images/teste2e/create1.png)
 
 5. Under **Recommended Solutions**, you will be able to see the solutions with the confidence score.
 
-    ![testing](../images/teste2e/recommend.png)
+    ![testing](../images/teste2e/recommended.png)
 
-6. Click on **Accept Solution**.
+6. Click on **Accept Solution** which you find meaningful and with highest Confidence Score.
 
-    ![testing](../images/teste2e/accept1.png)
+    ![testing](../images/teste2e/accept3.png)
 
 7. In the dropdown, click on **Yes**, if the recommended solution worked. And click on **Accept Solution** again.
 
@@ -80,5 +83,9 @@ cds watch --profile hybrid
 8. You will get a notification as **Data added successfully!**
 
     ![testing](../images/teste2e/data-saved.png)
+
+9. If you want to check the detailed solution, click on **Detailed Solution**, which gives a detailed step by step solution for the issue.
+
+    ![testing](../images/teste2e/detailed.png)
 
 ## Go back to the [Home Page](../../build-code-with-ai-capability/README.md#optional-exercise-3-deploy-in-sap-btp-cloud-foundry-runtime) to deploy to the Cloud Foundry Runtime.

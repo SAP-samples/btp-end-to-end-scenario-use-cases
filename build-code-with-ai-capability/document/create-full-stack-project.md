@@ -40,9 +40,18 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 
     ![project-created](../../build-code/images/create-full-stack-project/new-review.png)
 
-8. Wait for the project to get created. Once it's created, click the project, which opens in a new tab.
+8. Wait for the project to get created. Once it's created, click on the project, which opens in a new tab.
 
     ![project-created](../../build-code/images/create-full-stack-project/project_created.png)
+
+9. Once the project is open, it loads the storyboard. Verify your storyboard looks like below.
+ 
+    ![project-storyboard](../images/others/storyboard.png)
+
+> [!Note]
+> If you accidentally closed the storyboard, you can open from Project Overview icon from the left tiles bar.
+![project-storyboard](../images/others/open-sb.png)
+
 
 ## Next Step
 
