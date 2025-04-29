@@ -44,9 +44,11 @@ Once you have added the packages, the final package.json looks like below.
 > For macOS: Command + Shift + P
 > For Windows: Ctrl + Shift + P
 
-![cf]()
+![cf](../images/others/commandpalatte.png)
 
 2. Type **CF: Login** in the field and select this entry **CF: Login to Cloud Foundry**  from the list.
+
+    ![cf](../images/others/cf-login.png)
  
 3. In the **Cloud Foundry Sign in** pop up, do the following: 
 
