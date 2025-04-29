@@ -51,10 +51,6 @@ cf login --sso
 
 3. Find the text box for **Enter the origin key** and click on **Sign in with alternative identity provider**.
 
-    > Note: Ask the instructor for the origin key
-
-    ![deploy-cf](../images/prereq/tenant_login.png)
-
     > Note: When choosing **Sign in with alternative identity provider**, if your are prompted to sign in, enter your username and password.
     > If you are signed in with Default Identity, you can choose to sign in with default identity provider.
 
@@ -105,24 +101,23 @@ cf login --sso
     cds build --production
     ```
 
-4. Deploy the csv files to the hana database, by running the below command in the terminal.
+4. Create a service binding to the SAP Destination Service, by running the below command in the terminal.
+
+    ```sh
+    cf create-service destination lite <destination-name>
+    cds bind --to <destination-name>
+    ```
+
+5. Deploy the csv files to the hana database, by running the below command in the terminal.
 
     ```sh
     cds deploy --to hana
     ```
- 
+    
 > [!Note]
 > It might take few seconds to finish the deployment to hana, once done, you get the successful deployment message.
 ![success](../images/extend-service/successful-deployment.png)
 
-## Create service binding to SAP Destination Service
-
-1. Create the instance and binding by running the below commands in the terminal.
-
-```sh
-cf create-service destination lite <destination-name>
-cds bind --to <destination-name>
-```
 
 ## Next Step
 
