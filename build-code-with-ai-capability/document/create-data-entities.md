@@ -4,7 +4,7 @@ Joule is an AI copilot that can generate the data model of an application as CDS
 
 ## Prerequisite
 
-You have created the project following the steps at [Create a Full-Stack Application](./create-full-stack-project.md).
+You have created the project following [Create the Project](./create-full-stack-project.md).
 
 ## Add a domain model
 
