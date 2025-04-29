@@ -41,7 +41,9 @@ Once you have added the packages, the final package.json looks like below.
 
 > [!Note]
 > You can also invoke the Command Palette quickly using the following key combination:
+> 
 > For macOS: Command + Shift + P
+> 
 > For Windows: Ctrl + Shift + P
 
 ![cf](../images/others/commandpalatte.png)
