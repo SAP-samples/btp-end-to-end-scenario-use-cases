@@ -120,7 +120,7 @@ In this section we will enhance the Data Model of Incident Management Applicatio
         ```
     ![schema](../images/others/schema.png)
 
-2. The sample data generated in the previous steps, creates the **data** folder in the **test** folder. To use the data for productive usgae, move the **data** folder to the **db** folder. Open the terminal, and run the following command to move the csv files.
+2. The sample data generated in the previous steps, creates the **data** folder in the **test** folder. To use the data for productive usgae, move the **data** folder to the **db** folder. **Open the terminal**, and run the following command to move the csv files.
 
     ```sh
     mv test/data db/data
