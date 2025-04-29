@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-[Extend the Incident Management Application](./extend-service.md)
+[Deploy to Cloud Foundry Runtime](./deploy-cf.md)
 
 ## Testing end to end.
 
