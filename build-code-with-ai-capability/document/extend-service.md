@@ -96,7 +96,7 @@ service ProcessorService {
 > [!Tip]
 > The **ProcessorService** is being updated to incorporate entities for solutions and vector embeddings. An action called **VectorEmbedding** is been defined to retrieve solution details.
 
-4. Under `srv`, create a new file called `service.js` and add the following content.
+4. Under `srv`, open `service.js` and replace the existing content with the following code snippet.
 
 ```js
 const cds = require('@sap/cds');
