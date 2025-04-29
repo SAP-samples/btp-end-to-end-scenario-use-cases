@@ -49,7 +49,7 @@ This section explains how to access the SAP Build lobby and create a full-stack 
     ![project-storyboard](../images/others/storyboard.png)
 
 > [!Note]
-> If you accidentally closed the storyboard, you can open from Project Overview icon from the left tiles bar.
+> If you accidentally closed the storyboard, you can open from **Project Overview** icon from the left tiles bar.
 ![project-storyboard](../images/others/open-sb.png)
 
 

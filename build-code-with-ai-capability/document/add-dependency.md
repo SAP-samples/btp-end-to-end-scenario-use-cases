@@ -37,33 +37,58 @@ Once you have added the packages, the final package.json looks like below.
 
 ## Login to Cloud Foundry
 
-1. In the terminal, log in to your subaccount in SAP BTP by following the below commands:
-
-```sh
-cf api <API-ENDPOINT>
-cf login --sso
-```
+1. Choose the burger menu and then choose **View → Command Palette**.
 
 > [!Note]
-> You can find the API endpoint in the Overview section of your subaccount in the SAP BTP cockpit.
-![prereq](../images/prereq/retrieve_endpoint.png) 
+> You can also invoke the Command Palette quickly using the following key combination:
+> For macOS: Command + Shift + P
+> For Windows: Ctrl + Shift + P
 
-2. Copy the URL to get the Temporary Authentication Code and paste it in new tab.
+![cf](../images/others/commandpalatte.png)
 
-    ![prereq](../images/extend-service/get-temp-code.png)
+2. Type **CF: Login** in the field and select this entry **CF: Login to Cloud Foundry**  from the list.
 
-3. Find the text box for **Enter the origin key** and click on **Sign in with alternative identity provider**.
+    ![cf](../images/others/cf-login.png)
+ 
+3. In the **Cloud Foundry Sign in** pop up, do the following: 
 
-    > Note: When choosing **Sign in with alternative identity provider**, if your are prompted to sign in, enter your username and password.
-    > If you are signed in with Default Identity, you can choose to sign in with default identity provider.
+    1. In the **Enter Cloud Foundry Endpoint** field, enter the **API Endpoint** from SAP BTP Cockpit.
 
-4. Choose the **Copy** icon to get a temporary authentication code.
+        > Note: The Cloud Foundry Endpoint can be retrived from SAP BTP Cockpit.
+        ![deploy-cf](../../build-code/images/deploy-cf/retrieve_endpoint.png) 
 
-    ![deploy-cf](../images/prereq/deploy_auth_code.png)
+    2. Select **SSO Passcode** as an authentication method.
 
-5. Paste the copied code in the terminal and click the enter key.
+        ![deploy-cf](../../build-code/images/deploy-cf/ssopasscode.png)
 
-6. Select Cloud Foundry space created in [Exercise 1 Step 1: Create Cloud Foundry Space](./create-space.md).
+    3. Choose **Open a new browser page to generate your SSO passcode** to sign in to your subaccount in SAP BTP, which opens in a new browser.
+
+    4. Find the text box for **Enter the origin key** and enter **aviss4yru-platform** and click on **Sign in with alternative identity provider**.
+
+        ![deploy-cf](../../build-code/images/deploy-cf/tenant_login.png)
+
+        > Note: When choosing **Sign in with alternative identity provider**, if your are prompted to sign in, enter your username and password.
+        > If you are signed in with Default Identity, you can choose to sign in with default identity provider.
+
+    5. Choose the **Copy** icon to get a temporary authentication code.
+
+        ![deploy-cf](../../build-code/images/deploy-cf/deploy_auth_code.png)
+    
+    6. Paste the copied code in the **Enter your SSO Passcode** field in the Cloud Foundry login page.
+
+    7. Choose **Sign In**.
+
+        ![deploy-cf](../../build-code/images/deploy-cf/deploy_sign_in.png)
+
+4. In the **Cloud Foundry Target** section, do the following:
+
+    1. In the **Select Cloud Foundry Organization** dropdown menu, select the respective Org name.
+
+    2. In the **Select Cloud Foundry Space** dropdown menu, select the Cloud Foundry space created in [Exercise 1 Step 1: Create Cloud Foundry Space](./create-space.md).
+
+    3. Choose **Apply**.
+
+        ![deploy-cf](../../build-code/images/deploy-cf/cf_targets.png)
 
 ## Enhance the Incident Management Application Data Model
 
@@ -91,6 +116,7 @@ In this section we will enhance the Data Model of Incident Management Applicatio
             solution   : LargeString;
         }
         ```
+    ![schema](../images/others/schema.png)
 
 2. The sample data generated in the previous steps, creates the **data** folder in the **test** folder. To use the data for productive usgae, move the **data** folder to the **db** folder. Open the terminal, and run the following command to move the csv files.
 

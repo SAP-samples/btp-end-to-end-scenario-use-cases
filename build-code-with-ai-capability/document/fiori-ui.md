@@ -10,10 +10,10 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
 1. In Joule, start typing ```/fiori``` and select **/fiori-gen-cap-ui** from the suggestions.
 
-    > [!Note]
-    > If you are not able to find the `/fiori-gen-cap-ui`, please refresh the page.
+> [!Note]
+> If you are not able to find the `/fiori-gen-cap-ui`, please refresh the page.
 
-    ![fiori-ui](../../build-code/images/fiori-ui/ui_suggestion.png)
+![fiori-ui](../../build-code/images/fiori-ui/ui_suggestion.png)
 
 2. Use the following prompt to create a user interface.
 
