@@ -62,7 +62,9 @@ cf login --sso
 
 6. Select Cloud Foundry space created in [Exercise 1 Step 1: Create Cloud Foundry Space](./create-space.md).
 
-## Setup initial data for Incident Management Application
+## Enhance the Incident Management Application Data Model
+
+In this section we will enhance the Data Model of Incident Management Application to support Vector Embeddings
 
 1. Open `schema.cds` and add the following code snippets:
 
