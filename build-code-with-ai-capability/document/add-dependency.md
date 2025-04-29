@@ -15,6 +15,9 @@
 },
 ```
 
+Once you have added the packages, the final package.json looks like below.
+![package](../images/extend-service/package.png)
+
 > [!Tip]
 > These packages are needed to enable AI integration, text processing, and file handling within the CAP application.
 > 
