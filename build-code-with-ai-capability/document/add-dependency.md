@@ -2,7 +2,7 @@
 
 ## Add and Install required packages
 
-1. Open Package.json and add the below dependencies
+1. Open `Package.json` and add the below dependencies
 
 ```json
 "dependencies": {
