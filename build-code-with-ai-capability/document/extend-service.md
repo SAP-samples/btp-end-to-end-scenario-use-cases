@@ -289,7 +289,7 @@ Content-Type: application/json
 
 ## Add Annotations to enhance the Fiori UI
 
-1. Open `app/incident-management/annotation.cds` file and paste the below code
+1. Open `app/incident-management/annotation.cds` file and replace it with the below code
 
 ```js
 using ProcessorService as service from '../../srv/service';
