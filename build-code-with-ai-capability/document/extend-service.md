@@ -6,6 +6,8 @@ Add dependencies required for SAP Cloud SDK for AI, and setting up the data for 
 
 ## Extend the Incident Management Application
 
+In this section, you will upload data, generate text embeddings from it, and store them in a vector database.
+
 1. Under `srv`, create a new file called `incidents.csv`, copy the contents from [incidents.csv](https://raw.githubusercontent.com/SAP-samples/btp-end-to-end-scenario-use-cases/refs/heads/main/build-code-with-ai-capability/csv/incidents.csv)
 
 2. Under `srv`, create a new file called `vector-embedding.js` and paste the content from below.
