@@ -37,7 +37,7 @@ The final step in SAP Build Code is to deploy the application to the SAP BTP, Cl
     ![deploy-cf](../../build-code/images/deploy-cf/deploy_cf_terminal.png)
 
 > [!Note]
-> During the deployment, if a new page pops up for sign in to Cloud Foundry Runtime, follow steps 3 - 6. Else, proceed with the **Assign the User Roles**.
+> During the deployment, if a new page pops up for sign in to Cloud Foundry Runtime, follow steps 3 - 6. Else, once the deployment is completed, proceed with **[Assign the User Roles](./deploy-cf.md#assign-the-user-roles)**.
 
 3. In the Cloud Foundry Sign in pop up, do the following: 
 
