@@ -2,13 +2,10 @@
 
 Action is one of the feature in SAP Process Automation. Action is a mean to connect processes with external systems, be it SAP or non-SAP systems. This is an important piece of the puzzle especially if you want to automate or extend your business processes for any available line of business like SAP S/4HANA, SAP Ariba, SAP SuccessFactors and many more. These extensions can be easily build using SAP Process Automation, and using Actions you can connect to any SAP System and can do any kind of operation like GET, POST, PATCH and other calls.
 
-## Prerequisite
-
-Deploy the Purchase Order CAP Application using [Deployment of CAP Application](../prerequisites/deployment.md)
 
 ## Generate the OpenAPI specification
 
-1. The openAPI specification for this CAP Application is already generated. Click on [open api specification](https://github.com/SAP-samples/s4hana-cloud-extension-process-automation/blob/purchase/docs/purchaseOrderAppSrv.openapi3.json).
+1. The openAPI specification for this CAP Application is already generated. Click on [open api specification](https://github.com/SAP-samples/s4hana-cloud-extension-process-automation/blob/purchase/docs/purchaseOrderAppSrv.openapi3.json) and download the file.
 
 > [!NOTE]  
 > If you want to generate manually, open the terminal and run the below command to generate open api specification.
@@ -38,7 +35,7 @@ Deploy the Purchase Order CAP Application using [Deployment of CAP Application](
 
 6. In the Create an **Action project** popup:
 
-    1. Specify the name as **PurchaseOrder**
+    1. Enter `Purchase order <your-initials><unique-random-number>` in the **Project Name** field. For example, if your name is `John Doe`, then the project name would be **Purchase order jd12**, (12 is some random number).
 
     2. Click **Create**
 
@@ -72,8 +69,9 @@ Your Action Project will contain the actions for the CAP service.
 
     ![action](./images/createaction/publish.png)
 
-# Create Action for SAP S/4HANA Cloud system using SAP Build
 
-Follow the steps from [Create Business Partner Action Project in SAP Build Actions](https://developers.sap.com/tutorials/spa-business-partner-action-create.html)
+**You have successfully created action project for CAP Application.**
 
-**You have successfully created action project.**
+## Next Step
+
+[Create Project in SAP Build Lobby](../createprocess/README.md)

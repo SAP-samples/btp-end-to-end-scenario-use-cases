@@ -27,11 +27,14 @@ The Business Process will be in Deployed state. To edit the process and forms, c
 
 4. In the **Browse Library** pop-up, choose **GET Retrieves customer general data**.
 
-5. Select the **Add** option for the action project you created earlier.
+5. Select the **Add** option for the action project.
 
-    ![s4hana](../s4hana/images/chooseaction.png)
+> [!Note]
+> There might be many actions listed, verify that you are selecting the action from the project name you have created earlier.
 
-6. Create Destination Variable.
+![s4hana](../s4hana/images/chooseaction.png)
+
+6. Click on **+Create Destination Variable.**
 
     ![s4hana](../s4hana/images/createdest.png)
 
@@ -44,9 +47,9 @@ The Business Process will be in Deployed state. To edit the process and forms, c
 
     ![s4hana](../s4hana/images/bupa.png)
 
-8. Choose the **Customer Name** option from the dropdown.
+8. Click on the value help of **Available Data** dropdown, and select **Name of Customer** from the list.
 
-    ![s4hana](../s4hana/images/custname.png)
+    ![s4hana](../s4hana/images/customername.png)
 
 > [!NOTE]  
 > The customer name in the dropdown are coming from the metadata of SAP S/4HANA api.
