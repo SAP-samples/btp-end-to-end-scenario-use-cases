@@ -100,26 +100,26 @@ In this tutorial, you will create an action project based on Business Partner AP
 
 ### Test action project
 
-1. Once the action project is configured and saved, it is time to test the changes and output. To test the API, do the following:
+Once the action project is configured and saved, it is time to test the changes and output. To test the API, do the following:
 
-    > [!Note]
-    > The destinations are fetched from the SAP Business Technology Platform. The selected destination is already created in the account configured for this tutorial.
+> [!Note]
+> The destinations are fetched from the SAP Business Technology Platform. The selected destination is already created in the account configured for this tutorial.
 
-    - Click **Test** tab.
+1. Click **Test** tab.
 
-    - Select **Destination** option under **Connectivity**.
+2. Select **Destination** option under **Connectivity**.
 
-    - Select `S4HANA` from the dropdown options.
+3. Select `S4HANA` from the dropdown options.
 
-    > Notice that the input value is already picked from the default value entered while configuring the action project.
+> Notice that the input value is already picked from the default value entered while configuring the action project.
 
-    - Click **Test**.
+4. Click **Test**.
 
-        ![Action Project](./images/createactions4hana/test.png)
+    ![Action Project](./images/createactions4hana/test.png)
 
-    - Once the execution is successful, you see **200 OK** response with the details of the customers in the backend S/4HANA Cloud system.
+5. Once the execution is successful, you see **200 OK** response with the details of the customers in the backend S/4HANA Cloud system.
 
-        ![Action Project](./images/createactions4hana/output.png)
+    ![Action Project](./images/createactions4hana/output.png)
 
 The action gives a response which, in this use case, returns the customer details and related details. You need to display the customer names which are in an array of objects.
 
