@@ -8,7 +8,7 @@ The goal is to cover all the necessary steps to consume the CAP Service API func
 
 # Hands-on Exercises
 
-## [Lobby link](https://hands-on-btp-innovation-day-bg6hmvjc.ap10.build.cloud.sap/lobby)
+[SAP Build Lobby](https://hands-on-btp-innovation-day-bg6hmvjc.ap10.build.cloud.sap/lobby)
 
 ## Exercise 1 : Build Purchase Order Approval Business Process and Integrate with CAP.
 
