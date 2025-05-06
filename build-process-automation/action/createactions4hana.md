@@ -8,6 +8,9 @@ In this tutorial, you will create an action project based on Business Partner AP
 
     ![Action Project](./images/createactions4hana/api-spec-path.png)
 
+> [!Note]
+> If you are not able to download from API hub, you can use the json from here [API_BUSINESS_PARTNER](./API_BUSINESS_PARTNER.json)
+
 2. Under **API Specification**, click download icon for **OpenAPI JSON**.
 
     ![Action Project](./images/createactions4hana/download-json.png)
