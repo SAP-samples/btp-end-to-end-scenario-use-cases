@@ -35,7 +35,7 @@ Action is one of the feature in SAP Process Automation. Action is a mean to conn
 
 6. In the Create an **Action project** popup:
 
-    1. Specify the name as **PurchaseOrder**
+    1. Enter `Purchase order <your-initials><unique-random-number>` in the **Project Name** field. For example, if your name is `John Doe`, then the project name would be **Purchase order jd12**, (12 is some random number).
 
     2. Click **Create**
 
