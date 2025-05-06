@@ -50,7 +50,7 @@ In this tutorial, you will create an action project based on Business Partner AP
 
 1. Once the Action Editor - **Add Actions From Business Partner** is opened, you have to select *GET* method of `/A_Customer` API. Follow the below steps to add it.
 
-    - Scroll the API lists to find the **Customer** API, and click on that expand near to that.
+    - Scroll the API lists to find the **Customer** API, and click on expand near to that.
 
         ![Action Project](./images/createactions4hana/customer.png)
 
@@ -95,6 +95,7 @@ In this tutorial, you will create an action project based on Business Partner AP
 
 > [!Tip] 
 > What is going on?
+>
 > If this array is not marked as Main Output Array, the Actions Project will not be visible in the Form Editor as a data source.
 
 ### Test action project
@@ -105,7 +106,7 @@ In this tutorial, you will create an action project based on Business Partner AP
 
     - Select **Destination** option under **Connectivity**.
 
-    - Select `S4_Business_Partner` from the dropdown options.
+    - Select `S4HANA` from the dropdown options.
 
     > [!Note]
     > The destinations are fetched from the SAP Business Technology Platform. The selected destination is already created in the account configured for this tutorial.
@@ -114,11 +115,11 @@ In this tutorial, you will create an action project based on Business Partner AP
 
     - Click **Test**.
 
-        ![Action Project](ActionProject_18.png)
+        ![Action Project](./images/createactions4hana/test.png)
 
     - Once the execution is successful, you see **200 OK** response with the details of the customers in the backend S/4HANA Cloud system.
 
-    <!-- border -->![Action Project](ActionProject_19.png)
+        ![Action Project](./images/createactions4hana/output.png)
 
     The action gives a response which, in this use case, returns the customer details and related details. You need to display the customer names which are in an array of objects.
 
@@ -126,15 +127,15 @@ In this tutorial, you will create an action project based on Business Partner AP
 
 1. Click on **Release**.
 
-    ![action](./images/createaction/release1.png)
+    ![action](./images/createactions4hana/release1.png)
 
 2. Click on **Release** again.
 
-    ![action](./images/createaction/release2.png)
+    ![action](./images/createactions4hana/release2.png)
 
 3. Click on **Publish**.
 
-    ![action](./images/createaction/publish0.png)
+    ![action](./images/createactions4hana/publish1.png)
 
 4. Click on **Publish** again.
 
@@ -144,4 +145,4 @@ In this tutorial, you will create an action project based on Business Partner AP
 
 ## Next Step
 
-[Consume SAP S/4HANA Business Partner API to the Drop-Down Fields in the Form.](./s4hana/README.md)
+[Consume SAP S/4HANA Business Partner API to the Drop-Down Fields in the Form.](../s4hana/README.md)
