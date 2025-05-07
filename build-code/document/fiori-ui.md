@@ -26,6 +26,10 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
     ![ui-generated-msg](../images/newprompts/fiori.png)
 
+> [!Note]
+> If you want to create a SAP Fiori Application manually using the SAP Fiori Elements Template
+> Follow [Generate the UI with an SAP Fiori Elements Template]()
+
 4. Joule creates a  SAP Fiori application using the List Report template in SAP Fiori Elements, with a local CAP  service as the data source
 
 5. Go to **Explorer**. In the **app** folder, check that the following folder structure is generated.
