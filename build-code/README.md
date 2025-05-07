@@ -30,10 +30,10 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 # Hands-on Exercise
 
-|  | | | |
+|  | | 
 | ----------- | ----------- | ----------- | ----------- |
 |[SAP Build Lobby](https://build-code-i7r3gm08.eu10.build.cloud.sap/lobby) | [SAP Build Work Zone](https://build-code-i7r3gm08.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory) |
-|  | | | |
+|  | | 
 
 ## Pre-requisite
 > [!Note]
