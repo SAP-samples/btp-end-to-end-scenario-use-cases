@@ -25,7 +25,6 @@
     
     - Choose **Next**.
 
-        <!-- border; size:540px --> 
         ![CAPpro](../images/generate-ui/datasourceselection.png)
 
 
@@ -41,15 +40,15 @@
 
     - Choose **Next**.
 
-        ![Entity selection](./images/entityselection.png)
+        ![Entity selection](../images/generate-ui/entityselection.png)
 
 6. In the **Project Attributes** step:
 
     - In the **Module name** field, enter **incidents**.
 
-    - In the **Application title** field, enter `Incident-Management`.
+    - In the **Application title** field, enter **Incident-Management**.
 
-    - In the **Application namespace** field, enter `ns<your-initials><random-number>`.
+    - In the **Application namespace** field, enter **ns**.
 
     - Leave the default values for all the other settings and choose **Finish**.
 
