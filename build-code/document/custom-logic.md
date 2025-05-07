@@ -117,7 +117,7 @@ This event handler prevents updates to incidents that are already closed (status
     ![Custom Logic](../images/custom-logic/logic2_code.png)
 
 > [!Note]
-> Joule may generate a different code for this backend logic. Please make sure the final `#srv/code/onUpdate.js.js` file looks like this: 
+> Joule may generate a different code for this backend logic. Please make sure the final `#srv/code/onUpdate.js` file looks like this: 
 
 
     module.exports = async function(request) {
