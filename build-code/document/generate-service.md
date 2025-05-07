@@ -54,21 +54,22 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 > [!Note]
 > Joule may generate a different code for the service. Please make sure the final `srv/service.cds` file looks like this: 
 
-using { sap.capire.incidents as my } from '../db/schema.cds';
 
-@requires: 'Support'
-service ProcessorService {
-    @odata.draft.enabled
-    entity Incidents as projection on my.Incidents;
-    @readonly
-    entity Customers as projection on my.Customers;
-}
+    using { sap.capire.incidents as my } from '../db/schema.cds';
 
-@requires: 'admin'
-service AdminService {
-    entity Customers as projection on my.Customers;
-    entity Incidents as projection on my.Incidents;
-}
+    @requires: 'Support'
+    service ProcessorService {
+        @odata.draft.enabled
+        entity Incidents as projection on my.Incidents;
+        @readonly
+        entity Customers as projection on my.Customers;
+    }
+
+    @requires: 'admin'
+    service AdminService {
+        entity Customers as projection on my.Customers;
+        entity Incidents as projection on my.Incidents;
+    }
 
 ## Next Step
 
