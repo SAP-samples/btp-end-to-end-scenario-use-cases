@@ -1,6 +1,4 @@
-# Home Page: Full Stack Application Development on SAP BTP using SAP Build Code
-
-## Handson Exercise on SAP Build Code CAP & SAP Build Process Automation
+# Home Page: Full Stack Application Development on SAP BTP using SAP Build Code & Build Business Process using SAP Build Process Automation
  
 |  | | | 
 | ----------- | ----------- | ----------- |
