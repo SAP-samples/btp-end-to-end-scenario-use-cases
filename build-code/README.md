@@ -28,8 +28,6 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ![Solution Diagram](images/Solution-Diagram.png)
 
-# Hands-on Exercise
-
 ## Pre-requisite
 > [!Note]
 > For this hands-on we have already set up the below pre-requisite steps. You can directly proceed with  the exercises

@@ -38,6 +38,9 @@ Do not generate name.The data should be structured in CSV format, maintaining co
 
     ![validate-gen-data](../images/enhance-sample-data/validate-gen-data.png)
 
+> [!Note]
+> If you want to learn how to configure data manually, please follow [Add Initial Data](./add-initial-data-manually.md)
+
 ## Next Step
 
 [Add CDS Services](generate-service.md)
