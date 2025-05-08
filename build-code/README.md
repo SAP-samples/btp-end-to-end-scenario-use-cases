@@ -45,16 +45,16 @@ ACME is a popular Electronics company. ACME hires call center support representa
 5. [Add CDS Services](./document/generate-service.md)
 6. [Add Business Logic with Joule](./document/custom-logic.md)
 7. [Add Fiori UI Using Joule](./document/fiori-ui.md)
-8. [[Optional]Extend the Fiori UI](./document/extend-fiori-ui.md)
+8. [[Optional] Extend the Fiori UI](./document/extend-fiori-ui.md)
 9. [Add Test Cases](./document/testcase.md)
 
-## Exercise 2: Deploy in SAP BTP, Cloud Foundry Runtime
+## [Optional] Exercise 2: Deploy in SAP BTP, Cloud Foundry Runtime
 
 1. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
 2. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
 3. [Test the Scenario End to End](./document/e2e-testing.md)
 
-## Exercise 3: Consume External Service
+## [Optional] Exercise 3: Consume External Service
 
 > [!Note]
 > To proceed with consuming external service, development and deployment of the CAP application needs to be completed as a prerequisite.
