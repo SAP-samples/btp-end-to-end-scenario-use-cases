@@ -1,10 +1,10 @@
 # Create Project in SAP Build Lobby
 
-1. Open **[SAP Build Lobby](https://pw-build-hands-on.eu10.build.cloud.sap/lobby)**.
+1. Open SAP Build Lobby.
 
-2. Click on **Create** from the *Create* dropdown.
+2. Click on **Create**.
 
-    ![project](./images/[new]create.png)
+    ![project](./images/image.png)
 
 3. In the Create Project dialog, under **Objective**, choose an **Automated Process** and click on **Next**.
 

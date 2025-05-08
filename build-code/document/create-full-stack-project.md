@@ -6,9 +6,9 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 
 1. Open the SAP Build Lobby.
 
-2. Click on **Create** from **Create** dropdown.
+2. Click on **Create**.
 
-    ![build lobby](../images/create-full-stack-project/new-create.png)
+    ![build lobby](../../build-process-automation/createprocess/images/image.png)
 
 3. In the Create Project dialog, under **Objective**, click on the **Application** tile and choose **Next**.
     

@@ -77,4 +77,4 @@ Create a UI application using a Joule prompt following the steps at [Create SAP 
 
 ## Next Step
 
-To deploy the application to SAP BTP, Cloud Foundry runtime, follow the steps at [Deploy in SAP BTP, Cloud Foundry Runtime](deploy-cf.md).
+To deploy the application to SAP BTP, Cloud Foundry runtime, follow the steps at [Exercise 2 - Deploy to SAP BTP Cloud Foundry Runtime](../README.md#optional-exercise-2-deploy-in-sap-btp-cloud-foundry-runtime).
