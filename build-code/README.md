@@ -38,21 +38,22 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
-1. [Create Space in SAP BTP](./document/create-space.md)
-2. [Create the Project](./document/create-full-stack-project.md)
-3. [Create Data Entities](./document/create-data-entities.md)
-4. [Add Sample Data](./document/enhance-sample-data.md)
-5. [Add CDS Services](./document/generate-service.md)
-6. [Add Business Logic with Joule](./document/custom-logic.md)
-7. [Add Fiori UI Using Joule](./document/fiori-ui.md)
-8. [[Optional] Extend the Fiori UI](./document/extend-fiori-ui.md)
-9. [Add Test Cases](./document/testcase.md)
+
+1. [Create the Project](./document/create-full-stack-project.md)
+2. [Create Data Entities](./document/create-data-entities.md)
+3. [Add Sample Data](./document/enhance-sample-data.md)
+4. [Add CDS Services](./document/generate-service.md)
+5. [Add Business Logic with Joule](./document/custom-logic.md)
+6. [Add Fiori UI Using Joule](./document/fiori-ui.md)
+7. [[Optional] Extend the Fiori UI](./document/extend-fiori-ui.md)
+8. [Add Test Cases](./document/testcase.md)
 
 ## [Optional] Exercise 2: Deploy in SAP BTP, Cloud Foundry Runtime
 
-1. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
-2. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
-3. [Test the Scenario End to End](./document/e2e-testing.md)
+1. [Create Space in SAP BTP](./document/create-space.md)
+2. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
+3. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
+4. [Test the Scenario End to End](./document/e2e-testing.md)
 
 ## [Optional] Exercise 3: Consume External Service
 
