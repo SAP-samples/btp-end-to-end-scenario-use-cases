@@ -29,10 +29,7 @@ The Business Process will be in Deployed state. To edit the process and forms, c
 
 5. Select the **Add** option for the action project.
 
-> [!Note]
-> There might be many actions listed, verify that you are selecting the action from the project name you have created earlier.
-
-![s4hana](../s4hana/images/chooseaction.png)
+    ![s4hana](../s4hana/images/chooseaction.png)
 
 6. Click on **+Create Destination Variable.**
 
@@ -43,7 +40,7 @@ The Business Process will be in Deployed state. To edit the process and forms, c
 
 ![s4hana](../s4hana/images/createbupa.png)
 
-7. Once detination is created, from the dropdown, choose **bupa**.
+7. Once destination is created, from the dropdown, choose **bupa**.
 
     ![s4hana](../s4hana/images/bupa.png)
 

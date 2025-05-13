@@ -7,8 +7,7 @@ The goal is to cover all the necessary steps to consume the CAP Service API func
 ![](./images/arch.png)
 
 > [!Note]
-> For this Hands-on, we have already created Action for CAP Application & SAP S/4HANA using SAP Build. You can proceed with exercises.
-
+> For this Hands-on, we have already subscribed, deployed CAP Application and created Actions for CAP Application & SAP S/4HANA using SAP Build using [Prerequisites](./prerequisites.md). You can proceed with exercises.
 
 ## Exercise 1 : Build Purchase Order Approval Business Process and Integrate with CAP.
 
