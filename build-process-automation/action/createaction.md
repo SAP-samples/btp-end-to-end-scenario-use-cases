@@ -71,7 +71,3 @@ Your Action Project will contain the actions for the CAP service.
 
 
 **You have successfully created action project for CAP Application.**
-
-## Next Step
-
-[Create Project in SAP Build Lobby](../createprocess/README.md)

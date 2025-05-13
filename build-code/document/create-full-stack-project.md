@@ -6,9 +6,9 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 
 1. Open the SAP Build Lobby.
 
-2. Click on **Create**.
+2. Click on **Create** from Create dropdown.
 
-    ![build lobby](../../build-process-automation/createprocess/images/image.png)
+    ![build lobby](../images/create-full-stack-project/new-create.png)
 
 3. In the Create Project dialog, under **Objective**, click on the **Application** tile and choose **Next**.
     
@@ -16,7 +16,7 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 
 4. Under **Category**, choose the **Full-Stack** tile and click on Next.
 
-    ![build code](../images/create-full-stack-project/new-fullstack.png)
+    ![build code](../images/create-full-stack-project/fullstack.png)
 
 5. Under **Type**, select the development configuration as **Full-Stack Node.JS**, and click on **Next**. 
 
