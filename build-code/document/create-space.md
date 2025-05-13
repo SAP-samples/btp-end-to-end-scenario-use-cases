@@ -19,6 +19,3 @@
 
 4. Pop-up message with **Space created successfully** will be displayed. You can also verify your space created.
 
-## Next Step
-
-[Create a Full-Stack Application](./create-full-stack-project.md)
