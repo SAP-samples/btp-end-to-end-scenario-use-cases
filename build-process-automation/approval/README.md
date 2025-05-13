@@ -42,9 +42,9 @@ In this exercise you will create a form to Approve the Purchase and add a commen
 
     1. In the **Subject**, type **Approve Purchase Order**, after that click on the **Purchase Order** from *purchaseform(Trigger)*.
 
-    2. Under the **Recipients** -> **Users**, choose **Process Started By** from Process Metadata.
+    2. Under the **Recipients** -> **Users**, choose **Started By** from Process Metadata.
 
-        ![approval](./images/general.png) 
+        ![approval](./images/general1.png) 
 
 11. Choose **Inputs** tab.
 
