@@ -6,75 +6,7 @@ Add dependencies required for SAP Cloud SDK for AI, and setting up the data for 
 
 ## Extend the Incident Management Application
 
-1. Under `srv`, create a new file called `incidents.csv`, copy the contents from [incidents.csv](https://raw.githubusercontent.com/SAP-samples/btp-end-to-end-scenario-use-cases/refs/heads/main/build-code-with-ai-capability/csv/incidents.csv)
-
-2. Under `srv`, create a new file called `feed-data.js` and paste the content from below.
-
-```js
-const fs = require("fs");
-const csv = require("csv-parser");
-const resourceGroup = 'default';
-const embeddingModelName = 'text-embedding-ada-002';
-
- 
-
-async function loadCSV(filePath) {
-  return new Promise((resolve, reject) => {
-    const results = [];
-    fs.createReadStream(filePath)
-      .pipe(csv())
-      .on("data", data => results.push(data))
-      .on("end", () => resolve(results))
-      .on("error", err => reject(err));
-  });
-}
- 
-async function feedData() {
-  try {
-    const { AzureOpenAiEmbeddingClient } = await import('@sap-ai-sdk/langchain');
-    const db = await cds.connect.to("db");
-    const { vectorEmbeddings } = db.entities;
-    const incidents = await loadCSV(__dirname + "/incidents.csv");
-    const embeddingClient = new AzureOpenAiEmbeddingClient({
-      modelName: embeddingModelName,
-      resourceGroup: resourceGroup
-    },{
-      destinationName: 'generative_ai_hub'
-    });
- 
-    for (const incident of incidents) {
-      const { ID, Title, Description, Resolution } = incident;
-      const text = `${Title}. ${Description}. ${Resolution}`.trim();
-      if (!text) continue;
- 
-      const embeddingResult = await embeddingClient.embedDocuments(text);
-      const embedding = embeddingResult[0];
-      if (!Array.isArray(embedding)) continue;
-      await new Promise(res => setTimeout(res, 500));
-      
-     await INSERT.into(vectorEmbeddings).entries({
-        metadata: ID,
-        text_chunk: text,
-        embedding: JSON.stringify(embedding),
-        solution: Resolution
-      });
-      
-      console.log(`Incident ${ID} stored.`);
-    }
- 
-    return "Feeding Data completed successfully.";
-  } catch (e) {
-    console.error("Feeding error:", e);
-    return `Error: ${e.message}`;
-  }
-}
- 
-module.exports = { feedData };
-```
-> [!Tip]
-> This file feeds data
-
-3. Open `srv/service.cds`file and replace the service ProcessorService with below code snippet.
+1. Open `srv/service.cds`file and replace the service ProcessorService with below code snippet.
 
 ```js
 service ProcessorService {
@@ -97,15 +29,14 @@ service ProcessorService {
 > [!Tip]
 > to be updated
 
-4. Under `srv`, create a new file called `service.js` and add the following content.
+3. Under `srv`, create a new file called `service.js` and add the following content.
 
 ```js
 const cds = require('@sap/cds');
-const { feedData } = require("./feed-data");
 const natural = require('natural');
 const tokenizer = new natural.WordTokenizer();
 const {vectorEmbeddings} = cds.entities;
-const resourceGroup = 'default';
+const resourceGroup = 'amit';
 const embeddingModelName = 'text-embedding-ada-002';
 const stopWords = new Set(["a", "an", "the", "is", "in", "on", "of", "and", "to", "with", "for", "this", "that", "it", "by", "at"]);
  
@@ -113,8 +44,6 @@ class ProcessorService extends cds.ApplicationService {
   /** Registering custom event handlers */
   async init() {
     this.after("CREATE", "Incidents", (req) => this.getRagResponse(req));
-    this.on("FeedData", feedData);
- 
     this.on('acceptSolution', async (req) => {
       if (!req.data.input1) return req.reject(400, "Solution acceptance is required.");
       let result = await cds.run(SELECT.from("Incidents.solutions").where({ ID: req.params[1].ID }));
@@ -250,7 +179,7 @@ class ProcessorService extends cds.ApplicationService {
         const { OrchestrationClient } = await import ('@sap-ai-sdk/orchestration');
         const orchestrationClient = new OrchestrationClient({
         llm: {
-            model_name: 'gpt-4o'
+            model_name: 'gpt-4'
         },
         templating: {
             template: [
@@ -280,16 +209,6 @@ module.exports = { ProcessorService };
 
 > [!Tip]
 > to be updated
-
-5. In the root project, create a new file called `request.http` and paste the content below.
-
-```http
-### Trigger the Feed Data action
-POST http://localhost:4004/odata/v4/processor/FeedData
-Content-Type: application/json
- 
-{}
-```
 
 ## Add Annotations to enhance the Fiori UI
 

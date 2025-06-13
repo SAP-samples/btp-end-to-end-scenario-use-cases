@@ -4,7 +4,9 @@
 
 [Extend the Incident Management Application](./extend-service.md)
 
-## Feed the data 
+
+
+## Testing end to end.
 
 1. Open the terminal, and start the application by following the below command:
 
@@ -12,17 +14,7 @@
 cds watch --profile hybrid
 ```
 
-2. Open the `request.http` file and click on **Send Request**.
-
-    ![request](../images/extend-service/send-req.png)
-
-> In the terminal, you can see the data from Incidents.csv file is getting trained, please wait for sometime. you will see the Response as 200. 
-
-3. Once completed, you will see the Response as 200.
-
-    to be updated.
-
-4. Go back to the terminal where the application is running, click on the url where the localhost is running
+2. Go to the terminal where the application is running, click on the url where the localhost is running
 
     ![terminal](../images/extend-service/localhost.png)
 
@@ -33,21 +25,19 @@ cds watch --profile hybrid
 >
 > For Mac, command + click on the URL
 
-## Testing end to end.
-
-1. Once you open the application, click on the URL under **Web Applications**.
+3. Once you open the application, click on the URL under **Web Applications**.
 
     ![webapp](../images/teste2e/open-webapp.png)
 
-2. Click on **Go**, which loads all the incidents.
+4. Click on **Go**, which loads all the incidents.
 
     ![testing](../images/teste2e/go.png)
 
-3. Click on **Create**.
+5. Click on **Create**.
 
     ![testing](../images/teste2e/create.png)
 
-4. Fill in the incident details:
+6. Fill in the incident details:
 
     1. In the **Title** field, enter **Printer is not working**.
     
@@ -65,19 +55,19 @@ cds watch --profile hybrid
 
         ![testing](../images/teste2e/createinobject.png)
 
-5. Under **Recommended Solutions**, you will be able to see the solutions with the confidence score.
+7. Under **Recommended Solutions**, you will be able to see the solutions with the confidence score.
 
     ![testing](../images/teste2e/recommend.png)
 
-6. Click on **Accept Solution**.
+8. Click on **Accept Solution**.
 
     ![testing](../images/teste2e/accept1.png)
 
-7. In the dropdown, click on **Yes**, if the recommended solution worked. And click on **Accept Solution** again.
+9. In the dropdown, click on **Yes**, if the recommended solution worked. And click on **Accept Solution** again.
 
     ![testing](../images/teste2e/accept2.png)
 
-8. You will get a notification as **Data added successfully!**
+10. You will get a notification as **Data added successfully!**
 
     ![testing](../images/teste2e/data-saved.png)
 

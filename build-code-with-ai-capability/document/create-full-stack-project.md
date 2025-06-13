@@ -6,31 +6,26 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 
 1. Open the SAP Build Lobby.
 
-2. Click on **Create** from **Create** dropdown.
+2. Click on **Clone from Git** from **Create** dropdown.
 
     ![build lobby](../../build-code/images/create-full-stack-project/new-create.png)
 
-3. In the Create Project dialog, under **Objective**, click on the **Application** tile and choose **Next**.
-    
-    ![build application](../../build-code/images/create-full-stack-project/new-application.png)
-
-4. Under **Category**, choose the **Full-Stack** tile and click on Next.
-
-    ![build code](../../build-code/images/create-full-stack-project/new-fullstack.png)
 
 5. Under **Type**, select the development configuration as **Full-Stack Node.JS**, and click on **Next**. 
 
     ![full-stack-app](../../build-code/images/create-full-stack-project/new-nodejs.png)
 
 6. Under **Name** tab, do the following:
-    1. Enter the Name as `Incidents<your-initials><unique-random-number>`. For example, if your name is `John Doe`, then the project name would be **Incidentsjd12**, (12 is some random number).
+    1. Enter the git url `https://github.com/amitsahu01/IncidentManagement.git`.
+
+    2. Enter the Name as `Incidents<your-initials><unique-random-number>`. For example, if your name is `John Doe`, then the project name would be **Incidentsjd12**, (12 is some random number).
 
         > **Note:** The project name should be unique to identify your project during deployment and also to avoid a duplication error.
-    2. Let **Full_Stack** be the default Dev Space.
+    3. Let **Full_Stack** be the default Dev Space.
 
-    3. Click on **Review**.
+    4. Click on **Review**.
 
-        ![project details](../../build-code/images/create-full-stack-project/new-name.png)
+        ![project details](../../build-code/images/create-full-stack-project/clone-github.png)
 
 > [!Note]
 > If the UI shows Dev space with New option, you can choose the existing Dev Space instead of creating a new one. 
@@ -46,4 +41,4 @@ This section explains how to access the SAP Build lobby and create a full-stack 
 
 ## Next Step
 
-[Create Data Entities](create-data-entities.md)
+[Add dependencies for SAP Cloud SDK for AI ](prerequisites.md)

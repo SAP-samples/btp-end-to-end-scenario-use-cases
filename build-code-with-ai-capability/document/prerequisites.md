@@ -26,24 +26,18 @@
 
 ## Login to Cloud Foundry
 
-1. In the terminal, log in to your subaccount in SAP BTP by following the below commands:
+1. In the terminal, log in to your subaccount in SAP BTP by following the below command:
 
 ```sh
-cf api <API-ENDPOINT>
-cf login --sso
+cf login -a https://api.cf.eu10-005.hana.ondemand.com --sso
 ```
-
-> [!Note]
-> You can find the API endpoint in the Overview section of your subaccount in the SAP BTP cockpit.
-![prereq](../images/prereq/retrieve_endpoint.png) 
 
 2. Copy the URL to get the Temporary Authentication Code and paste it in new tab.
 
     ![prereq](../images/extend-service/get-temp-code.png)
 
-3. Find the text box for **Enter the origin key** and click on **Sign in with alternative identity provider**.
+3. Find the text box for **Enter the origin key** `aviss4yru-platform` and click on **Sign in with alternative identity provider**.
 
-    > Note: Ask the instructor for the origin key
 
     ![deploy-cf](../images/prereq/tenant_login.png)
 
@@ -85,22 +79,16 @@ cf login --sso
         }
         ```
 
-2. The sample data generated in the previous steps, creates the **data** folder in the **test** folder. To use the data for productive usgae, move the **data** folder to the **db** folder. Open the terminal, and run the following command to move the csv files.
-
-    ```sh
-    mv test/data db/data
-    ```
-
 3. Do the productive build for your application, by running the below command in the terminal.
 
     ```sh
-    cds build --production
+        cds build --production
     ```
 
-4. Deploy the csv files to the hana database, by running the below command in the terminal.
+4. Create binding to the hana database, by running the below command in the terminal.
 
     ```sh
-    cds deploy --to hana
+    cds bind --to IncidentManagement-db
     ```
  
     > [!Note]
@@ -109,11 +97,10 @@ cf login --sso
 
 ## Create service binding to SAP Destination Service
 
-1. Create the instance and binding by running the below commands in the terminal.
+1. Create destination binding by running the below commands in the terminal.
 
 ```sh
-cf create-service destination lite <destination-name>
-cds bind --to <destination-name>
+cds bind --to incidents-destination
 ```
 
 ## Next Step
