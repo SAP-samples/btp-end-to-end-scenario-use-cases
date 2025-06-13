@@ -16,7 +16,7 @@
 ```
 
 > [!Note]
-> These packages are needed for 
+> These packages are needed for integrating AI capabilities into the application using SAP AI Cloud SDK for intelligent processing and automation.
 
 2. From the root of the project, choose the burger menu, and then choose Terminal → New Terminal.
 

@@ -59,16 +59,9 @@ cds watch --profile hybrid
 
     ![testing](../images/teste2e/recommend.png)
 
-8. Click on **Accept Solution**.
+8. Click on **Detailed Solution** to get the detailed explanation.
 
     ![testing](../images/teste2e/accept1.png)
 
-9. In the dropdown, click on **Yes**, if the recommended solution worked. And click on **Accept Solution** again.
-
-    ![testing](../images/teste2e/accept2.png)
-
-10. You will get a notification as **Data added successfully!**
-
-    ![testing](../images/teste2e/data-saved.png)
 
 ## Go back to the [Home Page](../../build-code-with-ai-capability/README.md#optional-exercise-3-deploy-in-sap-btp-cloud-foundry-runtime) to deploy to the Cloud Foundry Runtime.

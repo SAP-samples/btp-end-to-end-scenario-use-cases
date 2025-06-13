@@ -22,12 +22,11 @@ service ProcessorService {
  
     @readonly
     entity Customers as projection on my.Customers;
-    action FeedData() returns String;
 }
 ```
 
 > [!Tip]
-> to be updated
+> The vectorEmbeddings entity enables integration with SAP AI services by storing vector representations of text data, which are essential for performing semantic similarity and retrieval-augmented generation (RAG) in AI-driven scenarios.
 
 3. Under `srv`, create a new file called `service.js` and add the following content.
 
@@ -208,7 +207,7 @@ module.exports = { ProcessorService };
 ```
 
 > [!Tip]
-> to be updated
+> This service.js file adds custom logic to handle solution acceptance, generate vector embeddings using SAP AI SDK, and retrieve relevant AI-powered recommendations using Retrieval-Augmented Generation (RAG).
 
 ## Add Annotations to enhance the Fiori UI
 

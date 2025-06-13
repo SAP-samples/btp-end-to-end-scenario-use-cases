@@ -1,7 +1,8 @@
 # Develop Full Stack BTP Applications powered by AI
 
-In this hands-on exercise, you will learn how to jumpstart your application development of a full-stack SAP Cloud Application Programming Model (CAP)-based application.
+In this hands-on exercise, you will learn how to accelerate the development of a full-stack SAP Cloud Application Programming Model (CAP)-based application and enhance it with AI capabilities.
 
+You will integrate SAP AI Core, a cloud-native runtime for managing the lifecycle of AI assets such as machine learning models, and inference workflows. SAP AI Core provides robust orchestration, scalability, and secure access to AI workloads, enabling the seamless embedding of intelligence into business applications on SAP BTP.
 
 # Business Scenario
 
@@ -23,10 +24,6 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 1. [Add dependencies for SAP Cloud SDK for AI ](./document/prerequisites.md)
 2. [Extend the Incident Management Application](./document/extend-service.md)
-2. [Test the Scenario End to End](./document/e2e-testing.md)
+3. [Test the Scenario End to End](./document/e2e-testing.md)
 
-## [Optional] Exercise 3: Deploy in SAP BTP, Cloud Foundry Runtime
 
-1. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
-2. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
-3. [Test the Scenario End to End](./document/e2e-testing-cf.md)
