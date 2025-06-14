@@ -18,7 +18,7 @@ The package is a *cds-plugin*, which means it automatically handles many aspects
 
 Once you've included the *cds-plugin*, proceed to insert the `@changelog` annotations into the entities that you want to track changes for in the `services.cds` file.
 
-Navigate to `srv/services.cds` from the project's root directory and add the below annotations to it.
+Navigate to `srv/processor-service.cds` from the project's root directory and add the below annotations to it.
 
 ```cds
 annotate ProcessorService.Incidents with @changelog: {
