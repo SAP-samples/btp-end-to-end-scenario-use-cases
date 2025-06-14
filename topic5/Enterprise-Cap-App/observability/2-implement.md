@@ -13,7 +13,7 @@ You have the Incident Management application set up. See the [Develop a Full-Sta
 
 To add logs in the Incident Management application, take advantage of the minimalistic logging facade that CAP provides. To add logging functionality to the Incident Management application:
 
-1. Open `srv/services.js`.
+1. Open `srv/processor-service.js`.
 2. Add the following lines to you the code of the **srv/services.js** file.
    
    ```javascript
