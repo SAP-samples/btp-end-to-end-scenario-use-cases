@@ -6,9 +6,13 @@ Add dependencies required for SAP Cloud SDK for AI, and setting up the data for 
 
 ## Extend the Incident Management Application
 
-1. Open `srv/service.cds`file and replace the service ProcessorService with below code snippet.
+1. Open `srv/service.cds`file and replace with below code snippet.
 
 ```js
+using { sap.capire.incidents as my } from '../db/schema';
+/**
+* Service used by support personell, i.e. the incidents' 'processors'.
+*/
 service ProcessorService {
     @odata.draft.enabled
     entity Incidents as projection on my.Incidents;
@@ -22,7 +26,21 @@ service ProcessorService {
  
     @readonly
     entity Customers as projection on my.Customers;
+    action FeedData() returns String;
 }
+
+/**
+* Service used by administrators to manage customers and incidents.
+*/
+service AdminService  @(requires:'admin') {
+    entity Customers as projection on my.Customers;
+    entity Incidents as projection on my.Incidents;
+}
+extend projection ProcessorService.Customers with {
+  firstName || ' ' || lastName as name: String
+}
+annotate ProcessorService.Incidents with @odata.draft.enabled;
+annotate ProcessorService with @(requires: 'support'); 
 ```
 
 > [!Tip]
@@ -211,7 +229,7 @@ module.exports = { ProcessorService };
 
 ## Add Annotations to enhance the Fiori UI
 
-1. Open `app/incident-management/annotation.cds` file and paste the below code
+1. Open `app/incident-management/annotation.cds` file and replace with the below code
 
 ```js
 using ProcessorService as service from '../../srv/service';
