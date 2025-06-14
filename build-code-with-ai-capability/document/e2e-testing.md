@@ -63,5 +63,6 @@ cds watch --profile hybrid
 
     ![testing](../images/teste2e/accept1.png)
 
+## Congratulations! 
 
-## Go back to the [Home Page](../../build-code-with-ai-capability/README.md#optional-exercise-3-deploy-in-sap-btp-cloud-foundry-runtime) to deploy to the Cloud Foundry Runtime.
+You have successfully completed the exercise!
