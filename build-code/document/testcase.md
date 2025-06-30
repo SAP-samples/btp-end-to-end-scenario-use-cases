@@ -38,33 +38,33 @@ Create a UI application using a Joule prompt following the steps at [Create SAP 
 
     ![Testcase](../images/testcases/joule_start.png)
 
-    > In the Joule prompt, **/cap-unit-test** is used for writing testcases for the created services.
+    > In the Joule prompt, **/cap-unit-test** is used to write test cases for the created services.
 
 9. The Joule prompt will be prefilled with `/cap-unit-test #tests/code/test-incidents-test.js`. After the prefilled command, use the following prompt to create the testcase.
 
     ```console
-    Test case to read all the incidents, check only the status code is 200. Odata endpoint is /odata/v4/processor/Incidents
+    Test case to read all the incidents, and check only if the status code is 200. OData endpoint is /odata/v4/processor/Incidents
     ```
     
 10. Choose the **Send** icon.
 
     ![Testcase](../images/testcases/joule_send.png)
 
-11. Once Joule responds with the code, check the implementation and accept it. 
+11. Once Joule responds with the code, check and accept the implementation. 
 
 > [!Note]
-> /cap-unit-test prompt for adding test cases still under development. If the generated code has some errors, replace with below code snippet to test a READ call for Incidents entity
+> /cap-unit-test prompt for adding test cases still under development. If the generated code has some errors, replace it with the below code snippet to test a READ call for the Incidents entity
 
 ```js
-    module.exports = async function(GET, POST, PATCH, DELETE, expect) {
-        const response = await GET('/odata/v4/processor/Incidents');
-        expect(response.status).to.equal(200);
-    };
+module.exports = async function(GET, POST, PATCH, DELETE, expect) {
+  const response = await GET('/processor/sap.capire.incidents/Incidents');
+  expect(response.status).to.equal(200);
+};
 ```
 
 ## Test the application
 
-1. Open Terminal by clicking on the hamburger icon, click on **Terminal -> New Terminal**.
+1. Open Terminal by clicking on the hamburger icon, and click on **Terminal -> New Terminal**.
 
     ![Testcase](../images/testcases/terminal.png)
 
