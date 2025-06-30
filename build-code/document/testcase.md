@@ -57,7 +57,10 @@ Create a UI application using a Joule prompt following the steps at [Create SAP 
 
 ```js
 module.exports = async function(GET, POST, PATCH, DELETE, expect) {
-  const response = await GET('/processor/sap.capire.incidents/Incidents');
+  // Send a GET request to the OData endpoint for Incidents
+  const response = await GET('/odata/v4/processor/Incidents');
+
+  // Assert that the response status code is 200
   expect(response.status).to.equal(200);
 };
 ```
@@ -67,8 +70,12 @@ module.exports = async function(GET, POST, PATCH, DELETE, expect) {
 1. Open Terminal by clicking on the hamburger icon, and click on **Terminal -> New Terminal**.
 
     ![Testcase](../images/testcases/terminal.png)
-
-2. To test the application, run the following command in the terminal:
+2. Install the CAP test plugin
+   ```sh
+    npm add -D @cap-js/cds-test
+   ```
+> This is a library with test utilities for CAP Node.js applications
+3. To test the application, run the following command in the terminal:
 
     ```sh
         npm run test
