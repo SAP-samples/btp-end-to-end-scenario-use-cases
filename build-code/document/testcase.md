@@ -1,6 +1,6 @@
 ## Add Test Cases with Joule
 
-This section describes to create few test cases using a Joule prompt.
+This section describes how to create a few test cases using a Joule prompt.
 
 ## Prerequisite
 
@@ -81,7 +81,3 @@ module.exports = async function(GET, POST, PATCH, DELETE, expect) {
         npm run test
     ```
     ![Testcase](../images/testcases/testcase.png)
-
-## Next Step
-
-To deploy the application to SAP BTP, Cloud Foundry runtime, follow the steps at [Exercise 2 - Deploy to SAP BTP Cloud Foundry Runtime](../README.md#optional-exercise-2-deploy-in-sap-btp-cloud-foundry-runtime).
