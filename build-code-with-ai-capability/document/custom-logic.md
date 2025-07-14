@@ -56,7 +56,23 @@ Using Joule we will define an event handler that automatically sets the urgency 
 
     ![Custom Logic](../../build-code/images/custom-logic/logic1_code.png)
 
-    > Joule may generate different codes for the same prompt. If the code for the backend logic differs but achieves the same result, you can ignore the variation.
+> [!Note]
+> Joule may generate a different code for this backend logic. Please make sure the final `#srv/code/changeUrgencyDueToSubject.js` file looks like this: 
+
+
+    module.exports = async function(request) {
+        const { Incidents } = cds.entities;
+        
+        // Ensure the data is an array or wrap it in an array
+        const data = Array.isArray(request.data) ? request.data : [request.data];
+
+        for (const incident of data) {
+            if (incident.title && incident.title.toLowerCase().includes('urgent')) {
+            incident.urgency_code = 'H'; // Set urgency to High
+            }
+        }
+    }
+
 
 ### 2: Prevent updates to closed incidents
 This event handler prevents updates to incidents that are already closed (status_code = 'C'). This function runs before an UPDATE operation on ProcessorService.Incidents and ensures that validation happens before the database update.
@@ -100,8 +116,23 @@ This event handler prevents updates to incidents that are already closed (status
 
     ![Custom Logic](../../build-code/images/custom-logic/logic2_code.png)
 
-    > Joule may generate different codes for the same prompt. If the code for the backend logic differs but achieves the same result, you can ignore the variation.
+> [!Note]
+> Joule may generate a different code for this backend logic. Please make sure the final `#srv/code/onUpdate.js` file looks like this: 
 
+
+    module.exports = async function(request) {
+        const { Incidents } = cds.entities;
+        const { ID } = request.data;
+
+        if (!ID) return; // Ensure ID is provided
+
+        const incident = await SELECT.one.from(Incidents).where({ ID });
+
+        if (incident && incident.status_code === 'C') {
+            request.reject(400, 'Cannot modify the closed incident');
+        }
+    }
+    
 ## Next Step
 
 [Create SAP Fiori UI with Joule](./fiori-ui.md)
