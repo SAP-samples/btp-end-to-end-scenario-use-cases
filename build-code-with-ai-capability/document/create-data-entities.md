@@ -19,7 +19,7 @@ You have created the project following [Create the Project](./create-full-stack-
 3. Copy the following schema to the **schema.cds** file. 
 
 ```
-using { User, cuid, managed, sap.common.CodeList } from '@sap/cds/common';
+using { cuid, managed, sap.common.CodeList } from '@sap/cds/common';
 namespace sap.capire.incidents; 
 
 /**
