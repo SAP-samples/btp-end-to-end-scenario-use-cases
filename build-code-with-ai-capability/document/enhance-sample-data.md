@@ -38,6 +38,9 @@ Do not generate name column.The data should be structured in CSV format, maintai
 
     ![validate-gen-data](../../build-code/images/enhance-sample-data/validate-gen-data.png)
 
+> [!Note]
+> If you want to learn how to configure data manually, please follow [Add Initial Data](../../build-code/document/add-initial-data-manually.md)
+
 ## Next Step
 
 [Add CDS Services](generate-service.md)
