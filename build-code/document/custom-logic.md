@@ -54,7 +54,7 @@ Using Joule we will define an event handler that automatically sets the urgency 
 
 7. Once Joule responds with the code, check the implementation and accept it. 
 
-    ![Custom Logic](../images/custom-logic/logic1_code.png)
+    ![Custom Logic](../images/custom-logic/logic1_promptt.png)
 
 > [!Note]
 > Joule may generate a different code for this backend logic. Please make sure the final `#srv/code/changeUrgencyDueToSubject.js` file looks like this: 
@@ -114,7 +114,7 @@ This event handler prevents updates to incidents that are already closed (status
 
 8. Once Joule responds with the code, check the implementation and accept it. 
 
-    ![Custom Logic](../images/custom-logic/logic2_code.png)
+    ![Custom Logic](../images/custom-logic/logic2_code2.png)
 
 > [!Note]
 > Joule may generate a different code for this backend logic. Please make sure the final `#srv/code/onUpdate.js` file looks like this: 
