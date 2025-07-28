@@ -11,6 +11,6 @@
 |  |
 | - |
 | **Hands On - Exercise Links** |
-|**Exercise 1**:  [Side by Side Extension Application Development with SAP Build Code CAP](../../build-code/Beginner-tutorial.md) |
+|**Exercise 1**:  [Develop Full Stack BTP CAP Applications Using SAP Build Code With Joule](../../build-code/Beginner-tutorial.md) |
 |**Exercise 2**: [Build a Business Process Extension for SAP S/4 HANA  Public Cloud with SAP Build Process Automation](../../build-process-automation/README.md)|
 | |
