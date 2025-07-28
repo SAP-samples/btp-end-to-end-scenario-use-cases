@@ -38,9 +38,10 @@ Create a UI application using a Joule prompt following the steps at [Create SAP 
 
     ![Testcase](../images/testcases/joule_start.png)
 
-    > In the Joule prompt, **/cap-unit-test** is used to write test cases for the created services.
+> [!Note]
+> If the Joule prompt has **/cap-app-logic**, delete the prompt, and type **/cap-unit-test**, as **/cap-unit-test** is used to write test cases for the created services.
 
-9. The Joule prompt will be prefilled with `/cap-unit-test #tests/code/test-incidents-test.js`. After the prefilled command, use the following prompt to create the testcase.
+9. The Joule prompt will be having `/cap-unit-test #tests/code/test-incidents-test.js`. After the prefilled command, use the following prompt to create the testcase.
 
     ```console
     Test case to read all the incidents, and check only if the status code is 200. OData endpoint is /odata/v4/processor/Incidents
