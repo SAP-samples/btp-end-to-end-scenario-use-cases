@@ -1,4 +1,4 @@
-# Develop Full Stack BTP Applications Using SAP Build Code With Joule
+# Develop Full Stack BTP CAP Applications Using SAP Build Code With Joule
 
 In this hands-on exercise, you will learn how to jumpstart your application development of a full-stack SAP Cloud Application Programming Model (CAP)-based application using SAP Build Code powered by Joule, which is the AI copilot that understands your business and can interact with your SAP business systems.
 
