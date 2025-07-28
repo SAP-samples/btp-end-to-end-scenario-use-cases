@@ -1,4 +1,4 @@
-# Side by Side Extension Application Development with SAP Build Code CAP
+# Develop Full Stack BTP CAP Applications Using SAP Build Code With Joule
 
 In this hands-on exercise, you will learn how to jumpstart your application development of a full-stack SAP Cloud Application Programming Model (CAP)-based application using SAP Build Code powered by Joule, which is the AI copilot that understands your business and can interact with your SAP business systems.
 
@@ -30,11 +30,9 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ## Pre-requisite
 > [!Note]
-> Skip the below prerequisites if its already done 
+> Skip the below prerequisite if it's already done 
 
-1. [Setup SAP Build Code  in SAP BTP](./document/prerequisites.md)
-2. [Register an SAP S/4HANA Cloud system in your SAP SAP Business Technology Platform (BTP)](./document/add-remote-service/s4hana-cloud-to-btp-connectivity.md)
-3. [Create a Service Instance for SAP S/4HANA Cloud Extensibility](./document/add-remote-service/create-service.md)
+1. [Setup SAP Build Code in SAP BTP](./document/prerequisites.md)
 
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
