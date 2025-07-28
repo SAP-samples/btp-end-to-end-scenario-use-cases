@@ -42,14 +42,14 @@
 
 ## 3. Review PO Status in Purchase Order CAP Application.
 
-1. Open [CAP Application](https://hands-on.launchpad.cfapps.eu10.hana.ondemand.com/f1d6d6bf-87c6-480b-8b4e-6ee152fe96aa.purchase.nspurchase-0.0.1/index.html)
+1. Open [CAP Application](https://hands-on.launchpad.cfapps.eu10.hana.ondemand.com/1cfa5e3e-7907-4e79-99ee-0e3953fade97.purchase.nspurchase-0.0.1/index.html)
 
 2. Filter with your PO. Click on **GO**.
     
     ![teste2e](./images/caplist.png)
 
-3. Review status in detail page as well.
+3. Review the status in the detail page as well.
 
     ![teste2e](./images/output.png)
 
-**Congratulations! You have successfully completed the Exercise 1 of integrating CAP Application in SAP Build Process Automation**
+**Congratulations! You have completed Exercise 1 of integrating the CAP Application in SAP Build Process Automation**
