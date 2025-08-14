@@ -1,0 +1,8 @@
+# Ignore all node_modules folders
+node_modules/
+**/node_modules/
+/node_modules
+**/gen/
+**/dist/
+**/mta_archives/
+**/resources/
