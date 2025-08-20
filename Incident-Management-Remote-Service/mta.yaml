@@ -6,10 +6,18 @@ modules:
   - name: incident-management-srv
     type: nodejs
     path: gen/srv
+    properties:
+      SAP_CALM_FESR_LOG_LEVEL: debug
+      SAP_CALM_DCI_LOG_LEVEL: debug
+      SAP_CALM_SERVICE_NAME: incident-management-srv
+      SAP_CALM_SERVICE_TYPE: SAP_CP_CF
+      OTEL_RESOURCE_ATTRIBUTES: sap.tenancy.tenant_id=52fbaf37-c604-4abf-8580-c97703835dc8
+      NODE_ARGS: -r @sap/xotel-agent-ext-js/dist/common/tracer
     requires:
       - name: incident-management-db
       - name: uaa_incident-management
       - name: incident-management-destination-service
+      - name: incident-management-connectivity
       - name: xp265-cl
     provides:
       - name: srv-api
@@ -134,6 +142,11 @@ resources:
         tenant-mode: dedicated
   - name: xp265-cl
     type: org.cloudfoundry.existing-service
+  - name: incident-management-connectivity
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: connectivity
+      service-plan: lite
 parameters:
   deploy_mode: html5-repo
   enable-parallel-deployments: true
@@ -142,4 +155,5 @@ build-parameters:
     - builder: custom
       commands:
         - npm ci
-        - npx cds build --production
+        # - npx cds build --production
+       

@@ -5,7 +5,12 @@
  const meter = metrics.getMeter('@capire/incidents:incidents.urgency.high');
  // Create a counter
  const counter = meter.createUpDownCounter('incidents.urgency.high');
-
+ require('@sap/xotel-agent-ext-js/dist/common/tracer');
+ const app = require('express')()
+ const fesr = require("@sap/fesr-to-otel-js");
+ cds.serve('all').in(app)
+ app.listen()
+ cds.on("bootstrap", (app) => fesr.registerFesrEndpoint(app));
  cds.on('served', async () => {
  const { ProcessorService } = cds.services
  // Increase count when new incident with high urgency is created
