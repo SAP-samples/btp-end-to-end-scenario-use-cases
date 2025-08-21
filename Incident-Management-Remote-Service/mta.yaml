@@ -155,5 +155,5 @@ build-parameters:
     - builder: custom
       commands:
         - npm ci
-        # - npx cds build --production
+        - npx cds build --production
        

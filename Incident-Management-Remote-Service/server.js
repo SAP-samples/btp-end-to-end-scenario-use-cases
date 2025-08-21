@@ -11,19 +11,19 @@
  cds.serve('all').in(app)
  app.listen()
  cds.on("bootstrap", (app) => fesr.registerFesrEndpoint(app));
- cds.on('served', async () => {
- const { ProcessorService } = cds.services
- // Increase count when new incident with high urgency is created
- ProcessorService.after("CREATE", "Incidents", (results, req) => {
-     if (results.urgency_code === "H" && results.status_code !== "C") {
-     counter.add(1, { 'sap.tenancy.tenant_id': req.tenant });
-     }
- });
- // Reduce count once incident is closed
- ProcessorService.after("UPDATE", "Incidents", (results, req) => {
-     if (results.urgency_code === "H" && results?.status_code === "C") {
-     counter.add(-1, { 'sap.tenancy.tenant_id': req.tenant });
-     }
- });
- });
+//  cds.on('served', async () => {
+//  const { ProcessorService } = cds.services
+//  // Increase count when new incident with high urgency is created
+//  ProcessorService.after("CREATE", "Incidents", (results, req) => {
+//      if (results.urgency_code === "H" && results.status_code !== "C") {
+//      counter.add(1, { 'sap.tenancy.tenant_id': req.tenant });
+//      }
+//  });
+//  // Reduce count once incident is closed
+//  ProcessorService.after("UPDATE", "Incidents", (results, req) => {
+//      if (results.urgency_code === "H" && results?.status_code === "C") {
+//      counter.add(-1, { 'sap.tenancy.tenant_id': req.tenant });
+//      }
+//  });
+//  });
  module.exports = cds.server
