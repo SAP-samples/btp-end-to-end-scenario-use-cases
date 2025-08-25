@@ -73,4 +73,4 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
 
 ## Next Step
 
-[Add Business Logic with Joule](custom-logic.md)
+[Add Business Logic with Joule](custom-logic-1.md)
