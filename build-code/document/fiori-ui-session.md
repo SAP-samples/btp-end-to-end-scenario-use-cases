@@ -52,9 +52,6 @@ You have created custom logic following the steps at [Create Backend Logic with 
 
     ![object-page](../images/fiori-ui/Incident-object-page.png)
 
-10. To stop the running application, choose the **Disconnect** icon at top of the screen.
-    
-    ![stop-preview](../images/fiori-ui/stop_preview.png)
 
 ## Next Step
 
