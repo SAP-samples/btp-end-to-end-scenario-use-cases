@@ -4,7 +4,7 @@ This section describes how to create a UI application using a Joule prompt.
 
 ## Prerequisites
 
-You have created custom logic following the steps at [Create Backend Logic with Joule](custom-logic.md).
+You have created custom logic following the steps at [Create Backend Logic with Joule](custom-logic-1.md).
 
 ## Generate an SAP Fiori UI
 
