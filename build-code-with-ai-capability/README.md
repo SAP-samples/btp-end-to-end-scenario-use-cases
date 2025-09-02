@@ -44,9 +44,15 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 1. [Add dependencies for SAP Cloud SDK for AI ](./document/prerequisites.md)
 2. [Extend the Incident Management Application](./document/extend-service.md)
-2. [Test the Scenario End to End](./document/e2e-testing.md)
+3. [Test the Scenario End to End](./document/e2e-testing.md)
 
-## [Optional] Exercise 3: Deploy in SAP BTP, Cloud Foundry Runtime
+## Exercise 3: Integrate SAP Document AI and Attachments Plugin
+1. [Prerequisites](./document/prerequisites-2.md)
+2. [Extend the Incident Management Application with document AI](./document/extend-doc-ai.md)
+3. [Add Fiori UI application with attachments](./extended-ui.md)
+3. [Test the Scenario End to End](./document/e2e-testing-ai.md)
+
+## [Optional] Exercise 4: Deploy in SAP BTP, Cloud Foundry Runtime
 
 1. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
 2. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
