@@ -26,7 +26,9 @@
     "express": "^4",
     "hdb": "^0.19.12",
     "@sap/fesr-to-otel-js": "^1.5.17",
-    "@sap/xotel-agent-ext-js": "^1.5.29"
+    "@sap/xotel-agent-ext-js": "^1.5.29",
+    "cf-nodejs-logging-support": "7.5.0-beta.0",
+    "@sap/opentelemetry-exporter-for-sap-cloud-logging": "^0.4.0"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1.8.0",
