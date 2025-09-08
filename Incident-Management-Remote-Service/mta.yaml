@@ -18,6 +18,7 @@ modules:
       - name: uaa_incident-management
       - name: incident-management-destination-service
       - name: incident-management-connectivity
+      - name: xp265-auto
       - name: xp265-cl
     provides:
       - name: srv-api
@@ -140,8 +141,13 @@ resources:
       config:
         xsappname: incident-management-${org}-${space}
         tenant-mode: dedicated
+  # Cloud Logging instance      
   - name: xp265-cl
     type: org.cloudfoundry.existing-service
+  # Auto Scaler instance
+  - name: xp265-auto
+    type: org.cloudfoundry.existing-service
+  # Connectivity instance
   - name: incident-management-connectivity
     type: org.cloudfoundry.managed-service
     parameters:
