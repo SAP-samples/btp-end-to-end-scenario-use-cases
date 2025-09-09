@@ -6,32 +6,23 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@cap-js/telemetry": "^1.5.3",
-    "@grpc/grpc-js": "^1.12.6",
-    "@opentelemetry/api": "1.9.0",
-    "@opentelemetry/api-logs": "0.57.1",
-    "@opentelemetry/exporter-logs-otlp-grpc": "0.57.1",
-    "@opentelemetry/exporter-metrics-otlp-grpc": "0.57.1",
-    "@opentelemetry/exporter-metrics-otlp-proto": "0.57.1",
-    "@opentelemetry/exporter-trace-otlp-grpc": "0.57.1",
-    "@opentelemetry/exporter-trace-otlp-proto": "0.57.1",
-    "@opentelemetry/sdk-logs": "0.57.1",
-    "@sap/cds": "8.7.2",
-    "@opentelemetry/host-metrics": "^0.36",
+    "@cap-js/hana": "^2",
     "@sap-cloud-sdk/connectivity": "^4",
     "@sap-cloud-sdk/http-client": "^4",
     "@sap-cloud-sdk/resilience": "^4",
     "@sap-cloud-sdk/util": "^4",
+    "@sap/ams": "^3",
+    "@sap/cds": "^9",
     "@sap/xssec": "^4",
-    "express": "^4",
-    "hdb": "^0.19.12",
-    "@sap/fesr-to-otel-js": "^1.5.17",
-    "@sap/xotel-agent-ext-js": "^1.5.29",
     "cf-nodejs-logging-support": "7.5.0-beta.0",
-    "@sap/opentelemetry-exporter-for-sap-cloud-logging": "^0.4.0"
+    "express": "^4",
+    "hdb": "latest"
   },
   "devDependencies": {
-    "@cap-js/sqlite": "^1.8.0",
+    "@cap-js/cds-types": "latest",
+    "@cap-js/sqlite": "^2",
+    "@sap/ams-dev": "^2",
+    "@sap/cds-dk": "^9",
     "@sap/ux-specification": "^1.120.17",
     "rimraf": "^5.0.5"
   },
@@ -50,21 +41,23 @@
     "requires": {
       "[production]": {
         "db": "hana",
-        "auth": "xsuaa",
-        "telemetry": {
-          "kind": "to-cloud-logging"
+        "auth": {
+          "kind": "ias"
         }
       },
       "OP_API_BUSINESS_PARTNER_SRV": {
         "kind": "odata-v2",
         "model": "srv/external/OP_API_BUSINESS_PARTNER_SRV",
-         "[production]": {
+        "[production]": {
           "credentials": {
             "destination": "incidents-api-access",
             "path": "/sap/opu/odata/sap/API_BUSINESS_PARTNER"
           }
         }
-      }
+      },
+      "destinations": true,
+      "html5-runtime": true,
+      "workzone": true
     }
   }
 }

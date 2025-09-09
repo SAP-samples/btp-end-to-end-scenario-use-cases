@@ -1,7 +1,7 @@
 {
   "_version": "1.59.0",
   "sap.app": {
-    "id": "ukrs01.incidents",
+    "id": "ns.incidents",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -17,7 +17,7 @@
     },
     "dataSources": {
       "mainService": {
-        "uri": "/odata/v4/processor/",
+        "uri": "odata/v4/processor/",
         "type": "OData",
         "settings": {
           "annotations": [],
@@ -74,7 +74,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "ukrs01.incidents.i18n.i18n"
+          "bundleName": "ns.incidents.i18n.i18n"
         }
       },
       "": {
@@ -155,6 +155,6 @@
   },
   "sap.cloud": {
     "public": true,
-    "service": "incidents"
+    "service": "incidentmanagement.service"
   }
 }
