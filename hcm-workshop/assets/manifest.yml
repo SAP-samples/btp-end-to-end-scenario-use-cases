@@ -1,0 +1,9 @@
+applications:
+  - name: catering-sample
+    path: .
+    memory: 256M
+    disk: 512M
+    buildpacks:
+      - nodejs_buildpack
+    env:
+      NODE_ENV: development

@@ -1,0 +1,1 @@
+{"exportTime":"2025-08-31 13:17:49.858759673","destination":{"Name":"CateringAPI","Type":"HTTP","Description":"","URL":"https://catering-sample.cfapps.XX99-999.hana.ondemand.com/odata/v4/catalog","ProxyType":"Internet","Authentication":"NoAuthentication","HTML5.DynamicDestination":"true","TrustAll":"true","WebIDEEnabled":"true","WebIDEUsage":"odata_gen"}}
