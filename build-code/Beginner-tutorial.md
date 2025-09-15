@@ -46,10 +46,4 @@ ACME is a popular Electronics company. ACME hires call center support representa
 7. [[Optional] Extend the Fiori UI](./document/extend-fiori-ui.md)
 8. [Add Test Cases](./document/testcase.md)
 
-## [Optional] Exercise 2: Deploy in SAP BTP, Cloud Foundry Runtime
-
-1. [Create Space in SAP BTP](./document/create-space.md)
-2. [Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
-3. [Integrate Your Application with SAP Build Work Zone, Standard Edition](./document/integrate-workzone.md) 
-4. [Test the Scenario End to End](./document/e2e-testing.md)
 
