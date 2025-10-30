@@ -28,12 +28,6 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ![Solution Diagram](images/Solution-Diagram.png)
 
-## Pre-requisite
-> [!Note]
-> Skip the below prerequisite if it's already done 
-
-1. [Setup SAP Build Code in SAP BTP](./document/prerequisites.md)
-
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
 
