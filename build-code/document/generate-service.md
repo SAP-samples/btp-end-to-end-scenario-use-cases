@@ -21,7 +21,7 @@ You have enhanced the sample data following the steps at [Enhance Sample Data](e
     Add additional service named 'AdminService' with projection on the entities 'Incidents' and 'Customers'.
     Make ProcessorService only accessible by the user with 'Support' role.
     Similarly, make AdminService to be only accessible by the user with 'Admin' role.
-    Remove others services and path parameters.
+    Remove path parameters and other extra services.
     Enable draft editing for Incidents entity of ProcessorService using annotation.
     Make Customers entity of ProcessorService as readonly.
     ```
