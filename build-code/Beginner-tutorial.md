@@ -28,8 +28,6 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ![Solution Diagram](images/Solution-Diagram.png)
 
-## [SAP Build Lobby](https://sap-build-eu10-trial-4-ykabxtjj.eu10.build.cloud.sap/lobby)
-
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
 
