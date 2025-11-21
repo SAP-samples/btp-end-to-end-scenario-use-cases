@@ -2,7 +2,7 @@
 
  You need to have the base CAP application to begin with. You can quickly generate the CAP application by using the notebook by following these steps:
 
-1. Click [Here](https://github.com/cap-js/incidents-app/archive/refs/heads/main.zip) to download the base Incident Management application.
+1. Click [Here](https://github.com/SAP-samples/incidents-app/archive/refs/heads/main.zip) to download the base Incident Management application.
 
 2. Create a new folder **Handson** in the **desktop**, if the folder is already there, create a new folder with a unique name like **Handson-firstname**.
 
