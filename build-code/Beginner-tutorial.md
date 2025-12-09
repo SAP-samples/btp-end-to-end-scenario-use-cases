@@ -34,6 +34,8 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 [SAP BTP Subaccount](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/4a9f366b-1fda-44b1-b44f-b4cad2a04b1d&//detail/7f6a71ba-a54c-4c87-b5d6-f6a0322670a1/?layout=TwoColumnsMidExpanded)
 
+[SAP Build Work Zone](https://handson-workshop.dt.launchpad.cfapps.eu10.hana.ondemand.com/sites#Site-Directory)
+
 ## Exercise 1: Develop Basic Incident Management Application using SAP Build Code CAP
 
 
