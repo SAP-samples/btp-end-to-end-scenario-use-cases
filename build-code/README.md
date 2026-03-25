@@ -58,7 +58,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 ## [Optional] Exercise 3: Consume External Service
 
 > [!Note]
-> To proceed with consuming external service, development and deployment of the CAP application needs to be completed as a prerequisite.
+> To proceed with consuming the external service, development and deployment of the CAP application needs to be completed as a prerequisite.
 
 1. [Update the Business Scenario](./document/add-remote-service/README.md)
 2. [Extend the Incident Management аpplication](./document/add-remote-service/extend-app-cf.md)
