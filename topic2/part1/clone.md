@@ -8,7 +8,7 @@ In this section, you will prepare a workspace in SAP Business Application Studio
 
 In this exercise, you will perform the following tasks:
 
-1. Create development space
+1. Open development space
 2. Clone repository
 3. Prepare the codebase
 
@@ -24,13 +24,10 @@ In this exercise, you will perform the following tasks:
 
   ![Alt text](img/0010-open-bas.png) 
 
-4. Select **Create Dev Space** button.
+4. Select **Run** button to start the dev space.
 
-  ![Alt text](img/0020-create-dev-space.png) 
+  ![Alt text](img/0020-start-dev-space.png) 
 
-5. Enter **dev** as the space name and select **Full Stack Cloud Application**. Then choose **Create Dev Space** button.
-
-  ![Alt text](img/0030-create-dev-space.png)
 
 > It may take several minutes. Please be patient.
 
@@ -53,49 +50,33 @@ cd projects
 3. Clone the repository with the following command:
 
   ```url
-  git clone https://github.com/SAP-samples/btp-end-to-end-scenario-use-cases.git -b topic2app
+  git clone https://github.com/sap-samples/incidents-app
   ```
 
   ![Alt text](img/0060-git-clone-url.png) 
 
-4. After the cloning has been finished you will see a new project **author-readings** in the **Get Started** window. Just select it to open.
+4. After the cloning has been finished you will see a new project **incidents-app** in the **Get Started** window. Just select it to open.
 
   ![Alt text](img/0070-open-project.png) 
 
 ### Task 3: Prepare the codebase
 
-> As all the workshop participants work in one subaccount and one SAP S/4 HANA Cloud system the name of the created artifacts must be unique. To distinguish the objects for all participants in the workshop use the following naming convention: Replace **{YOUR_ID}** in every exercise with your initials plus a 3 digit number. For example instead of **MY_OBJECT_{YOUR_ID}**, use **MY_OBJECT_AB123**. 
-
-1. On the left side in the file explorer select **btp-end-to-end-scenario-use-cases** folder and call the popup menu. Select **Find in Folder...** option.
-
-  ![Alt text](img/0080-find-in-folder.png) 
-
-2. Enter **{YOUR_ID}** as the text to find and your ID (e.g. ab123) as the text to replace. Select **Replace all** button afterwards.
-
-  ![Alt text](img/0090-replace-id.png) 
-
-3. Select the "burger" button to call the main menu and select *View* &rarr; *Terminal* option.
+1. Select the "burger" button to call the main menu and select *View* &rarr; *Terminal* option.
 
   ![Alt text](img/0100-view-terminal.png) 
 
 
-3. Install UI5 CLI with the following command:
+2. In the terminal install the packages with the command:
 
   ```cli
-  npm install --save-dev @ui5/cli
-  ```
-
-4. In the terminal install the packages with the command:
-
-  ```cli
-  npm i --save-dev
+  npm install
   ```
 
   ![Alt text](img/0110-npm-install.png)
 
 ## Result
 
-You have now the codebase with your application ready to be deployed.
+You have now the codebase Setup in the Business Application Studio.
 
-[Next Tutorial: Deploy the application](./deploy.md)
+[Next Tutorial: Set Up MCP Servers for Agentic Coding](../../cap-app-with-agent/setup-mcp-servers.md)
 
