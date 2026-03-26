@@ -50,9 +50,13 @@ By completing this exercise, you will have used agentic coding with MCP servers 
 - Protect user input against SQL injection patterns
 - Write and run automated Jest tests following the OData Draft Choreography pattern
 
-### Read More
+## [Optional] Exercise 3: Consume External Service
 
-- [What is the Model Context Protocol (MCP)?](https://modelcontextprotocol.io/docs/getting-started/intro)
-- [MCP Server for CAP](https://github.com/cap-js/mcp-server)
-- [MCP Server for SAP Fiori](https://www.npmjs.com/package/@sap-ux/fiori-mcp-server)
-- [SAP BTP Developer's Guide](https://help.sap.com/docs/btp/btp-developers-guide/btp-developers-guide?version=Cloud)
+> [!Note]
+> To proceed with consuming external service, development and deployment of the CAP application needs to be completed as a prerequisite.
+
+1. [Update the Business Scenario](./../build-code/document/add-remote-service/README.md)
+2. [Extend the Incident Management аpplication](./../build-code/document/add-remote-service/extend-app-cf.md)
+3. [Run a developer test Locally](./../build-code/document/add-remote-service/test-with-mock.md)
+4. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./../build-code/document/add-remote-service/deploy-to-cf.md)
+5. [Test the end to end flow](./../build-code/document/add-remote-service/test-the-app.md)
