@@ -1,35 +1,5 @@
 # Extend the Incident Management Application
 
-## Clean Up the Cloud Foundry Space
-
-1. Open your project space.
-
-2. Open the terminal and type the following command. Then, get the mta_id from the output of the command.
-
-    ```sh
-      cf mtas
-    ```
-
-    ![testing](../../images/e2e-testing/get_mtaid.png)
-
-    > **Note:** You run `cf mtas` command to get the MTA ID.
-
-3. To undeploy the application, use the following command:
-
-    ```sh
-      cf undeploy <mta_id> --delete-service-keys --delete-services
-    ```
-
-    If its asks for confirmation, type **y**.
-
-    ![testing](../../images/e2e-testing/undeploy_confirm.png)
-
-    > **Note:** The mta_id is the same you got from Step 1.
-
-> [!Note]
-> Wait for a few minutes until the application is fully undeployed and you get the success message.
-
-## Extend the Incident Management Application
 
 1. To add the service, do the following:
    - Click on Service Center(on left navigation shown in screenshot below)

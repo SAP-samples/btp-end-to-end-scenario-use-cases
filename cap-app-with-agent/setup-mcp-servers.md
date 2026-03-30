@@ -34,11 +34,8 @@ The SAP Fiori MCP server (`@sap-ux/fiori-mcp-server`) enables developers using A
 
 ## Prerequisite
 
-You have the Incident Management application set up in SAP Business Application Studio. Clone the project from GitHub:
+You have the [Incident Management application set up in SAP Business Application Studio](../topic2/part1/clone.md).
 
-```bash
-git clone https://github.com/sap-samples/incidents-app
-```
 
 ## Setting Up MCP Servers
 

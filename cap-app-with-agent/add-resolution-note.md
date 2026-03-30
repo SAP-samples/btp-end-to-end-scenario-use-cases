@@ -134,7 +134,15 @@ This validation ensures that a user cannot set an incident's status to **Resolve
 1. In **Cline**, enter the following prompt:
 
     ```
-    I have a CAP Node.js project with an Incidents entity that has a resolutionNote field and a status_code field. I want to add a validation in srv/services.js inside the existing service handler: when someone updates an incident and sets the status to Resolved (R) or Closed (C), they must provide a resolution note. If it's missing or empty, reject the request with a clear error message saying a resolution note is required.
+    I have a CAP project with an Incidents app. When someone tries to close or resolve an incident, they must provide a resolution note explaining what was done. 
+
+    Add validation to prevent closing/resolving incidents without a resolution note:
+
+    - If status is changed to "Resolved" or "Closed" but no resolution note is provided, show an error
+    - Check if they're adding a resolution note now, or if one was already added before
+    - Make sure it works with the draft system
+
+    The incident has a status_code field ('R' for Resolved, 'C' for Closed) and a resolutionNote field.
     ```
 
 2. Cline will use the **CAP MCP server** to check the entity and documentation:
