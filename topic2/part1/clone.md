@@ -55,7 +55,7 @@ cd projects
 
   ![Alt text](img/0060-git-clone-url.png) 
 
-4. After the cloning has been finished you will see a new project **incidents-app** in the **Get Started** window. Just select it to open.
+4. After the cloning has been finished you will see a new project **incident-management** in the **Get Started** window. Just select it to open.
 
   ![Alt text](img/0070-open-project.png) 
 
