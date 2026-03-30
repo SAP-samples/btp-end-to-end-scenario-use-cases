@@ -78,5 +78,5 @@ cd projects
 
 You have now the codebase Setup in the Business Application Studio.
 
-[Next Tutorial: Set Up MCP Servers for Agentic Coding](../../cap-app-with-agent/setup-mcp-servers.md)
+[Next Tutorial: Understand th application structure](../../cap-app-with-agent/#)
 

@@ -27,9 +27,24 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 ## Prerequisites
 
-- SAP Business Application Studio with Cline installed
+- [Configure Cline in SAP Business Application Studio](./document/setup-cline.md)
 
-## Exercise: Extend the Incident Management Application
+## Exercise 1: Understand the CodeBase
+
+1. [Setup the application](../topic2/part1/clone.md)
+2. [Understand the application structure](./#)
+3. [Test the application locally ](./add-resolution-note.md)
+
+## Exercise 2: Consume External Service
+
+1. [Update the Business Scenario](./document/add-remote-service/README.md)
+2. [Extend the Incident Management аpplication](./document/add-remote-service/extend-app-cf.md)
+3. [Run a developer test Locally](./document/add-remote-service/test-with-mock.md)
+4. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./document/add-remote-service/deploy-to-cf.md)
+5. [Test the end to end flow](./document/add-remote-service/test-the-app.md)
+
+
+## Exercise 2: Extend the Incident Management Application
 
 1. [Prepare the CodeBase](../topic2/part1/clone.md)
 2. [Set Up MCP Servers for Agentic Coding](./setup-mcp-servers.md)
@@ -55,8 +70,8 @@ By completing this exercise, you will have used agentic coding with MCP servers 
 > [!Note]
 > To proceed with consuming external service, development and deployment of the CAP application needs to be completed as a prerequisite.
 
-1. [Update the Business Scenario](./../build-code/document/add-remote-service/README.md)
-2. [Extend the Incident Management аpplication](./../build-code/document/add-remote-service/extend-app-cf.md)
-3. [Run a developer test Locally](./../build-code/document/add-remote-service/test-with-mock.md)
-4. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./../build-code/document/add-remote-service/deploy-to-cf.md)
-5. [Test the end to end flow](./../build-code/document/add-remote-service/test-the-app.md)
+1. [Update the Business Scenario](./document/add-remote-service/README.md)
+2. [Extend the Incident Management аpplication](./document/add-remote-service/extend-app-cf.md)
+3. [Run a developer test Locally](./document/add-remote-service/test-with-mock.md)
+4. [Deploy to SAP BTP Cloud Foundry runtime with SAP S/4HANA Cloud](./document/add-remote-service/deploy-to-cf.md)
+5. [Test the end to end flow](./document/add-remote-service/test-the-app.md)

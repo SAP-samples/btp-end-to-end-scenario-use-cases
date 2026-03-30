@@ -16,7 +16,7 @@ When a new incident is created by the processor, they have to assign the inciden
 
 # Solution Diagram
 
-  ![Solution Diagram](../../images/add-remote-service/Solution-Diagram-RS.png)
+  ![Solution Diagram](../../images/Solution-Diagram-RS.png)
 
 ## Next Step
 
