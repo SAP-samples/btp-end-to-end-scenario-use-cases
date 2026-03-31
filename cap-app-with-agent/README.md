@@ -1,10 +1,12 @@
-# Extend CAP Applications Using Agentic Coding With MCP
+# Mastering Clean Core on SAP BTP: A Hands-On Journey with VIBE Coding & MCP
 
-In this hands-on exercise, you will learn how to extend a full-stack SAP Cloud Application Programming Model (CAP)-based application using **Cline** — an AI coding agent — powered by the **CAP MCP server** and the **SAP Fiori MCP server** running in SAP Business Application Studio.
+In this hands-on exercise, you will learn to develop a full-stack SAP BTP application based on SAP Cloud Application Programming Model (CAP), Fiori-based application , extend it using VIBE codeing and MCP and deploy to BTP.
 
 ## What You Will Build
+- Build an extension app for S/4 HANA Cloud using CAP
+- VIBE code in SAP Business Application Studio using **Cline**, connect to tools like **CAP MCP server** and **SAP Fiori MCP server** to extend the CAP application
 
-You will extend the **Incident Management** application by adding a `Resolution Note` field to the `Incidents` entity, enforcing business rules around it, and writing automated tests — all guided by natural-language prompts to Cline.
+You will extend the **Incident Management** CAP application by adding a `Resolution Note` field to the `Incidents` entity, enforcing business rules around it, and writing automated tests — all guided by natural-language prompts in Cline.
 
 ## Key Capabilities of Agentic Coding With MCP
 
