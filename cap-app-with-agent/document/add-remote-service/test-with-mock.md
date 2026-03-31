@@ -2,46 +2,124 @@
 
 ## Scenario
 
-To increase your development speed, it is helpful to run and test your implementation in a local environment. In this section you will learn how to test the incident management application locally.
+To increase your development speed, it is helpful to run and test your implementation in a local environment. In this section you will learn how to test the incident management applicaiton locally.
 
 ## Content
 
+### Create Mock Data for the New Entities
+
+1. If you are using cloud foundry open Business applicaiton studio for development and if you are using Kyma open Visual Studio Code for development.
+
+2. Navigate to the Incident Management Application code base and Create a new folder **data** in the `srv/external` folder.
+
+3. Create a new file **incidents_api_access-A_BusinessPartner.csv** and add the following data to it
+   
+   ```csv
+   BusinessPartner;FirstName;LastName;BusinessPartnerName;BusinessPartnerIsBlocked;
+   1004155;Daniel;Watts;Daniel Watts;false
+   1004161;Stormy;Weathers;Stormy Weathers;false
+   1004100;Sunny;Sunshine;Sunny Sunshine;true
+   ```
+
+4. Create a new file **incidents_api_access-A_BusinessPartnerAddress.csv** and add the following data to it
+
+   ```csv
+   BusinessPartner;AddressID;
+   1004155;123
+   1004161;345
+   1004100;456
+   ```
+
+5. Create a new file **incidents_api_access-A_AddressEmailAddress.csv** and add the following data to it
+
+   ```csv
+   AddressID;EmailAddress;Person;OrdinalNumber
+   123;test@demo.com;Williams;123
+   345;testjohn@demo.com;Smith;222
+   456;testhencry@demo.com;johnson;333
+   ```
+6. Create a new file **incidents_api_access-A_AddressPhoneNumber.csv** and add the following data to it
+
+   ```csv
+   AddressID;PhoneNumber;Person;OrdinalNumber
+   123;+44-555-123;Daniel;123
+   345;+01-555-688;Stormy;222
+   456;+01-555-789;Sunny;333
+   ```
+   
+   ![mock data](./../../images/add-remote-service/test-with-mock-new/test-app00.png)
+
+
 ### Run the Incident Management Application
 
-1. Choose the `Run and Debug` icon to run the application locally.
+1. Build your application.
 
-   ![open-terminal](../../images/add-remote-service/test-with-mock/run-app.png)
+   ```sh
+   npm i
+   ```
 
-2. Select `incidents-api-access` in the popup.
+2. Run the mock server locally.
 
-   ![select-api](../../images/add-remote-service/test-with-mock/select-api.png)
+   ```sh
+   cds mock incidents_api_access
+   ```
 
-3. Testing the scenario - while creating a new incident, the value help for customers loads data from the SAP S/4HANA Cloud.
+3. In the terminal, you should see the following output
+
+   ```cds
+   [cds] - connect using bindings from: { registry: '~/.cds-services.json' }
+   [cds] - connect to db > sqlite { url: ':memory:' }
+      > init from db/data/sap.capire.incidents-Urgency.csv 
+      > init from db/data/sap.capire.incidents-Status.csv 
+      > init from db/data/sap.capire.incidents-Incidents.csv 
+      > init from db/data/sap.capire.incidents-Customers.csv 
+      > init from db/data/sap.capire.incidents-Conversations.csv 
+      > init from srv/external/data/incidents_api_access-A_BusinessPartnerAddress.csv 
+      > init from srv/external/data/incidents_api_access-A_BusinessPartner.csv 
+      > init from srv/external/data/incidents_api_access-A_AddressPhoneNumber.csv 
+      > init from srv/external/data/incidents_api_access-A_AddressEmailAddress.csv  
+   ```
+   > If the incidents_api_access doesn't show up, remove the `.cds-services.json` file - you find it in the user root folder (e.g.: /home/user/.cds-services.json) 
+
+4.  Open a new terminal and run `cds watch`. This will start the application connected to the running mock service.
+
+
+5. To open the server URL in terminal click on `http://localhost:4004`.
+
+   ![run test](./../../images/add-remote-service/test-with-mock/click-server-url.png)
+
+6. There are two URLs under web applications:
+ 
+    - */launchpage.html* uses a [local launchpage](!https://pages.github.tools.sap/cap/golden-path/develop/Launchpage/Launchpage)
+    - */incidents/webapp/index.html* uses the *index.html* from [ui5 app](!https://pages.github.tools.sap/cap/golden-path/develop/btp-app-create-ui-fiori-elements/btp-app-create-ui-fiori-elements)
+    - Choose the *launchpad.html*.
+    
+   ![run test](./../../images/add-remote-service/test-with-mock-new/test-app01.png)
+
+
+7.  When you are prompted to authenticate, use the following credentials:
+ 
+    - Username: `alice`
+    - Password: Empty / No Password   
+    
+    > You find the user settings in the `.cdsrc.json file`.
+
+8. Testing the scenario - while creating a new incident, the value help for customers loads data from the mock service.
    * Open the Incident Management application.
+  
+      ![run test](./../../images/add-remote-service/test-with-mock-new/test-app02.png)
   
    *  Choose **Create**.
   
-      ![run test](../../images/add-remote-service/test-with-mock/test-app03.png)
+      ![run test](./../../images/add-remote-service/test-with-mock-new/test-app03.png)
    
    * Set **Title**, **Customer**, **Status** and **Urgency**. 
-
-   * The value help for **Customer** fetches data from the SAP S/4HANA Cloud.
-
-      ![select-api](../../images/add-remote-service/test-with-mock/customer-list.png)
-
+   * The value help for **Customer** fetches data from the mock server.
    * Create a conversation.
-
    * Choose **Create** to save the settings.
      
-      ![run test](../../images/add-remote-service/test-with-mock/test-app04.png)
+      ![run test](./../../images/add-remote-service/test-with-mock-new/test-app04.png)
+   
 
-> [!Note]
-> If you have not done the enhance Fiori UI chapter, creating conversations will not be visible in the UI.
-
-> [!Note]
-> By using a mock server you can easily test your implementation in a local environment. You find more details in the documentation for [Local Mocking](https://cap.cloud.sap/docs/guides/using-services#local-mocking)
-
-## Next Step
-
-[Deploy the application to Cloud Foundry Runtime](./deploy-to-cf.md)
-
+## Summary
+By using a mock server you can easily test your implementation in a local environment. You find more details in the documentation for [Local Mocking](https://cap.cloud.sap/docs/guides/using-services#local-mocking)
