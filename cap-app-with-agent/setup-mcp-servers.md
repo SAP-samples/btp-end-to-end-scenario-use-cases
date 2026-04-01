@@ -49,6 +49,8 @@ To get started, you need to set up the MCP servers for both CAP and SAP Fiori in
 
 2. In SAP Business Application Studio, open **Cline** and choose the **MCP Servers** icon in the Cline panel.
 
+  ![Alt text](./images/add-resolution-note/setup-mcp.png) 
+
 3. Choose **Edit MCP Settings** to open the Cline MCP configuration and add the following entries:
 
     ```json

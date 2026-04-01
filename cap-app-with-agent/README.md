@@ -25,7 +25,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 
 # Solution Diagram
 
-![Solution Diagram](images/Solution-Diagram.png)
+![Solution Diagram](images/Solution-Diagram-RS.png)
 
 ## Prerequisites
 
@@ -34,8 +34,7 @@ ACME is a popular Electronics company. ACME hires call center support representa
 ## Exercise 1: Understand the CodeBase
 
 1. [Setup the application](../topic2/part1/clone.md)
-2. [Understand the application structure](./#)
-3. [Test the application locally ](./add-resolution-note.md)
+2. [Understand the application structure](./document/understand-application.md)
 
 ## Exercise 2: Extend the application with External Service
 

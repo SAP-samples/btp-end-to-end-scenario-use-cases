@@ -78,5 +78,5 @@ cd projects
 
 You have now the codebase Setup in the Business Application Studio.
 
-[Next Tutorial: Understand the application structure](../../cap-app-with-agent/#)
+[Next Tutorial: Understand the application structure](../../cap-app-with-agent/document/understand-application.md)
 

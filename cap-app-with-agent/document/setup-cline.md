@@ -69,3 +69,6 @@ In this section, you will configure the Cline AI coding assistant in SAP Busines
 4. Choose **Continue** to complete the Cline configuration.
 
     ![Select SAP AI Core](../images/setup-cline/0080-setup-api-provider.png)
+
+
+[Next Tutorial: Setup the application](../../topic2/part1/clone.md)
