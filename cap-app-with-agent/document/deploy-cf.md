@@ -30,7 +30,6 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
 
 ![deploy-cf](../images/deploy-cf/crossnavigation.png)  
 
-
 > [!Note]
 > **To uniquely identify your deployed application in SAP BTP Cockpit, make the following changes to UI module of your application .**
 
@@ -50,7 +49,8 @@ This section describes how to deploy the application to the SAP BTP, Cloud Found
     2. Under **app -> incident-management -> ui5.yaml**, replace incidentmanagement with new name.
             ![deploy-cf](../images/deploy-cf/ui5.png)
 
-        > Note: Do Find all and replace *incidentmanagement* with *incidentmanagementjd12*. 
+> [!Note]
+> Do Find all and replace *incidentmanagement* with *incidentmanagementjd12*. 
 
 
 ## Deploy the Application
@@ -68,34 +68,18 @@ The final step in SAP Business Application Studio is to deploy the application t
     ```bash
     cd ../.. && mbt build
     ```
+> [!Note]
+> The `mbt build` command packages the CAP service, Fiori app, and all configurations into a deployable `.mtar` archive. Make sure the `mta.yaml` file is present in the root of your project.
 
-    > [!Note]
-    > The `mbt build` command packages the CAP service, Fiori app, and all configurations into a deployable `.mtar` archive. Make sure the `mta.yaml` file is present in the root of your project.
+3. Open the control panel in BAS by pressing `Ctrl + Shift + P` and search for `cf login`. Select the command to start the deployment process.
 
-3. Log in to Cloud Foundry using the CF CLI. When prompted, enter the API endpoint of your SAP BTP subaccount:
+     ![deploy-cf](../images/deploy-cf/cf_login.png)
 
-    ```bash
-    cf login --sso
-    ```
-
-4. Deploy the `.mtar` archive to Cloud Foundry:
-
-    ```bash
-    cf deploy mta_archives/<your-app-name>.mtar
-    ```
-
-    > [!Tip]
-    > The `.mtar` file is generated in the `mta_archives/` folder after the `mbt build` step. Replace `<your-app-name>` with the actual filename shown in your terminal after the build completes.
-
-5. Check if the task has been launched in the terminal.
-
-    ![deploy-cf](../images/deploy-cf/deploy_cf_terminal.png)
-
-3. During the deployment, a new page pops up asking you to sign in to Cloud Foundry. Follow these steps:
+4. During the deployment, a new page pops up asking you to sign in to Cloud Foundry. Follow these steps:
 
     1. In the **Enter Cloud Foundry Endpoint** field, enter the **API Endpoint** from SAP BTP Cockpit.
-
-        > Note: The Cloud Foundry Endpoint can be retrived from SAP BTP Cockpit.
+    > [!Note]
+    > The Cloud Foundry Endpoint can be retrived from SAP BTP Cockpit.
         ![deploy-cf](../images/deploy-cf/retrieve_endpoint.png) 
 
     2. Select **SSO Passcode** as an authentication method.
@@ -106,23 +90,23 @@ The final step in SAP Business Application Studio is to deploy the application t
 
     4. Find the text box for **Enter the origin key** `pesworkshops-platform` and click on **Sign in with alternative identity provider**.
 
+      ![deploy-cf](../images/deploy-cf/tenant_login.png)
 
-        ![deploy-cf](../images/deploy-cf/tenant_login.png)
+> [!Note]
+> When choosing **Sign in with alternative identity provider**, if your are prompted to sign in, enter your username and password.
+> If you are signed in with Default Identity, you can choose to sign in with default identity provider.
 
-        > Note: When choosing **Sign in with alternative identity provider**, if your are prompted to sign in, enter your username and password.
-        > If you are signed in with Default Identity, you can choose to sign in with default identity provider.
+5. Choose the **Copy** icon to get a temporary authentication code.
 
-    5. Choose the **Copy** icon to get a temporary authentication code.
-
-        ![deploy-cf](../images/deploy-cf/deploy_auth_code.png)
+![deploy-cf](../images/deploy-cf/deploy_auth_code.png)
     
-    6. Paste the copied code in the **Enter your SSO Passcode** field in the Cloud Foundry login page.
+6. Paste the copied code in the **Enter your SSO Passcode** field in the Cloud Foundry login page.
 
-    7. Choose **Sign In**.
+7. Choose **Sign In**.
 
-        ![deploy-cf](../images/deploy-cf/deploy_sign_in.png)
+![deploy-cf](../images/deploy-cf/deploy_sign_in.png)
 
-4. In the **Cloud Foundry Target** section, do the following:
+8. In the **Cloud Foundry Target** section, do the following:
 
     1. In the **Select Cloud Foundry Organization** dropdown menu, select the respective Org name.
 
@@ -131,10 +115,22 @@ The final step in SAP Business Application Studio is to deploy the application t
     3. Choose **Apply**.
 
         ![deploy-cf](../images/deploy-cf/cf_targets.png)
+   
+9. Deploy the `.mtar` archive to Cloud Foundry:
 
-5. Check the terminal for the deployment progress. 
+    ```bash
+    cf deploy mta_archives/<your-app-name>.mtar
+    ```
 
-6. Once the deployment is completed, the application is started log and you can see the Overview URL.
+   > [!Tip]
+   > The `.mtar` file is generated in the `mta_archives/` folder after the `mbt build` step. Replace `<your-app-name>` with the actual filename shown in your terminal after the build completes.
+10. Check if the task has been launched in the terminal.
+
+   ![deploy-cf](../images/deploy-cf/deploy_cf_terminal.png)
+
+11. Check the terminal for the deployment progress. 
+
+12. Once the deployment is completed, the application is started log and you can see the Overview URL.
 
     ![deploy-cf](../images/deploy-cf/deploy_completed.png)
 
@@ -162,7 +158,7 @@ The final step in SAP Business Application Studio is to deploy the application t
 
     1. Type your username in the **ID** field, and select your username from the suggestions.
 
-    2. Select **...accounts.ondemand.com(application users)** from the **Identity Provider** dropdown.
+    2. Select **...accounts.ondemand.com(business users)** from the **Identity Provider** dropdown.
 
     > **Note:** Make sure you are selecting the Identity Provider with (application users).
 
