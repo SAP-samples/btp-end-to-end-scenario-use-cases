@@ -71,7 +71,7 @@ The final step in SAP Business Application Studio is to deploy the application t
 > [!Note]
 > The `mbt build` command packages the CAP service, Fiori app, and all configurations into a deployable `.mtar` archive. Make sure the `mta.yaml` file is present in the root of your project.
 
-3. Open the control panel in BAS by pressing `Ctrl + Shift + P` and search for `cf login`. Select the command to start the deployment process.
+3. Open the control panel in BAS by pressing `Ctrl + Shift + P`(Windows users) or `Cmd + Shift + P`(Mac user) and search for `cf login`. Select the command to start the deployment process.
 
      ![deploy-cf](../images/deploy-cf/cf_login.png)
 
