@@ -1,5 +1,6 @@
 # Introduction
-SAP BTP Applications need to connect to SAP systems to fetch and and process data. 
+
+SAP BTP Applications need to connect to SAP systems to fetch and process data. 
 
 You can find the APIs exposed by an SAP system that you need to complete your extension scenario in [SAP Business Accelerator Hub](https://api.sap.com/).  
 SAP BTP Connectivity allows SAP BTP applications to securely access APIs that run on the Internet or on-premise. 
@@ -20,4 +21,4 @@ When a new incident is created by the processor, they have to assign the inciden
 
 ## Next Step
 
-[Extend the Incident Management аpplication](./extend-app-cf.md)
+[Extend the Incident Management application](./extend-app-cf.md)

@@ -14,7 +14,7 @@ In this exercise, you will perform the following tasks:
 
 ## Content
 
-### Task 1: Create development space
+### Step 1: Create development space
 
 1. In **[SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/7fa8a0c6-7202-4fc9-91cd-79b6a52b9acc/subaccountoverview)**, navigate to your subaccount.
 
@@ -35,7 +35,7 @@ In this exercise, you will perform the following tasks:
  
   ![Alt text](img/0040-dev-space-running.png) 
 
-### Task 2: Clone repository
+### Step 2: Clone repository
 
 1. On the initial screen choose the "burger" button and then select *View* &rarr; *Terminal* option in the popup menu.
 
@@ -59,7 +59,7 @@ cd projects
 
   ![Alt text](img/0070-open-project.png) 
 
-### Task 3: Prepare the codebase
+### Step 3: Prepare the codebase
 
 1. Select the "burger" button to call the main menu and select *View* &rarr; *Terminal* option.
 
@@ -72,11 +72,11 @@ cd projects
   npm install
   ```
 
-  ![Alt text](img/0110-npm-install.png)
-
 ## Result
 
 You have now the codebase Setup in the Business Application Studio.
 
-[Next Tutorial: Understand the application structure](../../cap-app-with-agent/document/understand-application.md)
+## Next Steps:
+
+- [Understand the application structure](../../cap-app-with-agent/document/understand-application.md)
 

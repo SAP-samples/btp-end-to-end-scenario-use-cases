@@ -47,7 +47,7 @@ To get started, you need to set up the MCP servers for both CAP and SAP Fiori in
     npm install -g @cap-js/mcp-server @sap-ux/fiori-mcp-server
     ```
 
-2. In SAP Business Application Studio, open **Cline** and choose the **MCP Servers** icon in the Cline panel.
+2. In SAP Business Application Studio, open **Cline** and choose the **MCP Servers** icon in the Cline panel. If Cline icon is not visible in the left navigation pane, you can open it by clicking on `...` icon and selecting Cline from the dropdown.
 
   ![Alt text](./images/add-resolution-note/setup-mcp.png) 
 
@@ -103,11 +103,12 @@ To get started, you need to set up the MCP servers for both CAP and SAP Fiori in
 
 4. Save the settings. The MCP servers will appear as connected in the Cline MCP Servers panel.
 
-5. Test the MCP server setup by asking Cline to list all entities in your CAP project:
+5. Test the MCP server setup by asking Cline to list all entities in your CAP project by passing the below prompt in Cline prompt window:
 
     ```
     cds-mcp list the entities of this project
     ```
+   ![img.png](./images/img.png)
 
 6. You can also ask Cline to list all Fiori apps in your project:
 
@@ -127,6 +128,7 @@ Create `AGENTS.md` in the root of your project with the following content:
 ## Rules for cds-mcp
 - You MUST search for CDS definitions, like entities, fields and services (which include HTTP endpoints) with cds-mcp, only if it fails you MAY read *.cds files in the project.
 - You MUST search for CAP docs with cds-mcp EVERY TIME you create, modify CDS models or when using APIs or the `cds` CLI from CAP. Do NOT propose, suggest or make any changes without first checking it.
+- You MUST use cds watch to start the server locally.
 
 ## Rules for creation or modification of SAP Fiori elements apps
 - When asked to create an SAP Fiori elements app check whether the user input can be interpreted as an application organized into one or more pages containing table data or forms, these can be translated into a SAP Fiori elements application, else ask the user for suitable input.
@@ -144,4 +146,4 @@ Create `AGENTS.md` in the root of your project with the following content:
 
 ## Next Step
 
-[Add Resolution Note — Field, Business Logic & Tests](add-resolution-note.md)
+- [Add Resolution Note — Field, Business Logic & Tests](add-resolution-note.md)

@@ -324,30 +324,6 @@ The `mta.yaml` file defines:
 - **Destination Service**: External service connectivity
 - **HTML5 Runtime**: UI application hosting
 
-## Extension Points
-
-The application is designed for extensibility:
-
-### 1. Data Model Extensions
-- Add new fields to existing entities
-- Create new entities with relationships
-- Extend code lists with additional values
-
-### 2. Service Extensions
-- Add new service operations
-- Implement additional business logic
-- Create specialized views or projections
-
-### 3. UI Extensions
-- Add new fields to forms
-- Create custom actions and buttons
-- Implement additional facets and sections
-
-### 4. Integration Extensions
-- Connect to external systems via destinations
-- Implement event-driven architectures
-- Add workflow integration
-
 ## Best Practices Implemented
 
 ### 1. Data Modeling
@@ -376,5 +352,6 @@ The application is designed for extensibility:
 
 This incident management application demonstrates modern SAP BTP development practices using CAP, providing a solid foundation for enterprise-grade support ticket management systems.
 
+## Next Steps
 
-[Next Tutorial: Update the Business Scenario](./add-remote-service/README.md)
+- [Update the Business Scenario](./add-remote-service/README.md)

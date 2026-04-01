@@ -172,4 +172,4 @@ The final step in SAP Business Application Studio is to deploy the application t
 
 ## Next Steps
 
-Integrate Your Application with SAP Build Work Zone by following the steps at [Integrate with SAP Build Work Zone](integrate-workzone.md)
+- [Integrate with SAP Build Work Zone](integrate-workzone.md)
