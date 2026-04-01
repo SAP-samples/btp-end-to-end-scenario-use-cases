@@ -2,9 +2,10 @@
 
 In this section, you will use **Cline** in SAP Business Application Studio to extend the Incident Management application with a `Resolution Note` field. The work is organized into three chapters:
 
-- **Chapter 1** — Add the field to the CDS model and SAP Fiori UI
-- **Chapter 2** — Add business logic (mandatory validation + SQL injection check)
-- **Chapter 3** — Add automated tests
+- Add the field to the CDS model and SAP Fiori UI
+
+- Add business logic (mandatory validation + SQL injection check)
+- Add automated tests
 
 ## Prerequisite
 
@@ -12,7 +13,7 @@ You have set up the MCP servers and defined the `AGENTS.md` rules following the 
 
 ---
 
-## Chapter 1: Add the Resolution Note Field
+## 1: Add the Resolution Note Field
 
 In this chapter, you will add the `resolutionNote` field to the `Incidents` entity in the CDS model and expose it in the SAP Fiori elements UI.
 
@@ -21,7 +22,7 @@ In this chapter, you will add the `resolutionNote` field to the `Incidents` enti
 2. Enter the following prompt:
 
     ```
-    Add a new field 'Resolution Note' to the 'Incidents' entity in the CDS model and UI using cds-mcp and fiori-mcp servers
+    Add a new field 'Resolution Note' to the 'Incidents' entity in the CDS model and Fiori UI using cds-mcp and fiori-mcp servers
     ```
 
 3. Cline will use the **CAP MCP server** to look up the `Incidents` entity definition and find the correct file location:
@@ -34,7 +35,7 @@ In this chapter, you will add the `resolutionNote` field to the `Incidents` enti
       title          : String  @title : 'Title';
       urgency        : Association to Urgency default 'M';
       status         : Association to Status default 'N';
-      resolutionNote : String @title : 'Resolution Note'; // [!code ++]
+      resolutionNote : String @title : 'Resolution Note'; // newly added field
       conversation   : Composition of many {
         key ID       : UUID;
             timestamp : type of managed:createdAt;
@@ -46,13 +47,13 @@ In this chapter, you will add the `resolutionNote` field to the `Incidents` enti
 
 5. Cline will update `app/incidents/annotations.cds` to include the new field in the UI:
 
-    ```js
+    ```json
     ...
-    { // [!code ++]
-        $Type : 'UI.DataField', // [!code ++]
-        Value : resolutionNote, // [!code ++]
-        Label : '{i18n>ResolutionNote}', // [!code ++]
-    }, // [!code ++]
+    { 
+        $Type : 'UI.DataField',
+        Value : resolutionNote,
+        Label : '{i18n>ResolutionNote}',
+    },
     ...
     ```
 
@@ -115,11 +116,11 @@ In this chapter, you will add the `resolutionNote` field to the `Incidents` enti
 
 
 > [!Note]
-> Cline may generate slightly different code. Please make sure the final `db/schema.cds` includes the `resolutionNote` field and `app/incidents/annotations.cds` includes the corresponding `UI.DataField` entry.
+> Cline may generate slightly different code. Please make sure the final `db/schema.cds` includes the `resolutionNote` field, `app/incidents/annotations.cds` includes the corresponding `UI.DataField` entry and the `db/data/sap.capire.incidents-Incidents.csv` has resolutionNote values for the existing incidents.
 
 ---
 
-## Chapter 2: Add Business Logic
+## 2: Add Business Logic
 
 In this chapter, you will add two validations to `srv/services.js`:
 1. `resolutionNote` is **mandatory** when setting status to Resolved (`R`) or Closed (`C`)
@@ -167,17 +168,17 @@ This validation ensures that a user cannot set an incident's status to **Resolve
 3. Cline will update `srv/services.js` with the mandatory check inside `onUpdate`:
 
     ```js
-    // Mandatory resolutionNote when resolving or closing // [!code ++]
-    const newStatus = req.data.status_code; // [!code ++]
-    if (newStatus === 'R' || newStatus === 'C') { // [!code ++]
-      const noteInRequest = req.data.resolutionNote?.trim(); // [!code ++]
-      const noteInDB = noteInRequest === undefined // [!code ++]
-        ? (await SELECT.one(req.subject, i => i.resolutionNote).where({ ID: req.data.ID }))?.resolutionNote?.trim() // [!code ++]
-        : undefined; // [!code ++]
-      if (!noteInRequest && !noteInDB) { // [!code ++]
-        return req.reject(400, 'A Resolution Note is required before resolving or closing an incident.'); // [!code ++]
-      } // [!code ++]
-    } // [!code ++]
+    // Mandatory resolutionNote when resolving or closing
+    const newStatus = req.data.status_code;
+    if (newStatus === 'R' || newStatus === 'C') { 
+      const noteInRequest = req.data.resolutionNote?.trim();
+      const noteInDB = noteInRequest === undefined 
+        ? (await SELECT.one(req.subject, i => i.resolutionNote).where({ ID: req.data.ID }))?.resolutionNote?.trim() 
+        : undefined; 
+      if (!noteInRequest && !noteInDB) {
+        return req.reject(400, 'A Resolution Note is required before resolving or closing an incident.'); 
+      } 
+    } 
     ```
 
 4. Cline will confirm:
@@ -203,13 +204,13 @@ This validation ensures that a user cannot set an incident's status to **Resolve
 2. Cline will extend `onUpdate` with the SQL injection check placed **before** the mandatory note validation:
 
     ```js
-    // SQL injection check on resolutionNote // [!code ++]
-    if (req.data.resolutionNote) { // [!code ++]
-      const sqlPatterns = /--|;|'|\/\*|\*\/|\b(DROP|SELECT|INSERT|DELETE|UPDATE|UNION)\b/i; // [!code ++]
-      if (sqlPatterns.test(req.data.resolutionNote)) { // [!code ++]
-        return req.reject(400, 'Resolution Note contains invalid characters or patterns.'); // [!code ++]
-      } // [!code ++]
-    } // [!code ++]
+    // SQL injection check on resolutionNote 
+    if (req.data.resolutionNote) {
+      const sqlPatterns = /--|;|'|\/\*|\*\/|\b(DROP|SELECT|INSERT|DELETE|UPDATE|UNION)\b/i;
+      if (sqlPatterns.test(req.data.resolutionNote)) {
+        return req.reject(400, 'Resolution Note contains invalid characters or patterns.'); 
+      } 
+    } 
     ```
 
 3. Cline will confirm:
@@ -293,7 +294,7 @@ module.exports = { ProcessorService }
 
 ---
 
-## Chapter 3: Add Automated Tests
+## 3: Add Automated Tests
 
 In this chapter, you will add Jest tests that verify the business logic using the OData Draft Choreography pattern.
 
@@ -332,96 +333,96 @@ The `before UPDATE` handler — where the validations live — is triggered duri
 2. Cline will add a new `describe` block to `test/test.js`:
 
     ```js
-    describe('Resolution Note Business Logic', () => { // [!code ++]
-      let incidentId // [!code ++]
-     // [!code ++]
-      it('+ Create an incident for resolution note testing', async () => { // [!code ++]
-        const { status, data } = await POST(`/odata/v4/processor/Incidents`, { // [!code ++]
-          title: 'Test incident for resolution note', // [!code ++]
-          status_code: 'N' // [!code ++]
-        }) // [!code ++]
-        incidentId = data.ID // [!code ++]
-        expect(status).to.equal(201) // [!code ++]
-      }) // [!code ++]
-     // [!code ++]
-      it('+ Activate the draft', async () => { // [!code ++]
-        const response = await POST( // [!code ++]
-          `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` // [!code ++]
-        ) // [!code ++]
-        expect(response.status).to.eql(201) // [!code ++]
-      }) // [!code ++]
-     // [!code ++]
-      describe('Mandatory Resolution Note Validation', () => { // [!code ++]
-        it('Should fail to resolve an incident without a resolution note', async () => { // [!code ++]
-          await POST( // [!code ++]
-            `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=true)/ProcessorService.draftEdit`, // [!code ++]
-            { PreserveChanges: true } // [!code ++]
-          ) // [!code ++]
-          await PATCH(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)`, { // [!code ++]
-            status_code: 'R' // [!code ++]
-          }) // [!code ++]
-          try { // [!code ++]
-            await POST( // [!code ++]
-              `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` // [!code ++]
-            ) // [!code ++]
-          } catch (error) { // [!code ++]
-            expect(error.response.status).to.eql(400) // [!code ++]
-            expect(error.response.data.error.message).to.include('A Resolution Note is required before resolving or closing an incident') // [!code ++]
-          } // [!code ++]
-        }) // [!code ++]
-     // [!code ++]
-        it('Should resolve an incident successfully when a resolution note is provided', async () => { // [!code ++]
-          const response = await PATCH(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)`, { // [!code ++]
-            status_code: 'R', // [!code ++]
-            resolutionNote: 'Issue has been resolved successfully.' // [!code ++]
-          }) // [!code ++]
-          expect(response.status).to.eql(200) // [!code ++]
-          const activated = await POST( // [!code ++]
-            `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` // [!code ++]
-          ) // [!code ++]
-          expect(activated.status).to.eql(200) // [!code ++]
-          expect(activated.data.status_code).to.eql('R') // [!code ++]
-          expect(activated.data.resolutionNote).to.eql('Issue has been resolved successfully.') // [!code ++]
-        }) // [!code ++]
-      }) // [!code ++]
-     // [!code ++]
-      describe('SQL Injection Check on Resolution Note', () => { // [!code ++]
-        it('Should fail when resolution note contains SQL injection patterns', async () => { // [!code ++]
-          await POST( // [!code ++]
-            `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=true)/ProcessorService.draftEdit`, // [!code ++]
-            { PreserveChanges: true } // [!code ++]
-          ) // [!code ++]
-          await PATCH(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)`, { // [!code ++]
-            resolutionNote: "Fixed; DROP TABLE Incidents--" // [!code ++]
-          }) // [!code ++]
-          try { // [!code ++]
-            await POST( // [!code ++]
-              `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` // [!code ++]
-            ) // [!code ++]
-          } catch (error) { // [!code ++]
-            expect(error.response.status).to.eql(400) // [!code ++]
-            expect(error.response.data.error.message).to.include('Resolution Note contains invalid characters or patterns') // [!code ++]
-          } // [!code ++]
-        }) // [!code ++]
-     // [!code ++]
-        it('Should accept a valid resolution note without SQL patterns', async () => { // [!code ++]
-          const response = await PATCH(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)`, { // [!code ++]
-            resolutionNote: 'Resolved after thorough investigation.' // [!code ++]
-          }) // [!code ++]
-          expect(response.status).to.eql(200) // [!code ++]
-          const activated = await POST( // [!code ++]
-            `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` // [!code ++]
-          ) // [!code ++]
-          expect(activated.status).to.eql(200) // [!code ++]
-          expect(activated.data.resolutionNote).to.eql('Resolved after thorough investigation.') // [!code ++]
-        }) // [!code ++]
-      }) // [!code ++]
-     // [!code ++]
-      it('- Delete the Incident', async () => { // [!code ++]
-        const response = await DELETE(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=true)`) // [!code ++]
-        expect(response.status).to.eql(204) // [!code ++]
-      }) // [!code ++]
-    }) // [!code ++]
+    describe('Resolution Note Business Logic', () => { 
+      let incidentId 
+     
+      it('+ Create an incident for resolution note testing', async () => { 
+        const { status, data } = await POST(`/odata/v4/processor/Incidents`, { 
+          title: 'Test incident for resolution note', 
+          status_code: 'N' 
+        }) 
+        incidentId = data.ID 
+        expect(status).to.equal(201) 
+      }) 
+     
+      it('+ Activate the draft', async () => { 
+        const response = await POST( 
+          `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` 
+        ) 
+        expect(response.status).to.eql(201) 
+      }) 
+     
+      describe('Mandatory Resolution Note Validation', () => { 
+        it('Should fail to resolve an incident without a resolution note', async () => { 
+          await POST( 
+            `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=true)/ProcessorService.draftEdit`, 
+            { PreserveChanges: true } 
+          ) 
+          await PATCH(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)`, { 
+            status_code: 'R' 
+          }) 
+          try { 
+            await POST( 
+              `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` 
+            ) 
+          } catch (error) { 
+            expect(error.response.status).to.eql(400) 
+            expect(error.response.data.error.message).to.include('A Resolution Note is required before resolving or closing an incident') 
+          } 
+        }) 
+     
+        it('Should resolve an incident successfully when a resolution note is provided', async () => { 
+          const response = await PATCH(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)`, { 
+            status_code: 'R', 
+            resolutionNote: 'Issue has been resolved successfully.' 
+          }) 
+          expect(response.status).to.eql(200) 
+          const activated = await POST( 
+            `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` 
+          ) 
+          expect(activated.status).to.eql(200) 
+          expect(activated.data.status_code).to.eql('R') 
+          expect(activated.data.resolutionNote).to.eql('Issue has been resolved successfully.') 
+        }) 
+      }) 
+     
+      describe('SQL Injection Check on Resolution Note', () => { 
+        it('Should fail when resolution note contains SQL injection patterns', async () => { 
+          await POST( 
+            `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=true)/ProcessorService.draftEdit`, 
+            { PreserveChanges: true } 
+          ) 
+          await PATCH(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)`, { 
+            resolutionNote: "Fixed; DROP TABLE Incidents--" 
+          }) 
+          try { 
+            await POST( 
+              `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` 
+            ) 
+          } catch (error) { 
+            expect(error.response.status).to.eql(400) 
+            expect(error.response.data.error.message).to.include('Resolution Note contains invalid characters or patterns') 
+          } 
+        }) 
+     
+        it('Should accept a valid resolution note without SQL patterns', async () => { 
+          const response = await PATCH(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)`, { 
+            resolutionNote: 'Resolved after thorough investigation.' 
+          }) 
+          expect(response.status).to.eql(200) 
+          const activated = await POST( 
+            `/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=false)/ProcessorService.draftActivate` 
+          ) 
+          expect(activated.status).to.eql(200) 
+          expect(activated.data.resolutionNote).to.eql('Resolved after thorough investigation.') 
+        }) 
+      }) 
+     
+      it('- Delete the Incident', async () => { 
+        const response = await DELETE(`/odata/v4/processor/Incidents(ID=${incidentId},IsActiveEntity=true)`) 
+        expect(response.status).to.eql(204) 
+      }) 
+    }) 
     ```
 
 3. Cline will confirm:
