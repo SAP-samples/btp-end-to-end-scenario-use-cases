@@ -72,8 +72,6 @@ cd projects
   npm install
   ```
 
-  ![Alt text](img/0110-npm-install.png)
-
 ## Result
 
 You have now the codebase Setup in the Business Application Studio.

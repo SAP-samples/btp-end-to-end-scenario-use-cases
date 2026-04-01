@@ -122,7 +122,7 @@ To increase your development speed, it is helpful to run and test your implement
    
 
 ## Summary
-By using a mock server you can easily test your implementation in a local environment. You find more details in the documentation for [Local Mocking](https://cap.cloud.sap/docs/guides/using-services#local-mocking)
+By using a mock server you can easily test your implementation in a local environment. You find more details in the documentation for [Local Mocking](https://cap.cloud.sap/docs/guides/services/consuming-services#run-local-with-mocks)
 
 ## Next Steps
 

@@ -280,15 +280,15 @@ module.exports = { ProcessorService }
 
 1. Run `cds watch` and open `http://localhost:4004`.
 
-2. **Test mandatory note validation:**
+2. **Test mandatory resolutionNote validation:**
    - Set **Status** to **Resolved** or **Closed** with an empty **Resolution Note** and choose **Save**.
    - Expected error: *A Resolution Note is required before resolving or closing an incident.*
 
-3. **Test SQL injection check:**
+3. **Test SQL injection check in resolutionNote:**
    - Enter `Fixed; DROP TABLE Incidents--` in the **Resolution Note** field and choose **Save**.
    - Expected error: *Resolution Note contains invalid characters or patterns.*
 
-4. **Test the happy path:**
+4. **Test adding a correct resolutionNote:**
    - Enter `Issue resolved after replacing the faulty component.`, set **Status** to **Resolved**, and choose **Save**.
    - The incident should be saved successfully.
 
