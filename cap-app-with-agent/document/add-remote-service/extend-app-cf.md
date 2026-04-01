@@ -7,6 +7,7 @@
    - Select `Service`  **incidents-api-access**.
     
       ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
+   
 
 2. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
 
@@ -14,13 +15,13 @@
 
 3. Choose the `Add to CAP Project`.  
     
-    ![add-cap](../../images/add-remote-service/extend-app-cf/add-cap.png)
+    ![add-cap](../../images/add-remote-service/extend-app-cf/addcap.png)
 
 > [!Note]
 > If UI prompts to select the project, choose your project name created with `Incidents<Initial><Uniquid>` earlier. And click on **Add**.
 ![add-cap](../../images/add-remote-service/extend-app-cf/addcap.png)
 
-4. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for **entity incidents_api_access.A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
+4. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for entity **A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
     ```js
     to_BusinessPartnerAddress : Composition of many incidents_api_access.A_BusinessPartnerAddress on to_BusinessPartnerAddress.BusinessPartner = BusinessPartner;
@@ -28,24 +29,24 @@
 
     ![add-cap](../../images/add-remote-service/extend-app-cf/code1.png)
 
-5. Search for **entity incidents_api_access.A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
+5. Search for entity **A_BusinessPartnerAddress**. Scroll down to the **to_EmailAddress** section and replace the associations for email address with the following.
 
     ```js
     to_EmailAddress : Composition of many incidents_api_access.A_AddressEmailAddress on to_EmailAddress.AddressID = AddressID;
     ```
 
-6. Scroll down to the **to_PhoneNumber** section under **entity incidents_api_access.A_BusinessPartnerAddress** and replace the associations for phone number with the following.
+6. Scroll down to the **to_PhoneNumber** section under entity **A_BusinessPartnerAddress** and replace the associations for phone number with the following.
 
     ```js
     to_PhoneNumber : Composition of many incidents_api_access.A_AddressPhoneNumber on to_PhoneNumber.AddressID = AddressID;
     ```
     ![add-cap](../../images/add-remote-service/extend-app-cf/code0.png)
 
-7. Create a new file *remote.cds* in the *srv* folder.
+7. Create a new file **remote.cds** in the **srv** folder.
 
     ![create-new-file](../../images/add-remote-service/extend-app-cf/create-new-file.png)
 
-8. Copy the snippet to the newly created *remote.cds* file:
+8. Copy the snippet to the newly created **remote.cds** file:
 
     ```js
     using { incidents_api_access as S4 } from './external/incidents_api_access';
@@ -92,7 +93,15 @@
       this.on('READ', 'Customers', (req) => this.onCustomerRead(req));
       ```
 
-   * Add the custom handler implementation after the *init* method:
+   * Add the custom handler implementation after the **init** method:
+
+      This handler reads customer data from the remote S/4HANA Business Partner service and prepares it for the `Customers` value help in your app:
+
+      - It forwards the incoming read request and logs the query for troubleshooting.
+      - It applies paging with `$top` and `$skip` (defaulting to 100 and 0).
+      - It reads `BusinessPartner` records including nested address email data using expand.
+      - It maps the remote response to a simplified structure with `ID`, `name`, and `email`.
+      - The UI value help wil display total entries for `BusinessPartner` correctly.
   
       ```js
       async onCustomerRead(req) {
@@ -127,7 +136,7 @@
 		
       ```
 
-   *  Add a custom handler for CREATE, UPDATE, DELETE of incidents. Add this code snippet to the *init* method:
+   *  Add a custom handler for CREATE, UPDATE, DELETE of incidents. Add this code snippet to the **init** method:
 
       ```js
       this.on(['CREATE','UPDATE'], 'Incidents', (req, next) => this.onCustomerCache(req, next));
@@ -135,7 +144,11 @@
       this.remoteService = await cds.connect.to('RemoteService');
       ```
     
-   * Add the custom handler after the *onCustomerRead* method created in above step:  
+   * Add the custom handler after the **onCustomerRead** method created in above step:
+
+      This handler keeps the local `Customers` entity in sync whenever an incident is created or updated with a customer reference. After the main incident operation completes, it reads the selected Business Partner from the remote S/4HANA service (including email and phone), maps the nested response to flat fields, and then upserts the customer in the local database.
+
+      This way, the incident flow stays unchanged for the user, while customer details are cached locally in the background for follow-up use.
 
       ```js
       async onCustomerCache(req, next) {
@@ -177,4 +190,4 @@ You have integrated the Business Partner API into your project and business logi
 
 ## Next Step
 
-[Run a developer test Locally](./test-with-mock.md)
+- [Run a developer test Locally](./test-with-mock.md)

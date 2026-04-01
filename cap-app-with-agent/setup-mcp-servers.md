@@ -144,4 +144,4 @@ Create `AGENTS.md` in the root of your project with the following content:
 
 ## Next Step
 
-[Add Resolution Note — Field, Business Logic & Tests](add-resolution-note.md)
+- [Add Resolution Note — Field, Business Logic & Tests](add-resolution-note.md)

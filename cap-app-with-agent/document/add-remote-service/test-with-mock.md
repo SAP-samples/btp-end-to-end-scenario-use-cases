@@ -2,13 +2,13 @@
 
 ## Scenario
 
-To increase your development speed, it is helpful to run and test your implementation in a local environment. In this section you will learn how to test the incident management applicaiton locally.
+To increase your development speed, it is helpful to run and test your implementation in a local environment. In this section you will learn how to test the Incident Management application locally.
 
 ## Content
 
 ### Create Mock Data for the New Entities
 
-1. If you are using cloud foundry open Business applicaiton studio for development and if you are using Kyma open Visual Studio Code for development.
+1. If you are using cloud foundry open Business application studio for development and if you are using Kyma open Visual Studio Code for development.
 
 2. Navigate to the Incident Management Application code base and Create a new folder **data** in the `srv/external` folder.
 
@@ -124,6 +124,6 @@ To increase your development speed, it is helpful to run and test your implement
 ## Summary
 By using a mock server you can easily test your implementation in a local environment. You find more details in the documentation for [Local Mocking](https://cap.cloud.sap/docs/guides/using-services#local-mocking)
 
+## Next Steps
 
-
-[Next Tutorial: Set Up MCP Servers for Agentic Coding](./../../setup-mcp-servers.md)
+- [Set Up MCP Servers for Agentic Coding](./../../setup-mcp-servers.md)

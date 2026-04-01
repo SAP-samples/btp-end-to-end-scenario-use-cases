@@ -1,6 +1,6 @@
 # Mastering Clean Core on SAP BTP: A Hands-On Journey with VIBE Coding & MCP
 
-In this hands-on exercise, you will learn to develop a full-stack SAP BTP application based on SAP Cloud Application Programming Model (CAP), Fiori-based application , extend it using VIBE codeing and MCP and deploy to BTP.
+In this hands-on exercise, you will learn to develop a full-stack SAP BTP application based on SAP Cloud Application Programming Model (CAP), Fiori-based application , extend it using VIBE coding and MCP and deploy to BTP.
 
 ## What You Will Build
 - Build an extension app for S/4 HANA Cloud using CAP

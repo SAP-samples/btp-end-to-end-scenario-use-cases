@@ -62,13 +62,12 @@ In this section, you will configure the Cline AI coding assistant in SAP Busines
 
 2. Enter the API key credentials for SAP AI Core.
 
-3. Select the deployed model from the available options.
-
-    ![Enter API Key Credentials](../images/setup-cline/step10.png)
+3. Select the `claude-sonnet-4` model from the available options.
 
 4. Choose **Continue** to complete the Cline configuration.
 
     ![Select SAP AI Core](../images/setup-cline/0080-setup-api-provider.png)
 
+## Next Steps:
 
-[Next Tutorial: Setup the application](../../topic2/part1/clone.md)
+- [Set up the application](../../topic2/part1/clone.md)

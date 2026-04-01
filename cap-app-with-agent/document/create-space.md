@@ -19,5 +19,6 @@
 
 4. Pop-up message with **Space created successfully** will be displayed. You can also verify your space created.
 
+## Next Steps
 
-[Next Tutorial: Deploy to SAP BTP, Cloud Foundry Runtime](./document/deploy-cf.md)
+- [Deploy to SAP BTP, Cloud Foundry Runtime](./deploy-cf.md)
