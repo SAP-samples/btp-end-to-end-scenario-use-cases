@@ -53,35 +53,49 @@ To get started, you need to set up the MCP servers for both CAP and SAP Fiori in
 
     ```json
     {
-        "mcpServers": {
-            "cds-mcp": {
-                "command": "cds-mcp",
-                "args": [],
-                "env": {},
-                "autoApprove": [
-                    "search_model",
-                    "search_docs"
-                ]
-            },
-            "fiori-mcp": {
-                "type": "stdio",
-                "timeout": 600,
-                "command": "npx",
-                "args": [
-                    "--yes",
-                    "@sap-ux/fiori-mcp-server@latest",
-                    "fiori-mcp"
-                ],
-                "autoApprove": [
-                    "list_functionality",
-                    "execute_functionality",
-                    "get_functionality_details",
-                    "generate-fiori-ui-app",
-                    "list_fiori_apps",
-                    "search_docs"
-                ]
-            }
+    "mcpServers": {
+        "cds-mcp": {
+        "autoApprove": [
+            "search_model",
+            "search_docs"
+        ],
+        "disabled": false,
+        "timeout": 60,
+        "type": "stdio",
+        "command": "/home/user/.asdf-inst/installs/nodejs/22.13.1/bin/node",
+        "args": [
+            "/home/user/.node_modules_global/bin/cds-mcp"
+        ],
+        "env": {
+            "ASDF_DIR": "/home/user/.asdf",
+            "ASDF_DATA_DIR": "/home/user/.asdf-inst",
+            "PATH": "/home/user/.asdf-inst/installs/nodejs/22.13.1/bin:/home/user/.node_modules_global/bin:/home/user/.local/bin:/usr/local/bin:/usr/bin:/bin"
         }
+        },
+        "fiori-mcp": {
+        "autoApprove": [
+            "list_functionality",
+            "execute_functionality",
+            "get_functionality_details",
+            "generate-fiori-ui-app",
+            "list_fiori_apps",
+            "search_docs"
+        ],
+        "timeout": 600,
+        "type": "stdio",
+        "command": "/home/user/.asdf-inst/installs/nodejs/22.13.1/bin/npx",
+        "args": [
+            "--yes",
+            "@sap-ux/fiori-mcp-server@latest",
+            "fiori-mcp"
+        ],
+        "env": {
+            "ASDF_DIR": "/home/user/.asdf",
+            "ASDF_DATA_DIR": "/home/user/.asdf-inst",
+            "PATH": "/home/user/.asdf-inst/installs/nodejs/22.13.1/bin:/home/user/.node_modules_global/bin:/home/user/.local/bin:/usr/local/bin:/usr/bin:/bin"
+        }
+        }
+    }
     }
     ```
 

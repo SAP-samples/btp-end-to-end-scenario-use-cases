@@ -16,7 +16,7 @@ In this exercise, you will perform the following tasks:
 
 ### Task 1: Create development space
 
-1. In **SAP BTP Cockpit**, navigate to your subaccount.
+1. In **[SAP BTP Cockpit](https://emea.cockpit.btp.cloud.sap/cockpit/?idp=pesworkshops.accounts.ondemand.com#/globalaccount/a9030b2a-ed51-438e-9166-241ce6c0291d/subaccount/7fa8a0c6-7202-4fc9-91cd-79b6a52b9acc/subaccountoverview)**, navigate to your subaccount.
 
 2. From your left-side subaccount menu, navigate to **Services** &rarr; **Instances and Subscriptions**.
 
@@ -78,5 +78,5 @@ cd projects
 
 You have now the codebase Setup in the Business Application Studio.
 
-[Next Tutorial: Understand th application structure](../../cap-app-with-agent/#)
+[Next Tutorial: Understand the application structure](../../cap-app-with-agent/#)
 

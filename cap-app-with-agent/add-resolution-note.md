@@ -26,20 +26,6 @@ In this chapter, you will add the `resolutionNote` field to the `Incidents` enti
 
 3. Cline will use the **CAP MCP server** to look up the `Incidents` entity definition and find the correct file location:
 
-    ```shell
-    search_model
-    Returns CDS model definitions (CSN), including elements, annotations, parameters,
-    file locations and HTTP endpoints. Useful for building queries, OData URLs, or
-    modifying models.
-    Arguments
-    {
-      "projectPath": "/path/to/your/project",
-      "name": "Incidents",
-      "kind": "entity",
-      "topN": 1
-    }
-    ```
-
 4. Cline will update `db/schema.cds` to add the new field to the `Incidents` entity:
 
     ```js
@@ -99,22 +85,34 @@ In this chapter, you will add the `resolutionNote` field to the `Incidents` enti
     cds watch
     ```
 
-2. Open `http://localhost:4004`, navigate to the **Incidents** list, and open an existing incident.
+2. To open the server URL in terminal click on `http://localhost:4004`.
 
-3. The **Resolution Note** field should now be visible in the incident Object Page.
+   ![run test](./images/add-remote-service/test-with-mock/click-server-url.png)
 
-4. Enter a value and choose **Save**. After saving, the data will look like this:
+3. There are two URLs under web applications:
+ 
+    - */launchpage.html* uses a [local launchpage](!https://pages.github.tools.sap/cap/golden-path/develop/Launchpage/Launchpage)
+    - */incidents/webapp/index.html* uses the *index.html* from [ui5 app](!https://pages.github.tools.sap/cap/golden-path/develop/btp-app-create-ui-fiori-elements/btp-app-create-ui-fiori-elements)
+    - Choose the *launchpad.html*.
+    
+   ![run test](./images/add-remote-service/test-with-mock-new/test-app01.png)
 
-    ```json
-    {
-      "ID": "3a4ede72-244a-4f5f-8efa-b17e032d01ee",
-      "title": "No current on a sunny day",
-      "urgency_code": "H",
-      "status_code": "N",
-      "resolutionNote": "Warranty Expired", // [!code ++]
-      "IsActiveEntity": true
-    }
-    ```
+
+4.  When you are prompted to authenticate, use the following credentials:
+ 
+    - Username: `alice`
+    - Password: Empty / No Password   
+    
+    > You find the user settings in the `.cdsrc.json file`.
+
+5. Testing the scenario - while creating a new incident, the value help for customers loads data from the mock service.
+   * Open the Incident Management application and select one incident.
+  
+      ![run test](./images/add-remote-service/test-with-mock-new/test-app02.png)
+  
+
+6. The **Resolution Note** field should now be visible in the incident Object Page.
+
 
 > [!Note]
 > Cline may generate slightly different code. Please make sure the final `db/schema.cds` includes the `resolutionNote` field and `app/incidents/annotations.cds` includes the corresponding `UI.DataField` entry.
