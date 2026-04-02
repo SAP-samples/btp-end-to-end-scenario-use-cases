@@ -5,9 +5,6 @@
    - Click on Service Center(on left navigation shown in screenshot below)
    - Set `Select a Provider` as **SAP SYSTEM**
    - Select `Service`  **incidents-api-access**.
-    
-      ![service-center](../../images/add-remote-service/extend-app-cf/service-center.png)
-   
 
 2. Enter the Serivce path `/sap/opu/odata/sap/API_BUSINESS_PARTNER` and choose `connect`.
 
@@ -19,7 +16,7 @@
 
 > [!Note]
 > If UI prompts to select the project, choose your project name created with `Incidents<Initial><Uniquid>` earlier. And click on **Add**.
-![add-cap](../../images/add-remote-service/extend-app-cf/addcap.png)
+![add-cap](../../images/add-remote-service/extend-app-cf/service-center.png)
 
 4. Change the conditions for the relationships between some of the entities. Open **srv/external/incidents_api_access.cds**. Search for entity **A_BusinessPartner**. Scroll down to the **to_BusinessPartnerAddress** section and replace it with the following:
 
